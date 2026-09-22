@@ -1,0 +1,391 @@
+{
+  "feedback": {
+    "actor": null,
+    "actual_request_state_unchanged": true,
+    "candidate_actions_dispatched": 0,
+    "candidate_simulation": {
+      "failure": null,
+      "first_goal_met_after_step": null,
+      "forbidden_present_at_stop": [],
+      "goal_met_at_stop": false,
+      "missing_positive_at_stop": [
+        "at_base(rover_1)"
+      ],
+      "repeated_symbolic_states": [
+        {
+          "after_step": 15,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 16,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 17,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 18,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 21,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 22,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 23,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 24,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 25,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 26,
+          "same_as_after_step": 14
+        },
+        {
+          "after_step": 27,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 28,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 29,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 30,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 31,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 32,
+          "same_as_after_step": 20
+        },
+        {
+          "after_step": 33,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 34,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 35,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 36,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 37,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 38,
+          "same_as_after_step": 14
+        },
+        {
+          "after_step": 39,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 40,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 41,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 42,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 43,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 44,
+          "same_as_after_step": 20
+        },
+        {
+          "after_step": 45,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 46,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 47,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 48,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 49,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 50,
+          "same_as_after_step": 14
+        },
+        {
+          "after_step": 51,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 52,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 53,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 54,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 55,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 56,
+          "same_as_after_step": 20
+        },
+        {
+          "after_step": 57,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 58,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 59,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 60,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 61,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 62,
+          "same_as_after_step": 14
+        },
+        {
+          "after_step": 63,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 64,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 65,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 66,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 67,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 68,
+          "same_as_after_step": 20
+        },
+        {
+          "after_step": 69,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 70,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 71,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 72,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 73,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 74,
+          "same_as_after_step": 14
+        },
+        {
+          "after_step": 75,
+          "same_as_after_step": 13
+        },
+        {
+          "after_step": 76,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 77,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 78,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 79,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 80,
+          "same_as_after_step": 20
+        },
+        {
+          "after_step": 81,
+          "same_as_after_step": 19
+        },
+        {
+          "after_step": 82,
+          "same_as_after_step": 12
+        },
+        {
+          "after_step": 83,
+          "same_as_after_step": 11
+        },
+        {
+          "after_step": 84,
+          "same_as_after_step": 12
+        }
+      ],
+      "scope": "read-only candidate simulation; never actual history, a dispatch certificate, or a resource feasibility claim",
+      "state": [
+        "at_base(relay_1)",
+        "at_location(rover_1)",
+        "at_location(rover_2)",
+        "at_target(relay_1, base)",
+        "at_target(rover_1, sample_2)",
+        "at_target(rover_2, sample_2)",
+        "available(relay_1)",
+        "available(rover_1)",
+        "available(rover_2)",
+        "cargo(rover_1, sample_1)",
+        "cargo(rover_1, sample_2)",
+        "cargo(rover_2, sample_1)",
+        "cargo(rover_2, sample_2)",
+        "position(relay_1, 0.0, 0.0, 0.0)",
+        "position(rover_1, 40.0, 20.0, 0.0)",
+        "position(rover_2, 40.0, 20.0, 0.0)",
+        "psr_semantics_profile(psr_location_stored_v1)",
+        "sample_collected(rover_1)",
+        "sample_collected(rover_2)",
+        "sample_status(sample_1, stored)",
+        "sample_status(sample_2, stored)",
+        "sample_stored(rover_1)",
+        "sample_stored(rover_2)",
+        "stored(sample_1)",
+        "stored(sample_2)"
+      ],
+      "symbolic_steps_applied": 84
+    },
+    "entity": null,
+    "error_category": "TRUNCATED_OUTPUT",
+    "executed_history_prefix_ids": [],
+    "executed_history_scope": "preexisting physical source history; candidate simulation does not extend it",
+    "failed_predicate": null,
+    "feedback_version": "feedback_state_clarity_v1",
+    "finish_reason": "length",
+    "incomplete_prefix_is_candidate": false,
+    "parse_error": {
+      "accepted": false,
+      "reason": "Expecting property name enclosed in double quotes: line 676 column 1 (char 13629)"
+    },
+    "prefix_description": {
+      "complete_objects_respect_tuple_schema": null,
+      "complete_step_count": 84,
+      "exact_block_repetitions": 7,
+      "exact_repeated_block_steps": 12,
+      "primitive_counts": {
+        "move_to": 28,
+        "sample_collect": 28,
+        "sample_store": 28
+      },
+      "return_to_base_occurrences": 0,
+      "scope": "only complete objects visibly present in the truncated text; no JSON completion, candidate adoption, state simulation or dispatch",
+      "unique_step_count": 12
+    },
+    "prior_candidate_raw_response": "{\n  \"chain\": [\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n",
+    "prior_status": "candidate_format_rejected",
+    "remaining_obligations": {
+      "cardinality": [],
+      "negative": [],
+      "positive": [
+        "at_base(rover_1)"
+      ]
+    },
+    "request_goal": {
+      "cardinality": [],
+      "negative": [],
+      "positive": [
+        "at_base(rover_1)"
+      ]
+    },
+    "request_initial_state": [
+      "at_base(relay_1)",
+      "at_base(rover_2)",
+      "at_target(relay_1, base)",
+      "at_target(rover_1, sample_1)",
+      "at_target(rover_2, base)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "position(relay_1, 0.0, 0.0, 0.0)",
+      "position(rover_1, 20.0, 20.0, 0.0)",
+      "position(rover_2, 0.0, 0.0, 0.0)",
+      "psr_semantics_profile(psr_location_stored_v1)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)"
+    ],
+    "request_node_id": null,
+    "request_state_origin": "actual_world_snapshot",
+    "required_output_scope": "complete_current_Task_replacement_from_request_initial_state",
+    "validation_failure_state": null,
+    "validation_failure_state_origin": "unknown_not_simulated",
+    "instruction": "Return a complete replacement for the same current goal from request_initial_state. Previous candidate actions were not dispatched. Simulation states are not the live state. Keep the same output schema, action domain and permissions."
+  },
+  "local_analysis_cost": {
+    "source_trial": "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/flat-full/trial.json",
+    "wall_s": 0.04205719998572022,
+    "symbolic_rollouts": 1,
+    "symbolic_steps": 84,
+    "world_steps": 0,
+    "model_calls": 0
+  }
+}

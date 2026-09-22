@@ -1,0 +1,20 @@
+scenario: PSR
+type: context_contrast
+source: curated_for_d_m_psr   # CC-authored on PI delegation
+# SAME Mission (collect sample_1), DIFFERENT agent state -> DIFFERENT task decomposition.
+context_A:
+  mission_postcondition: "stored(sample_1)"
+  current_state: "deployed(rover_1)"               # rover_1 NOT yet on-site (at base / en route)
+expected_output_A:
+  tasks:
+    - {id: t1, precondition: "deployed(rover_1)", postcondition: "at_location(rover_1)", required_primitives: [move_to], context: {params: {position: "sample_1.pos"}}}
+    - {id: t2, precondition: "at_location(rover_1)", postcondition: "sample_collected(sample_1)", required_primitives: [sample_collect], dependencies: [t1], context: {params: {id: sample_1}}}
+    - {id: t3, precondition: "sample_collected(sample_1)", postcondition: "stored(sample_1)", required_primitives: [sample_store], dependencies: [t2], context: {params: {id: sample_1}}}
+context_B:
+  mission_postcondition: "stored(sample_1)"
+  current_state: "deployed(rover_1) & at_location(rover_1)"   # rover_1 ALREADY on-site at the sample
+expected_output_B:
+  tasks:
+    - {id: t1, precondition: "at_location(rover_1)", postcondition: "sample_collected(sample_1)", required_primitives: [sample_collect], context: {params: {id: sample_1}}}
+    - {id: t2, precondition: "sample_collected(sample_1)", postcondition: "stored(sample_1)", required_primitives: [sample_store], dependencies: [t1], context: {params: {id: sample_1}}}
+rationale: "Context drives structure: when the rover is already on-site (at_location holds in the current state), DROP the move_to Task — re-deriving it would violate nothing but wastes a sortie. When it is not on-site, INCLUDE move_to so Contract 3 holds (sample_collect needs at_location). Adapt the Task list to the CURRENT state; do not emit a fixed template."

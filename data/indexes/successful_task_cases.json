@@ -1,0 +1,363 @@
+{
+  "scope": "configuration-specific examples, not a fixed 9/9 cohort or success-rate estimate",
+  "rows": [
+    {
+      "cell": "B05_psr_strict_disconnected",
+      "arm": "D_T-full",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/D_T-full/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/D_T-full/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": true,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/D_T-full/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 10208,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 10208
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 1
+        }
+      }
+    },
+    {
+      "cell": "B05_psr_strict_disconnected",
+      "arm": "D_T-view",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/D_T-view/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/D_T-view/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": true,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/D_T-view/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 6945,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 6945
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 1
+        }
+      }
+    },
+    {
+      "cell": "E05_lava_communication_return",
+      "arm": "D_T-view",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/D_T-view/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/D_T-view/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": true,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/D_T-view/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 38950,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 38950
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 1
+        }
+      }
+    },
+    {
+      "cell": "E05_lava_communication_return",
+      "arm": "flat-full",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/flat-full/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/flat-full/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": true,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/flat-full/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 50410,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 50410
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "flat": 1
+        }
+      }
+    },
+    {
+      "cell": "E05_lava_communication_return",
+      "arm": "D_T-full",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/D_T-full/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/D_T-full/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": true,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/E05_lava_communication_return/D_T-full/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 49860,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 49860
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 1
+        }
+      }
+    },
+    {
+      "cell": "cross_actor",
+      "arm": "flat-full",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/cross_actor/flat-full/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/cross_actor/flat-full/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": false,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/cross_actor/flat-full/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 12132,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 12132
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "flat": 1
+        }
+      }
+    },
+    {
+      "cell": "cross_actor",
+      "arm": "D_T-view",
+      "configuration": "Grounded",
+      "source_trial": "artifacts/grounded_task_interface_v1_real/runs/cross_actor/D_T-view/trial.json",
+      "source_calls": [
+        "artifacts/grounded_task_interface_v1_real/runs/cross_actor/D_T-view/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": false,
+      "request_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/cross_actor/D_T-view/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 8004,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 8004
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 1
+        }
+      }
+    },
+    {
+      "cell": "B05_psr_strict_disconnected",
+      "arm": "flat-full",
+      "configuration": "Structured feedback v2",
+      "source_trial": "artifacts/structured_task_feedback_v2_real/runs/B05_psr_strict_disconnected/flat-full/trial.json",
+      "source_calls": [
+        "artifacts/structured_task_feedback_v2_real/runs/B05_psr_strict_disconnected/flat-full/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": true,
+      "request_cost": {
+        "source_files": [
+          "artifacts/structured_task_feedback_v2_real/runs/B05_psr_strict_disconnected/flat-full/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 17411,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 17411
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "flat": 1
+        }
+      },
+      "two_request_path_cost": {
+        "source_files": [
+          "artifacts/grounded_task_interface_v1_real/runs/B05_psr_strict_disconnected/flat-full/calls.jsonl",
+          "artifacts/structured_task_feedback_v2_real/runs/B05_psr_strict_disconnected/flat-full/calls.jsonl"
+        ],
+        "logical_records": 2,
+        "physical_attempts": 2,
+        "known_tokens": 31633,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 31633
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 2
+        },
+        "physical_by_role": {
+          "edge": 2
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "flat": 2
+        }
+      }
+    },
+    {
+      "cell": "cross_actor",
+      "arm": "D_T-full",
+      "configuration": "State-assisted L2",
+      "source_trial": "artifacts/cross_actor_bounded_state_planning_v1/L2/evaluation/trial.json",
+      "source_calls": [
+        "artifacts/cross_actor_bounded_state_planning_v1/L2/calls.jsonl"
+      ],
+      "Task": true,
+      "parent": false,
+      "request_cost": {
+        "source_files": [
+          "artifacts/cross_actor_bounded_state_planning_v1/L2/calls.jsonl"
+        ],
+        "logical_records": 1,
+        "physical_attempts": 1,
+        "known_tokens": 15093,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 15093
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 1
+        },
+        "physical_by_role": {
+          "edge": 1
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 1
+        }
+      },
+      "L1_plus_L2_cost": {
+        "source_files": [
+          "artifacts/cross_actor_bounded_state_planning_v1/L1/calls.jsonl",
+          "artifacts/cross_actor_bounded_state_planning_v1/L2/calls.jsonl"
+        ],
+        "logical_records": 2,
+        "physical_attempts": 2,
+        "known_tokens": 30221,
+        "unknown_usage_attempts": 0,
+        "known_tokens_by_role": {
+          "edge": 30221
+        },
+        "unknown_usage_by_role": {},
+        "requests_by_role": {
+          "edge": 2
+        },
+        "physical_by_role": {
+          "edge": 2
+        },
+        "transport_retries": 0,
+        "request_operations": {
+          "D_T": 2
+        }
+      }
+    }
+  ],
+  "retained_fixed_cohorts": {
+    "grounded_complete_nine": "artifacts/grounded_task_interface_v1_real/runs",
+    "other_fixed_configuration_archive": "https://github.com/JiaxiangE/lunar-recovery-testbed/blob/154190c7a4e24e836f8292a4d20adde4973ffac0/results/Final/data/task_view_final_common_support_v1.json"
+  }
+}

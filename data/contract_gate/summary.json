@@ -1,0 +1,710 @@
+{
+  "actual_logical_calls": 30,
+  "actual_physical_attempts": 30,
+  "actual_tokens": 77421,
+  "analysis": {
+    "cells": {
+      "v3_psr_m_five_sample_delivery": {
+        "accepted_but_world_failed_n": 2,
+        "accepted_only_auxiliary": {
+          "accepted_n": 10,
+          "eligible_denominator": 10,
+          "executed_goal_met_n": 8
+        },
+        "adverse_gate_reason_counting": "first structured gate reason per candidate; missing historical codes remain unclassified, never inferred from prose",
+        "adverse_initial_maintenance_n": 0,
+        "adverse_suffix_classification_unavailable_n": 0,
+        "all_plan_units": {
+          "complete_pair_n": 10,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "inference_scope": "exploratory complete pairs; missing outcomes shown as bounds, not imputed",
+          "marginal": {
+            "off": {
+              "completed": 8,
+              "completion_fraction_bounds": [
+                0.8,
+                0.8
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            },
+            "on": {
+              "completed": 8,
+              "completion_fraction_bounds": [
+                0.8,
+                0.8
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            }
+          },
+          "missing_pair_n": 0,
+          "n": 10,
+          "paired_2x2": {
+            "both_complete": 8,
+            "neither_complete": 2,
+            "off_only": 0,
+            "on_only": 0
+          },
+          "paired_completion_difference_on_minus_off": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "arm_flow": {
+          "off": {
+            "execution_failed": 2,
+            "execution_succeeded": 8
+          },
+          "on": {
+            "execution_failed": 2,
+            "execution_succeeded": 8
+          }
+        },
+        "common_boundary_rejected_by_category": {
+          "actor_capability": 0,
+          "communication_policy": 0,
+          "entity_domain": 0,
+          "resource_authorization": 0,
+          "schema_vocabulary": 0
+        },
+        "common_boundary_rejected_n": 0,
+        "common_boundary_unclassified_n": 0,
+        "cost_saved_off_minus_on": {
+          "dispatch_count": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "energy_wh": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "failed_action_count": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "makespan_s": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "work_time_s": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "denominator_definition": "candidate counts, never two-arm counts; parse includes JSON/envelope failures; five common categories use first failing stage then first failing step; eligible additionally excludes initial maintenance",
+        "eligible": {
+          "complete_pair_n": 10,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "inference_scope": "exploratory complete pairs; missing outcomes shown as bounds, not imputed",
+          "marginal": {
+            "off": {
+              "completed": 8,
+              "completion_fraction_bounds": [
+                0.8,
+                0.8
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            },
+            "on": {
+              "completed": 8,
+              "completion_fraction_bounds": [
+                0.8,
+                0.8
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            }
+          },
+          "missing_pair_n": 0,
+          "n": 10,
+          "paired_2x2": {
+            "both_complete": 8,
+            "neither_complete": 2,
+            "off_only": 0,
+            "on_only": 0
+          },
+          "paired_completion_difference_on_minus_off": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "formal_confusion_matrix": null,
+        "formal_label_limitation": "No independent formal-compliance labels for generated plans; world failures are not FPR/FNR labels.",
+        "gate_rejected_n": 0,
+        "generation_flow": {
+          "parsed": 10
+        },
+        "goal_met_with_illegal_suffix_n": 0,
+        "maintenance_n": 0,
+        "pairing_error_n": 0,
+        "rejected_but_off_goal_met_by_primary_gate_reason": {},
+        "rejected_but_off_goal_met_n": 0,
+        "stage_denominators": {
+          "common_boundary_evaluated_candidates": 10,
+          "common_boundary_passed_candidates": 10,
+          "gate_decisions_observed": 10,
+          "generation_started": 10,
+          "parse_failed_n": 0,
+          "parsed_candidates": 10,
+          "planned_candidates": 10,
+          "recovery_eligible_candidates": 10
+        },
+        "verification_overhead_s": {
+          "gate_treatment_s": {
+            "ci95": [
+              0.010053557503852062,
+              0.027739242263778576
+            ],
+            "degenerate_ci": false,
+            "interpretation_limit": "Exploratory empirical paired bootstrap; not an equivalence test.",
+            "mean": 0.01607921000686474,
+            "n": 10
+          },
+          "solver_s": {
+            "ci95": [
+              0.0013833697598602157,
+              0.0038196600100491194
+            ],
+            "degenerate_ci": false,
+            "interpretation_limit": "Exploratory empirical paired bootstrap; not an equivalence test.",
+            "mean": 0.002208620007149875,
+            "n": 10
+          }
+        }
+      },
+      "v3_psr_p_named_navigation": {
+        "accepted_but_world_failed_n": 0,
+        "accepted_only_auxiliary": {
+          "accepted_n": 10,
+          "eligible_denominator": 10,
+          "executed_goal_met_n": 10
+        },
+        "adverse_gate_reason_counting": "first structured gate reason per candidate; missing historical codes remain unclassified, never inferred from prose",
+        "adverse_initial_maintenance_n": 0,
+        "adverse_suffix_classification_unavailable_n": 0,
+        "all_plan_units": {
+          "complete_pair_n": 10,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "inference_scope": "exploratory complete pairs; missing outcomes shown as bounds, not imputed",
+          "marginal": {
+            "off": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            },
+            "on": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            }
+          },
+          "missing_pair_n": 0,
+          "n": 10,
+          "paired_2x2": {
+            "both_complete": 10,
+            "neither_complete": 0,
+            "off_only": 0,
+            "on_only": 0
+          },
+          "paired_completion_difference_on_minus_off": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "arm_flow": {
+          "off": {
+            "execution_succeeded": 10
+          },
+          "on": {
+            "execution_succeeded": 10
+          }
+        },
+        "common_boundary_rejected_by_category": {
+          "actor_capability": 0,
+          "communication_policy": 0,
+          "entity_domain": 0,
+          "resource_authorization": 0,
+          "schema_vocabulary": 0
+        },
+        "common_boundary_rejected_n": 0,
+        "common_boundary_unclassified_n": 0,
+        "cost_saved_off_minus_on": {
+          "dispatch_count": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "energy_wh": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "failed_action_count": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "makespan_s": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "work_time_s": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "denominator_definition": "candidate counts, never two-arm counts; parse includes JSON/envelope failures; five common categories use first failing stage then first failing step; eligible additionally excludes initial maintenance",
+        "eligible": {
+          "complete_pair_n": 10,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "inference_scope": "exploratory complete pairs; missing outcomes shown as bounds, not imputed",
+          "marginal": {
+            "off": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            },
+            "on": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            }
+          },
+          "missing_pair_n": 0,
+          "n": 10,
+          "paired_2x2": {
+            "both_complete": 10,
+            "neither_complete": 0,
+            "off_only": 0,
+            "on_only": 0
+          },
+          "paired_completion_difference_on_minus_off": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "formal_confusion_matrix": null,
+        "formal_label_limitation": "No independent formal-compliance labels for generated plans; world failures are not FPR/FNR labels.",
+        "gate_rejected_n": 0,
+        "generation_flow": {
+          "parsed": 10
+        },
+        "goal_met_with_illegal_suffix_n": 0,
+        "maintenance_n": 0,
+        "pairing_error_n": 0,
+        "rejected_but_off_goal_met_by_primary_gate_reason": {},
+        "rejected_but_off_goal_met_n": 0,
+        "stage_denominators": {
+          "common_boundary_evaluated_candidates": 10,
+          "common_boundary_passed_candidates": 10,
+          "gate_decisions_observed": 10,
+          "generation_started": 10,
+          "parse_failed_n": 0,
+          "parsed_candidates": 10,
+          "planned_candidates": 10,
+          "recovery_eligible_candidates": 10
+        },
+        "verification_overhead_s": {
+          "gate_treatment_s": {
+            "ci95": [
+              0.0020650469910469837,
+              0.004148272235906915
+            ],
+            "degenerate_ci": false,
+            "interpretation_limit": "Exploratory empirical paired bootstrap; not an equivalence test.",
+            "mean": 0.0028580799931660294,
+            "n": 10
+          },
+          "solver_s": {
+            "ci95": [
+              0.0008733895029581618,
+              0.0027629219903610646
+            ],
+            "degenerate_ci": false,
+            "interpretation_limit": "Exploratory empirical paired bootstrap; not an equivalence test.",
+            "mean": 0.001536879997001961,
+            "n": 10
+          }
+        }
+      },
+      "v3_psr_t_named_delivery": {
+        "accepted_but_world_failed_n": 0,
+        "accepted_only_auxiliary": {
+          "accepted_n": 10,
+          "eligible_denominator": 10,
+          "executed_goal_met_n": 10
+        },
+        "adverse_gate_reason_counting": "first structured gate reason per candidate; missing historical codes remain unclassified, never inferred from prose",
+        "adverse_initial_maintenance_n": 0,
+        "adverse_suffix_classification_unavailable_n": 0,
+        "all_plan_units": {
+          "complete_pair_n": 10,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "inference_scope": "exploratory complete pairs; missing outcomes shown as bounds, not imputed",
+          "marginal": {
+            "off": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            },
+            "on": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            }
+          },
+          "missing_pair_n": 0,
+          "n": 10,
+          "paired_2x2": {
+            "both_complete": 10,
+            "neither_complete": 0,
+            "off_only": 0,
+            "on_only": 0
+          },
+          "paired_completion_difference_on_minus_off": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "arm_flow": {
+          "off": {
+            "execution_succeeded": 10
+          },
+          "on": {
+            "execution_succeeded": 10
+          }
+        },
+        "common_boundary_rejected_by_category": {
+          "actor_capability": 0,
+          "communication_policy": 0,
+          "entity_domain": 0,
+          "resource_authorization": 0,
+          "schema_vocabulary": 0
+        },
+        "common_boundary_rejected_n": 0,
+        "common_boundary_unclassified_n": 0,
+        "cost_saved_off_minus_on": {
+          "dispatch_count": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "energy_wh": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "failed_action_count": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "makespan_s": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          },
+          "work_time_s": {
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "denominator_definition": "candidate counts, never two-arm counts; parse includes JSON/envelope failures; five common categories use first failing stage then first failing step; eligible additionally excludes initial maintenance",
+        "eligible": {
+          "complete_pair_n": 10,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "inference_scope": "exploratory complete pairs; missing outcomes shown as bounds, not imputed",
+          "marginal": {
+            "off": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            },
+            "on": {
+              "completed": 10,
+              "completion_fraction_bounds": [
+                1.0,
+                1.0
+              ],
+              "known_n": 10,
+              "planned_n": 10,
+              "unknown": 0
+            }
+          },
+          "missing_pair_n": 0,
+          "n": 10,
+          "paired_2x2": {
+            "both_complete": 10,
+            "neither_complete": 0,
+            "off_only": 0,
+            "on_only": 0
+          },
+          "paired_completion_difference_on_minus_off": {
+            "ci95": [
+              0,
+              0
+            ],
+            "degenerate_ci": true,
+            "interpretation_limit": "The empirical paired sample has no variation (or collapsed bootstrap percentiles). This interval does not establish a zero population effect or equivalence of the policies.",
+            "mean": 0.0,
+            "n": 10
+          }
+        },
+        "formal_confusion_matrix": null,
+        "formal_label_limitation": "No independent formal-compliance labels for generated plans; world failures are not FPR/FNR labels.",
+        "gate_rejected_n": 0,
+        "generation_flow": {
+          "parsed": 10
+        },
+        "goal_met_with_illegal_suffix_n": 0,
+        "maintenance_n": 0,
+        "pairing_error_n": 0,
+        "rejected_but_off_goal_met_by_primary_gate_reason": {},
+        "rejected_but_off_goal_met_n": 0,
+        "stage_denominators": {
+          "common_boundary_evaluated_candidates": 10,
+          "common_boundary_passed_candidates": 10,
+          "gate_decisions_observed": 10,
+          "generation_started": 10,
+          "parse_failed_n": 0,
+          "parsed_candidates": 10,
+          "planned_candidates": 10,
+          "recovery_eligible_candidates": 10
+        },
+        "verification_overhead_s": {
+          "gate_treatment_s": {
+            "ci95": [
+              0.0032719175066449682,
+              0.003834571751067415
+            ],
+            "degenerate_ci": false,
+            "interpretation_limit": "Exploratory empirical paired bootstrap; not an equivalence test.",
+            "mean": 0.0034830300020985304,
+            "n": 10
+          },
+          "solver_s": {
+            "ci95": [
+              0.0009479484947223682,
+              0.0011602999875321984
+            ],
+            "degenerate_ci": false,
+            "interpretation_limit": "Exploratory empirical paired bootstrap; not an equivalence test.",
+            "mean": 0.0010309599980246275,
+            "n": 10
+          }
+        }
+      }
+    },
+    "ci_method": "exploratory 95% percentile paired bootstrap; 10000 resamples; seed=1003; no multiplicity-adjusted confirmatory claims",
+    "common_boundary": {
+      "common_boundary_rejected_by_category": {
+        "actor_capability": 0,
+        "communication_policy": 0,
+        "entity_domain": 0,
+        "resource_authorization": 0,
+        "schema_vocabulary": 0
+      },
+      "common_boundary_rejected_n": 0,
+      "common_boundary_unclassified_n": 0,
+      "denominator_definition": "candidate counts, never two-arm counts; parse includes JSON/envelope failures; five common categories use first failing stage then first failing step; eligible additionally excludes initial maintenance",
+      "stage_denominators": {
+        "common_boundary_evaluated_candidates": 30,
+        "common_boundary_passed_candidates": 30,
+        "gate_decisions_observed": 30,
+        "generation_started": 30,
+        "parse_failed_n": 0,
+        "parsed_candidates": 30,
+        "planned_candidates": 30,
+        "recovery_eligible_candidates": 30
+      }
+    },
+    "cross_cell_success_rate": null,
+    "difference_conventions": "completion: on-off; saved execution costs: off-on; preparation/solver overhead separate",
+    "null_interpretation": "No difference detected; no equivalence or no-effect conclusion is licensed."
+  },
+  "api_calls_made": 30,
+  "attempts_with_unknown_usage": 0,
+  "evidence_class": "formal_model_run",
+  "logical_calls_recorded": 30,
+  "observation_version": "v3_paired_observation_v2",
+  "operator": "Leader (Qoder), PI-authorized operator",
+  "physical_attempts_recorded": 30,
+  "planned_candidates": 30,
+  "planned_local_arms": 60,
+  "prompt_version": "w5_03_v3_shared_named_candidate_v2",
+  "recorded_known_tokens": 77421,
+  "run_budget": {
+    "logical_calls_reserved": 30,
+    "max_logical_calls": 30,
+    "max_physical_attempts": 60,
+    "max_total_tokens": 614400,
+    "observed_tokens": 77421,
+    "physical_attempt_capacity_reserved": 60,
+    "physical_attempts_started": 30,
+    "token_capacity_reserved": 614400
+  },
+  "run_complete": true,
+  "run_id": "w5-03-psr-gate-ablation-qwen3.8-max-v3",
+  "semantics_version": "psr_named_state_v2",
+  "solver_version": "5.1.0",
+  "startup_budget_authorization": {
+    "author_name": "PI/Author — approval entered by Leader (Qoder) as explicitly authorized proxy",
+    "run_id": "w5-03-psr-gate-ablation-qwen3.8-max-v3",
+    "signed_at": "2026-09-05 · PI approved v3 in principle with sufficient budget, conditional on effect-model alignment now delivered by E01; five outcome branches, power assumption q about 0.67317, rejection-threshold-versus-power correction, no-equivalence rule and degenerate-CI flag all frozen before spend"
+  },
+  "stub_generation_attempts": 0
+}

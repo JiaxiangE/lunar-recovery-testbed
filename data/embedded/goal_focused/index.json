@@ -1,0 +1,12 @@
+[
+  {
+    "input": "psr_return",
+    "trial": "data/embedded/goal_focused/psr_return/trial.json",
+    "calls": "data/embedded/goal_focused/psr_return/calls.jsonl"
+  },
+  {
+    "input": "lava_return",
+    "trial": "data/embedded/goal_focused/lava_return/trial.json",
+    "calls": "data/embedded/goal_focused/lava_return/calls.jsonl"
+  }
+]

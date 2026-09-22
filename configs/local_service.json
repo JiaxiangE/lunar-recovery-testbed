@@ -1,0 +1,13 @@
+{
+  "role": "edge",
+  "model": "qwen-7b-local",
+  "host": "user-configured-workstation",
+  "endpoint": "http://127.0.0.1:8000/v1",
+  "weights": "/opt/paper4-runtime/models/edge/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+  "quantization": "Q4_K_M",
+  "backend": "llama.cpp 5266f24da75dc449bd56cbed7addb9c8e4a6a73e",
+  "context_tokens": 65536,
+  "output_tokens": 4096,
+  "observed_ready": true,
+  "placement": "workstation_simulated_edge"
+}

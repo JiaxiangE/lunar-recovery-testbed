@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software snapshot and identify the experiment configuration used."
+title: "Lunar Recovery Testbed"
+type: software
+authors:
+  - name: "JiaxiangE"
+    email: "jiaxiang.e@mail.mcgill.ca"
+repository-code: "https://github.com/JiaxiangE/lunar-recovery-testbed"
+url: "https://github.com/JiaxiangE/lunar-recovery-testbed"
+version: "0.5.0"

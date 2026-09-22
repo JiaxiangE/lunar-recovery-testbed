@@ -1,0 +1,5371 @@
+{
+  "trial_id": "R_S_construction_prefix_source_inj005-fd-s2",
+  "method": "llmp_shared_domain_fd_v2",
+  "axis_b": true,
+  "cell_id": "R_S_construction_prefix_source_inj005",
+  "seed": 2,
+  "development_control": false,
+  "domain_version": "paper4_domain_extension_v2",
+  "semantics_profile": "construction_assembly_execution_v1",
+  "status": "executed",
+  "representation_supported": true,
+  "attempts": [
+    {
+      "policy": "nominal",
+      "goal": {
+        "positive": [
+          "circuit_connected"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            12,
+            [
+              "panel_installed(panel_1)",
+              "panel_installed(panel_10)",
+              "panel_installed(panel_11)",
+              "panel_installed(panel_12)",
+              "panel_installed(panel_2)",
+              "panel_installed(panel_3)",
+              "panel_installed(panel_4)",
+              "panel_installed(panel_5)",
+              "panel_installed(panel_6)",
+              "panel_installed(panel_7)",
+              "panel_installed(panel_8)",
+              "panel_installed(panel_9)"
+            ]
+          ]
+        ]
+      },
+      "raw_translation_response": "\n\n{\n  \"goal_facts\": [\n    \"circuit_connected\"\n  ],\n  \"negative_goal_facts\": [],\n  \"goal_cardinality\": [\n    [\n      12,\n      [\n        \"panel_installed(panel_1)\",\n        \"panel_installed(panel_10)\",\n        \"panel_installed(panel_11)\",\n        \"panel_installed(panel_12)\",\n        \"panel_installed(panel_2)\",\n        \"panel_installed(panel_3)\",\n        \"panel_installed(panel_4)\",\n        \"panel_installed(panel_5)\",\n        \"panel_installed(panel_6)\",\n        \"panel_installed(panel_7)\",\n        \"panel_installed(panel_8)\",\n        \"panel_installed(panel_9)\"\n      ]\n    ]\n  ]\n}",
+      "translation_format": {
+        "accepted": true
+      },
+      "parsed_translation": {
+        "goal_facts": [
+          "circuit_connected"
+        ],
+        "negative_goal_facts": [],
+        "goal_cardinality": [
+          [
+            12,
+            [
+              "panel_installed(panel_1)",
+              "panel_installed(panel_10)",
+              "panel_installed(panel_11)",
+              "panel_installed(panel_12)",
+              "panel_installed(panel_2)",
+              "panel_installed(panel_3)",
+              "panel_installed(panel_4)",
+              "panel_installed(panel_5)",
+              "panel_installed(panel_6)",
+              "panel_installed(panel_7)",
+              "panel_installed(panel_8)",
+              "panel_installed(panel_9)"
+            ]
+          ]
+        ]
+      },
+      "native": {
+        "method_id": "llmp",
+        "implementation_id": "llmp_shared_domain_fd_v2",
+        "native_status": "NATIVE_EXHAUSTED",
+        "native_success": false,
+        "canonical_plan": [],
+        "plan_length": 0,
+        "native_artifact": {
+          "domain_version": "paper4_domain_extension_v2",
+          "scenario_id": "construction",
+          "intended_goal_for_wrapper": {
+            "facts": [
+              "circuit_connected"
+            ],
+            "negative": [],
+            "cardinality": [
+              {
+                "threshold": 12,
+                "atoms": [
+                  "panel_installed(panel_1)",
+                  "panel_installed(panel_10)",
+                  "panel_installed(panel_11)",
+                  "panel_installed(panel_12)",
+                  "panel_installed(panel_2)",
+                  "panel_installed(panel_3)",
+                  "panel_installed(panel_4)",
+                  "panel_installed(panel_5)",
+                  "panel_installed(panel_6)",
+                  "panel_installed(panel_7)",
+                  "panel_installed(panel_8)",
+                  "panel_installed(panel_9)"
+                ]
+              }
+            ]
+          },
+          "supplied_goal_facts": [
+            "circuit_connected"
+          ],
+          "supplied_negative_goal_facts": [],
+          "supplied_goal_cardinality": [
+            {
+              "threshold": 12,
+              "atoms": [
+                "panel_installed(panel_1)",
+                "panel_installed(panel_10)",
+                "panel_installed(panel_11)",
+                "panel_installed(panel_12)",
+                "panel_installed(panel_2)",
+                "panel_installed(panel_3)",
+                "panel_installed(panel_4)",
+                "panel_installed(panel_5)",
+                "panel_installed(panel_6)",
+                "panel_installed(panel_7)",
+                "panel_installed(panel_8)",
+                "panel_installed(panel_9)"
+              ]
+            }
+          ],
+          "translation_source": "caller_owned_instrumented_session",
+          "model_api_calls": 0,
+          "actual_model_tokens": 0,
+          "planner_image": "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+          "planner_version_disclosure": "installed image created 2025-02-07; not the paper's 22.12.0 checkout",
+          "search_configuration": "eager_greedy([ff()])",
+          "timeout_s": 30.0,
+          "memory_mb": 2048,
+          "host_hard_wall_s": 30.0,
+          "memory_measurement_scope": "Docker cgroup limit; distinct from Windows Job committed-memory accounting",
+          "plan_optimality_claimed": false,
+          "symbolic_cost": "one unit per physical ground action; nominal runtime costs are measured separately",
+          "planner_invocations": 1,
+          "action_ids": [],
+          "work": {
+            "expanded_states": 0,
+            "generated_states": 0,
+            "evaluated_states": 1,
+            "plan_length": null,
+            "plan_cost": null,
+            "search_time_s": 0.0,
+            "total_time_s": 0.002003
+          },
+          "compiler_internal_robot_actions_added": 0,
+          "compiler_identity_mapping": "one PDDL symbol per grounded action; actor and parameters preserved",
+          "resources": {
+            "backend": "docker_cgroup_v2",
+            "memory_peak_bytes": 51695616,
+            "memory_peak_source": "/sys/fs/cgroup/memory.peak",
+            "memory_limit_bytes": 2147483648,
+            "limit_reason": null,
+            "hard_wall_limit_s": 30.0,
+            "accounting_difference": "Docker container memory includes kernel-accounted file cache; Windows Job Object reports committed allocation",
+            "container_wall_s": 0.20312829599993165,
+            "fd_returncode": 12,
+            "memory_accounting": "Linux cgroup v2 memory.peak: container tree including wrapper and file cache; not Windows committed memory",
+            "memory_events_after": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_before": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_delta": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_max_bytes": 2147483648,
+            "metrics_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-crry67lo/resource_metrics.json",
+            "memory_max_event_count": 0,
+            "memory_pressure_observed": false,
+            "host_wall_s_including_setup_cleanup": 0.7051295999553986
+          },
+          "workdir": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-crry67lo",
+          "domain_pddl_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-crry67lo/domain.pddl",
+          "problem_pddl_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-crry67lo/problem.pddl",
+          "compiler_wall_s": 0.004879800020717084,
+          "actual_fd_executable": "/workspace/downward/fast-downward.py",
+          "planner_command": [
+            "/home/public-user\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--name",
+            "paper4-fd-52d11b0448a8463c953db2019beff80a",
+            "--memory",
+            "2048m",
+            "--cpus",
+            "1",
+            "-v",
+            "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-crry67lo:/wd",
+            "-w",
+            "/wd",
+            "--entrypoint",
+            "python3",
+            "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+            "/wd/resource_wrapper.py",
+            "/workspace/downward/fast-downward.py",
+            "--overall-time-limit",
+            "30s",
+            "--overall-memory-limit",
+            "2048",
+            "domain.pddl",
+            "problem.pddl",
+            "--search",
+            "eager_greedy([ff()])"
+          ],
+          "transport_invocations": 1,
+          "planner_wall_s": 0.6894154999754392,
+          "planner_returncode": 12,
+          "planner_reported_solution": false,
+          "mapper_status": "not_attempted",
+          "planner_stdout_tail": "INFO     planner time limit: 30s\nINFO     planner memory limit: 2048 MB\n\nINFO     Running translator.\nINFO     translator stdin: None\nINFO     translator time limit: 29s\nINFO     translator memory limit: 2048 MB\nINFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problem.pddl --sas-file output.sas\nParsing...\nParsing: [0.020s CPU, 0.031s wall-clock]\nNormalizing task... [0.000s CPU, 0.001s wall-clock]\nInstantiating...\nGenerating Datalog program... [0.000s CPU, 0.001s wall-clock]\nNormalizing Datalog program...\nNormalizing Datalog program: [0.000s CPU, 0.005s wall-clock]\nPreparing model... [0.000s CPU, 0.001s wall-clock]\nGenerated 457 rules.\nComputing model... [0.010s CPU, 0.001s wall-clock]\n430 relevant atoms\n0 auxiliary atoms\n430 final queue length\n564 total queue pushes\nCompleting instantiation... [0.000s CPU, 0.001s wall-clock]\nInstantiating: [0.010s CPU, 0.009s wall-clock]\nComputing fact groups...\nFinding invariants...\n168 initial candidates\nFinding invariants: [0.000s CPU, 0.001s wall-clock]\nChecking invariant weight... [0.000s CPU, 0.000s wall-clock]\nInstantiating groups... [0.000s CPU, 0.000s wall-clock]\nCollecting mutex groups... [0.000s CPU, 0.000s wall-clock]\nChoosing groups...\n168 uncovered facts\nChoosing groups: [0.000s CPU, 0.000s wall-clock]\nBuilding translation key... [0.000s CPU, 0.000s wall-clock]\nComputing fact groups: [0.000s CPU, 0.002s wall-clock]\nBuilding STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]\nBuilding dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]\nBuilding mutex information...\nBuilding mutex information: [0.000s CPU, 0.000s wall-clock]\nTranslating task...\nProcessing axioms...\nSimplifying axioms... [0.000s CPU, 0.000s wall-clock]\nTranslator axioms removed by simplifying: 0\nProcessing axioms: [0.000s CPU, 0.000s wall-clock]\nTranslating task: [0.000s CPU, 0.001s wall-clock]\n0 effect conditions simplified\n0 implied preconditions added\nDetecting unreachable propositions...\nSimplified to trivially false goal! Generating unsolvable task...\nDetecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]\nTranslator variables: 1\nTranslator derived variables: 0\nTranslator facts: 2\nTranslator goal facts: 1\nTranslator mutex groups: 0\nTranslator total mutex groups size: 0\nTranslator operators: 0\nTranslator axioms: 0\nTranslator task size: 4\nTranslator peak memory: 33728 KB\nWriting output... [0.000s CPU, 0.004s wall-clock]\nDone! [0.030s CPU, 0.048s wall-clock]\ntranslate exit code: 0\n\nINFO     Running search (release).\nINFO     search stdin: output.sas\nINFO     search time limit: 29s\nINFO     search memory limit: 2048 MB\nINFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas\n[t=0.000519s, 12120 KB] reading input...\n[t=0.000712s, 12120 KB] done reading input!\n[t=0.002003s, 12384 KB] Simplifying 0 unary operators... done! [0 unary operators]\n[t=0.002003s, 12384 KB] time to simplify: 0.000000s\n[t=0.002003s, 12384 KB] Initializing additive heuristic...\n[t=0.002003s, 12384 KB] Initializing FF heuristic...\n[t=0.002003s, 12384 KB] Building successor generator...done!\n[t=0.002003s, 12384 KB] peak memory difference for successor generator creation: 0 KB\n[t=0.002003s, 12384 KB] time for successor generation creation: 0.000000s\n[t=0.002003s, 12384 KB] Variables: 1\n[t=0.002003s, 12384 KB] FactPairs: 2\n[t=0.002003s, 12384 KB] Bytes per state: 4\n[t=0.002003s, 12384 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647\n[t=0.002003s, 12384 KB] Initial state is a dead end.\n[t=0.002003s, 12384 KB] Initial heuristic value for ff: infinity\n[t=0.002003s, 12384 KB] pruning method: none\n[t=0.002003s, 12384 KB] Completely explored state space -- no solution!\n[t=0.002003s, 12384 KB] Actual search time: 0.000000s\n[t=0.002003s, 12384 KB] Expanded 0 state(s).\n[t=0.002003s, 12384 KB] Reopened 0 state(s).\n[t=0.002003s, 12384 KB] Evaluated 1 state(s).\n[t=0.002003s, 12384 KB] Evaluations: 1\n[t=0.002003s, 12384 KB] Generated 0 state(s).\n[t=0.002003s, 12384 KB] Dead ends: 0 state(s).\n[t=0.002003s, 12384 KB] Number of registered states: 1\n[t=0.002003s, 12384 KB] Int hash set load factor: 1/1 = 1.000000\n[t=0.002003s, 12384 KB] Int hash set resizes: 0\n[t=0.002003s, 12384 KB] Search time: 0.000000s\n[t=0.002003s, 12384 KB] Total time: 0.002003s\nSearch stopped without finding a solution.\nPeak memory: 12384 KB\nRemove intermediate file output.sas\nsearch exit code: 12\n\nDriver aborting after search\nINFO     Planner time: 0.12s\n",
+          "planner_stderr_tail": "",
+          "native_log_reports_exhausted_space": true,
+          "exit_code_interpretation": "12 remains incomplete/exhausted; a log phrase alone is not promoted to a native unsolvability certificate"
+        },
+        "diagnostics": {
+          "reason": "Fast Downward/Docker returned 12",
+          "native_goal_certified": false,
+          "native_certifies_only_supplied_goal": true,
+          "intended_goal_checked_by_native": false,
+          "intended_goal_wrapper_credited_to_baseline": false
+        }
+      }
+    },
+    {
+      "policy": "common_pi_const_nominal12_to_ge5",
+      "goal": {
+        "positive": [
+          "circuit_connected"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            5,
+            [
+              "panel_installed(panel_1)",
+              "panel_installed(panel_10)",
+              "panel_installed(panel_11)",
+              "panel_installed(panel_12)",
+              "panel_installed(panel_2)",
+              "panel_installed(panel_3)",
+              "panel_installed(panel_4)",
+              "panel_installed(panel_5)",
+              "panel_installed(panel_6)",
+              "panel_installed(panel_7)",
+              "panel_installed(panel_8)",
+              "panel_installed(panel_9)"
+            ]
+          ]
+        ]
+      },
+      "raw_translation_response": "\n\n{\n  \"goal_facts\": [\n    \"circuit_connected\"\n  ],\n  \"negative_goal_facts\": [],\n  \"goal_cardinality\": [\n    [\n      5,\n      [\n        \"panel_installed(panel_1)\",\n        \"panel_installed(panel_10)\",\n        \"panel_installed(panel_11)\",\n        \"panel_installed(panel_12)\",\n        \"panel_installed(panel_2)\",\n        \"panel_installed(panel_3)\",\n        \"panel_installed(panel_4)\",\n        \"panel_installed(panel_5)\",\n        \"panel_installed(panel_6)\",\n        \"panel_installed(panel_7)\",\n        \"panel_installed(panel_8)\",\n        \"panel_installed(panel_9)\"\n      ]\n    ]\n  ]\n}",
+      "translation_format": {
+        "accepted": true
+      },
+      "parsed_translation": {
+        "goal_facts": [
+          "circuit_connected"
+        ],
+        "negative_goal_facts": [],
+        "goal_cardinality": [
+          [
+            5,
+            [
+              "panel_installed(panel_1)",
+              "panel_installed(panel_10)",
+              "panel_installed(panel_11)",
+              "panel_installed(panel_12)",
+              "panel_installed(panel_2)",
+              "panel_installed(panel_3)",
+              "panel_installed(panel_4)",
+              "panel_installed(panel_5)",
+              "panel_installed(panel_6)",
+              "panel_installed(panel_7)",
+              "panel_installed(panel_8)",
+              "panel_installed(panel_9)"
+            ]
+          ]
+        ]
+      },
+      "native": {
+        "method_id": "llmp",
+        "implementation_id": "llmp_shared_domain_fd_v2",
+        "native_status": "NATIVE_SOLVED",
+        "native_success": true,
+        "canonical_plan": [
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_4",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_5",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_6",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_7",
+              "bracket_id": "bracket_1"
+            }
+          }
+        ],
+        "plan_length": 4,
+        "native_artifact": {
+          "domain_version": "paper4_domain_extension_v2",
+          "scenario_id": "construction",
+          "intended_goal_for_wrapper": {
+            "facts": [
+              "circuit_connected"
+            ],
+            "negative": [],
+            "cardinality": [
+              {
+                "threshold": 5,
+                "atoms": [
+                  "panel_installed(panel_1)",
+                  "panel_installed(panel_10)",
+                  "panel_installed(panel_11)",
+                  "panel_installed(panel_12)",
+                  "panel_installed(panel_2)",
+                  "panel_installed(panel_3)",
+                  "panel_installed(panel_4)",
+                  "panel_installed(panel_5)",
+                  "panel_installed(panel_6)",
+                  "panel_installed(panel_7)",
+                  "panel_installed(panel_8)",
+                  "panel_installed(panel_9)"
+                ]
+              }
+            ]
+          },
+          "supplied_goal_facts": [
+            "circuit_connected"
+          ],
+          "supplied_negative_goal_facts": [],
+          "supplied_goal_cardinality": [
+            {
+              "threshold": 5,
+              "atoms": [
+                "panel_installed(panel_1)",
+                "panel_installed(panel_10)",
+                "panel_installed(panel_11)",
+                "panel_installed(panel_12)",
+                "panel_installed(panel_2)",
+                "panel_installed(panel_3)",
+                "panel_installed(panel_4)",
+                "panel_installed(panel_5)",
+                "panel_installed(panel_6)",
+                "panel_installed(panel_7)",
+                "panel_installed(panel_8)",
+                "panel_installed(panel_9)"
+              ]
+            }
+          ],
+          "translation_source": "caller_owned_instrumented_session",
+          "model_api_calls": 0,
+          "actual_model_tokens": 0,
+          "planner_image": "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+          "planner_version_disclosure": "installed image created 2025-02-07; not the paper's 22.12.0 checkout",
+          "search_configuration": "eager_greedy([ff()])",
+          "timeout_s": 30.0,
+          "memory_mb": 2048,
+          "host_hard_wall_s": 30.0,
+          "memory_measurement_scope": "Docker cgroup limit; distinct from Windows Job committed-memory accounting",
+          "plan_optimality_claimed": false,
+          "symbolic_cost": "one unit per physical ground action; nominal runtime costs are measured separately",
+          "planner_invocations": 1,
+          "action_ids": [
+            "construction_action_0048",
+            "construction_action_0060",
+            "construction_action_0072",
+            "construction_action_0084"
+          ],
+          "work": {
+            "expanded_states": 5,
+            "generated_states": 384,
+            "evaluated_states": 27,
+            "plan_length": 4,
+            "plan_cost": 4,
+            "search_time_s": 0.001415,
+            "total_time_s": 0.002535
+          },
+          "compiler_internal_robot_actions_added": 0,
+          "compiler_identity_mapping": "one PDDL symbol per grounded action; actor and parameters preserved",
+          "resources": {
+            "backend": "docker_cgroup_v2",
+            "memory_peak_bytes": 42577920,
+            "memory_peak_source": "/sys/fs/cgroup/memory.peak",
+            "memory_limit_bytes": 2147483648,
+            "limit_reason": null,
+            "hard_wall_limit_s": 30.0,
+            "accounting_difference": "Docker container memory includes kernel-accounted file cache; Windows Job Object reports committed allocation",
+            "container_wall_s": 0.26527785199982645,
+            "fd_returncode": 0,
+            "memory_accounting": "Linux cgroup v2 memory.peak: container tree including wrapper and file cache; not Windows committed memory",
+            "memory_events_after": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_before": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_delta": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_max_bytes": 2147483648,
+            "metrics_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-ppc1xzoy/resource_metrics.json",
+            "memory_max_event_count": 0,
+            "memory_pressure_observed": false,
+            "host_wall_s_including_setup_cleanup": 0.6573185999877751
+          },
+          "workdir": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-ppc1xzoy",
+          "domain_pddl_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-ppc1xzoy/domain.pddl",
+          "problem_pddl_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-ppc1xzoy/problem.pddl",
+          "compiler_wall_s": 0.0034978000330738723,
+          "actual_fd_executable": "/workspace/downward/fast-downward.py",
+          "planner_command": [
+            "/home/public-user\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--name",
+            "paper4-fd-49e04a9180304f50b0d8f427a9d16f76",
+            "--memory",
+            "2048m",
+            "--cpus",
+            "1",
+            "-v",
+            "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-ppc1xzoy:/wd",
+            "-w",
+            "/wd",
+            "--entrypoint",
+            "python3",
+            "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+            "/wd/resource_wrapper.py",
+            "/workspace/downward/fast-downward.py",
+            "--overall-time-limit",
+            "30s",
+            "--overall-memory-limit",
+            "2048",
+            "domain.pddl",
+            "problem.pddl",
+            "--search",
+            "eager_greedy([ff()])"
+          ],
+          "transport_invocations": 1,
+          "planner_wall_s": 0.6392258999985643,
+          "planner_returncode": 0,
+          "planner_reported_solution": true,
+          "mapper_status": "validated",
+          "planner_stdout_tail": "INFO     planner time limit: 30s\nINFO     planner memory limit: 2048 MB\n\nINFO     Running translator.\nINFO     translator stdin: None\nINFO     translator time limit: 29s\nINFO     translator memory limit: 2048 MB\nINFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problem.pddl --sas-file output.sas\nParsing...\nParsing: [0.030s CPU, 0.055s wall-clock]\nNormalizing task... [0.010s CPU, 0.011s wall-clock]\nInstantiating...\nGenerating Datalog program... [0.000s CPU, 0.002s wall-clock]\nNormalizing Datalog program...\nNormalizing Datalog program: [0.010s CPU, 0.008s wall-clock]\nPreparing model... [0.010s CPU, 0.011s wall-clock]\nGenerated 2041 rules.\nComputing model... [0.000s CPU, 0.004s wall-clock]\n1223 relevant atoms\n0 auxiliary atoms\n1223 final queue length\n2148 total queue pushes\nCompleting instantiation... [0.000s CPU, 0.006s wall-clock]\nInstantiating: [0.020s CPU, 0.033s wall-clock]\nComputing fact groups...\nFinding invariants...\n168 initial candidates\nFinding invariants: [0.010s CPU, 0.001s wall-clock]\nChecking invariant weight... [0.000s CPU, 0.000s wall-clock]\nInstantiating groups... [0.000s CPU, 0.000s wall-clock]\nCollecting mutex groups... [0.000s CPU, 0.000s wall-clock]\nChoosing groups...\n169 uncovered facts\nChoosing groups: [0.000s CPU, 0.000s wall-clock]\nBuilding translation key... [0.000s CPU, 0.000s wall-clock]\nComputing fact groups: [0.010s CPU, 0.002s wall-clock]\nBuilding STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]\nBuilding dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]\nBuilding mutex information...\nBuilding mutex information: [0.000s CPU, 0.000s wall-clock]\nTranslating task...\nProcessing axioms...\nSimplifying axioms... [0.010s CPU, 0.011s wall-clock]\nTranslator axioms removed by simplifying: 0\nProcessing axioms: [0.010s CPU, 0.012s wall-clock]\nTranslating task: [0.010s CPU, 0.019s wall-clock]\n0 effect conditions simplified\n0 implied preconditions added\nDetecting unreachable propositions...\n1 operators removed\n666 axioms removed\n106 propositions removed\nDetecting unreachable propositions: [0.010s CPU, 0.002s wall-clock]\nReordering and filtering variables...\n9 of 116 variables necessary.\n0 of 0 mutex groups necessary.\n96 of 107 operators necessary.\n126 of 126 axiom rules necessary.\nReordering and filtering variables: [0.000s CPU, 0.000s wall-clock]\nTranslator variables: 9\nTranslator derived variables: 1\nTranslator facts: 18\nTranslator goal facts: 1\nTranslator mutex groups: 0\nTranslator total mutex groups size: 0\nTranslator operators: 96\nTranslator axioms: 126\nTranslator task size: 906\nTranslator peak memory: 36800 KB\nWriting output... [0.000s CPU, 0.004s wall-clock]\nDone! [0.090s CPU, 0.126s wall-clock]\ntranslate exit code: 0\n\nINFO     Running search (release).\nINFO     search stdin: output.sas\nINFO     search time limit: 29s\nINFO     search memory limit: 2048 MB\nINFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas\n[t=0.000000s, 12120 KB] reading input...\n[t=0.001119s, 12120 KB] done reading input!\n[t=0.001119s, 12520 KB] Simplifying 222 unary operators... done! [134 unary operators]\n[t=0.001119s, 12520 KB] time to simplify: 0.000000s\n[t=0.001119s, 12520 KB] Initializing additive heuristic...\n[t=0.001119s, 12520 KB] Initializing FF heuristic...\n[t=0.001119s, 12520 KB] Building successor generator...done!\n[t=0.001119s, 12520 KB] peak memory difference for successor generator creation: 0 KB\n[t=0.001119s, 12520 KB] time for successor generation creation: 0.000000s\n[t=0.001119s, 12520 KB] Variables: 9\n[t=0.001119s, 12520 KB] FactPairs: 18\n[t=0.001119s, 12520 KB] Bytes per state: 4\n[t=0.001119s, 12520 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647\n[t=0.001119s, 12520 KB] New best heuristic value for ff: 4\n[t=0.001119s, 12520 KB] g=0, 1 evaluated, 0 expanded\n[t=0.001119s, 12520 KB] Initial heuristic value for ff: 4\n[t=0.001119s, 12520 KB] pruning method: none\n[t=0.001119s, 12520 KB] New best heuristic value for ff: 3\n[t=0.001119s, 12520 KB] g=1, 2 evaluated, 1 expanded\n[t=0.001119s, 12520 KB] New best heuristic value for ff: 2\n[t=0.001119s, 12520 KB] g=2, 10 evaluated, 2 expanded\n[t=0.001119s, 12520 KB] New best heuristic value for ff: 1\n[t=0.001119s, 12520 KB] g=3, 17 evaluated, 3 expanded\n[t=0.001119s, 12520 KB] New best heuristic value for ff: 0\n[t=0.001119s, 12520 KB] g=4, 23 evaluated, 4 expanded\n[t=0.002535s, 12520 KB] Solution found!\n[t=0.002535s, 12520 KB] Actual search time: 0.001415s\na00048  (1)\na00060  (1)\na00072  (1)\na00084  (1)\n[t=0.002535s, 12520 KB] Plan length: 4 step(s).\n[t=0.002535s, 12520 KB] Plan cost: 4\n[t=0.002535s, 12520 KB] Expanded 5 state(s).\n[t=0.002535s, 12520 KB] Reopened 0 state(s).\n[t=0.002535s, 12520 KB] Evaluated 27 state(s).\n[t=0.002535s, 12520 KB] Evaluations: 27\n[t=0.002535s, 12520 KB] Generated 384 state(s).\n[t=0.002535s, 12520 KB] Dead ends: 0 state(s).\n[t=0.002535s, 12520 KB] Number of registered states: 27\n[t=0.002535s, 12520 KB] Int hash set load factor: 27/32 = 0.843750\n[t=0.002535s, 12520 KB] Int hash set resizes: 5\n[t=0.002535s, 12520 KB] Search time: 0.001415s\n[t=0.002535s, 12520 KB] Total time: 0.002535s\nSolution found.\nPeak memory: 12520 KB\nRemove intermediate file output.sas\nsearch exit code: 0\n\nINFO     Planner time: 0.19s\n",
+          "planner_stderr_tail": "",
+          "native_log_reports_exhausted_space": false,
+          "exit_code_interpretation": "12 remains incomplete/exhausted; a log phrase alone is not promoted to a native unsolvability certificate",
+          "planner_plan_path": "artifacts/final_interface_refresh_v1/llmp/R_S_construction_prefix_source_inj005/s2/fd/fd-ppc1xzoy/sas_plan",
+          "final_state": [
+            "available(assembler_1)",
+            "available(transport_1)",
+            "bracket_at_correct_location(bracket_1)",
+            "bracket_at_correct_location(bracket_1, foundation_1)",
+            "bracket_at_correct_location(bracket_10)",
+            "bracket_at_correct_location(bracket_10, foundation_10)",
+            "bracket_at_correct_location(bracket_11)",
+            "bracket_at_correct_location(bracket_11, foundation_11)",
+            "bracket_at_correct_location(bracket_12)",
+            "bracket_at_correct_location(bracket_12, foundation_12)",
+            "bracket_at_correct_location(bracket_2)",
+            "bracket_at_correct_location(bracket_2, foundation_2)",
+            "bracket_at_correct_location(bracket_3)",
+            "bracket_at_correct_location(bracket_3, foundation_3)",
+            "bracket_at_correct_location(bracket_4)",
+            "bracket_at_correct_location(bracket_4, foundation_4)",
+            "bracket_at_correct_location(bracket_5)",
+            "bracket_at_correct_location(bracket_5, foundation_5)",
+            "bracket_at_correct_location(bracket_6)",
+            "bracket_at_correct_location(bracket_6, foundation_6)",
+            "bracket_at_correct_location(bracket_7)",
+            "bracket_at_correct_location(bracket_7, foundation_7)",
+            "bracket_at_correct_location(bracket_8)",
+            "bracket_at_correct_location(bracket_8, foundation_8)",
+            "bracket_at_correct_location(bracket_9)",
+            "bracket_at_correct_location(bracket_9, foundation_9)",
+            "bracket_secured(bracket_1)",
+            "bracket_secured(bracket_10)",
+            "bracket_secured(bracket_11)",
+            "bracket_secured(bracket_12)",
+            "bracket_secured(bracket_2)",
+            "bracket_secured(bracket_3)",
+            "bracket_secured(bracket_4)",
+            "bracket_secured(bracket_5)",
+            "bracket_secured(bracket_6)",
+            "bracket_secured(bracket_7)",
+            "bracket_secured(bracket_8)",
+            "bracket_secured(bracket_9)",
+            "cargo(assembler_1, panel_1)",
+            "cargo(assembler_1, panel_10)",
+            "cargo(assembler_1, panel_11)",
+            "cargo(assembler_1, panel_12)",
+            "cargo(assembler_1, panel_2)",
+            "cargo(assembler_1, panel_3)",
+            "cargo(assembler_1, panel_4)",
+            "cargo(assembler_1, panel_5)",
+            "cargo(assembler_1, panel_6)",
+            "cargo(assembler_1, panel_7)",
+            "cargo(assembler_1, panel_8)",
+            "cargo(assembler_1, panel_9)",
+            "circuit_connected",
+            "damaged(panel_1)",
+            "damaged(panel_2)",
+            "damaged(panel_3)",
+            "has_arm(assembler_1)",
+            "has_arm(manipulator_1)",
+            "panel_docked_to_bracket(panel_12, bracket_12)",
+            "panel_docked_to_bracket(panel_4, bracket_1)",
+            "panel_docked_to_bracket(panel_5, bracket_1)",
+            "panel_docked_to_bracket(panel_6, bracket_1)",
+            "panel_docked_to_bracket(panel_7, bracket_1)",
+            "panel_installed(panel_12)",
+            "panel_installed(panel_4)",
+            "panel_installed(panel_5)",
+            "panel_installed(panel_6)",
+            "panel_installed(panel_7)",
+            "reachable_by(assembler_1, bracket_1)",
+            "reachable_by(assembler_1, bracket_10)",
+            "reachable_by(assembler_1, bracket_11)",
+            "reachable_by(assembler_1, bracket_12)",
+            "reachable_by(assembler_1, bracket_2)",
+            "reachable_by(assembler_1, bracket_3)",
+            "reachable_by(assembler_1, bracket_4)",
+            "reachable_by(assembler_1, bracket_5)",
+            "reachable_by(assembler_1, bracket_6)",
+            "reachable_by(assembler_1, bracket_7)",
+            "reachable_by(assembler_1, bracket_8)",
+            "reachable_by(assembler_1, bracket_9)",
+            "reachable_by(assembler_1, panel_1)",
+            "reachable_by(assembler_1, panel_10)",
+            "reachable_by(assembler_1, panel_11)",
+            "reachable_by(assembler_1, panel_12)",
+            "reachable_by(assembler_1, panel_2)",
+            "reachable_by(assembler_1, panel_3)",
+            "reachable_by(assembler_1, panel_4)",
+            "reachable_by(assembler_1, panel_5)",
+            "reachable_by(assembler_1, panel_6)",
+            "reachable_by(assembler_1, panel_7)",
+            "reachable_by(assembler_1, panel_8)",
+            "reachable_by(assembler_1, panel_9)",
+            "reachable_by(manipulator_1, bracket_1)",
+            "reachable_by(manipulator_1, bracket_10)",
+            "reachable_by(manipulator_1, bracket_11)",
+            "reachable_by(manipulator_1, bracket_12)",
+            "reachable_by(manipulator_1, bracket_2)",
+            "reachable_by(manipulator_1, bracket_3)",
+            "reachable_by(manipulator_1, bracket_4)",
+            "reachable_by(manipulator_1, bracket_5)",
+            "reachable_by(manipulator_1, bracket_6)",
+            "reachable_by(manipulator_1, bracket_7)",
+            "reachable_by(manipulator_1, bracket_8)",
+            "reachable_by(manipulator_1, bracket_9)",
+            "reachable_by(manipulator_1, panel_1)",
+            "reachable_by(manipulator_1, panel_10)",
+            "reachable_by(manipulator_1, panel_11)",
+            "reachable_by(manipulator_1, panel_12)",
+            "reachable_by(manipulator_1, panel_2)",
+            "reachable_by(manipulator_1, panel_3)",
+            "reachable_by(manipulator_1, panel_4)",
+            "reachable_by(manipulator_1, panel_5)",
+            "reachable_by(manipulator_1, panel_6)",
+            "reachable_by(manipulator_1, panel_7)",
+            "reachable_by(manipulator_1, panel_8)",
+            "reachable_by(manipulator_1, panel_9)",
+            "reachable_by(transport_1, bracket_1)",
+            "reachable_by(transport_1, bracket_10)",
+            "reachable_by(transport_1, bracket_11)",
+            "reachable_by(transport_1, bracket_12)",
+            "reachable_by(transport_1, bracket_2)",
+            "reachable_by(transport_1, bracket_3)",
+            "reachable_by(transport_1, bracket_4)",
+            "reachable_by(transport_1, bracket_5)",
+            "reachable_by(transport_1, bracket_6)",
+            "reachable_by(transport_1, bracket_7)",
+            "reachable_by(transport_1, bracket_8)",
+            "reachable_by(transport_1, bracket_9)",
+            "reachable_by(transport_1, panel_1)",
+            "reachable_by(transport_1, panel_10)",
+            "reachable_by(transport_1, panel_11)",
+            "reachable_by(transport_1, panel_12)",
+            "reachable_by(transport_1, panel_2)",
+            "reachable_by(transport_1, panel_3)",
+            "reachable_by(transport_1, panel_4)",
+            "reachable_by(transport_1, panel_5)",
+            "reachable_by(transport_1, panel_6)",
+            "reachable_by(transport_1, panel_7)",
+            "reachable_by(transport_1, panel_8)",
+            "reachable_by(transport_1, panel_9)",
+            "zero_material_wasted"
+          ],
+          "planner_plan_source": "sas_plan",
+          "compiled_plan_semantic_replay_valid": true
+        },
+        "diagnostics": {
+          "reason": "",
+          "native_goal_certified": true,
+          "native_certifies_only_supplied_goal": true,
+          "intended_goal_checked_by_native": false,
+          "intended_goal_wrapper_credited_to_baseline": false,
+          "zero_step_initial_goal_satisfied": false,
+          "search_finished_with_resource_limit": false
+        }
+      },
+      "common_symbolic_validation": {
+        "accepted": true,
+        "reason": "VERIFIED",
+        "action_ids": [
+          "construction_action_0048",
+          "construction_action_0060",
+          "construction_action_0072",
+          "construction_action_0084"
+        ],
+        "normalized_plan": [
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_4",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_5",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_6",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_7",
+              "bracket_id": "bracket_1"
+            }
+          }
+        ],
+        "final_state": [
+          "available(assembler_1)",
+          "available(transport_1)",
+          "bracket_at_correct_location(bracket_1)",
+          "bracket_at_correct_location(bracket_1, foundation_1)",
+          "bracket_at_correct_location(bracket_10)",
+          "bracket_at_correct_location(bracket_10, foundation_10)",
+          "bracket_at_correct_location(bracket_11)",
+          "bracket_at_correct_location(bracket_11, foundation_11)",
+          "bracket_at_correct_location(bracket_12)",
+          "bracket_at_correct_location(bracket_12, foundation_12)",
+          "bracket_at_correct_location(bracket_2)",
+          "bracket_at_correct_location(bracket_2, foundation_2)",
+          "bracket_at_correct_location(bracket_3)",
+          "bracket_at_correct_location(bracket_3, foundation_3)",
+          "bracket_at_correct_location(bracket_4)",
+          "bracket_at_correct_location(bracket_4, foundation_4)",
+          "bracket_at_correct_location(bracket_5)",
+          "bracket_at_correct_location(bracket_5, foundation_5)",
+          "bracket_at_correct_location(bracket_6)",
+          "bracket_at_correct_location(bracket_6, foundation_6)",
+          "bracket_at_correct_location(bracket_7)",
+          "bracket_at_correct_location(bracket_7, foundation_7)",
+          "bracket_at_correct_location(bracket_8)",
+          "bracket_at_correct_location(bracket_8, foundation_8)",
+          "bracket_at_correct_location(bracket_9)",
+          "bracket_at_correct_location(bracket_9, foundation_9)",
+          "bracket_secured(bracket_1)",
+          "bracket_secured(bracket_10)",
+          "bracket_secured(bracket_11)",
+          "bracket_secured(bracket_12)",
+          "bracket_secured(bracket_2)",
+          "bracket_secured(bracket_3)",
+          "bracket_secured(bracket_4)",
+          "bracket_secured(bracket_5)",
+          "bracket_secured(bracket_6)",
+          "bracket_secured(bracket_7)",
+          "bracket_secured(bracket_8)",
+          "bracket_secured(bracket_9)",
+          "cargo(assembler_1, panel_1)",
+          "cargo(assembler_1, panel_10)",
+          "cargo(assembler_1, panel_11)",
+          "cargo(assembler_1, panel_12)",
+          "cargo(assembler_1, panel_2)",
+          "cargo(assembler_1, panel_3)",
+          "cargo(assembler_1, panel_4)",
+          "cargo(assembler_1, panel_5)",
+          "cargo(assembler_1, panel_6)",
+          "cargo(assembler_1, panel_7)",
+          "cargo(assembler_1, panel_8)",
+          "cargo(assembler_1, panel_9)",
+          "circuit_connected",
+          "damaged(panel_1)",
+          "damaged(panel_2)",
+          "damaged(panel_3)",
+          "has_arm(assembler_1)",
+          "has_arm(manipulator_1)",
+          "panel_docked_to_bracket(panel_12, bracket_12)",
+          "panel_docked_to_bracket(panel_4, bracket_1)",
+          "panel_docked_to_bracket(panel_5, bracket_1)",
+          "panel_docked_to_bracket(panel_6, bracket_1)",
+          "panel_docked_to_bracket(panel_7, bracket_1)",
+          "panel_installed(panel_12)",
+          "panel_installed(panel_4)",
+          "panel_installed(panel_5)",
+          "panel_installed(panel_6)",
+          "panel_installed(panel_7)",
+          "reachable_by(assembler_1, bracket_1)",
+          "reachable_by(assembler_1, bracket_10)",
+          "reachable_by(assembler_1, bracket_11)",
+          "reachable_by(assembler_1, bracket_12)",
+          "reachable_by(assembler_1, bracket_2)",
+          "reachable_by(assembler_1, bracket_3)",
+          "reachable_by(assembler_1, bracket_4)",
+          "reachable_by(assembler_1, bracket_5)",
+          "reachable_by(assembler_1, bracket_6)",
+          "reachable_by(assembler_1, bracket_7)",
+          "reachable_by(assembler_1, bracket_8)",
+          "reachable_by(assembler_1, bracket_9)",
+          "reachable_by(assembler_1, panel_1)",
+          "reachable_by(assembler_1, panel_10)",
+          "reachable_by(assembler_1, panel_11)",
+          "reachable_by(assembler_1, panel_12)",
+          "reachable_by(assembler_1, panel_2)",
+          "reachable_by(assembler_1, panel_3)",
+          "reachable_by(assembler_1, panel_4)",
+          "reachable_by(assembler_1, panel_5)",
+          "reachable_by(assembler_1, panel_6)",
+          "reachable_by(assembler_1, panel_7)",
+          "reachable_by(assembler_1, panel_8)",
+          "reachable_by(assembler_1, panel_9)",
+          "reachable_by(manipulator_1, bracket_1)",
+          "reachable_by(manipulator_1, bracket_10)",
+          "reachable_by(manipulator_1, bracket_11)",
+          "reachable_by(manipulator_1, bracket_12)",
+          "reachable_by(manipulator_1, bracket_2)",
+          "reachable_by(manipulator_1, bracket_3)",
+          "reachable_by(manipulator_1, bracket_4)",
+          "reachable_by(manipulator_1, bracket_5)",
+          "reachable_by(manipulator_1, bracket_6)",
+          "reachable_by(manipulator_1, bracket_7)",
+          "reachable_by(manipulator_1, bracket_8)",
+          "reachable_by(manipulator_1, bracket_9)",
+          "reachable_by(manipulator_1, panel_1)",
+          "reachable_by(manipulator_1, panel_10)",
+          "reachable_by(manipulator_1, panel_11)",
+          "reachable_by(manipulator_1, panel_12)",
+          "reachable_by(manipulator_1, panel_2)",
+          "reachable_by(manipulator_1, panel_3)",
+          "reachable_by(manipulator_1, panel_4)",
+          "reachable_by(manipulator_1, panel_5)",
+          "reachable_by(manipulator_1, panel_6)",
+          "reachable_by(manipulator_1, panel_7)",
+          "reachable_by(manipulator_1, panel_8)",
+          "reachable_by(manipulator_1, panel_9)",
+          "reachable_by(transport_1, bracket_1)",
+          "reachable_by(transport_1, bracket_10)",
+          "reachable_by(transport_1, bracket_11)",
+          "reachable_by(transport_1, bracket_12)",
+          "reachable_by(transport_1, bracket_2)",
+          "reachable_by(transport_1, bracket_3)",
+          "reachable_by(transport_1, bracket_4)",
+          "reachable_by(transport_1, bracket_5)",
+          "reachable_by(transport_1, bracket_6)",
+          "reachable_by(transport_1, bracket_7)",
+          "reachable_by(transport_1, bracket_8)",
+          "reachable_by(transport_1, bracket_9)",
+          "reachable_by(transport_1, panel_1)",
+          "reachable_by(transport_1, panel_10)",
+          "reachable_by(transport_1, panel_11)",
+          "reachable_by(transport_1, panel_12)",
+          "reachable_by(transport_1, panel_2)",
+          "reachable_by(transport_1, panel_3)",
+          "reachable_by(transport_1, panel_4)",
+          "reachable_by(transport_1, panel_5)",
+          "reachable_by(transport_1, panel_6)",
+          "reachable_by(transport_1, panel_7)",
+          "reachable_by(transport_1, panel_8)",
+          "reachable_by(transport_1, panel_9)",
+          "zero_material_wasted"
+        ],
+        "solver_version": "5.1.0",
+        "solver_status": "unsat",
+        "solver_encode_check_s": 0.005952099978458136,
+        "verification_s": 0.011685000034049153,
+        "grounding": {
+          "accepted": true,
+          "checked_through_step": null,
+          "complete": true,
+          "reason": "all steps grounded"
+        },
+        "symbolic_contract": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+        }
+      },
+      "common_resource_prediction": {
+        "resource_feasible": null,
+        "status": "NUMERIC_RESOURCE_UNKNOWN",
+        "prediction_dispatch_n": 0
+      },
+      "execution": {
+        "accepted": true,
+        "reason": "EXECUTED",
+        "execution_success": true,
+        "goal_met": true,
+        "recovery_required": true,
+        "dispatch_n": 4,
+        "executed_plan": [
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_4",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_5",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_6",
+              "bracket_id": "bracket_1"
+            }
+          },
+          {
+            "primitive": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "params": {
+              "panel_id": "panel_7",
+              "bracket_id": "bracket_1"
+            }
+          }
+        ],
+        "execution_results": [
+          {
+            "success": true,
+            "primitive_name": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "reason_code": "",
+            "detail": "",
+            "elapsed_s": 100.0,
+            "energy_consumed_wh": null
+          },
+          {
+            "success": true,
+            "primitive_name": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "reason_code": "",
+            "detail": "",
+            "elapsed_s": 100.0,
+            "energy_consumed_wh": null
+          },
+          {
+            "success": true,
+            "primitive_name": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "reason_code": "",
+            "detail": "",
+            "elapsed_s": 100.0,
+            "energy_consumed_wh": null
+          },
+          {
+            "success": true,
+            "primitive_name": "panel_align_and_dock",
+            "agent_id": "assembler_1",
+            "reason_code": "",
+            "detail": "",
+            "elapsed_s": 100.0,
+            "energy_consumed_wh": null
+          }
+        ],
+        "transition_observations": [
+          {
+            "actor": "assembler_1",
+            "primitive": "panel_align_and_dock",
+            "position_before": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 500.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "cargo_after": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 500.0,
+            "success": true
+          },
+          {
+            "actor": "assembler_1",
+            "primitive": "panel_align_and_dock",
+            "position_before": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 500.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "cargo_after": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 500.0,
+            "success": true
+          },
+          {
+            "actor": "assembler_1",
+            "primitive": "panel_align_and_dock",
+            "position_before": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 500.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "cargo_after": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 500.0,
+            "success": true
+          },
+          {
+            "actor": "assembler_1",
+            "primitive": "panel_align_and_dock",
+            "position_before": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 500.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              0.0,
+              30.0,
+              0.0
+            ],
+            "cargo_after": [
+              "panel_1",
+              "panel_10",
+              "panel_11",
+              "panel_12",
+              "panel_2",
+              "panel_3",
+              "panel_4",
+              "panel_5",
+              "panel_6",
+              "panel_7",
+              "panel_8",
+              "panel_9"
+            ],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 500.0,
+            "success": true
+          }
+        ],
+        "verification": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "action_ids": [
+            "construction_action_0048",
+            "construction_action_0060",
+            "construction_action_0072",
+            "construction_action_0084"
+          ],
+          "normalized_plan": [
+            {
+              "primitive": "panel_align_and_dock",
+              "agent_id": "assembler_1",
+              "params": {
+                "panel_id": "panel_4",
+                "bracket_id": "bracket_1"
+              }
+            },
+            {
+              "primitive": "panel_align_and_dock",
+              "agent_id": "assembler_1",
+              "params": {
+                "panel_id": "panel_5",
+                "bracket_id": "bracket_1"
+              }
+            },
+            {
+              "primitive": "panel_align_and_dock",
+              "agent_id": "assembler_1",
+              "params": {
+                "panel_id": "panel_6",
+                "bracket_id": "bracket_1"
+              }
+            },
+            {
+              "primitive": "panel_align_and_dock",
+              "agent_id": "assembler_1",
+              "params": {
+                "panel_id": "panel_7",
+                "bracket_id": "bracket_1"
+              }
+            }
+          ],
+          "final_state": [
+            "available(assembler_1)",
+            "available(transport_1)",
+            "bracket_at_correct_location(bracket_1)",
+            "bracket_at_correct_location(bracket_1, foundation_1)",
+            "bracket_at_correct_location(bracket_10)",
+            "bracket_at_correct_location(bracket_10, foundation_10)",
+            "bracket_at_correct_location(bracket_11)",
+            "bracket_at_correct_location(bracket_11, foundation_11)",
+            "bracket_at_correct_location(bracket_12)",
+            "bracket_at_correct_location(bracket_12, foundation_12)",
+            "bracket_at_correct_location(bracket_2)",
+            "bracket_at_correct_location(bracket_2, foundation_2)",
+            "bracket_at_correct_location(bracket_3)",
+            "bracket_at_correct_location(bracket_3, foundation_3)",
+            "bracket_at_correct_location(bracket_4)",
+            "bracket_at_correct_location(bracket_4, foundation_4)",
+            "bracket_at_correct_location(bracket_5)",
+            "bracket_at_correct_location(bracket_5, foundation_5)",
+            "bracket_at_correct_location(bracket_6)",
+            "bracket_at_correct_location(bracket_6, foundation_6)",
+            "bracket_at_correct_location(bracket_7)",
+            "bracket_at_correct_location(bracket_7, foundation_7)",
+            "bracket_at_correct_location(bracket_8)",
+            "bracket_at_correct_location(bracket_8, foundation_8)",
+            "bracket_at_correct_location(bracket_9)",
+            "bracket_at_correct_location(bracket_9, foundation_9)",
+            "bracket_secured(bracket_1)",
+            "bracket_secured(bracket_10)",
+            "bracket_secured(bracket_11)",
+            "bracket_secured(bracket_12)",
+            "bracket_secured(bracket_2)",
+            "bracket_secured(bracket_3)",
+            "bracket_secured(bracket_4)",
+            "bracket_secured(bracket_5)",
+            "bracket_secured(bracket_6)",
+            "bracket_secured(bracket_7)",
+            "bracket_secured(bracket_8)",
+            "bracket_secured(bracket_9)",
+            "cargo(assembler_1, panel_1)",
+            "cargo(assembler_1, panel_10)",
+            "cargo(assembler_1, panel_11)",
+            "cargo(assembler_1, panel_12)",
+            "cargo(assembler_1, panel_2)",
+            "cargo(assembler_1, panel_3)",
+            "cargo(assembler_1, panel_4)",
+            "cargo(assembler_1, panel_5)",
+            "cargo(assembler_1, panel_6)",
+            "cargo(assembler_1, panel_7)",
+            "cargo(assembler_1, panel_8)",
+            "cargo(assembler_1, panel_9)",
+            "circuit_connected",
+            "damaged(panel_1)",
+            "damaged(panel_2)",
+            "damaged(panel_3)",
+            "has_arm(assembler_1)",
+            "has_arm(manipulator_1)",
+            "panel_docked_to_bracket(panel_12, bracket_12)",
+            "panel_docked_to_bracket(panel_4, bracket_1)",
+            "panel_docked_to_bracket(panel_5, bracket_1)",
+            "panel_docked_to_bracket(panel_6, bracket_1)",
+            "panel_docked_to_bracket(panel_7, bracket_1)",
+            "panel_installed(panel_12)",
+            "panel_installed(panel_4)",
+            "panel_installed(panel_5)",
+            "panel_installed(panel_6)",
+            "panel_installed(panel_7)",
+            "reachable_by(assembler_1, bracket_1)",
+            "reachable_by(assembler_1, bracket_10)",
+            "reachable_by(assembler_1, bracket_11)",
+            "reachable_by(assembler_1, bracket_12)",
+            "reachable_by(assembler_1, bracket_2)",
+            "reachable_by(assembler_1, bracket_3)",
+            "reachable_by(assembler_1, bracket_4)",
+            "reachable_by(assembler_1, bracket_5)",
+            "reachable_by(assembler_1, bracket_6)",
+            "reachable_by(assembler_1, bracket_7)",
+            "reachable_by(assembler_1, bracket_8)",
+            "reachable_by(assembler_1, bracket_9)",
+            "reachable_by(assembler_1, panel_1)",
+            "reachable_by(assembler_1, panel_10)",
+            "reachable_by(assembler_1, panel_11)",
+            "reachable_by(assembler_1, panel_12)",
+            "reachable_by(assembler_1, panel_2)",
+            "reachable_by(assembler_1, panel_3)",
+            "reachable_by(assembler_1, panel_4)",
+            "reachable_by(assembler_1, panel_5)",
+            "reachable_by(assembler_1, panel_6)",
+            "reachable_by(assembler_1, panel_7)",
+            "reachable_by(assembler_1, panel_8)",
+            "reachable_by(assembler_1, panel_9)",
+            "reachable_by(manipulator_1, bracket_1)",
+            "reachable_by(manipulator_1, bracket_10)",
+            "reachable_by(manipulator_1, bracket_11)",
+            "reachable_by(manipulator_1, bracket_12)",
+            "reachable_by(manipulator_1, bracket_2)",
+            "reachable_by(manipulator_1, bracket_3)",
+            "reachable_by(manipulator_1, bracket_4)",
+            "reachable_by(manipulator_1, bracket_5)",
+            "reachable_by(manipulator_1, bracket_6)",
+            "reachable_by(manipulator_1, bracket_7)",
+            "reachable_by(manipulator_1, bracket_8)",
+            "reachable_by(manipulator_1, bracket_9)",
+            "reachable_by(manipulator_1, panel_1)",
+            "reachable_by(manipulator_1, panel_10)",
+            "reachable_by(manipulator_1, panel_11)",
+            "reachable_by(manipulator_1, panel_12)",
+            "reachable_by(manipulator_1, panel_2)",
+            "reachable_by(manipulator_1, panel_3)",
+            "reachable_by(manipulator_1, panel_4)",
+            "reachable_by(manipulator_1, panel_5)",
+            "reachable_by(manipulator_1, panel_6)",
+            "reachable_by(manipulator_1, panel_7)",
+            "reachable_by(manipulator_1, panel_8)",
+            "reachable_by(manipulator_1, panel_9)",
+            "reachable_by(transport_1, bracket_1)",
+            "reachable_by(transport_1, bracket_10)",
+            "reachable_by(transport_1, bracket_11)",
+            "reachable_by(transport_1, bracket_12)",
+            "reachable_by(transport_1, bracket_2)",
+            "reachable_by(transport_1, bracket_3)",
+            "reachable_by(transport_1, bracket_4)",
+            "reachable_by(transport_1, bracket_5)",
+            "reachable_by(transport_1, bracket_6)",
+            "reachable_by(transport_1, bracket_7)",
+            "reachable_by(transport_1, bracket_8)",
+            "reachable_by(transport_1, bracket_9)",
+            "reachable_by(transport_1, panel_1)",
+            "reachable_by(transport_1, panel_10)",
+            "reachable_by(transport_1, panel_11)",
+            "reachable_by(transport_1, panel_12)",
+            "reachable_by(transport_1, panel_2)",
+            "reachable_by(transport_1, panel_3)",
+            "reachable_by(transport_1, panel_4)",
+            "reachable_by(transport_1, panel_5)",
+            "reachable_by(transport_1, panel_6)",
+            "reachable_by(transport_1, panel_7)",
+            "reachable_by(transport_1, panel_8)",
+            "reachable_by(transport_1, panel_9)",
+            "zero_material_wasted"
+          ],
+          "solver_version": "5.1.0",
+          "solver_status": "unsat",
+          "solver_encode_check_s": 0.006619599997065961,
+          "verification_s": 0.010970900009851903,
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          }
+        },
+        "final_state": {
+          "semantics_version": "construction_assembly_execution_v1",
+          "sim_time_s": 2800.0,
+          "agents": {
+            "transport_1": {
+              "id": "transport_1",
+              "agent_type": "TRANSPORT",
+              "position": [
+                0.0,
+                30.0,
+                0.0
+              ],
+              "energy_wh": 500.0,
+              "initial_energy_wh": 500.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": [],
+              "available": true,
+              "reachable_entities": [
+                "bracket_1",
+                "bracket_10",
+                "bracket_11",
+                "bracket_12",
+                "bracket_2",
+                "bracket_3",
+                "bracket_4",
+                "bracket_5",
+                "bracket_6",
+                "bracket_7",
+                "bracket_8",
+                "bracket_9",
+                "panel_1",
+                "panel_10",
+                "panel_11",
+                "panel_12",
+                "panel_2",
+                "panel_3",
+                "panel_4",
+                "panel_5",
+                "panel_6",
+                "panel_7",
+                "panel_8",
+                "panel_9"
+              ],
+              "has_arm": false
+            },
+            "manipulator_1": {
+              "id": "manipulator_1",
+              "agent_type": "MANIPULATOR",
+              "position": [
+                0.0,
+                30.0,
+                0.0
+              ],
+              "energy_wh": 500.0,
+              "initial_energy_wh": 500.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": [],
+              "available": true,
+              "reachable_entities": [
+                "bracket_1",
+                "bracket_10",
+                "bracket_11",
+                "bracket_12",
+                "bracket_2",
+                "bracket_3",
+                "bracket_4",
+                "bracket_5",
+                "bracket_6",
+                "bracket_7",
+                "bracket_8",
+                "bracket_9",
+                "panel_1",
+                "panel_10",
+                "panel_11",
+                "panel_12",
+                "panel_2",
+                "panel_3",
+                "panel_4",
+                "panel_5",
+                "panel_6",
+                "panel_7",
+                "panel_8",
+                "panel_9"
+              ],
+              "has_arm": true
+            },
+            "assembler_1": {
+              "id": "assembler_1",
+              "agent_type": "ASSEMBLER",
+              "position": [
+                0.0,
+                30.0,
+                0.0
+              ],
+              "energy_wh": 500.0,
+              "initial_energy_wh": 500.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": [
+                "panel_1",
+                "panel_10",
+                "panel_11",
+                "panel_12",
+                "panel_2",
+                "panel_3",
+                "panel_4",
+                "panel_5",
+                "panel_6",
+                "panel_7",
+                "panel_8",
+                "panel_9"
+              ],
+              "available": true,
+              "reachable_entities": [
+                "bracket_1",
+                "bracket_10",
+                "bracket_11",
+                "bracket_12",
+                "bracket_2",
+                "bracket_3",
+                "bracket_4",
+                "bracket_5",
+                "bracket_6",
+                "bracket_7",
+                "bracket_8",
+                "bracket_9",
+                "panel_1",
+                "panel_10",
+                "panel_11",
+                "panel_12",
+                "panel_2",
+                "panel_3",
+                "panel_4",
+                "panel_5",
+                "panel_6",
+                "panel_7",
+                "panel_8",
+                "panel_9"
+              ],
+              "has_arm": true
+            }
+          },
+          "agent_busy_s": {
+            "transport_1": 0.0,
+            "manipulator_1": 0.0,
+            "assembler_1": 500.0
+          },
+          "panels": {
+            "panel_1": {
+              "status": "damaged",
+              "bracket_ids": []
+            },
+            "panel_2": {
+              "status": "damaged",
+              "bracket_ids": []
+            },
+            "panel_3": {
+              "status": "damaged",
+              "bracket_ids": []
+            },
+            "panel_4": {
+              "status": "installed",
+              "bracket_ids": [
+                "bracket_1"
+              ]
+            },
+            "panel_5": {
+              "status": "installed",
+              "bracket_ids": [
+                "bracket_1"
+              ]
+            },
+            "panel_6": {
+              "status": "installed",
+              "bracket_ids": [
+                "bracket_1"
+              ]
+            },
+            "panel_7": {
+              "status": "installed",
+              "bracket_ids": [
+                "bracket_1"
+              ]
+            },
+            "panel_8": {
+              "status": "available",
+              "bracket_ids": []
+            },
+            "panel_9": {
+              "status": "available",
+              "bracket_ids": []
+            },
+            "panel_10": {
+              "status": "available",
+              "bracket_ids": []
+            },
+            "panel_11": {
+              "status": "available",
+              "bracket_ids": []
+            },
+            "panel_12": {
+              "status": "installed",
+              "bracket_ids": [
+                "bracket_12"
+              ]
+            }
+          },
+          "brackets": {
+            "bracket_1": {
+              "foundation_location": "foundation_1",
+              "location": "foundation_1",
+              "secured": true
+            },
+            "bracket_2": {
+              "foundation_location": "foundation_2",
+              "location": "foundation_2",
+              "secured": true
+            },
+            "bracket_3": {
+              "foundation_location": "foundation_3",
+              "location": "foundation_3",
+              "secured": true
+            },
+            "bracket_4": {
+              "foundation_location": "foundation_4",
+              "location": "foundation_4",
+              "secured": true
+            },
+            "bracket_5": {
+              "foundation_location": "foundation_5",
+              "location": "foundation_5",
+              "secured": true
+            },
+            "bracket_6": {
+              "foundation_location": "foundation_6",
+              "location": "foundation_6",
+              "secured": true
+            },
+            "bracket_7": {
+              "foundation_location": "foundation_7",
+              "location": "foundation_7",
+              "secured": true
+            },
+            "bracket_8": {
+              "foundation_location": "foundation_8",
+              "location": "foundation_8",
+              "secured": true
+            },
+            "bracket_9": {
+              "foundation_location": "foundation_9",
+              "location": "foundation_9",
+              "secured": true
+            },
+            "bracket_10": {
+              "foundation_location": "foundation_10",
+              "location": "foundation_10",
+              "secured": true
+            },
+            "bracket_11": {
+              "foundation_location": "foundation_11",
+              "location": "foundation_11",
+              "secured": true
+            },
+            "bracket_12": {
+              "foundation_location": "foundation_12",
+              "location": "foundation_12",
+              "secured": true
+            }
+          },
+          "installed_panel_ids": [
+            "panel_12",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7"
+          ],
+          "installed_panels": 5,
+          "circuit_connected": true,
+          "wasted_material": 0,
+          "damaged_panel_ids": [
+            "panel_1",
+            "panel_2",
+            "panel_3"
+          ],
+          "damage_order": [
+            "panel_1",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9",
+            "panel_10",
+            "panel_11",
+            "panel_12"
+          ],
+          "disabled_agents": [
+            "manipulator_1"
+          ],
+          "scene_unsatisfiable": true,
+          "alt_scene_goal": "install_5_panels_not_12",
+          "applied_injections": [
+            "inj_const_005"
+          ],
+          "current_task_id": null,
+          "deadlock": [],
+          "goal_conflict": [],
+          "injected_comm_offline": [],
+          "pending_injections": []
+        },
+        "final_facts": [
+          "available(assembler_1)",
+          "available(transport_1)",
+          "bracket_at_correct_location(bracket_1)",
+          "bracket_at_correct_location(bracket_1, foundation_1)",
+          "bracket_at_correct_location(bracket_10)",
+          "bracket_at_correct_location(bracket_10, foundation_10)",
+          "bracket_at_correct_location(bracket_11)",
+          "bracket_at_correct_location(bracket_11, foundation_11)",
+          "bracket_at_correct_location(bracket_12)",
+          "bracket_at_correct_location(bracket_12, foundation_12)",
+          "bracket_at_correct_location(bracket_2)",
+          "bracket_at_correct_location(bracket_2, foundation_2)",
+          "bracket_at_correct_location(bracket_3)",
+          "bracket_at_correct_location(bracket_3, foundation_3)",
+          "bracket_at_correct_location(bracket_4)",
+          "bracket_at_correct_location(bracket_4, foundation_4)",
+          "bracket_at_correct_location(bracket_5)",
+          "bracket_at_correct_location(bracket_5, foundation_5)",
+          "bracket_at_correct_location(bracket_6)",
+          "bracket_at_correct_location(bracket_6, foundation_6)",
+          "bracket_at_correct_location(bracket_7)",
+          "bracket_at_correct_location(bracket_7, foundation_7)",
+          "bracket_at_correct_location(bracket_8)",
+          "bracket_at_correct_location(bracket_8, foundation_8)",
+          "bracket_at_correct_location(bracket_9)",
+          "bracket_at_correct_location(bracket_9, foundation_9)",
+          "bracket_secured(bracket_1)",
+          "bracket_secured(bracket_10)",
+          "bracket_secured(bracket_11)",
+          "bracket_secured(bracket_12)",
+          "bracket_secured(bracket_2)",
+          "bracket_secured(bracket_3)",
+          "bracket_secured(bracket_4)",
+          "bracket_secured(bracket_5)",
+          "bracket_secured(bracket_6)",
+          "bracket_secured(bracket_7)",
+          "bracket_secured(bracket_8)",
+          "bracket_secured(bracket_9)",
+          "cargo(assembler_1, panel_1)",
+          "cargo(assembler_1, panel_10)",
+          "cargo(assembler_1, panel_11)",
+          "cargo(assembler_1, panel_12)",
+          "cargo(assembler_1, panel_2)",
+          "cargo(assembler_1, panel_3)",
+          "cargo(assembler_1, panel_4)",
+          "cargo(assembler_1, panel_5)",
+          "cargo(assembler_1, panel_6)",
+          "cargo(assembler_1, panel_7)",
+          "cargo(assembler_1, panel_8)",
+          "cargo(assembler_1, panel_9)",
+          "circuit_connected",
+          "damaged(panel_1)",
+          "damaged(panel_2)",
+          "damaged(panel_3)",
+          "has_arm(assembler_1)",
+          "has_arm(manipulator_1)",
+          "panel_docked_to_bracket(panel_12, bracket_12)",
+          "panel_docked_to_bracket(panel_4, bracket_1)",
+          "panel_docked_to_bracket(panel_5, bracket_1)",
+          "panel_docked_to_bracket(panel_6, bracket_1)",
+          "panel_docked_to_bracket(panel_7, bracket_1)",
+          "panel_installed(panel_12)",
+          "panel_installed(panel_4)",
+          "panel_installed(panel_5)",
+          "panel_installed(panel_6)",
+          "panel_installed(panel_7)",
+          "reachable_by(assembler_1, bracket_1)",
+          "reachable_by(assembler_1, bracket_10)",
+          "reachable_by(assembler_1, bracket_11)",
+          "reachable_by(assembler_1, bracket_12)",
+          "reachable_by(assembler_1, bracket_2)",
+          "reachable_by(assembler_1, bracket_3)",
+          "reachable_by(assembler_1, bracket_4)",
+          "reachable_by(assembler_1, bracket_5)",
+          "reachable_by(assembler_1, bracket_6)",
+          "reachable_by(assembler_1, bracket_7)",
+          "reachable_by(assembler_1, bracket_8)",
+          "reachable_by(assembler_1, bracket_9)",
+          "reachable_by(assembler_1, panel_1)",
+          "reachable_by(assembler_1, panel_10)",
+          "reachable_by(assembler_1, panel_11)",
+          "reachable_by(assembler_1, panel_12)",
+          "reachable_by(assembler_1, panel_2)",
+          "reachable_by(assembler_1, panel_3)",
+          "reachable_by(assembler_1, panel_4)",
+          "reachable_by(assembler_1, panel_5)",
+          "reachable_by(assembler_1, panel_6)",
+          "reachable_by(assembler_1, panel_7)",
+          "reachable_by(assembler_1, panel_8)",
+          "reachable_by(assembler_1, panel_9)",
+          "reachable_by(manipulator_1, bracket_1)",
+          "reachable_by(manipulator_1, bracket_10)",
+          "reachable_by(manipulator_1, bracket_11)",
+          "reachable_by(manipulator_1, bracket_12)",
+          "reachable_by(manipulator_1, bracket_2)",
+          "reachable_by(manipulator_1, bracket_3)",
+          "reachable_by(manipulator_1, bracket_4)",
+          "reachable_by(manipulator_1, bracket_5)",
+          "reachable_by(manipulator_1, bracket_6)",
+          "reachable_by(manipulator_1, bracket_7)",
+          "reachable_by(manipulator_1, bracket_8)",
+          "reachable_by(manipulator_1, bracket_9)",
+          "reachable_by(manipulator_1, panel_1)",
+          "reachable_by(manipulator_1, panel_10)",
+          "reachable_by(manipulator_1, panel_11)",
+          "reachable_by(manipulator_1, panel_12)",
+          "reachable_by(manipulator_1, panel_2)",
+          "reachable_by(manipulator_1, panel_3)",
+          "reachable_by(manipulator_1, panel_4)",
+          "reachable_by(manipulator_1, panel_5)",
+          "reachable_by(manipulator_1, panel_6)",
+          "reachable_by(manipulator_1, panel_7)",
+          "reachable_by(manipulator_1, panel_8)",
+          "reachable_by(manipulator_1, panel_9)",
+          "reachable_by(transport_1, bracket_1)",
+          "reachable_by(transport_1, bracket_10)",
+          "reachable_by(transport_1, bracket_11)",
+          "reachable_by(transport_1, bracket_12)",
+          "reachable_by(transport_1, bracket_2)",
+          "reachable_by(transport_1, bracket_3)",
+          "reachable_by(transport_1, bracket_4)",
+          "reachable_by(transport_1, bracket_5)",
+          "reachable_by(transport_1, bracket_6)",
+          "reachable_by(transport_1, bracket_7)",
+          "reachable_by(transport_1, bracket_8)",
+          "reachable_by(transport_1, bracket_9)",
+          "reachable_by(transport_1, panel_1)",
+          "reachable_by(transport_1, panel_10)",
+          "reachable_by(transport_1, panel_11)",
+          "reachable_by(transport_1, panel_12)",
+          "reachable_by(transport_1, panel_2)",
+          "reachable_by(transport_1, panel_3)",
+          "reachable_by(transport_1, panel_4)",
+          "reachable_by(transport_1, panel_5)",
+          "reachable_by(transport_1, panel_6)",
+          "reachable_by(transport_1, panel_7)",
+          "reachable_by(transport_1, panel_8)",
+          "reachable_by(transport_1, panel_9)",
+          "zero_material_wasted"
+        ],
+        "elapsed_s": 400.0,
+        "energy_consumed_wh": null,
+        "wrapper_wall_s": 0.01942979998420924,
+        "actual_radio_delivery_observed": false,
+        "timing_kind": "nominal simulator work time; not hardware latency"
+      }
+    }
+  ],
+  "execution": {
+    "accepted": true,
+    "reason": "EXECUTED",
+    "execution_success": true,
+    "goal_met": true,
+    "recovery_required": true,
+    "dispatch_n": 4,
+    "executed_plan": [
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_4",
+          "bracket_id": "bracket_1"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_5",
+          "bracket_id": "bracket_1"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_6",
+          "bracket_id": "bracket_1"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_7",
+          "bracket_id": "bracket_1"
+        }
+      }
+    ],
+    "execution_results": [
+      {
+        "success": true,
+        "primitive_name": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "reason_code": "",
+        "detail": "",
+        "elapsed_s": 100.0,
+        "energy_consumed_wh": null
+      },
+      {
+        "success": true,
+        "primitive_name": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "reason_code": "",
+        "detail": "",
+        "elapsed_s": 100.0,
+        "energy_consumed_wh": null
+      },
+      {
+        "success": true,
+        "primitive_name": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "reason_code": "",
+        "detail": "",
+        "elapsed_s": 100.0,
+        "energy_consumed_wh": null
+      },
+      {
+        "success": true,
+        "primitive_name": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "reason_code": "",
+        "detail": "",
+        "elapsed_s": 100.0,
+        "energy_consumed_wh": null
+      }
+    ],
+    "transition_observations": [
+      {
+        "actor": "assembler_1",
+        "primitive": "panel_align_and_dock",
+        "position_before": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 500.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "cargo_after": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 500.0,
+        "success": true
+      },
+      {
+        "actor": "assembler_1",
+        "primitive": "panel_align_and_dock",
+        "position_before": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 500.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "cargo_after": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 500.0,
+        "success": true
+      },
+      {
+        "actor": "assembler_1",
+        "primitive": "panel_align_and_dock",
+        "position_before": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 500.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "cargo_after": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 500.0,
+        "success": true
+      },
+      {
+        "actor": "assembler_1",
+        "primitive": "panel_align_and_dock",
+        "position_before": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 500.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "cargo_after": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 500.0,
+        "success": true
+      }
+    ],
+    "verification": {
+      "accepted": true,
+      "reason": "VERIFIED",
+      "action_ids": [
+        "construction_action_0048",
+        "construction_action_0060",
+        "construction_action_0072",
+        "construction_action_0084"
+      ],
+      "normalized_plan": [
+        {
+          "primitive": "panel_align_and_dock",
+          "agent_id": "assembler_1",
+          "params": {
+            "panel_id": "panel_4",
+            "bracket_id": "bracket_1"
+          }
+        },
+        {
+          "primitive": "panel_align_and_dock",
+          "agent_id": "assembler_1",
+          "params": {
+            "panel_id": "panel_5",
+            "bracket_id": "bracket_1"
+          }
+        },
+        {
+          "primitive": "panel_align_and_dock",
+          "agent_id": "assembler_1",
+          "params": {
+            "panel_id": "panel_6",
+            "bracket_id": "bracket_1"
+          }
+        },
+        {
+          "primitive": "panel_align_and_dock",
+          "agent_id": "assembler_1",
+          "params": {
+            "panel_id": "panel_7",
+            "bracket_id": "bracket_1"
+          }
+        }
+      ],
+      "final_state": [
+        "available(assembler_1)",
+        "available(transport_1)",
+        "bracket_at_correct_location(bracket_1)",
+        "bracket_at_correct_location(bracket_1, foundation_1)",
+        "bracket_at_correct_location(bracket_10)",
+        "bracket_at_correct_location(bracket_10, foundation_10)",
+        "bracket_at_correct_location(bracket_11)",
+        "bracket_at_correct_location(bracket_11, foundation_11)",
+        "bracket_at_correct_location(bracket_12)",
+        "bracket_at_correct_location(bracket_12, foundation_12)",
+        "bracket_at_correct_location(bracket_2)",
+        "bracket_at_correct_location(bracket_2, foundation_2)",
+        "bracket_at_correct_location(bracket_3)",
+        "bracket_at_correct_location(bracket_3, foundation_3)",
+        "bracket_at_correct_location(bracket_4)",
+        "bracket_at_correct_location(bracket_4, foundation_4)",
+        "bracket_at_correct_location(bracket_5)",
+        "bracket_at_correct_location(bracket_5, foundation_5)",
+        "bracket_at_correct_location(bracket_6)",
+        "bracket_at_correct_location(bracket_6, foundation_6)",
+        "bracket_at_correct_location(bracket_7)",
+        "bracket_at_correct_location(bracket_7, foundation_7)",
+        "bracket_at_correct_location(bracket_8)",
+        "bracket_at_correct_location(bracket_8, foundation_8)",
+        "bracket_at_correct_location(bracket_9)",
+        "bracket_at_correct_location(bracket_9, foundation_9)",
+        "bracket_secured(bracket_1)",
+        "bracket_secured(bracket_10)",
+        "bracket_secured(bracket_11)",
+        "bracket_secured(bracket_12)",
+        "bracket_secured(bracket_2)",
+        "bracket_secured(bracket_3)",
+        "bracket_secured(bracket_4)",
+        "bracket_secured(bracket_5)",
+        "bracket_secured(bracket_6)",
+        "bracket_secured(bracket_7)",
+        "bracket_secured(bracket_8)",
+        "bracket_secured(bracket_9)",
+        "cargo(assembler_1, panel_1)",
+        "cargo(assembler_1, panel_10)",
+        "cargo(assembler_1, panel_11)",
+        "cargo(assembler_1, panel_12)",
+        "cargo(assembler_1, panel_2)",
+        "cargo(assembler_1, panel_3)",
+        "cargo(assembler_1, panel_4)",
+        "cargo(assembler_1, panel_5)",
+        "cargo(assembler_1, panel_6)",
+        "cargo(assembler_1, panel_7)",
+        "cargo(assembler_1, panel_8)",
+        "cargo(assembler_1, panel_9)",
+        "circuit_connected",
+        "damaged(panel_1)",
+        "damaged(panel_2)",
+        "damaged(panel_3)",
+        "has_arm(assembler_1)",
+        "has_arm(manipulator_1)",
+        "panel_docked_to_bracket(panel_12, bracket_12)",
+        "panel_docked_to_bracket(panel_4, bracket_1)",
+        "panel_docked_to_bracket(panel_5, bracket_1)",
+        "panel_docked_to_bracket(panel_6, bracket_1)",
+        "panel_docked_to_bracket(panel_7, bracket_1)",
+        "panel_installed(panel_12)",
+        "panel_installed(panel_4)",
+        "panel_installed(panel_5)",
+        "panel_installed(panel_6)",
+        "panel_installed(panel_7)",
+        "reachable_by(assembler_1, bracket_1)",
+        "reachable_by(assembler_1, bracket_10)",
+        "reachable_by(assembler_1, bracket_11)",
+        "reachable_by(assembler_1, bracket_12)",
+        "reachable_by(assembler_1, bracket_2)",
+        "reachable_by(assembler_1, bracket_3)",
+        "reachable_by(assembler_1, bracket_4)",
+        "reachable_by(assembler_1, bracket_5)",
+        "reachable_by(assembler_1, bracket_6)",
+        "reachable_by(assembler_1, bracket_7)",
+        "reachable_by(assembler_1, bracket_8)",
+        "reachable_by(assembler_1, bracket_9)",
+        "reachable_by(assembler_1, panel_1)",
+        "reachable_by(assembler_1, panel_10)",
+        "reachable_by(assembler_1, panel_11)",
+        "reachable_by(assembler_1, panel_12)",
+        "reachable_by(assembler_1, panel_2)",
+        "reachable_by(assembler_1, panel_3)",
+        "reachable_by(assembler_1, panel_4)",
+        "reachable_by(assembler_1, panel_5)",
+        "reachable_by(assembler_1, panel_6)",
+        "reachable_by(assembler_1, panel_7)",
+        "reachable_by(assembler_1, panel_8)",
+        "reachable_by(assembler_1, panel_9)",
+        "reachable_by(manipulator_1, bracket_1)",
+        "reachable_by(manipulator_1, bracket_10)",
+        "reachable_by(manipulator_1, bracket_11)",
+        "reachable_by(manipulator_1, bracket_12)",
+        "reachable_by(manipulator_1, bracket_2)",
+        "reachable_by(manipulator_1, bracket_3)",
+        "reachable_by(manipulator_1, bracket_4)",
+        "reachable_by(manipulator_1, bracket_5)",
+        "reachable_by(manipulator_1, bracket_6)",
+        "reachable_by(manipulator_1, bracket_7)",
+        "reachable_by(manipulator_1, bracket_8)",
+        "reachable_by(manipulator_1, bracket_9)",
+        "reachable_by(manipulator_1, panel_1)",
+        "reachable_by(manipulator_1, panel_10)",
+        "reachable_by(manipulator_1, panel_11)",
+        "reachable_by(manipulator_1, panel_12)",
+        "reachable_by(manipulator_1, panel_2)",
+        "reachable_by(manipulator_1, panel_3)",
+        "reachable_by(manipulator_1, panel_4)",
+        "reachable_by(manipulator_1, panel_5)",
+        "reachable_by(manipulator_1, panel_6)",
+        "reachable_by(manipulator_1, panel_7)",
+        "reachable_by(manipulator_1, panel_8)",
+        "reachable_by(manipulator_1, panel_9)",
+        "reachable_by(transport_1, bracket_1)",
+        "reachable_by(transport_1, bracket_10)",
+        "reachable_by(transport_1, bracket_11)",
+        "reachable_by(transport_1, bracket_12)",
+        "reachable_by(transport_1, bracket_2)",
+        "reachable_by(transport_1, bracket_3)",
+        "reachable_by(transport_1, bracket_4)",
+        "reachable_by(transport_1, bracket_5)",
+        "reachable_by(transport_1, bracket_6)",
+        "reachable_by(transport_1, bracket_7)",
+        "reachable_by(transport_1, bracket_8)",
+        "reachable_by(transport_1, bracket_9)",
+        "reachable_by(transport_1, panel_1)",
+        "reachable_by(transport_1, panel_10)",
+        "reachable_by(transport_1, panel_11)",
+        "reachable_by(transport_1, panel_12)",
+        "reachable_by(transport_1, panel_2)",
+        "reachable_by(transport_1, panel_3)",
+        "reachable_by(transport_1, panel_4)",
+        "reachable_by(transport_1, panel_5)",
+        "reachable_by(transport_1, panel_6)",
+        "reachable_by(transport_1, panel_7)",
+        "reachable_by(transport_1, panel_8)",
+        "reachable_by(transport_1, panel_9)",
+        "zero_material_wasted"
+      ],
+      "solver_version": "5.1.0",
+      "solver_status": "unsat",
+      "solver_encode_check_s": 0.006619599997065961,
+      "verification_s": 0.010970900009851903,
+      "grounding": {
+        "accepted": true,
+        "checked_through_step": null,
+        "complete": true,
+        "reason": "all steps grounded"
+      },
+      "symbolic_contract": {
+        "accepted": true,
+        "reason": "VERIFIED",
+        "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+      }
+    },
+    "final_state": {
+      "semantics_version": "construction_assembly_execution_v1",
+      "sim_time_s": 2800.0,
+      "agents": {
+        "transport_1": {
+          "id": "transport_1",
+          "agent_type": "TRANSPORT",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": false
+        },
+        "manipulator_1": {
+          "id": "manipulator_1",
+          "agent_type": "MANIPULATOR",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        },
+        "assembler_1": {
+          "id": "assembler_1",
+          "agent_type": "ASSEMBLER",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        }
+      },
+      "agent_busy_s": {
+        "transport_1": 0.0,
+        "manipulator_1": 0.0,
+        "assembler_1": 500.0
+      },
+      "panels": {
+        "panel_1": {
+          "status": "damaged",
+          "bracket_ids": []
+        },
+        "panel_2": {
+          "status": "damaged",
+          "bracket_ids": []
+        },
+        "panel_3": {
+          "status": "damaged",
+          "bracket_ids": []
+        },
+        "panel_4": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_1"
+          ]
+        },
+        "panel_5": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_1"
+          ]
+        },
+        "panel_6": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_1"
+          ]
+        },
+        "panel_7": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_1"
+          ]
+        },
+        "panel_8": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_9": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_10": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_11": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_12": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_12"
+          ]
+        }
+      },
+      "brackets": {
+        "bracket_1": {
+          "foundation_location": "foundation_1",
+          "location": "foundation_1",
+          "secured": true
+        },
+        "bracket_2": {
+          "foundation_location": "foundation_2",
+          "location": "foundation_2",
+          "secured": true
+        },
+        "bracket_3": {
+          "foundation_location": "foundation_3",
+          "location": "foundation_3",
+          "secured": true
+        },
+        "bracket_4": {
+          "foundation_location": "foundation_4",
+          "location": "foundation_4",
+          "secured": true
+        },
+        "bracket_5": {
+          "foundation_location": "foundation_5",
+          "location": "foundation_5",
+          "secured": true
+        },
+        "bracket_6": {
+          "foundation_location": "foundation_6",
+          "location": "foundation_6",
+          "secured": true
+        },
+        "bracket_7": {
+          "foundation_location": "foundation_7",
+          "location": "foundation_7",
+          "secured": true
+        },
+        "bracket_8": {
+          "foundation_location": "foundation_8",
+          "location": "foundation_8",
+          "secured": true
+        },
+        "bracket_9": {
+          "foundation_location": "foundation_9",
+          "location": "foundation_9",
+          "secured": true
+        },
+        "bracket_10": {
+          "foundation_location": "foundation_10",
+          "location": "foundation_10",
+          "secured": true
+        },
+        "bracket_11": {
+          "foundation_location": "foundation_11",
+          "location": "foundation_11",
+          "secured": true
+        },
+        "bracket_12": {
+          "foundation_location": "foundation_12",
+          "location": "foundation_12",
+          "secured": true
+        }
+      },
+      "installed_panel_ids": [
+        "panel_12",
+        "panel_4",
+        "panel_5",
+        "panel_6",
+        "panel_7"
+      ],
+      "installed_panels": 5,
+      "circuit_connected": true,
+      "wasted_material": 0,
+      "damaged_panel_ids": [
+        "panel_1",
+        "panel_2",
+        "panel_3"
+      ],
+      "damage_order": [
+        "panel_1",
+        "panel_2",
+        "panel_3",
+        "panel_4",
+        "panel_5",
+        "panel_6",
+        "panel_7",
+        "panel_8",
+        "panel_9",
+        "panel_10",
+        "panel_11",
+        "panel_12"
+      ],
+      "disabled_agents": [
+        "manipulator_1"
+      ],
+      "scene_unsatisfiable": true,
+      "alt_scene_goal": "install_5_panels_not_12",
+      "applied_injections": [
+        "inj_const_005"
+      ],
+      "current_task_id": null,
+      "deadlock": [],
+      "goal_conflict": [],
+      "injected_comm_offline": [],
+      "pending_injections": []
+    },
+    "final_facts": [
+      "available(assembler_1)",
+      "available(transport_1)",
+      "bracket_at_correct_location(bracket_1)",
+      "bracket_at_correct_location(bracket_1, foundation_1)",
+      "bracket_at_correct_location(bracket_10)",
+      "bracket_at_correct_location(bracket_10, foundation_10)",
+      "bracket_at_correct_location(bracket_11)",
+      "bracket_at_correct_location(bracket_11, foundation_11)",
+      "bracket_at_correct_location(bracket_12)",
+      "bracket_at_correct_location(bracket_12, foundation_12)",
+      "bracket_at_correct_location(bracket_2)",
+      "bracket_at_correct_location(bracket_2, foundation_2)",
+      "bracket_at_correct_location(bracket_3)",
+      "bracket_at_correct_location(bracket_3, foundation_3)",
+      "bracket_at_correct_location(bracket_4)",
+      "bracket_at_correct_location(bracket_4, foundation_4)",
+      "bracket_at_correct_location(bracket_5)",
+      "bracket_at_correct_location(bracket_5, foundation_5)",
+      "bracket_at_correct_location(bracket_6)",
+      "bracket_at_correct_location(bracket_6, foundation_6)",
+      "bracket_at_correct_location(bracket_7)",
+      "bracket_at_correct_location(bracket_7, foundation_7)",
+      "bracket_at_correct_location(bracket_8)",
+      "bracket_at_correct_location(bracket_8, foundation_8)",
+      "bracket_at_correct_location(bracket_9)",
+      "bracket_at_correct_location(bracket_9, foundation_9)",
+      "bracket_secured(bracket_1)",
+      "bracket_secured(bracket_10)",
+      "bracket_secured(bracket_11)",
+      "bracket_secured(bracket_12)",
+      "bracket_secured(bracket_2)",
+      "bracket_secured(bracket_3)",
+      "bracket_secured(bracket_4)",
+      "bracket_secured(bracket_5)",
+      "bracket_secured(bracket_6)",
+      "bracket_secured(bracket_7)",
+      "bracket_secured(bracket_8)",
+      "bracket_secured(bracket_9)",
+      "cargo(assembler_1, panel_1)",
+      "cargo(assembler_1, panel_10)",
+      "cargo(assembler_1, panel_11)",
+      "cargo(assembler_1, panel_12)",
+      "cargo(assembler_1, panel_2)",
+      "cargo(assembler_1, panel_3)",
+      "cargo(assembler_1, panel_4)",
+      "cargo(assembler_1, panel_5)",
+      "cargo(assembler_1, panel_6)",
+      "cargo(assembler_1, panel_7)",
+      "cargo(assembler_1, panel_8)",
+      "cargo(assembler_1, panel_9)",
+      "circuit_connected",
+      "damaged(panel_1)",
+      "damaged(panel_2)",
+      "damaged(panel_3)",
+      "has_arm(assembler_1)",
+      "has_arm(manipulator_1)",
+      "panel_docked_to_bracket(panel_12, bracket_12)",
+      "panel_docked_to_bracket(panel_4, bracket_1)",
+      "panel_docked_to_bracket(panel_5, bracket_1)",
+      "panel_docked_to_bracket(panel_6, bracket_1)",
+      "panel_docked_to_bracket(panel_7, bracket_1)",
+      "panel_installed(panel_12)",
+      "panel_installed(panel_4)",
+      "panel_installed(panel_5)",
+      "panel_installed(panel_6)",
+      "panel_installed(panel_7)",
+      "reachable_by(assembler_1, bracket_1)",
+      "reachable_by(assembler_1, bracket_10)",
+      "reachable_by(assembler_1, bracket_11)",
+      "reachable_by(assembler_1, bracket_12)",
+      "reachable_by(assembler_1, bracket_2)",
+      "reachable_by(assembler_1, bracket_3)",
+      "reachable_by(assembler_1, bracket_4)",
+      "reachable_by(assembler_1, bracket_5)",
+      "reachable_by(assembler_1, bracket_6)",
+      "reachable_by(assembler_1, bracket_7)",
+      "reachable_by(assembler_1, bracket_8)",
+      "reachable_by(assembler_1, bracket_9)",
+      "reachable_by(assembler_1, panel_1)",
+      "reachable_by(assembler_1, panel_10)",
+      "reachable_by(assembler_1, panel_11)",
+      "reachable_by(assembler_1, panel_12)",
+      "reachable_by(assembler_1, panel_2)",
+      "reachable_by(assembler_1, panel_3)",
+      "reachable_by(assembler_1, panel_4)",
+      "reachable_by(assembler_1, panel_5)",
+      "reachable_by(assembler_1, panel_6)",
+      "reachable_by(assembler_1, panel_7)",
+      "reachable_by(assembler_1, panel_8)",
+      "reachable_by(assembler_1, panel_9)",
+      "reachable_by(manipulator_1, bracket_1)",
+      "reachable_by(manipulator_1, bracket_10)",
+      "reachable_by(manipulator_1, bracket_11)",
+      "reachable_by(manipulator_1, bracket_12)",
+      "reachable_by(manipulator_1, bracket_2)",
+      "reachable_by(manipulator_1, bracket_3)",
+      "reachable_by(manipulator_1, bracket_4)",
+      "reachable_by(manipulator_1, bracket_5)",
+      "reachable_by(manipulator_1, bracket_6)",
+      "reachable_by(manipulator_1, bracket_7)",
+      "reachable_by(manipulator_1, bracket_8)",
+      "reachable_by(manipulator_1, bracket_9)",
+      "reachable_by(manipulator_1, panel_1)",
+      "reachable_by(manipulator_1, panel_10)",
+      "reachable_by(manipulator_1, panel_11)",
+      "reachable_by(manipulator_1, panel_12)",
+      "reachable_by(manipulator_1, panel_2)",
+      "reachable_by(manipulator_1, panel_3)",
+      "reachable_by(manipulator_1, panel_4)",
+      "reachable_by(manipulator_1, panel_5)",
+      "reachable_by(manipulator_1, panel_6)",
+      "reachable_by(manipulator_1, panel_7)",
+      "reachable_by(manipulator_1, panel_8)",
+      "reachable_by(manipulator_1, panel_9)",
+      "reachable_by(transport_1, bracket_1)",
+      "reachable_by(transport_1, bracket_10)",
+      "reachable_by(transport_1, bracket_11)",
+      "reachable_by(transport_1, bracket_12)",
+      "reachable_by(transport_1, bracket_2)",
+      "reachable_by(transport_1, bracket_3)",
+      "reachable_by(transport_1, bracket_4)",
+      "reachable_by(transport_1, bracket_5)",
+      "reachable_by(transport_1, bracket_6)",
+      "reachable_by(transport_1, bracket_7)",
+      "reachable_by(transport_1, bracket_8)",
+      "reachable_by(transport_1, bracket_9)",
+      "reachable_by(transport_1, panel_1)",
+      "reachable_by(transport_1, panel_10)",
+      "reachable_by(transport_1, panel_11)",
+      "reachable_by(transport_1, panel_12)",
+      "reachable_by(transport_1, panel_2)",
+      "reachable_by(transport_1, panel_3)",
+      "reachable_by(transport_1, panel_4)",
+      "reachable_by(transport_1, panel_5)",
+      "reachable_by(transport_1, panel_6)",
+      "reachable_by(transport_1, panel_7)",
+      "reachable_by(transport_1, panel_8)",
+      "reachable_by(transport_1, panel_9)",
+      "zero_material_wasted"
+    ],
+    "elapsed_s": 400.0,
+    "energy_consumed_wh": null,
+    "wrapper_wall_s": 0.01942979998420924,
+    "actual_radio_delivery_observed": false,
+    "timing_kind": "nominal simulator work time; not hardware latency"
+  },
+  "selected_policy": "common_pi_const_nominal12_to_ge5",
+  "original_goal_met": false,
+  "degraded_goal_met": true,
+  "original_goal_initially_met": false,
+  "original_suffix_still_valid": false,
+  "original_suffix_validity_scope": "symbolic/authorization obligations only; numeric execution energy is not certified",
+  "repair_required_by_observed_network": true,
+  "original_information": {
+    "tree": {
+      "root_id": "scene",
+      "nodes": {
+        "scene": {
+          "id": "scene",
+          "layer": "S",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "circuit_connected",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "circuit_connected"
+              ],
+              "negative": [],
+              "cardinality": [
+                [
+                  12,
+                  [
+                    "panel_installed(panel_1)",
+                    "panel_installed(panel_10)",
+                    "panel_installed(panel_11)",
+                    "panel_installed(panel_12)",
+                    "panel_installed(panel_2)",
+                    "panel_installed(panel_3)",
+                    "panel_installed(panel_4)",
+                    "panel_installed(panel_5)",
+                    "panel_installed(panel_6)",
+                    "panel_installed(panel_7)",
+                    "panel_installed(panel_8)",
+                    "panel_installed(panel_9)"
+                  ]
+                ]
+              ]
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": null,
+          "children_ids": [
+            "mission_1",
+            "mission_2"
+          ],
+          "formal_postcondition": "circuit_connected"
+        },
+        "mission_1": {
+          "id": "mission_1",
+          "layer": "M",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_1) & panel_installed(panel_12) & panel_installed(panel_2) & panel_installed(panel_3) & panel_installed(panel_4) & panel_installed(panel_5)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_1)",
+                "panel_installed(panel_12)",
+                "panel_installed(panel_2)",
+                "panel_installed(panel_3)",
+                "panel_installed(panel_4)",
+                "panel_installed(panel_5)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "scene",
+          "children_ids": [
+            "install_panel_12",
+            "install_panel_1",
+            "install_panel_2",
+            "install_panel_3",
+            "install_panel_4",
+            "install_panel_5"
+          ],
+          "required_agent_types": []
+        },
+        "install_panel_12": {
+          "id": "install_panel_12",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_12)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_12)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "install_panel_12.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_12.p1": {
+          "id": "install_panel_12.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_12",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_12",
+            "bracket_id": "bracket_12"
+          }
+        },
+        "install_panel_1": {
+          "id": "install_panel_1",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_1)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_1)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_12"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "install_panel_1.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_1.p1": {
+          "id": "install_panel_1.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_1",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_1",
+            "bracket_id": "bracket_1"
+          }
+        },
+        "install_panel_2": {
+          "id": "install_panel_2",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_2)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_2)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_1"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "install_panel_2.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_2.p1": {
+          "id": "install_panel_2.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_2",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_2",
+            "bracket_id": "bracket_2"
+          }
+        },
+        "install_panel_3": {
+          "id": "install_panel_3",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_3)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_3)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_2"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "install_panel_3.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_3.p1": {
+          "id": "install_panel_3.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_3",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_3",
+            "bracket_id": "bracket_3"
+          }
+        },
+        "install_panel_4": {
+          "id": "install_panel_4",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_4)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_4)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_3"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "install_panel_4.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_4.p1": {
+          "id": "install_panel_4.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_4",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_4",
+            "bracket_id": "bracket_4"
+          }
+        },
+        "install_panel_5": {
+          "id": "install_panel_5",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_5)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_5)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_4"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "install_panel_5.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_5.p1": {
+          "id": "install_panel_5.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_5",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_5",
+            "bracket_id": "bracket_5"
+          }
+        },
+        "mission_2": {
+          "id": "mission_2",
+          "layer": "M",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_10) & panel_installed(panel_11) & panel_installed(panel_6) & panel_installed(panel_7) & panel_installed(panel_8) & panel_installed(panel_9)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_10)",
+                "panel_installed(panel_11)",
+                "panel_installed(panel_6)",
+                "panel_installed(panel_7)",
+                "panel_installed(panel_8)",
+                "panel_installed(panel_9)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "mission_1"
+          ],
+          "parent_id": "scene",
+          "children_ids": [
+            "install_panel_6",
+            "install_panel_7",
+            "install_panel_8",
+            "install_panel_9",
+            "install_panel_10",
+            "install_panel_11"
+          ],
+          "required_agent_types": []
+        },
+        "install_panel_6": {
+          "id": "install_panel_6",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_6)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_6)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "install_panel_6.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_6.p1": {
+          "id": "install_panel_6.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_6",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_6",
+            "bracket_id": "bracket_6"
+          }
+        },
+        "install_panel_7": {
+          "id": "install_panel_7",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_7)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_7)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_6"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "install_panel_7.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_7.p1": {
+          "id": "install_panel_7.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_7",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_7",
+            "bracket_id": "bracket_7"
+          }
+        },
+        "install_panel_8": {
+          "id": "install_panel_8",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_8)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_8)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_7"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "install_panel_8.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_8.p1": {
+          "id": "install_panel_8.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_8",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_8",
+            "bracket_id": "bracket_8"
+          }
+        },
+        "install_panel_9": {
+          "id": "install_panel_9",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_9)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_9)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_8"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "install_panel_9.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_9.p1": {
+          "id": "install_panel_9.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_9",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_9",
+            "bracket_id": "bracket_9"
+          }
+        },
+        "install_panel_10": {
+          "id": "install_panel_10",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_10)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_10)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_9"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "install_panel_10.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_10.p1": {
+          "id": "install_panel_10.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_10",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_10",
+            "bracket_id": "bracket_10"
+          }
+        },
+        "install_panel_11": {
+          "id": "install_panel_11",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "panel_installed(panel_11)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "panel_installed(panel_11)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "install_panel_10"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "install_panel_11.p1"
+          ],
+          "assigned_agent_id": "assembler_1",
+          "required_primitives": []
+        },
+        "install_panel_11.p1": {
+          "id": "install_panel_11.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "install_panel_11",
+          "children_ids": [],
+          "primitive_name": "panel_align_and_dock",
+          "primitive_args": {
+            "panel_id": "panel_11",
+            "bracket_id": "bracket_11"
+          }
+        }
+      }
+    },
+    "original_plan": [
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_12",
+          "bracket_id": "bracket_12"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_1",
+          "bracket_id": "bracket_1"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_2",
+          "bracket_id": "bracket_2"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_3",
+          "bracket_id": "bracket_3"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_4",
+          "bracket_id": "bracket_4"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_5",
+          "bracket_id": "bracket_5"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_6",
+          "bracket_id": "bracket_6"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_7",
+          "bracket_id": "bracket_7"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_8",
+          "bracket_id": "bracket_8"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_9",
+          "bracket_id": "bracket_9"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_10",
+          "bracket_id": "bracket_10"
+        }
+      },
+      {
+        "primitive": "panel_align_and_dock",
+        "agent_id": "assembler_1",
+        "params": {
+          "panel_id": "panel_11",
+          "bracket_id": "bracket_11"
+        }
+      }
+    ],
+    "original_observation": {
+      "semantics_version": "construction_assembly_execution_v1",
+      "sim_time_s": 2300,
+      "agents": {
+        "transport_1": {
+          "id": "transport_1",
+          "agent_type": "TRANSPORT",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": false
+        },
+        "manipulator_1": {
+          "id": "manipulator_1",
+          "agent_type": "MANIPULATOR",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        },
+        "assembler_1": {
+          "id": "assembler_1",
+          "agent_type": "ASSEMBLER",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        }
+      },
+      "agent_busy_s": {
+        "transport_1": 0.0,
+        "manipulator_1": 0.0,
+        "assembler_1": 0.0
+      },
+      "panels": {
+        "panel_1": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_2": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_3": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_4": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_5": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_6": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_7": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_8": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_9": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_10": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_11": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_12": {
+          "status": "available",
+          "bracket_ids": []
+        }
+      },
+      "brackets": {
+        "bracket_1": {
+          "foundation_location": "foundation_1",
+          "location": "foundation_1",
+          "secured": true
+        },
+        "bracket_2": {
+          "foundation_location": "foundation_2",
+          "location": "foundation_2",
+          "secured": true
+        },
+        "bracket_3": {
+          "foundation_location": "foundation_3",
+          "location": "foundation_3",
+          "secured": true
+        },
+        "bracket_4": {
+          "foundation_location": "foundation_4",
+          "location": "foundation_4",
+          "secured": true
+        },
+        "bracket_5": {
+          "foundation_location": "foundation_5",
+          "location": "foundation_5",
+          "secured": true
+        },
+        "bracket_6": {
+          "foundation_location": "foundation_6",
+          "location": "foundation_6",
+          "secured": true
+        },
+        "bracket_7": {
+          "foundation_location": "foundation_7",
+          "location": "foundation_7",
+          "secured": true
+        },
+        "bracket_8": {
+          "foundation_location": "foundation_8",
+          "location": "foundation_8",
+          "secured": true
+        },
+        "bracket_9": {
+          "foundation_location": "foundation_9",
+          "location": "foundation_9",
+          "secured": true
+        },
+        "bracket_10": {
+          "foundation_location": "foundation_10",
+          "location": "foundation_10",
+          "secured": true
+        },
+        "bracket_11": {
+          "foundation_location": "foundation_11",
+          "location": "foundation_11",
+          "secured": true
+        },
+        "bracket_12": {
+          "foundation_location": "foundation_12",
+          "location": "foundation_12",
+          "secured": true
+        }
+      },
+      "installed_panel_ids": [],
+      "installed_panels": 0,
+      "circuit_connected": true,
+      "wasted_material": 0,
+      "damaged_panel_ids": [],
+      "damage_order": [
+        "panel_1",
+        "panel_2",
+        "panel_3",
+        "panel_4",
+        "panel_5",
+        "panel_6",
+        "panel_7",
+        "panel_8",
+        "panel_9",
+        "panel_10",
+        "panel_11",
+        "panel_12"
+      ],
+      "disabled_agents": [],
+      "scene_unsatisfiable": false,
+      "alt_scene_goal": null,
+      "applied_injections": [],
+      "current_task_id": null,
+      "deadlock": [],
+      "goal_conflict": [],
+      "injected_comm_offline": [],
+      "pending_injections": []
+    },
+    "pre_deviation_observation": {
+      "semantics_version": "construction_assembly_execution_v1",
+      "sim_time_s": 2400.0,
+      "agents": {
+        "transport_1": {
+          "id": "transport_1",
+          "agent_type": "TRANSPORT",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": false
+        },
+        "manipulator_1": {
+          "id": "manipulator_1",
+          "agent_type": "MANIPULATOR",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        },
+        "assembler_1": {
+          "id": "assembler_1",
+          "agent_type": "ASSEMBLER",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        }
+      },
+      "agent_busy_s": {
+        "transport_1": 0.0,
+        "manipulator_1": 0.0,
+        "assembler_1": 100.0
+      },
+      "panels": {
+        "panel_1": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_2": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_3": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_4": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_5": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_6": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_7": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_8": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_9": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_10": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_11": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_12": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_12"
+          ]
+        }
+      },
+      "brackets": {
+        "bracket_1": {
+          "foundation_location": "foundation_1",
+          "location": "foundation_1",
+          "secured": true
+        },
+        "bracket_2": {
+          "foundation_location": "foundation_2",
+          "location": "foundation_2",
+          "secured": true
+        },
+        "bracket_3": {
+          "foundation_location": "foundation_3",
+          "location": "foundation_3",
+          "secured": true
+        },
+        "bracket_4": {
+          "foundation_location": "foundation_4",
+          "location": "foundation_4",
+          "secured": true
+        },
+        "bracket_5": {
+          "foundation_location": "foundation_5",
+          "location": "foundation_5",
+          "secured": true
+        },
+        "bracket_6": {
+          "foundation_location": "foundation_6",
+          "location": "foundation_6",
+          "secured": true
+        },
+        "bracket_7": {
+          "foundation_location": "foundation_7",
+          "location": "foundation_7",
+          "secured": true
+        },
+        "bracket_8": {
+          "foundation_location": "foundation_8",
+          "location": "foundation_8",
+          "secured": true
+        },
+        "bracket_9": {
+          "foundation_location": "foundation_9",
+          "location": "foundation_9",
+          "secured": true
+        },
+        "bracket_10": {
+          "foundation_location": "foundation_10",
+          "location": "foundation_10",
+          "secured": true
+        },
+        "bracket_11": {
+          "foundation_location": "foundation_11",
+          "location": "foundation_11",
+          "secured": true
+        },
+        "bracket_12": {
+          "foundation_location": "foundation_12",
+          "location": "foundation_12",
+          "secured": true
+        }
+      },
+      "installed_panel_ids": [
+        "panel_12"
+      ],
+      "installed_panels": 1,
+      "circuit_connected": true,
+      "wasted_material": 0,
+      "damaged_panel_ids": [],
+      "damage_order": [
+        "panel_1",
+        "panel_2",
+        "panel_3",
+        "panel_4",
+        "panel_5",
+        "panel_6",
+        "panel_7",
+        "panel_8",
+        "panel_9",
+        "panel_10",
+        "panel_11",
+        "panel_12"
+      ],
+      "disabled_agents": [],
+      "scene_unsatisfiable": false,
+      "alt_scene_goal": null,
+      "applied_injections": [],
+      "current_task_id": null,
+      "deadlock": [],
+      "goal_conflict": [],
+      "injected_comm_offline": [],
+      "pending_injections": []
+    },
+    "executed_prefix": [
+      {
+        "node_id": "install_panel_12.p1",
+        "step": {
+          "primitive": "panel_align_and_dock",
+          "agent_id": "assembler_1",
+          "params": {
+            "panel_id": "panel_12",
+            "bracket_id": "bracket_12"
+          }
+        },
+        "result": {
+          "success": true,
+          "primitive_name": "panel_align_and_dock",
+          "agent_id": "assembler_1",
+          "reason_code": "",
+          "detail": "",
+          "elapsed_s": 100.0,
+          "energy_consumed_wh": null
+        }
+      }
+    ],
+    "executed_prefix_ids": [
+      "install_panel_12.p1"
+    ],
+    "observed_deviation": {
+      "id": "inj_const_005",
+      "symptom": "G-03_scene_unsatisfiable",
+      "trigger": {
+        "type": "time",
+        "t_seconds": 2400
+      },
+      "target": {
+        "scope": "scene",
+        "agent": "assembler_1"
+      },
+      "parameters": {
+        "inject_method": "destroy_3_panels_and_1_manipulator",
+        "alt_scene_available": "install_5_panels_not_12"
+      },
+      "kind": "source_injection_after_actual_prefix",
+      "agent": "assembler_1",
+      "initial_time_note": "t=2300 initialization plus one actual 100s prefix action"
+    },
+    "post_deviation_observation": {
+      "semantics_version": "construction_assembly_execution_v1",
+      "sim_time_s": 2400.0,
+      "agents": {
+        "transport_1": {
+          "id": "transport_1",
+          "agent_type": "TRANSPORT",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": false
+        },
+        "manipulator_1": {
+          "id": "manipulator_1",
+          "agent_type": "MANIPULATOR",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        },
+        "assembler_1": {
+          "id": "assembler_1",
+          "agent_type": "ASSEMBLER",
+          "position": [
+            0.0,
+            30.0,
+            0.0
+          ],
+          "energy_wh": 500.0,
+          "initial_energy_wh": 500.0,
+          "facts": [
+            "at_base"
+          ],
+          "cargo": [
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "available": true,
+          "reachable_entities": [
+            "bracket_1",
+            "bracket_10",
+            "bracket_11",
+            "bracket_12",
+            "bracket_2",
+            "bracket_3",
+            "bracket_4",
+            "bracket_5",
+            "bracket_6",
+            "bracket_7",
+            "bracket_8",
+            "bracket_9",
+            "panel_1",
+            "panel_10",
+            "panel_11",
+            "panel_12",
+            "panel_2",
+            "panel_3",
+            "panel_4",
+            "panel_5",
+            "panel_6",
+            "panel_7",
+            "panel_8",
+            "panel_9"
+          ],
+          "has_arm": true
+        }
+      },
+      "agent_busy_s": {
+        "transport_1": 0.0,
+        "manipulator_1": 0.0,
+        "assembler_1": 100.0
+      },
+      "panels": {
+        "panel_1": {
+          "status": "damaged",
+          "bracket_ids": []
+        },
+        "panel_2": {
+          "status": "damaged",
+          "bracket_ids": []
+        },
+        "panel_3": {
+          "status": "damaged",
+          "bracket_ids": []
+        },
+        "panel_4": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_5": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_6": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_7": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_8": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_9": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_10": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_11": {
+          "status": "available",
+          "bracket_ids": []
+        },
+        "panel_12": {
+          "status": "installed",
+          "bracket_ids": [
+            "bracket_12"
+          ]
+        }
+      },
+      "brackets": {
+        "bracket_1": {
+          "foundation_location": "foundation_1",
+          "location": "foundation_1",
+          "secured": true
+        },
+        "bracket_2": {
+          "foundation_location": "foundation_2",
+          "location": "foundation_2",
+          "secured": true
+        },
+        "bracket_3": {
+          "foundation_location": "foundation_3",
+          "location": "foundation_3",
+          "secured": true
+        },
+        "bracket_4": {
+          "foundation_location": "foundation_4",
+          "location": "foundation_4",
+          "secured": true
+        },
+        "bracket_5": {
+          "foundation_location": "foundation_5",
+          "location": "foundation_5",
+          "secured": true
+        },
+        "bracket_6": {
+          "foundation_location": "foundation_6",
+          "location": "foundation_6",
+          "secured": true
+        },
+        "bracket_7": {
+          "foundation_location": "foundation_7",
+          "location": "foundation_7",
+          "secured": true
+        },
+        "bracket_8": {
+          "foundation_location": "foundation_8",
+          "location": "foundation_8",
+          "secured": true
+        },
+        "bracket_9": {
+          "foundation_location": "foundation_9",
+          "location": "foundation_9",
+          "secured": true
+        },
+        "bracket_10": {
+          "foundation_location": "foundation_10",
+          "location": "foundation_10",
+          "secured": true
+        },
+        "bracket_11": {
+          "foundation_location": "foundation_11",
+          "location": "foundation_11",
+          "secured": true
+        },
+        "bracket_12": {
+          "foundation_location": "foundation_12",
+          "location": "foundation_12",
+          "secured": true
+        }
+      },
+      "installed_panel_ids": [
+        "panel_12"
+      ],
+      "installed_panels": 1,
+      "circuit_connected": true,
+      "wasted_material": 0,
+      "damaged_panel_ids": [
+        "panel_1",
+        "panel_2",
+        "panel_3"
+      ],
+      "damage_order": [
+        "panel_1",
+        "panel_2",
+        "panel_3",
+        "panel_4",
+        "panel_5",
+        "panel_6",
+        "panel_7",
+        "panel_8",
+        "panel_9",
+        "panel_10",
+        "panel_11",
+        "panel_12"
+      ],
+      "disabled_agents": [
+        "manipulator_1"
+      ],
+      "scene_unsatisfiable": true,
+      "alt_scene_goal": "install_5_panels_not_12",
+      "applied_injections": [
+        "inj_const_005"
+      ],
+      "current_task_id": null,
+      "deadlock": [],
+      "goal_conflict": [],
+      "injected_comm_offline": [],
+      "pending_injections": []
+    },
+    "public_policy": {
+      "id": "common_pi_const_nominal12_to_ge5",
+      "eligible": true,
+      "source": "existing PI nominal12 to ge5, same eligible input and alternatives for all methods",
+      "nominal_goal": {
+        "positive": [
+          "circuit_connected"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            12,
+            [
+              "panel_installed(panel_1)",
+              "panel_installed(panel_10)",
+              "panel_installed(panel_11)",
+              "panel_installed(panel_12)",
+              "panel_installed(panel_2)",
+              "panel_installed(panel_3)",
+              "panel_installed(panel_4)",
+              "panel_installed(panel_5)",
+              "panel_installed(panel_6)",
+              "panel_installed(panel_7)",
+              "panel_installed(panel_8)",
+              "panel_installed(panel_9)"
+            ]
+          ]
+        ]
+      },
+      "fallback_goal": {
+        "positive": [
+          "circuit_connected"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            5,
+            [
+              "panel_installed(panel_1)",
+              "panel_installed(panel_10)",
+              "panel_installed(panel_11)",
+              "panel_installed(panel_12)",
+              "panel_installed(panel_2)",
+              "panel_installed(panel_3)",
+              "panel_installed(panel_4)",
+              "panel_installed(panel_5)",
+              "panel_installed(panel_6)",
+              "panel_installed(panel_7)",
+              "panel_installed(panel_8)",
+              "panel_installed(panel_9)"
+            ]
+          ]
+        ]
+      }
+    },
+    "shared_resource_information": {
+      "scenario": "construction",
+      "numeric_resource_model": "unknown",
+      "reason": "No approved numeric movement/task energy source for this execution world.",
+      "formal_energy_guarantee": false
+    },
+    "resource_assistance_contract": {
+      "permitted_regrouping_scopes": [
+        "M",
+        "S"
+      ],
+      "parent_obligations": "preserve all named delivery, custody and explicit source duties; Task-only keeps its return/delivery and actor",
+      "prediction": "public observed PSR simulator rollout; same ResourceSupport.forecast interface for all five methods",
+      "limits": {
+        "prediction_calls": 64,
+        "search_calls": 2,
+        "candidate_rollouts": 2112,
+        "world_steps": 100000,
+        "work_wall_s": 120.0,
+        "worker_wall_s": 30.0,
+        "memory_mb": 2048
+      },
+      "search_limits": {
+        "max_candidate_rollouts": 1024,
+        "max_world_steps": 30000,
+        "search_wall_s": 24.0,
+        "hard_wall_s": 30.0,
+        "memory_mb": 2048
+      },
+      "method_aid": "Ours and flat independently search the same declared delivery family; HTN/BT replan with their own kernel; FD retains its own planner"
+    }
+  },
+  "final_observation": {
+    "semantics_version": "construction_assembly_execution_v1",
+    "sim_time_s": 2800.0,
+    "agents": {
+      "transport_1": {
+        "id": "transport_1",
+        "agent_type": "TRANSPORT",
+        "position": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "energy_wh": 500.0,
+        "initial_energy_wh": 500.0,
+        "facts": [
+          "at_base"
+        ],
+        "cargo": [],
+        "available": true,
+        "reachable_entities": [
+          "bracket_1",
+          "bracket_10",
+          "bracket_11",
+          "bracket_12",
+          "bracket_2",
+          "bracket_3",
+          "bracket_4",
+          "bracket_5",
+          "bracket_6",
+          "bracket_7",
+          "bracket_8",
+          "bracket_9",
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "has_arm": false
+      },
+      "manipulator_1": {
+        "id": "manipulator_1",
+        "agent_type": "MANIPULATOR",
+        "position": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "energy_wh": 500.0,
+        "initial_energy_wh": 500.0,
+        "facts": [
+          "at_base"
+        ],
+        "cargo": [],
+        "available": true,
+        "reachable_entities": [
+          "bracket_1",
+          "bracket_10",
+          "bracket_11",
+          "bracket_12",
+          "bracket_2",
+          "bracket_3",
+          "bracket_4",
+          "bracket_5",
+          "bracket_6",
+          "bracket_7",
+          "bracket_8",
+          "bracket_9",
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "has_arm": true
+      },
+      "assembler_1": {
+        "id": "assembler_1",
+        "agent_type": "ASSEMBLER",
+        "position": [
+          0.0,
+          30.0,
+          0.0
+        ],
+        "energy_wh": 500.0,
+        "initial_energy_wh": 500.0,
+        "facts": [
+          "at_base"
+        ],
+        "cargo": [
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "available": true,
+        "reachable_entities": [
+          "bracket_1",
+          "bracket_10",
+          "bracket_11",
+          "bracket_12",
+          "bracket_2",
+          "bracket_3",
+          "bracket_4",
+          "bracket_5",
+          "bracket_6",
+          "bracket_7",
+          "bracket_8",
+          "bracket_9",
+          "panel_1",
+          "panel_10",
+          "panel_11",
+          "panel_12",
+          "panel_2",
+          "panel_3",
+          "panel_4",
+          "panel_5",
+          "panel_6",
+          "panel_7",
+          "panel_8",
+          "panel_9"
+        ],
+        "has_arm": true
+      }
+    },
+    "agent_busy_s": {
+      "transport_1": 0.0,
+      "manipulator_1": 0.0,
+      "assembler_1": 500.0
+    },
+    "panels": {
+      "panel_1": {
+        "status": "damaged",
+        "bracket_ids": []
+      },
+      "panel_2": {
+        "status": "damaged",
+        "bracket_ids": []
+      },
+      "panel_3": {
+        "status": "damaged",
+        "bracket_ids": []
+      },
+      "panel_4": {
+        "status": "installed",
+        "bracket_ids": [
+          "bracket_1"
+        ]
+      },
+      "panel_5": {
+        "status": "installed",
+        "bracket_ids": [
+          "bracket_1"
+        ]
+      },
+      "panel_6": {
+        "status": "installed",
+        "bracket_ids": [
+          "bracket_1"
+        ]
+      },
+      "panel_7": {
+        "status": "installed",
+        "bracket_ids": [
+          "bracket_1"
+        ]
+      },
+      "panel_8": {
+        "status": "available",
+        "bracket_ids": []
+      },
+      "panel_9": {
+        "status": "available",
+        "bracket_ids": []
+      },
+      "panel_10": {
+        "status": "available",
+        "bracket_ids": []
+      },
+      "panel_11": {
+        "status": "available",
+        "bracket_ids": []
+      },
+      "panel_12": {
+        "status": "installed",
+        "bracket_ids": [
+          "bracket_12"
+        ]
+      }
+    },
+    "brackets": {
+      "bracket_1": {
+        "foundation_location": "foundation_1",
+        "location": "foundation_1",
+        "secured": true
+      },
+      "bracket_2": {
+        "foundation_location": "foundation_2",
+        "location": "foundation_2",
+        "secured": true
+      },
+      "bracket_3": {
+        "foundation_location": "foundation_3",
+        "location": "foundation_3",
+        "secured": true
+      },
+      "bracket_4": {
+        "foundation_location": "foundation_4",
+        "location": "foundation_4",
+        "secured": true
+      },
+      "bracket_5": {
+        "foundation_location": "foundation_5",
+        "location": "foundation_5",
+        "secured": true
+      },
+      "bracket_6": {
+        "foundation_location": "foundation_6",
+        "location": "foundation_6",
+        "secured": true
+      },
+      "bracket_7": {
+        "foundation_location": "foundation_7",
+        "location": "foundation_7",
+        "secured": true
+      },
+      "bracket_8": {
+        "foundation_location": "foundation_8",
+        "location": "foundation_8",
+        "secured": true
+      },
+      "bracket_9": {
+        "foundation_location": "foundation_9",
+        "location": "foundation_9",
+        "secured": true
+      },
+      "bracket_10": {
+        "foundation_location": "foundation_10",
+        "location": "foundation_10",
+        "secured": true
+      },
+      "bracket_11": {
+        "foundation_location": "foundation_11",
+        "location": "foundation_11",
+        "secured": true
+      },
+      "bracket_12": {
+        "foundation_location": "foundation_12",
+        "location": "foundation_12",
+        "secured": true
+      }
+    },
+    "installed_panel_ids": [
+      "panel_12",
+      "panel_4",
+      "panel_5",
+      "panel_6",
+      "panel_7"
+    ],
+    "installed_panels": 5,
+    "circuit_connected": true,
+    "wasted_material": 0,
+    "damaged_panel_ids": [
+      "panel_1",
+      "panel_2",
+      "panel_3"
+    ],
+    "damage_order": [
+      "panel_1",
+      "panel_2",
+      "panel_3",
+      "panel_4",
+      "panel_5",
+      "panel_6",
+      "panel_7",
+      "panel_8",
+      "panel_9",
+      "panel_10",
+      "panel_11",
+      "panel_12"
+    ],
+    "disabled_agents": [
+      "manipulator_1"
+    ],
+    "scene_unsatisfiable": true,
+    "alt_scene_goal": "install_5_panels_not_12",
+    "applied_injections": [
+      "inj_const_005"
+    ],
+    "current_task_id": null,
+    "deadlock": [],
+    "goal_conflict": [],
+    "injected_comm_offline": [],
+    "pending_injections": []
+  },
+  "final_facts": [
+    "available(assembler_1)",
+    "available(transport_1)",
+    "bracket_at_correct_location(bracket_1)",
+    "bracket_at_correct_location(bracket_1, foundation_1)",
+    "bracket_at_correct_location(bracket_10)",
+    "bracket_at_correct_location(bracket_10, foundation_10)",
+    "bracket_at_correct_location(bracket_11)",
+    "bracket_at_correct_location(bracket_11, foundation_11)",
+    "bracket_at_correct_location(bracket_12)",
+    "bracket_at_correct_location(bracket_12, foundation_12)",
+    "bracket_at_correct_location(bracket_2)",
+    "bracket_at_correct_location(bracket_2, foundation_2)",
+    "bracket_at_correct_location(bracket_3)",
+    "bracket_at_correct_location(bracket_3, foundation_3)",
+    "bracket_at_correct_location(bracket_4)",
+    "bracket_at_correct_location(bracket_4, foundation_4)",
+    "bracket_at_correct_location(bracket_5)",
+    "bracket_at_correct_location(bracket_5, foundation_5)",
+    "bracket_at_correct_location(bracket_6)",
+    "bracket_at_correct_location(bracket_6, foundation_6)",
+    "bracket_at_correct_location(bracket_7)",
+    "bracket_at_correct_location(bracket_7, foundation_7)",
+    "bracket_at_correct_location(bracket_8)",
+    "bracket_at_correct_location(bracket_8, foundation_8)",
+    "bracket_at_correct_location(bracket_9)",
+    "bracket_at_correct_location(bracket_9, foundation_9)",
+    "bracket_secured(bracket_1)",
+    "bracket_secured(bracket_10)",
+    "bracket_secured(bracket_11)",
+    "bracket_secured(bracket_12)",
+    "bracket_secured(bracket_2)",
+    "bracket_secured(bracket_3)",
+    "bracket_secured(bracket_4)",
+    "bracket_secured(bracket_5)",
+    "bracket_secured(bracket_6)",
+    "bracket_secured(bracket_7)",
+    "bracket_secured(bracket_8)",
+    "bracket_secured(bracket_9)",
+    "cargo(assembler_1, panel_1)",
+    "cargo(assembler_1, panel_10)",
+    "cargo(assembler_1, panel_11)",
+    "cargo(assembler_1, panel_12)",
+    "cargo(assembler_1, panel_2)",
+    "cargo(assembler_1, panel_3)",
+    "cargo(assembler_1, panel_4)",
+    "cargo(assembler_1, panel_5)",
+    "cargo(assembler_1, panel_6)",
+    "cargo(assembler_1, panel_7)",
+    "cargo(assembler_1, panel_8)",
+    "cargo(assembler_1, panel_9)",
+    "circuit_connected",
+    "damaged(panel_1)",
+    "damaged(panel_2)",
+    "damaged(panel_3)",
+    "has_arm(assembler_1)",
+    "has_arm(manipulator_1)",
+    "panel_docked_to_bracket(panel_12, bracket_12)",
+    "panel_docked_to_bracket(panel_4, bracket_1)",
+    "panel_docked_to_bracket(panel_5, bracket_1)",
+    "panel_docked_to_bracket(panel_6, bracket_1)",
+    "panel_docked_to_bracket(panel_7, bracket_1)",
+    "panel_installed(panel_12)",
+    "panel_installed(panel_4)",
+    "panel_installed(panel_5)",
+    "panel_installed(panel_6)",
+    "panel_installed(panel_7)",
+    "reachable_by(assembler_1, bracket_1)",
+    "reachable_by(assembler_1, bracket_10)",
+    "reachable_by(assembler_1, bracket_11)",
+    "reachable_by(assembler_1, bracket_12)",
+    "reachable_by(assembler_1, bracket_2)",
+    "reachable_by(assembler_1, bracket_3)",
+    "reachable_by(assembler_1, bracket_4)",
+    "reachable_by(assembler_1, bracket_5)",
+    "reachable_by(assembler_1, bracket_6)",
+    "reachable_by(assembler_1, bracket_7)",
+    "reachable_by(assembler_1, bracket_8)",
+    "reachable_by(assembler_1, bracket_9)",
+    "reachable_by(assembler_1, panel_1)",
+    "reachable_by(assembler_1, panel_10)",
+    "reachable_by(assembler_1, panel_11)",
+    "reachable_by(assembler_1, panel_12)",
+    "reachable_by(assembler_1, panel_2)",
+    "reachable_by(assembler_1, panel_3)",
+    "reachable_by(assembler_1, panel_4)",
+    "reachable_by(assembler_1, panel_5)",
+    "reachable_by(assembler_1, panel_6)",
+    "reachable_by(assembler_1, panel_7)",
+    "reachable_by(assembler_1, panel_8)",
+    "reachable_by(assembler_1, panel_9)",
+    "reachable_by(manipulator_1, bracket_1)",
+    "reachable_by(manipulator_1, bracket_10)",
+    "reachable_by(manipulator_1, bracket_11)",
+    "reachable_by(manipulator_1, bracket_12)",
+    "reachable_by(manipulator_1, bracket_2)",
+    "reachable_by(manipulator_1, bracket_3)",
+    "reachable_by(manipulator_1, bracket_4)",
+    "reachable_by(manipulator_1, bracket_5)",
+    "reachable_by(manipulator_1, bracket_6)",
+    "reachable_by(manipulator_1, bracket_7)",
+    "reachable_by(manipulator_1, bracket_8)",
+    "reachable_by(manipulator_1, bracket_9)",
+    "reachable_by(manipulator_1, panel_1)",
+    "reachable_by(manipulator_1, panel_10)",
+    "reachable_by(manipulator_1, panel_11)",
+    "reachable_by(manipulator_1, panel_12)",
+    "reachable_by(manipulator_1, panel_2)",
+    "reachable_by(manipulator_1, panel_3)",
+    "reachable_by(manipulator_1, panel_4)",
+    "reachable_by(manipulator_1, panel_5)",
+    "reachable_by(manipulator_1, panel_6)",
+    "reachable_by(manipulator_1, panel_7)",
+    "reachable_by(manipulator_1, panel_8)",
+    "reachable_by(manipulator_1, panel_9)",
+    "reachable_by(transport_1, bracket_1)",
+    "reachable_by(transport_1, bracket_10)",
+    "reachable_by(transport_1, bracket_11)",
+    "reachable_by(transport_1, bracket_12)",
+    "reachable_by(transport_1, bracket_2)",
+    "reachable_by(transport_1, bracket_3)",
+    "reachable_by(transport_1, bracket_4)",
+    "reachable_by(transport_1, bracket_5)",
+    "reachable_by(transport_1, bracket_6)",
+    "reachable_by(transport_1, bracket_7)",
+    "reachable_by(transport_1, bracket_8)",
+    "reachable_by(transport_1, bracket_9)",
+    "reachable_by(transport_1, panel_1)",
+    "reachable_by(transport_1, panel_10)",
+    "reachable_by(transport_1, panel_11)",
+    "reachable_by(transport_1, panel_12)",
+    "reachable_by(transport_1, panel_2)",
+    "reachable_by(transport_1, panel_3)",
+    "reachable_by(transport_1, panel_4)",
+    "reachable_by(transport_1, panel_5)",
+    "reachable_by(transport_1, panel_6)",
+    "reachable_by(transport_1, panel_7)",
+    "reachable_by(transport_1, panel_8)",
+    "reachable_by(transport_1, panel_9)",
+    "zero_material_wasted"
+  ],
+  "final_radio_observation": {
+    "connected_by_actor": {
+      "transport_1": true,
+      "manipulator_1": true,
+      "assembler_1": true
+    },
+    "source": "ConstructionExecutionWorld.comm_connected_to_base",
+    "supervisory_policy": "Connected",
+    "interpretation": "physical source-world radio after execution; reaching a return goal does not itself restore communication"
+  },
+  "dispatch_n": 4,
+  "logical_model_calls": 2,
+  "model_logical_cap": 2,
+  "stage_observations": {
+    "native_kernel_attempted": true,
+    "model_transport_attempts": 2,
+    "common_execution_boundary_reached": true
+  },
+  "actual_model_api_calls": 2,
+  "actual_provider_tokens": 58337,
+  "wall_s": 114.94342879997566,
+  "scope": "development fixtures; not held-out model or overall method performance",
+  "policy_selection_credit": "shared PI policy A",
+  "runtime_cost_scope": "PSR actual simulator energy; Construction/Lava numeric energy unknown; durations nominal",
+  "resource_accounting_scope": "host hard wall30s per solver goal; Windows Job committed memory2GiB vs Docker cgroup2GiB, distinct peak counters",
+  "resource_assistance": {
+    "implementation": "resource_assistance_v1",
+    "limits": {
+      "prediction_calls": 64,
+      "search_calls": 2,
+      "candidate_rollouts": 2112,
+      "world_steps": 100000,
+      "work_wall_s": 120.0,
+      "worker_wall_s": 30.0,
+      "memory_mb": 2048
+    },
+    "metrics": {
+      "candidate_rollouts": 0,
+      "prediction_world_steps": 0,
+      "prediction_wall_s": 0.0,
+      "standalone_prediction_wall_s": 0.0,
+      "local_search_wall_s": 0.0,
+      "proposal_validation_wall_s": 0.011687899997923523,
+      "prediction_calls": 0,
+      "search_calls": 0,
+      "work_counters_complete": true,
+      "resource_wall_s": 0.011687899997923523,
+      "total_wall_s": 114.94342879997566
+    },
+    "events": [
+      {
+        "kind": "forecast",
+        "result": {
+          "resource_feasible": null,
+          "status": "NUMERIC_RESOURCE_UNKNOWN",
+          "prediction_dispatch_n": 0
+        }
+      }
+    ],
+    "formal_resource_guarantee": false,
+    "time_accounting": "resource_wall is standalone forecast + inclusive search + external validation; prediction_wall includes nested search forecasts and must not be added again"
+  },
+  "resource_input": {
+    "scenario": "construction",
+    "numeric_resource_model": "unknown",
+    "reason": "No approved numeric movement/task energy source for this execution world.",
+    "formal_energy_guarantee": false
+  },
+  "local_work": {
+    "candidate_rollouts": 0,
+    "prediction_world_steps": 0,
+    "prediction_wall_s": 0.0,
+    "standalone_prediction_wall_s": 0.0,
+    "local_search_wall_s": 0.0,
+    "proposal_validation_wall_s": 0.011687899997923523,
+    "prediction_calls": 0,
+    "search_calls": 0,
+    "work_counters_complete": true,
+    "resource_wall_s": 0.011687899997923523,
+    "total_wall_s": 114.9594527000445,
+    "native_wall_s": 1.3624481999431737,
+    "execution_wall_s": 0.01942979998420924,
+    "native_replan_calls": 0
+  },
+  "parent_goal_results": {
+    "nominal": {
+      "parent_goal_met": false,
+      "missing_positive": [],
+      "forbidden_present": [],
+      "cardinality": [
+        {
+          "required": 12,
+          "achieved": 5,
+          "shortfall": 7,
+          "missing_members": [
+            "panel_installed(panel_1)",
+            "panel_installed(panel_10)",
+            "panel_installed(panel_11)",
+            "panel_installed(panel_2)",
+            "panel_installed(panel_3)",
+            "panel_installed(panel_8)",
+            "panel_installed(panel_9)"
+          ]
+        }
+      ]
+    },
+    "common_pi_const_nominal12_to_ge5": {
+      "parent_goal_met": true,
+      "missing_positive": [],
+      "forbidden_present": [],
+      "cardinality": [
+        {
+          "required": 5,
+          "achieved": 5,
+          "shortfall": 0,
+          "missing_members": [
+            "panel_installed(panel_1)",
+            "panel_installed(panel_10)",
+            "panel_installed(panel_11)",
+            "panel_installed(panel_2)",
+            "panel_installed(panel_3)",
+            "panel_installed(panel_8)",
+            "panel_installed(panel_9)"
+          ]
+        }
+      ]
+    }
+  },
+  "repair_process": {
+    "version": "repair_process_observation_v1",
+    "candidate_stages": [
+      {
+        "candidate_record": "/attempts/0",
+        "format": {
+          "accepted": true
+        },
+        "grounding": null,
+        "symbolic_contract": null,
+        "resource_prediction": null
+      },
+      {
+        "candidate_record": "/attempts/1",
+        "format": {
+          "accepted": true
+        },
+        "grounding": {
+          "accepted": true,
+          "checked_through_step": null,
+          "complete": true,
+          "reason": "all steps grounded"
+        },
+        "symbolic_contract": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+        },
+        "resource_prediction": {
+          "resource_feasible": null,
+          "status": "NUMERIC_RESOURCE_UNKNOWN",
+          "record": "/attempts/1/common_resource_prediction"
+        }
+      }
+    ],
+    "child_or_parent_retries": [],
+    "scope_escalations": [],
+    "resource_search_records": [],
+    "adoption": {
+      "origin": "native_kernel",
+      "candidate_record": "/execution/verification/normalized_plan"
+    },
+    "adopted_matches_execution_validation": true,
+    "adopted_syntax_equals_grounded_plan": true,
+    "actual_is_validated_prefix": true,
+    "observed_mechanisms_nonexclusive": {
+      "model_candidate_used_without_resource_change": false,
+      "hierarchical_retry_occurred": false,
+      "scope_escalation_occurred": false,
+      "adopted_resource_search_changed_candidate": false
+    },
+    "prefix_recomposition_adopted": false,
+    "parent_result": {
+      "parent_goal_met": true,
+      "missing_positive": [],
+      "forbidden_present": [],
+      "cardinality": [
+        {
+          "required": 5,
+          "achieved": 5,
+          "shortfall": 0,
+          "missing_members": [
+            "panel_installed(panel_1)",
+            "panel_installed(panel_10)",
+            "panel_installed(panel_11)",
+            "panel_installed(panel_2)",
+            "panel_installed(panel_3)",
+            "panel_installed(panel_8)",
+            "panel_installed(panel_9)"
+          ]
+        }
+      ]
+    },
+    "interpretation": "Process observations can overlap. Module invocation, candidate change and success do not establish causal benefit; CL-023 requires comparison arms."
+  },
+  "prefix_recomposition_enabled": false,
+  "legacy_resource_search_setting": {
+    "assistance_limits": {
+      "prediction_calls": 64,
+      "search_calls": 2,
+      "candidate_rollouts": 2112,
+      "world_steps": 100000,
+      "work_wall_s": 120.0,
+      "worker_wall_s": 30.0,
+      "memory_mb": 2048
+    },
+    "search_limits": {
+      "max_candidate_rollouts": 1024,
+      "max_world_steps": 30000,
+      "search_wall_s": 24.0,
+      "hard_wall_s": 30.0,
+      "memory_mb": 2048
+    }
+  },
+  "adopted_candidate": [
+    {
+      "primitive": "panel_align_and_dock",
+      "agent_id": "assembler_1",
+      "params": {
+        "panel_id": "panel_4",
+        "bracket_id": "bracket_1"
+      }
+    },
+    {
+      "primitive": "panel_align_and_dock",
+      "agent_id": "assembler_1",
+      "params": {
+        "panel_id": "panel_5",
+        "bracket_id": "bracket_1"
+      }
+    },
+    {
+      "primitive": "panel_align_and_dock",
+      "agent_id": "assembler_1",
+      "params": {
+        "panel_id": "panel_6",
+        "bracket_id": "bracket_1"
+      }
+    },
+    {
+      "primitive": "panel_align_and_dock",
+      "agent_id": "assembler_1",
+      "params": {
+        "panel_id": "panel_7",
+        "bracket_id": "bracket_1"
+      }
+    }
+  ],
+  "task_id": "R_S_construction_prefix_source_inj005",
+  "model_seed": 2,
+  "implementation_profile": "resource_integrated_comparison_v2",
+  "policy_eligible": true,
+  "model_source": "caller-owned model session",
+  "method_improvement": "symmetric independently invoked resource search for Ours/flat; independent native kernels use common forecast",
+  "model_tokens": 58337,
+  "communication": {
+    "attempts": 0,
+    "delivered": null,
+    "source": "local source tokens are not measured radio delivery"
+  },
+  "cost_accounting": {
+    "total_wall_s": "observed inclusive arm wall time, not a sum of nested components",
+    "prediction_wall_s": "forecast compute including the subset inside local_search_wall_s",
+    "execution_wall_s": "actual execution boundary, including its mandatory revalidation and binding",
+    "native_wall_s": "includes native parsing/mapping/verification inside the native worker",
+    "proposal_validation_wall_s": "outer candidate and rebuilt-child/parent checks; excludes native/internal execution checks",
+    "task_preparation": "shared fixture/witness preparation is recorded per task, not charged as each arm's search"
+  },
+  "selected_goal_initially_met": false,
+  "new_recovery_success": true,
+  "resource_reorganization_used": false,
+  "mechanism_metrics": {
+    "version": "mechanism_observation_v1",
+    "actions": {
+      "original_remaining_n": 11,
+      "actual_executed_n": 4,
+      "actual_preserved_action_n": 0,
+      "actual_preserved_outside_fault_n": 0,
+      "removed_or_replaced_outside_fault_n": 10,
+      "unmatched_actual_action_n": 4,
+      "matched_original_actual_indices": [],
+      "fault_original_indices": [
+        0
+      ],
+      "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+      "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions",
+      "fault_scope_definition": "original Task containing observed failed primitive; fixed across methods, not selected repair scope"
+    },
+    "adopted_plan_changes": {
+      "original_remaining_n": 11,
+      "actual_executed_n": 4,
+      "actual_preserved_action_n": 0,
+      "actual_preserved_outside_fault_n": 0,
+      "removed_or_replaced_outside_fault_n": 10,
+      "unmatched_actual_action_n": 4,
+      "matched_original_actual_indices": [],
+      "fault_original_indices": [
+        0
+      ],
+      "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+      "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions"
+    },
+    "events": [],
+    "regeneration_tokens_new_calls": {
+      "known_lower_bound": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "unknown_request_n": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "request_n": 0,
+      "scope": "completed response usage; transport retries/unknown posts remain separately in the existing ledger"
+    },
+    "regeneration_ancestry_complete": true,
+    "regeneration_token_interpretation": "observed linked calls only; missing ancestry makes this a partial lower bound, not total regeneration cost",
+    "regeneration_unmatched_request_n": 0,
+    "scope_escalations": [],
+    "parent_invalidated_work": [],
+    "first_discovered_error_cost": null,
+    "operational_replay_n": 0,
+    "physical_prefix_n": 1,
+    "physical_prefix_source": "original_information.executed_prefix; distinct from generated verification",
+    "source_obligations": {
+      "original_goal_met": false,
+      "selected_policy": "common_pi_const_nominal12_to_ge5",
+      "approved_policy_changed": true,
+      "implementation_action_rewrite_is_goal_change": false
+    },
+    "causal_benefit_established": false
+  },
+  "final_translation_builder": "literal_goal_translation_v7",
+  "result_version": "final_interface_refresh_v1",
+  "source_calls": null,
+  "replay_only": false
+}

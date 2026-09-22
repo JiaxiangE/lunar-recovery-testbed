@@ -1,0 +1,2445 @@
+{
+  "captured_date": "2026-09-20",
+  "scope": "read-only current filesystem/image/container inspection; no inference, simulation, rendering, container start or historical runtime attestation",
+  "omnilrs": {
+    "commit": "bd05f7fb9499a34076504f76f11cb2165a4edbe3",
+    "branch": "main",
+    "tags": [],
+    "upstream": "https://github.com/OmniLRS/OmniLRS",
+    "submodules": [
+      " 23bd494b1bbcdd54cf314250a4312352d285c712 WorldBuilders (heads/main)"
+    ],
+    "runtime_copy_has_git": false,
+    "runtime_patch": "integration/isaac_snapshot/omnilrs-runtime.patch",
+    "inactive_cosim": "F1_RENDER/HUSKY_OFF unset in captured container; optional unrelated co-simulation source is not required for this path or distributed"
+  },
+  "ros_demo": {
+    "directory": "/opt/omnilrs_ros2_demo",
+    "git_commit": null,
+    "reason": "actual mounted directory has no .git; no nested repositories; adjacent original checkout absent",
+    "recorded_source_url": "https://github.com/jnskkmhr/omnilrs_ros2_demo",
+    "packages": [
+      {
+        "path": "/opt/omnilrs_ros2_demo/humble_ws/src/robot_bringup/package.xml",
+        "text": "<?xml version=\"1.0\"?>\n<?xml-model href=\"http://download.ros.org/schema/package_format3.xsd\" schematypens=\"http://www.w3.org/2001/XMLSchema\"?>\n<package format=\"3\">\n  <name>robot_bringup</name>\n  <version>0.0.0</version>\n  <description>TODO: Package description</description>\n  <maintainer email=\"public-contact@example.invalid\">jnskkmhr</maintainer>\n  <license>TODO: License declaration</license>\n\n  <buildtool_depend>ament_cmake</buildtool_depend>\n  \n  <exec_depend>slam_toolbox</exec_depend>\n  <exec_depend>navigation2</exec_depend>\n  <exec_depend>nav2_bringup</exec_depend>\n\n  <test_depend>ament_lint_auto</test_depend>\n  <test_depend>ament_lint_common</test_depend>\n\n  <export>\n    <build_type>ament_cmake</build_type>\n  </export>\n</package>\n"
+      },
+      {
+        "path": "/opt/omnilrs_ros2_demo/humble_ws/src/vis_tool/package.xml",
+        "text": "<?xml version=\"1.0\"?>\n<?xml-model href=\"http://download.ros.org/schema/package_format3.xsd\" schematypens=\"http://www.w3.org/2001/XMLSchema\"?>\n<package format=\"3\">\n  <name>vis_tool</name>\n  <version>0.0.0</version>\n  <description>TODO: Package description</description>\n  <maintainer email=\"public-contact@example.invalid\">ubuntu</maintainer>\n  <license>TODO: License declaration</license>\n\n  <buildtool_depend>ament_cmake</buildtool_depend>\n\n  <depend>rclpy</depend>\n  <depend>sensor_msgs</depend>\n  <depend>cv_bridge</depend>\n  <depend>tf2</depend>\n\n  <test_depend>ament_lint_auto</test_depend>\n  <test_depend>ament_lint_common</test_depend>\n\n  <export>\n    <build_type>ament_cmake</build_type>\n  </export>\n</package>\n"
+      },
+      {
+        "path": "/opt/omnilrs_ros2_demo/humble_ws/src/nav2_commander/package.xml",
+        "text": "<?xml version=\"1.0\"?>\n<?xml-model href=\"http://download.ros.org/schema/package_format3.xsd\" schematypens=\"http://www.w3.org/2001/XMLSchema\"?>\n<package format=\"3\">\n  <name>nav2_commander</name>\n  <version>0.0.0</version>\n  <description>TODO: Package description</description>\n  <maintainer email=\"public-contact@example.invalid\">jnskkmhr</maintainer>\n  <license>TODO: License declaration</license>\n\n  <depend>rclpy</depend>\n  <depend>turtlebot4_navigation</depend>\n  <depend>nav2_simple_commander</depend>\n  <depend>irobot_create_msgs</depend>\n\n  <test_depend>ament_copyright</test_depend>\n  <test_depend>ament_flake8</test_depend>\n  <test_depend>ament_pep257</test_depend>\n  <test_depend>python3-pytest</test_depend>\n\n  <export>\n    <build_type>ament_python</build_type>\n  </export>\n</package>"
+      },
+      {
+        "path": "/opt/omnilrs_ros2_demo/humble_ws/src/paper4_msgs/package.xml",
+        "text": "Historical placeholder metadata superseded by author-confirmed MIT component in this repository."
+      },
+      {
+        "path": "/opt/omnilrs_ros2_demo/humble_ws/src/robot_controller/package.xml",
+        "text": "<?xml version=\"1.0\"?>\n<?xml-model href=\"http://download.ros.org/schema/package_format3.xsd\" schematypens=\"http://www.w3.org/2001/XMLSchema\"?>\n<package format=\"3\">\n  <name>robot_controller</name>\n  <version>0.0.0</version>\n  <description>TODO: Package description</description>\n  <maintainer email=\"public-contact@example.invalid\">jnskkmhr</maintainer>\n  <license>TODO: License declaration</license>\n\n  <buildtool_depend>ament_cmake</buildtool_depend>\n\n  <exec_depend>joy</exec_depend>\n\n  <depend>rclcpp</depend>\n  <depend>sensor_msgs</depend>\n  <depend>std_msgs</depend>\n  <depend>geometry_msgs</depend>\n\n  <test_depend>ament_lint_auto</test_depend>\n  <test_depend>ament_lint_common</test_depend>\n\n  <export>\n    <build_type>ament_cmake</build_type>\n  </export>\n</package>\n"
+      }
+    ]
+  },
+  "images": {
+    "isaac-sim-omnilrs:latest": {
+      "Id": "sha256:a42aa83c284cb8a612061a4b91be0a33018c290201cef03812035285a7a4a001",
+      "RepoTags": [
+        "isaac-sim-omnilrs:latest"
+      ],
+      "RepoDigests": [
+        "isaac-sim-omnilrs@sha256:a42aa83c284cb8a612061a4b91be0a33018c290201cef03812035285a7a4a001"
+      ],
+      "Created": "2026-05-27T13:01:00.733574271+08:00",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 8278251875,
+      "config": {
+        "Labels": {
+          "com.nvidia.omniverse.build.branch": "release-5.0",
+          "com.nvidia.omniverse.build.build": "184afb15",
+          "com.nvidia.omniverse.build.build_tool_version": "1.3.0",
+          "com.nvidia.omniverse.build.compliant": "0",
+          "com.nvidia.omniverse.build.family": "gl",
+          "com.nvidia.omniverse.build.release": "5.0.0-rc.45",
+          "com.nvidia.omniverse.service": "isaac-sim",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "22.04"
+        },
+        "WorkingDir": "/isaac-sim",
+        "Entrypoint": [
+          "/entrypoint.sh"
+        ],
+        "Cmd": [
+          "bash"
+        ]
+      },
+      "version_env": [
+        "ROS_DISTRO=humble",
+        "RMW_IMPLEMENTATION=rmw_fastrtps_cpp"
+      ]
+    },
+    "omnilrs-navigation:v1.0": {
+      "Id": "sha256:0dd37a5577bf9201c645fba72db41d37c28743b85af3e9103d3ace259242a220",
+      "RepoTags": [
+        "omnilrs-navigation:v1.0"
+      ],
+      "RepoDigests": [
+        "omnilrs-navigation@sha256:0dd37a5577bf9201c645fba72db41d37c28743b85af3e9103d3ace259242a220"
+      ],
+      "Created": "2026-05-27T15:21:06.941322396+08:00",
+      "Architecture": "amd64",
+      "Os": "linux",
+      "Size": 1518097239,
+      "config": {
+        "Labels": {
+          "org.opencontainers.image.version": "22.04"
+        },
+        "WorkingDir": "/ros2_ws",
+        "Entrypoint": [
+          "/ros_entrypoint.sh"
+        ],
+        "Cmd": [
+          "bash"
+        ]
+      },
+      "version_env": [
+        "ROS_DISTRO=humble"
+      ]
+    }
+  },
+  "containers": [
+    {
+      "name": "isaac-sim-omnilrs-container",
+      "missing": "Error response from daemon: No such container: isaac-sim-omnilrs-container\n"
+    },
+    {
+      "name": "omnilrs-navigation-container",
+      "missing": "Error response from daemon: No such container: omnilrs-navigation-container\n"
+    },
+    {
+      "name": "paper4-isaac-localgen",
+      "Id": "03e20a48063b21b96dd0d8f41d9c9f080abf19e55018a8d73f33e702b39cd1b2",
+      "image": "sha256:a42aa83c284cb8a612061a4b91be0a33018c290201cef03812035285a7a4a001",
+      "state": "exited",
+      "path": "/bin/bash",
+      "args": [
+        "-lc",
+        "/isaac-sim/python.sh run.py environment=lunaryard_psr rendering.renderer.headless=true mode.ROS_DOMAIN_ID=84"
+      ],
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "/opt/paper4-runtime/isaac_outputs",
+          "Destination": "/out",
+          "Mode": "",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/opt/paper4-runtime/isaac_project",
+          "Destination": "/workspace/omnilrs",
+          "Mode": "",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/opt/OmniLRS/assets",
+          "Destination": "/workspace/omnilrs/assets",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/opt/paper4-runtime/isaac_bridge",
+          "Destination": "/bridge",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "network_mode": "host",
+      "gpu_requests": [
+        {
+          "Driver": "",
+          "Count": 0,
+          "DeviceIDs": [
+            "0"
+          ],
+          "Capabilities": [
+            [
+              "gpu"
+            ]
+          ],
+          "Options": {}
+        }
+      ],
+      "version_env": [
+        "ROS_LOCALHOST_ONLY=1",
+        "ROS_DOMAIN_ID=84",
+        "ROS_DISTRO=humble",
+        "RMW_IMPLEMENTATION=rmw_fastrtps_cpp"
+      ]
+    },
+    {
+      "name": "paper4-nav-localgen",
+      "Id": "3e52d32db7a3c7854ef25c9d963a335b6d0f29a7fad5ea4d2903c312658b4889",
+      "image": "sha256:0dd37a5577bf9201c645fba72db41d37c28743b85af3e9103d3ace259242a220",
+      "state": "exited",
+      "path": "/bin/bash",
+      "args": [
+        "-lc",
+        "source /opt/ros/humble/setup.bash && source /ros2_ws/install/setup.bash && python3 /bridge/move_to_server.py"
+      ],
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "/opt/paper4-runtime/isaac_bridge",
+          "Destination": "/bridge",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/opt/paper4-runtime/isaac_outputs",
+          "Destination": "/out",
+          "Mode": "",
+          "RW": true,
+          "Propagation": "rprivate"
+        },
+        {
+          "Type": "bind",
+          "Source": "/opt/omnilrs_ros2_demo/humble_ws",
+          "Destination": "/ros2_ws",
+          "Mode": "ro",
+          "RW": false,
+          "Propagation": "rprivate"
+        }
+      ],
+      "network_mode": "host",
+      "gpu_requests": null,
+      "version_env": [
+        "ROS_LOCALHOST_ONLY=1",
+        "ROS_DOMAIN_ID=84",
+        "ROS_DISTRO=humble"
+      ]
+    }
+  ],
+  "installed_ros_packages": [
+    {
+      "Package": "python3-colcon-argcomplete",
+      "Version": "0.3.3+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-bash",
+      "Version": "0.5.0-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-cd",
+      "Version": "0.2.1-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-cmake",
+      "Version": "0.2.29-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-common-extensions",
+      "Version": "0.3.0-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-core",
+      "Version": "0.20.1+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-defaults",
+      "Version": "0.2.9+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-devtools",
+      "Version": "0.3.0-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-library-path",
+      "Version": "0.2.1-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-metadata",
+      "Version": "0.2.5-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-mixin",
+      "Version": "0.2.3-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-notification",
+      "Version": "0.3.1+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-output",
+      "Version": "0.2.14+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-package-information",
+      "Version": "0.4.1+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-package-selection",
+      "Version": "0.2.10-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-parallel-executor",
+      "Version": "0.3.0-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-pkg-config",
+      "Version": "0.1.0-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-powershell",
+      "Version": "0.5.0+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-python-setup-py",
+      "Version": "0.2.9-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-recursive-crawl",
+      "Version": "0.2.3-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-ros",
+      "Version": "0.5.0+upstream-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-test-result",
+      "Version": "0.3.8-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-colcon-zsh",
+      "Version": "0.5.0-100",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-rosdep",
+      "Version": "0.26.0-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "python3-rosdep-modules",
+      "Version": "0.26.0-1",
+      "Architecture": "all",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ackermann-msgs",
+      "Version": "2.0.2-3jammy.20260414.032528",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-action-msgs",
+      "Version": "1.2.2-1jammy.20260414.032330",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-action-tutorials-cpp",
+      "Version": "0.20.9-1jammy.20260421.074920",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-action-tutorials-interfaces",
+      "Version": "0.20.9-1jammy.20260414.141138",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-action-tutorials-py",
+      "Version": "0.20.9-1jammy.20260421.071139",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-actionlib-msgs",
+      "Version": "4.9.1-1jammy.20260414.032337",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake",
+      "Version": "1.3.14-1jammy.20260226.035055",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-auto",
+      "Version": "1.3.14-1jammy.20260304.074922",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-copyright",
+      "Version": "0.12.15-1jammy.20260304.195729",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-core",
+      "Version": "1.3.14-1jammy.20260224.185609",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-cppcheck",
+      "Version": "0.12.15-1jammy.20260304.195901",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-cpplint",
+      "Version": "0.12.15-1jammy.20260304.195910",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-definitions",
+      "Version": "1.3.14-1jammy.20260226.010509",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-dependencies",
+      "Version": "1.3.14-1jammy.20260226.011144",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-include-directories",
+      "Version": "1.3.14-1jammy.20260226.010305",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-interfaces",
+      "Version": "1.3.14-1jammy.20260226.005715",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-libraries",
+      "Version": "1.3.14-1jammy.20260226.004939",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-link-flags",
+      "Version": "1.3.14-1jammy.20260226.010357",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-export-targets",
+      "Version": "1.3.14-1jammy.20260226.005705",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-flake8",
+      "Version": "0.12.15-1jammy.20260304.200009",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-gen-version-h",
+      "Version": "1.3.14-1jammy.20260226.034234",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-gmock",
+      "Version": "1.3.14-1jammy.20260226.034220",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-gtest",
+      "Version": "1.3.14-1jammy.20260226.013944",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-include-directories",
+      "Version": "1.3.14-1jammy.20260226.010650",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-libraries",
+      "Version": "1.3.14-1jammy.20260226.010453",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-lint-cmake",
+      "Version": "0.12.15-1jammy.20260304.195414",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-pep257",
+      "Version": "0.12.15-1jammy.20260304.200058",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-pytest",
+      "Version": "1.3.14-1jammy.20260226.014042",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-python",
+      "Version": "1.3.14-1jammy.20260226.005145",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-ros",
+      "Version": "0.10.0-3jammy.20260304.201222",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-target-dependencies",
+      "Version": "1.3.14-1jammy.20260226.013622",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-test",
+      "Version": "1.3.14-1jammy.20260226.013528",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-uncrustify",
+      "Version": "0.12.15-1jammy.20260304.195907",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-version",
+      "Version": "1.3.14-1jammy.20260226.010514",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cmake-xmllint",
+      "Version": "0.12.15-1jammy.20260304.200103",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-copyright",
+      "Version": "0.12.15-1jammy.20260226.034848",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cppcheck",
+      "Version": "0.12.15-1jammy.20260226.010724",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-cpplint",
+      "Version": "0.12.15-1jammy.20260304.090253",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-flake8",
+      "Version": "0.12.15-1jammy.20260226.013519",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-index-cpp",
+      "Version": "1.4.1-1jammy.20260304.201844",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-index-python",
+      "Version": "1.4.1-1jammy.20260304.090250",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-lint",
+      "Version": "0.12.15-1jammy.20260226.005140",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-lint-auto",
+      "Version": "0.12.15-1jammy.20260226.014133",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-lint-cmake",
+      "Version": "0.12.15-1jammy.20260304.090258",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-lint-common",
+      "Version": "0.12.15-1jammy.20260304.201149",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-package",
+      "Version": "0.14.2-1jammy.20260213.215617",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-pep257",
+      "Version": "0.12.15-1jammy.20260226.014506",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-uncrustify",
+      "Version": "0.12.15-1jammy.20260304.195710",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ament-xmllint",
+      "Version": "0.12.15-1jammy.20260304.090301",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-angles",
+      "Version": "1.15.0-1jammy.20260304.075013",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-behaviortree-cpp-v3",
+      "Version": "3.8.7-1jammy.20260421.072328",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-bond",
+      "Version": "4.1.4-1jammy.20260414.032536",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-bondcpp",
+      "Version": "4.1.4-1jammy.20260421.072335",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-builtin-interfaces",
+      "Version": "1.2.2-1jammy.20260414.020126",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-class-loader",
+      "Version": "2.2.0-3jammy.20260304.204543",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-common-interfaces",
+      "Version": "4.9.1-1jammy.20260414.140800",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-composition",
+      "Version": "0.20.9-1jammy.20260422.080715",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-composition-interfaces",
+      "Version": "1.2.2-1jammy.20260414.021015",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-console-bridge-vendor",
+      "Version": "1.4.1-1jammy.20260304.202710",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-costmap-queue",
+      "Version": "1.1.20-1jammy.20260425.080814",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-cv-bridge",
+      "Version": "3.2.1-1jammy.20260414.141421",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-demo-nodes-cpp",
+      "Version": "0.20.9-1jammy.20260422.080756",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-demo-nodes-cpp-native",
+      "Version": "0.20.9-1jammy.20260422.080720",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-demo-nodes-py",
+      "Version": "0.20.9-1jammy.20260421.071305",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-depthimage-to-laserscan",
+      "Version": "2.5.1-1jammy.20260421.075256",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-desktop",
+      "Version": "0.10.0-1jammy.20260423.142311",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-diagnostic-msgs",
+      "Version": "4.9.1-1jammy.20260414.034311",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-diagnostic-updater",
+      "Version": "4.0.6-1jammy.20260422.080729",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-domain-coordinator",
+      "Version": "0.10.0-3jammy.20260304.090332",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dummy-map-server",
+      "Version": "0.20.9-1jammy.20260421.072703",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dummy-robot-bringup",
+      "Version": "0.20.9-1jammy.20260422.090553",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dummy-sensors",
+      "Version": "0.20.9-1jammy.20260421.072712",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dwb-core",
+      "Version": "1.1.20-1jammy.20260425.081206",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dwb-critics",
+      "Version": "1.1.20-1jammy.20260425.081541",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dwb-msgs",
+      "Version": "1.1.20-1jammy.20260414.140802",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-dwb-plugins",
+      "Version": "1.1.20-1jammy.20260425.083502",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-eigen3-cmake-module",
+      "Version": "0.1.1-4jammy.20260304.195907",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-example-interfaces",
+      "Version": "0.9.3-2jammy.20260414.032634",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-action-client",
+      "Version": "0.15.5-1jammy.20260421.072735",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-action-server",
+      "Version": "0.15.5-1jammy.20260421.072738",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-client",
+      "Version": "0.15.5-1jammy.20260421.072740",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-composition",
+      "Version": "0.15.5-1jammy.20260421.075533",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-publisher",
+      "Version": "0.15.5-1jammy.20260421.072743",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-service",
+      "Version": "0.15.5-1jammy.20260421.072916",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-subscriber",
+      "Version": "0.15.5-1jammy.20260421.075538",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-minimal-timer",
+      "Version": "0.15.5-1jammy.20260421.072945",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclcpp-multithreaded-executor",
+      "Version": "0.15.5-1jammy.20260421.072949",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-executors",
+      "Version": "0.15.5-1jammy.20260421.071543",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-minimal-action-client",
+      "Version": "0.15.5-1jammy.20260421.071341",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-minimal-action-server",
+      "Version": "0.15.5-1jammy.20260421.071342",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-minimal-client",
+      "Version": "0.15.5-1jammy.20260421.071405",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-minimal-publisher",
+      "Version": "0.15.5-1jammy.20260421.071509",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-minimal-service",
+      "Version": "0.15.5-1jammy.20260421.071525",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-examples-rclpy-minimal-subscriber",
+      "Version": "0.15.5-1jammy.20260421.071609",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-fastcdr",
+      "Version": "1.0.29-1jammy.20260226.010952",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-fastrtps",
+      "Version": "2.6.11-1jammy.20260304.200925",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-fastrtps-cmake-module",
+      "Version": "2.2.4-1jammy.20260304.202011",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-foonathan-memory-vendor",
+      "Version": "1.2.0-3jammy.20260304.200554",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-foxglove-bridge",
+      "Version": "3.3.0-1jammy.20260504.100731",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-geometry-msgs",
+      "Version": "4.9.1-1jammy.20260414.033603",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-geometry2",
+      "Version": "0.25.20-2jammy.20260422.091726",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-gmock-vendor",
+      "Version": "1.10.9006-1jammy.20260226.011659",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-gtest-vendor",
+      "Version": "1.10.9006-1jammy.20260226.011046",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ignition-cmake2-vendor",
+      "Version": "0.0.2-2jammy.20260304.200630",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ignition-math6-vendor",
+      "Version": "0.0.2-2jammy.20260304.200852",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-image-geometry",
+      "Version": "3.2.1-1jammy.20260414.141420",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-image-tools",
+      "Version": "0.20.9-1jammy.20260422.080911",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-image-transport",
+      "Version": "3.1.12-1jammy.20260421.073057",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-interactive-markers",
+      "Version": "2.3.2-2jammy.20260422.093926",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-intra-process-demo",
+      "Version": "0.20.9-1jammy.20260421.073123",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-joy",
+      "Version": "3.3.0-1jammy.20260421.075951",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-joy-linux",
+      "Version": "3.3.0-1jammy.20260422.084656",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-kdl-parser",
+      "Version": "2.6.4-1jammy.20260329.192613",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-keyboard-handler",
+      "Version": "0.0.5-1jammy.20260304.202120",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-laser-geometry",
+      "Version": "2.4.1-1jammy.20260421.071018",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch",
+      "Version": "1.0.14-1jammy.20260304.195519",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch-ros",
+      "Version": "0.19.13-1jammy.20260421.071810",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch-testing",
+      "Version": "1.0.14-1jammy.20260304.200104",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch-testing-ament-cmake",
+      "Version": "1.0.14-1jammy.20260304.202633",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch-testing-ros",
+      "Version": "0.19.13-1jammy.20260421.072041",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch-xml",
+      "Version": "1.0.14-1jammy.20260304.195726",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-launch-yaml",
+      "Version": "1.0.14-1jammy.20260304.195728",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-libcurl-vendor",
+      "Version": "3.1.3-1jammy.20260304.090502",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-libstatistics-collector",
+      "Version": "1.3.4-1jammy.20260421.024132",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-libyaml-vendor",
+      "Version": "1.2.2-2jammy.20260304.204644",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-lifecycle",
+      "Version": "0.20.9-1jammy.20260423.093452",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-lifecycle-msgs",
+      "Version": "1.2.2-1jammy.20260414.020206",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-logging-demo",
+      "Version": "0.20.9-1jammy.20260422.081031",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-map-msgs",
+      "Version": "2.1.0-3jammy.20260414.125600",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-message-filters",
+      "Version": "4.3.16-1jammy.20260421.070941",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav-2d-msgs",
+      "Version": "1.1.20-1jammy.20260414.130120",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav-2d-utils",
+      "Version": "1.1.20-1jammy.20260422.094326",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav-msgs",
+      "Version": "4.9.1-1jammy.20260414.034929",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-amcl",
+      "Version": "1.1.20-1jammy.20260422.094309",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-behavior-tree",
+      "Version": "1.1.20-1jammy.20260422.094324",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-behaviors",
+      "Version": "1.1.20-1jammy.20260425.081134",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-bringup",
+      "Version": "1.1.20-1jammy.20260425.085132",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-bt-navigator",
+      "Version": "1.1.20-1jammy.20260425.083256",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-collision-monitor",
+      "Version": "1.1.20-1jammy.20260425.080834",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-common",
+      "Version": "1.1.20-1jammy.20260421.072043",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-constrained-smoother",
+      "Version": "1.1.20-1jammy.20260425.081155",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-controller",
+      "Version": "1.1.20-1jammy.20260425.083302",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-core",
+      "Version": "1.1.20-1jammy.20260425.080846",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-costmap-2d",
+      "Version": "1.1.20-1jammy.20260425.074356",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-dwb-controller",
+      "Version": "1.1.20-1jammy.20260425.084007",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-lifecycle-manager",
+      "Version": "1.1.20-1jammy.20260422.094245",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-map-server",
+      "Version": "1.1.20-1jammy.20260423.093726",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-mppi-controller",
+      "Version": "1.1.20-1jammy.20260425.081202",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-msgs",
+      "Version": "1.1.20-1jammy.20260421.073455",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-navfn-planner",
+      "Version": "1.1.20-1jammy.20260425.081205",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-planner",
+      "Version": "1.1.20-1jammy.20260425.081623",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-regulated-pure-pursuit-controller",
+      "Version": "1.1.20-1jammy.20260425.081712",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-rotation-shim-controller",
+      "Version": "1.1.20-1jammy.20260425.083931",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-route",
+      "Version": "1.1.20-1jammy.20260425.081627",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-rviz-plugins",
+      "Version": "1.1.20-1jammy.20260422.110656",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-simple-commander",
+      "Version": "1.1.20-1jammy.20260421.074727",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-smac-planner",
+      "Version": "1.1.20-1jammy.20260425.081642",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-smoother",
+      "Version": "1.1.20-1jammy.20260425.083303",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-theta-star-planner",
+      "Version": "1.1.20-1jammy.20260425.081724",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-util",
+      "Version": "1.1.20-1jammy.20260422.093306",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-velocity-smoother",
+      "Version": "1.1.20-1jammy.20260423.093726",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-voxel-grid",
+      "Version": "1.1.20-1jammy.20260421.073514",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-nav2-waypoint-follower",
+      "Version": "1.1.20-1jammy.20260425.083305",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-navigation2",
+      "Version": "1.1.20-1jammy.20260425.084326",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ompl",
+      "Version": "1.7.0-4jammy.20260226.011457",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-openvdb-vendor",
+      "Version": "2.3.4-1jammy.20260304.075105",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-orocos-kdl-vendor",
+      "Version": "0.2.5-1jammy.20260304.201339",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-osrf-pycommon",
+      "Version": "2.1.6-1jammy.20260226.011505",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pcl-conversions",
+      "Version": "2.4.5-2jammy.20260421.073254",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pcl-msgs",
+      "Version": "1.0.0-7jammy.20260414.125853",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pcl-msgs-dbgsym",
+      "Version": "1.0.0-7jammy.20260414.125853",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pcl-ros",
+      "Version": "2.4.5-2jammy.20260422.093745",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pcl-ros-dbgsym",
+      "Version": "2.4.5-2jammy.20260422.093745",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pendulum-control",
+      "Version": "0.20.9-1jammy.20260422.093755",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pendulum-msgs",
+      "Version": "0.20.9-1jammy.20260414.020550",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pluginlib",
+      "Version": "5.1.4-1jammy.20260329.184249",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-pybind11-vendor",
+      "Version": "2.4.2-1jammy.20260304.195023",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-python-cmake-module",
+      "Version": "0.10.0-2jammy.20260304.202554",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-python-orocos-kdl-vendor",
+      "Version": "0.2.5-1jammy.20260304.202632",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-python-qt-binding",
+      "Version": "1.1.3-1jammy.20260304.202555",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-qt-dotgraph",
+      "Version": "2.2.5-1jammy.20260330.190918",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-qt-gui",
+      "Version": "2.2.5-1jammy.20260330.190956",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-qt-gui-cpp",
+      "Version": "2.2.5-1jammy.20260330.192407",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-qt-gui-py-common",
+      "Version": "2.2.5-1jammy.20260330.190941",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-quality-of-service-demo-cpp",
+      "Version": "0.20.9-1jammy.20260421.080606",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-quality-of-service-demo-py",
+      "Version": "0.20.9-1jammy.20260421.071850",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl",
+      "Version": "5.3.13-1jammy.20260421.021738",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl-action",
+      "Version": "5.3.13-1jammy.20260421.024133",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl-interfaces",
+      "Version": "1.2.2-1jammy.20260414.020551",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl-lifecycle",
+      "Version": "5.3.13-1jammy.20260421.024128",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl-logging-interface",
+      "Version": "2.3.2-1jammy.20260304.204603",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl-logging-spdlog",
+      "Version": "2.3.2-1jammy.20260304.204758",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcl-yaml-param-parser",
+      "Version": "5.3.13-1jammy.20260421.015301",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rclcpp",
+      "Version": "16.0.19-1jammy.20260421.025847",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rclcpp-action",
+      "Version": "16.0.19-1jammy.20260421.045802",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rclcpp-components",
+      "Version": "16.0.19-1jammy.20260421.074221",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rclcpp-lifecycle",
+      "Version": "16.0.19-1jammy.20260421.045908",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rclpy",
+      "Version": "3.3.21-1jammy.20260421.025639",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcpputils",
+      "Version": "2.4.6-1jammy.20260304.204148",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rcutils",
+      "Version": "5.1.8-1jammy.20260304.203555",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-resource-retriever",
+      "Version": "3.1.3-1jammy.20260304.202624",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rmw",
+      "Version": "6.1.2-1jammy.20260304.204455",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rmw-dds-common",
+      "Version": "1.6.0-2jammy.20260414.021257",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rmw-fastrtps-cpp",
+      "Version": "6.2.10-1jammy.20260414.141625",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rmw-fastrtps-shared-cpp",
+      "Version": "6.2.10-1jammy.20260414.141110",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rmw-implementation",
+      "Version": "2.8.5-1jammy.20260415.075542",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rmw-implementation-cmake",
+      "Version": "6.1.2-1jammy.20260304.202612",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-robot-state-publisher",
+      "Version": "3.0.3-2jammy.20260422.081354",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros-base",
+      "Version": "0.10.0-1jammy.20260423.142225",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros-core",
+      "Version": "0.10.0-1jammy.20260423.142057",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros-environment",
+      "Version": "3.2.2-1jammy.20260226.005101",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros-workspace",
+      "Version": "1.0.2-2jammy.20260224.185744",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2action",
+      "Version": "0.18.18-1jammy.20260422.081552",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2bag",
+      "Version": "0.15.16-1jammy.20260422.101646",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2cli",
+      "Version": "0.18.18-1jammy.20260421.071921",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2cli-common-extensions",
+      "Version": "0.1.2-1jammy.20260423.141638",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2component",
+      "Version": "0.18.18-1jammy.20260422.090447",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2doctor",
+      "Version": "0.18.18-1jammy.20260422.081639",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2interface",
+      "Version": "0.18.18-1jammy.20260422.081645",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2launch",
+      "Version": "0.19.13-1jammy.20260422.085809",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2lifecycle",
+      "Version": "0.18.18-1jammy.20260422.085843",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2multicast",
+      "Version": "0.18.18-1jammy.20260422.081645",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2node",
+      "Version": "0.18.18-1jammy.20260422.081647",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2param",
+      "Version": "0.18.18-1jammy.20260422.085910",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2pkg",
+      "Version": "0.18.18-1jammy.20260422.081656",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2plugin",
+      "Version": "5.1.4-1jammy.20260422.085811",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2run",
+      "Version": "0.18.18-1jammy.20260422.085837",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2service",
+      "Version": "0.18.18-1jammy.20260422.081752",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-ros2topic",
+      "Version": "0.18.18-1jammy.20260422.081807",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2",
+      "Version": "0.15.16-1jammy.20260422.102523",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-compression",
+      "Version": "0.15.16-1jammy.20260422.093351",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-compression-zstd",
+      "Version": "0.15.16-1jammy.20260422.095132",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-cpp",
+      "Version": "0.15.16-1jammy.20260422.081948",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-interfaces",
+      "Version": "0.15.16-1jammy.20260414.021005",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-py",
+      "Version": "0.15.16-1jammy.20260422.101256",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-storage",
+      "Version": "0.15.16-1jammy.20260415.123423",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-storage-default-plugins",
+      "Version": "0.15.16-1jammy.20260415.123802",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosbag2-transport",
+      "Version": "0.15.16-1jammy.20260422.095413",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosgraph-msgs",
+      "Version": "1.2.2-1jammy.20260414.021041",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-adapter",
+      "Version": "3.1.8-1jammy.20260304.201231",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-cli",
+      "Version": "3.1.8-1jammy.20260304.195449",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-cmake",
+      "Version": "3.1.8-1jammy.20260304.202821",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-default-generators",
+      "Version": "1.2.1-1jammy.20260414.015818",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-default-runtime",
+      "Version": "1.2.1-1jammy.20260304.210145",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-generator-c",
+      "Version": "3.1.8-1jammy.20260304.204455",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-generator-cpp",
+      "Version": "3.1.8-1jammy.20260304.204902",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-generator-py",
+      "Version": "0.14.6-1jammy.20260304.205753",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-generator-rs",
+      "Version": "0.4.12-1jammy.20260414.015644",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-parser",
+      "Version": "3.1.8-1jammy.20260304.202637",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-runtime-c",
+      "Version": "3.1.8-1jammy.20260304.204205",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-runtime-cpp",
+      "Version": "3.1.8-1jammy.20260304.204656",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-runtime-py",
+      "Version": "0.9.3-1jammy.20260414.141026",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-c",
+      "Version": "2.0.2-1jammy.20260304.204636",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-cpp",
+      "Version": "2.0.2-1jammy.20260304.205041",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-fastrtps-c",
+      "Version": "2.2.4-1jammy.20260304.205703",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-fastrtps-cpp",
+      "Version": "2.2.4-1jammy.20260304.205234",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-interface",
+      "Version": "3.1.8-1jammy.20260304.202725",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-introspection-c",
+      "Version": "3.1.8-1jammy.20260304.204454",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosidl-typesupport-introspection-cpp",
+      "Version": "3.1.8-1jammy.20260304.204904",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rosx-introspection",
+      "Version": "2.3.0-1jammy.20260422.093430",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rpyutils",
+      "Version": "0.2.2-1jammy.20260304.195455",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-action",
+      "Version": "2.0.1-3jammy.20260422.091439",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-bag",
+      "Version": "1.1.6-1jammy.20260422.101611",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-bag-plugins",
+      "Version": "1.1.6-1jammy.20260422.102636",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-common-plugins",
+      "Version": "1.2.0-1jammy.20260422.102823",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-console",
+      "Version": "2.0.3-1jammy.20260422.091302",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-graph",
+      "Version": "1.3.2-1jammy.20260422.091317",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-gui",
+      "Version": "1.1.9-1jammy.20260421.071935",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-gui-cpp",
+      "Version": "1.1.9-1jammy.20260421.074755",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-gui-py",
+      "Version": "1.1.9-1jammy.20260422.082215",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-image-view",
+      "Version": "1.2.0-2jammy.20260421.075905",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-msg",
+      "Version": "1.2.0-1jammy.20260422.091409",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-plot",
+      "Version": "1.1.5-1jammy.20260422.091326",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-publisher",
+      "Version": "1.5.0-1jammy.20260422.091336",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-py-common",
+      "Version": "1.1.9-1jammy.20260421.071938",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-py-console",
+      "Version": "1.0.2-3jammy.20260422.091343",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-reconfigure",
+      "Version": "1.1.4-1jammy.20260422.091404",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-service-caller",
+      "Version": "1.0.5-3jammy.20260422.091412",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-shell",
+      "Version": "1.0.2-3jammy.20260422.091408",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-srv",
+      "Version": "1.0.3-3jammy.20260422.091441",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-tf-tree",
+      "Version": "1.0.6-1jammy.20260422.091423",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rqt-topic",
+      "Version": "1.5.1-1jammy.20260422.091415",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rttest",
+      "Version": "0.13.0-2jammy.20260304.202749",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rviz-assimp-vendor",
+      "Version": "11.2.26-1jammy.20260304.200321",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rviz-common",
+      "Version": "11.2.26-1jammy.20260422.093806",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rviz-default-plugins",
+      "Version": "11.2.26-1jammy.20260422.100642",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rviz-ogre-vendor",
+      "Version": "11.2.26-1jammy.20260304.200738",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rviz-rendering",
+      "Version": "11.2.26-1jammy.20260304.205048",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-rviz2",
+      "Version": "11.2.26-1jammy.20260422.110656",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-sdl2-vendor",
+      "Version": "3.3.0-1jammy.20260304.195240",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-sensor-msgs",
+      "Version": "4.9.1-1jammy.20260414.035238",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-sensor-msgs-py",
+      "Version": "4.9.1-1jammy.20260414.141436",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-shape-msgs",
+      "Version": "4.9.1-1jammy.20260414.130158",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-shared-queues-vendor",
+      "Version": "0.15.16-1jammy.20260304.075306",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-slam-toolbox",
+      "Version": "2.6.10-1jammy.20260423.094708",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-smclib",
+      "Version": "4.1.4-1jammy.20260317.155122",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-spatio-temporal-voxel-layer",
+      "Version": "2.3.4-1jammy.20260425.080849",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-spdlog-vendor",
+      "Version": "1.3.1-1jammy.20260304.202915",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-sqlite3-vendor",
+      "Version": "0.15.16-1jammy.20260304.195038",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-sros2",
+      "Version": "0.10.9-1jammy.20260423.141439",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-sros2-cmake",
+      "Version": "0.10.9-1jammy.20260423.141638",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-statistics-msgs",
+      "Version": "1.2.2-1jammy.20260414.021053",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-std-msgs",
+      "Version": "4.9.1-1jammy.20260414.021058",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-std-srvs",
+      "Version": "4.9.1-1jammy.20260414.021352",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-stereo-msgs",
+      "Version": "4.9.1-1jammy.20260414.125913",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tango-icons-vendor",
+      "Version": "0.1.1-3jammy.20260304.202920",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-teleop-twist-joy",
+      "Version": "2.4.8-1jammy.20260422.082433",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-teleop-twist-keyboard",
+      "Version": "2.4.1-1jammy.20260421.072001",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2",
+      "Version": "0.25.20-2jammy.20260414.140805",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-bullet",
+      "Version": "0.25.20-2jammy.20260422.082433",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-eigen",
+      "Version": "0.25.20-2jammy.20260422.082438",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-eigen-kdl",
+      "Version": "0.25.20-2jammy.20260415.070245",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-geometry-msgs",
+      "Version": "0.25.20-2jammy.20260422.082444",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-kdl",
+      "Version": "0.25.20-2jammy.20260422.082450",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-msgs",
+      "Version": "0.25.20-2jammy.20260414.034544",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-py",
+      "Version": "0.25.20-2jammy.20260421.072000",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-ros",
+      "Version": "0.25.20-2jammy.20260421.080016",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-ros-py",
+      "Version": "0.25.20-2jammy.20260421.072224",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-sensor-msgs",
+      "Version": "0.25.20-2jammy.20260422.082452",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tf2-tools",
+      "Version": "0.25.20-2jammy.20260421.072448",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tinyxml-vendor",
+      "Version": "0.8.3-2jammy.20260304.195406",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tinyxml2-vendor",
+      "Version": "0.7.7-1jammy.20260304.195411",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tlsf",
+      "Version": "0.7.0-2jammy.20260304.202930",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tlsf-cpp",
+      "Version": "0.13.0-2jammy.20260422.082512",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-topic-monitor",
+      "Version": "0.20.9-1jammy.20260421.072046",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-tracetools",
+      "Version": "4.1.2-1jammy.20260304.201640",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-trajectory-msgs",
+      "Version": "4.9.1-1jammy.20260414.130526",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-turtlesim",
+      "Version": "1.4.3-1jammy.20260421.074225",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-uncrustify-vendor",
+      "Version": "2.0.2-2jammy.20260304.195304",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-unique-identifier-msgs",
+      "Version": "2.2.1-3jammy.20260414.021405",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-urdf",
+      "Version": "2.6.1-1jammy.20260329.185456",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-urdf-parser-plugin",
+      "Version": "2.6.1-1jammy.20260304.201738",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-urdfdom",
+      "Version": "3.0.2-2jammy.20260304.202852",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-urdfdom-headers",
+      "Version": "1.0.6-2jammy.20260226.012553",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-visualization-msgs",
+      "Version": "4.9.1-1jammy.20260414.125941",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-yaml-cpp-vendor",
+      "Version": "8.0.2-1jammy.20260304.195332",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    },
+    {
+      "Package": "ros-humble-zstd-vendor",
+      "Version": "0.15.16-1jammy.20260304.195400",
+      "Architecture": "amd64",
+      "Status": "install ok installed"
+    }
+  ],
+  "isaac_version": {
+    "content": "5.0.0-rc.45+release.23960.184afb15.gl",
+    "sha256": "9a386be0545b0c802b4508e4b87e155df519ec10c634e88aae0c3c0ff771c3f5"
+  },
+  "kit_version": null,
+  "kit_version_reason": "expected version files absent; application config retained separately",
+  "dem_files": [
+    {
+      "path": "/opt/OmniLRS/tmp/LDEM_83S_10MPP_ADJ.tiff",
+      "bytes": 5116709568,
+      "sha256": "6c548d47896e238616149cfe336a1174eb9c070e34e8b605425fc40f768bde51"
+    },
+    {
+      "path": "/opt/OmniLRS/assets/Terrains/Lunaryard/shackleton_psr/mask.npy",
+      "bytes": 640128,
+      "sha256": "d1619e2f10afc9acd6db2bbed5dfc02035cab10ea7d06573622de37951c27a35"
+    },
+    {
+      "path": "/opt/OmniLRS/assets/Terrains/Lunaryard/shackleton_psr/final.dat",
+      "bytes": 2560000,
+      "sha256": "f9a06eb326dfff577219eb08b424666e1f48485c43ffdb8388e8b9f78066e39d"
+    },
+    {
+      "path": "/opt/OmniLRS/assets/Terrains/Lunaryard/shackleton_psr/dem.npy",
+      "bytes": 2560128,
+      "sha256": "ccdc866a5356a8404783e6c5a8c287f0fa6696a17838906d44c8b96b8f295bcb"
+    },
+    {
+      "path": "/opt/OmniLRS/assets/Terrains/Lunaryard/shackleton_psr/final.hdr",
+      "bytes": 174,
+      "sha256": "adfed205caee217db76e074e8ddae1173016ad0731e575c2d885934eaba8d51a"
+    }
+  ],
+  "public_roots": {
+    "omnilrs": "/opt/OmniLRS",
+    "runtime": "/opt/paper4-runtime",
+    "ros_demo": "/opt/omnilrs_ros2_demo"
+  },
+  "bridge_version_boundary": "Current public content-binding worker is used. Earlier captured worker is archived at public commit 154190c under integration/isaac_snapshot/historical_bridge; it is not the current entrypoint."
+}

@@ -1,0 +1,422 @@
+{
+  "captured_date": "2026-09-22",
+  "upstream": "https://github.com/OmniLRS/omnilrs_ros2_demo",
+  "baseline_commit": "9d09ff1e6b7ead7d761dda37f2e84c59268b3e91",
+  "compared_files": [
+    {
+      "path": ".gitignore",
+      "state": "identical"
+    },
+    {
+      "path": ".gitmodules",
+      "state": "identical"
+    },
+    {
+      "path": ".vscode/c_cpp_properties.json",
+      "state": "identical"
+    },
+    {
+      "path": ".vscode/settings.json",
+      "state": "identical"
+    },
+    {
+      "path": "LICENSE",
+      "state": "identical"
+    },
+    {
+      "path": "README.md",
+      "state": "identical"
+    },
+    {
+      "path": "docker/Dockerfile",
+      "state": "identical"
+    },
+    {
+      "path": "docker/build_image.sh",
+      "state": "identical"
+    },
+    {
+      "path": "docker/humble_navigation.sh",
+      "state": "identical"
+    },
+    {
+      "path": "docker/humble_setup.sh",
+      "state": "identical"
+    },
+    {
+      "path": "docker/requirements.txt",
+      "state": "identical"
+    },
+    {
+      "path": "docker/ros_entrypoint.sh",
+      "state": "identical"
+    },
+    {
+      "path": "docker/run_container.sh",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/husky_nav2.rviz",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/README.md",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/launch/commander.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/__init__.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/__pycache__/__init__.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/__pycache__/goal_pose_publisher.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/__pycache__/parameter_node.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/__pycache__/run_commander.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/goal_pose_publisher.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/parameter_node.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/run_commander.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/__init__.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/__pycache__/__init__.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/__pycache__/data_type.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/__pycache__/navigation_ros_wrapper.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/__pycache__/util.cpython-310.pyc",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/data_type.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/navigation_ros_wrapper.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/src/util.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/utils/__init__.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/nav2_commander/utils/ros_msg_util.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/package.xml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/resource/nav2_commander",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/script/start_nav.bash",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/script/start_sim.bash",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/setup.cfg",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/nav2_commander/setup.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/CMakeLists.txt",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/README.md",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/jackal_nav2.rviz",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/nav2_dwb.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/nav2_mppi.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/nav2_mppi_vlp16.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/nav2_mppi_vlp16_stvl.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/nav2_tb3.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/config/slam.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/launch/foxglove.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/launch/map_server.launch.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/launch/map_server.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/launch/navigation.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/launch/slam.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/launch/static_tf.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/maps/README.md",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_bringup/package.xml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/.gitignore",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/.vscode/c_cpp_properties.json",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/CMakeLists.txt",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/README.md",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/config/joystick.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/config/skid_steer.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/include/robot_controller/joystick_handler.hpp",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/include/robot_controller/wheel_driver.hpp",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/launch/skid_steer.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/launch/teleop_joy.launch.yaml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/package.xml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/src/common/joystick_handler.cpp",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/src/common/wheel_driver.cpp",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/src/diff_controller.cpp",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/robot_controller/src/teleop_joy.cpp",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/CMakeLists.txt",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/config/OmniLRS_ros2.json",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/launch/foxglove_depth_encode.launch.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/package.xml",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/scripts/foxglove/depth_encoding.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/scripts/rerun/rerun_omnilrs.py",
+      "state": "identical"
+    },
+    {
+      "path": "humble_ws/src/vis_tool/scripts/rerun/rerun_urdf.py",
+      "state": "identical"
+    },
+    {
+      "path": "media/foxglove.png",
+      "state": "identical"
+    },
+    {
+      "path": "media/rerun.png",
+      "state": "identical"
+    }
+  ],
+  "local_patch": "ros_captured.patch",
+  "interpretation": "baseline-to-captured-file comparison; not proof of the erased historical .git HEAD",
+  "project_additions": "paper4_msgs and directly launched project Python nodes are supplied by this repository; build only paper4_msgs in a fresh overlay. Upstream component licenses are unchanged.",
+  "additional_captured_files": [
+    {
+      "path": "humble_ws/src/paper4_msgs/package.xml",
+      "bytes": 857,
+      "sha256": "56913089d86e1b397c33fceed5d32a46199e38d397ba4671de70ea69b2af1928"
+    },
+    {
+      "path": "humble_ws/src/paper4_msgs/CMakeLists.txt",
+      "bytes": 419,
+      "sha256": "fd28f4a91bf19ed25f1ecfa99f3f3cd18272bb736ff7147aae4581cdcee3c3b4"
+    },
+    {
+      "path": "humble_ws/src/paper4_msgs/action/MoveTo.action",
+      "bytes": 250,
+      "sha256": "dffa184401ec1d459a87d2bb68c3a3caaf3654a2b9b8021175cf2fcc0f2c51d8"
+    },
+    {
+      "path": "humble_ws/hud_panel.py",
+      "bytes": 2949,
+      "sha256": "b16779fc3787f2ee4ee716c44779f51ea4cab3e145c4d9a2c531370945ad4cc5"
+    },
+    {
+      "path": "humble_ws/comm_evaluator_node.py",
+      "bytes": 2926,
+      "sha256": "c7257085f9b3c720a128c34d37ff911e548dda49ff40f7c823abd2b902945d14"
+    },
+    {
+      "path": "humble_ws/hero_loop_stuck.py",
+      "bytes": 5936,
+      "sha256": "334f15428e1824029e86db21693ea290a49e82c911fd0aec633a503fbe890059"
+    },
+    {
+      "path": "humble_ws/pub_cmd_vel.py",
+      "bytes": 435,
+      "sha256": "ea6d1a167d98f74521064f6d487f22244367e15d23c3d430b691514e7540645e"
+    },
+    {
+      "path": "humble_ws/save_monitor_frame.py",
+      "bytes": 2042,
+      "sha256": "b140152d83e212a3d0b4df55fd7f0d12eee487e8bf6fc53594f12dd7d13d7a7f"
+    },
+    {
+      "path": "humble_ws/move_to_executor.py",
+      "bytes": 3202,
+      "sha256": "5a17e53ad4e5a72590e809bd5da0ce743d6176a078adebc7d4745f7e23dbb8c4"
+    },
+    {
+      "path": "humble_ws/inject_obstacle.py",
+      "bytes": 1487,
+      "sha256": "7504f4ae0a96d6dc7f4d0ba591afef546f5ab0972fb257354effc453c26a44c3"
+    },
+    {
+      "path": "humble_ws/hero_loop_construction.py",
+      "bytes": 6255,
+      "sha256": "863fbbec2d06af09d873a5ebb53c6d099ca9d53011d3a78b6a3e50f40dd53f5e"
+    },
+    {
+      "path": "humble_ws/inject_stuck.py",
+      "bytes": 938,
+      "sha256": "fbd16b71f6aa9398e3d482198cea627c0797b68ead5a0c92fbfe449adebfbc7d"
+    },
+    {
+      "path": "humble_ws/hero_loop_lava.py",
+      "bytes": 6268,
+      "sha256": "141f5916ebb325abe920b2549bc590dcc0aebeabe18a4afb28051ad561a6484e"
+    },
+    {
+      "path": "humble_ws/hero_loop_runner.py",
+      "bytes": 6158,
+      "sha256": "2c3ffdb11d2512e5a2ac96f27ad33df40c8482eed14b97542ad57a01fe22289c"
+    },
+    {
+      "path": "humble_ws/restart_comm.sh",
+      "bytes": 572,
+      "sha256": "0e45dbb3ce3bce5bfdbd5df5adf77977dc5918ec611b97c57f19100d323ba54c"
+    },
+    {
+      "path": "humble_ws/move_to_server.py",
+      "bytes": 5628,
+      "sha256": "5576f6a4c6a24f75e2fc28d1f8d2f36404c05ede503aafad2d349449d0488d76"
+    },
+    {
+      "path": "humble_ws/edge_brain_node.py",
+      "bytes": 5816,
+      "sha256": "488f2a5d94ff33ae570b46b2b1e37f27473655a891aa865e9080e619893ab7ef"
+    }
+  ],
+  "addition_scope": "Historical copied helper scripts are inventoried; the new overlay uses the current explicit repository modules and message package, not implicit copies."
+}

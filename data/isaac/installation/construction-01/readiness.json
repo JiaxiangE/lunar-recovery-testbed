@@ -1,0 +1,26 @@
+{
+  "python": "3.10.12 (main, Mar  3 2026, 11:56:32) [GCC 11.4.0]",
+  "PIL": "9.0.1",
+  "clock_n": 213,
+  "odom_n": 214,
+  "rgb_n": 31,
+  "communication_n": 40,
+  "clock_s": 56.033336255,
+  "last_odom": {
+    "xyz": [
+      -3.0517578125e-05,
+      0.0,
+      -1.128656029701233
+    ],
+    "frame": "odom",
+    "body_frame": "base_link",
+    "stamp_s": 56.050002923
+  },
+  "rgb_shape": [
+    144,
+    256
+  ],
+  "rgb_encoding": "rgba8",
+  "base_reachable": true,
+  "MoveTo_ready": true
+}

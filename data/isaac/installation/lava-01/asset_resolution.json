@@ -1,0 +1,82 @@
+{
+  "version": "relocated-reference-overlay-v1",
+  "rows": [
+    {
+      "path": "robots/ros2_husky_PhysX_vlp16.usd",
+      "source_sha256": "0eeacb4fbd256e4539bde341a75113cda88cf3b7c5b9b2b5c3a77e40275ad252",
+      "changes": [
+        {
+          "old": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+          "new": "../common/rsd455.usd"
+        }
+      ],
+      "prepared_sha256": "c4b15cb0d22fd4570735fe4728a3d521641d9d561d907daed7e7d376b4c08cde"
+    },
+    {
+      "path": "robots/ros2_husky_PhysX_vlp16_mono_depth_imu.usd",
+      "source_sha256": "f797ad1fdc1ba358567bfb436bf94a4376fcb2a2e3888f5fd7b2969cb7da93d7",
+      "changes": [
+        {
+          "old": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+          "new": "../common/rsd455.usd"
+        }
+      ],
+      "prepared_sha256": "db7f1c0e28cf05d6a669cd8d8c33aa7648d5df8731d7fc0911580dc39406ac04"
+    },
+    {
+      "path": "robots/nograph_husky.usd",
+      "source_sha256": "858ee649efbff0ac250dd5f9d9b43dca6b6c7c3d6fdcdee3f78acca437a499fd",
+      "changes": [
+        {
+          "old": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+          "new": "../common/rsd455.usd"
+        }
+      ],
+      "prepared_sha256": "d5a5f68e4be4ab969daf2207c672ea0386491ebf791ec342635d4ac9dcbb81d5"
+    },
+    {
+      "path": "common/rsd455.usd",
+      "source_sha256": "9d96721c959de9c601359d930a781afdf5d04e5d5328b74acff26c8a5885dccb",
+      "changes": [],
+      "prepared_sha256": "9d96721c959de9c601359d930a781afdf5d04e5d5328b74acff26c8a5885dccb"
+    },
+    {
+      "path": "common/Earth.usd",
+      "source_sha256": "57e078c56274322f6f749536a15bd528ad0a01c2fdeae8ad8a21e184157ac3dc",
+      "changes": [],
+      "prepared_sha256": "57e078c56274322f6f749536a15bd528ad0a01c2fdeae8ad8a21e184157ac3dc"
+    },
+    {
+      "path": "common/lander/Vikram/Vikram.usd",
+      "source_sha256": "37c5e322f8384ead98b0d7dd7763d56565a431dcf2aca72b07556004a9f67a4c",
+      "changes": [],
+      "prepared_sha256": "37c5e322f8384ead98b0d7dd7763d56565a431dcf2aca72b07556004a9f67a4c"
+    },
+    {
+      "path": "rocks/lunalab_rocks/rock_1/rock1.usd",
+      "source_sha256": "c489c87c5fbc112c3fade8c9f1e8b55b06ed2d46fb1052e7b2ccb7b1353ed3d1",
+      "changes": [],
+      "prepared_sha256": "c489c87c5fbc112c3fade8c9f1e8b55b06ed2d46fb1052e7b2ccb7b1353ed3d1"
+    },
+    {
+      "path": "rocks/lunalab_rocks/rock_2/rock2.usd",
+      "source_sha256": "594fa454ae9bb3cf66075474c80a7dd76c544ba83c307866104b898261840739",
+      "changes": [],
+      "prepared_sha256": "594fa454ae9bb3cf66075474c80a7dd76c544ba83c307866104b898261840739"
+    },
+    {
+      "path": "rocks/lunalab_rocks/rock_3/rock3.usd",
+      "source_sha256": "2bb84a764bbfd3953fe66057d4234fcfb20aa90fb18e6a7126ae76be7740bd5b",
+      "changes": [],
+      "prepared_sha256": "2bb84a764bbfd3953fe66057d4234fcfb20aa90fb18e6a7126ae76be7740bd5b"
+    },
+    {
+      "path": "rocks/lunalab_rocks/rock_4/rock4.usd",
+      "source_sha256": "a545d8dbaf20d943dcc274eeb8aff77aef02e4765a5ed2ec28fb98f89ff2a235",
+      "changes": [],
+      "prepared_sha256": "a545d8dbaf20d943dcc274eeb8aff77aef02e4765a5ed2ec28fb98f89ff2a235"
+    }
+  ],
+  "material_policy": "bare OmniPBR/OmniGlass references retained for actual Isaac 5 resolver validation; no substitute shader",
+  "scope": "new installation configuration; original external files and historical provenance unchanged"
+}

@@ -1,0 +1,147 @@
+{
+  "configuration": "release-installation-check-v1",
+  "date": "2026-09-22",
+  "new_model_calls": 0,
+  "GPU": "workstation GPU0 only",
+  "scenes": [
+    {
+      "scene": "PSR",
+      "record_directory": "records/psr-07",
+      "motion_record": "records/psr-07/out/motion.json.gz",
+      "readiness": "records/psr-07/out/readiness.json",
+      "MoveTo_ready": true,
+      "topic_counts": {
+        "clock_n": 153,
+        "odom_n": 153,
+        "rgb_n": 8,
+        "communication_n": 22
+      },
+      "motion_targets_reached": true,
+      "repair_dispatch_n": 1,
+      "content_binding": {
+        "physical_parent_goal_met": null,
+        "content_bound": true,
+        "pose_checks": [],
+        "rgb_received_n": 38,
+        "scope": "command/observation binding, not inferred mission effects",
+        "status": "BOUND_COMPLETE_TRACE",
+        "pose_evidence_available": false,
+        "rgb_evidence_available": true,
+        "repair_rgb_n": 16,
+        "nonrepair_rgb_n": 22
+      },
+      "final_xy": [
+        0.418365478515625,
+        0.0014190673828125
+      ],
+      "Kit_build": "107.3.1+production.206797.8131b85d.gl",
+      "material_sources": 27,
+      "unresolved_materials": [],
+      "runtime_diagnostics": {
+        "error_log_lines": 0,
+        "dynamic_mesh_convexHull_fallbacks": 0,
+        "boundary": "No Error-level or unresolved-asset diagnostics observed in this captured log."
+      }
+    },
+    {
+      "scene": "Lava",
+      "record_directory": "records/lava-01",
+      "motion_record": "records/lava-01/out/motion.json.gz",
+      "readiness": "records/lava-01/out/readiness.json",
+      "MoveTo_ready": true,
+      "topic_counts": {
+        "clock_n": 216,
+        "odom_n": 215,
+        "rgb_n": 31,
+        "communication_n": 40
+      },
+      "motion_targets_reached": true,
+      "repair_dispatch_n": 1,
+      "content_binding": {
+        "physical_parent_goal_met": null,
+        "content_bound": true,
+        "pose_checks": [],
+        "rgb_received_n": 35,
+        "scope": "command/observation binding, not inferred mission effects",
+        "status": "BOUND_COMPLETE_TRACE",
+        "pose_evidence_available": false,
+        "rgb_evidence_available": true,
+        "repair_rgb_n": 16,
+        "nonrepair_rgb_n": 19
+      },
+      "final_xy": [
+        0.40163612365722656,
+        -0.00016880035400390625
+      ],
+      "Kit_build": "107.3.1+production.206797.8131b85d.gl",
+      "material_sources": 22,
+      "unresolved_materials": [],
+      "runtime_diagnostics": {
+        "error_log_lines": 0,
+        "dynamic_mesh_convexHull_fallbacks": 0,
+        "boundary": "No Error-level or unresolved-asset diagnostics observed in this captured log."
+      }
+    },
+    {
+      "scene": "Construction",
+      "record_directory": "records/construction-01",
+      "motion_record": "records/construction-01/out/motion.json.gz",
+      "readiness": "records/construction-01/out/readiness.json",
+      "MoveTo_ready": true,
+      "topic_counts": {
+        "clock_n": 213,
+        "odom_n": 214,
+        "rgb_n": 31,
+        "communication_n": 40
+      },
+      "motion_targets_reached": true,
+      "repair_dispatch_n": 1,
+      "content_binding": {
+        "physical_parent_goal_met": null,
+        "content_bound": true,
+        "pose_checks": [],
+        "rgb_received_n": 35,
+        "scope": "command/observation binding, not inferred mission effects",
+        "status": "BOUND_COMPLETE_TRACE",
+        "pose_evidence_available": false,
+        "rgb_evidence_available": true,
+        "repair_rgb_n": 16,
+        "nonrepair_rgb_n": 19
+      },
+      "final_xy": [
+        0.40606689453125,
+        -8.0108642578125e-05
+      ],
+      "Kit_build": "107.3.1+production.206797.8131b85d.gl",
+      "material_sources": 33,
+      "unresolved_materials": [],
+      "runtime_diagnostics": {
+        "error_log_lines": 210,
+        "dynamic_mesh_convexHull_fallbacks": 210,
+        "boundary": "Construction secondary static-scene robot has dynamic triangle meshes; PhysX reports convex-hull fallback. Main Husky motion/binding passes, but secondary collision fidelity/assembly has not been validated."
+      }
+    }
+  ],
+  "preparation_failures_preserved": [
+    "psr: initial render-loop matching",
+    "psr-02: USD layer cache creation conflict",
+    "psr-03: anonymous SDF/USD format mismatch"
+  ],
+  "recording_failures_preserved": [
+    "psr-05: World.current_time vs ROS /clock epoch mismatch",
+    "psr-06: last RGB lacked a subsequent clock before recorder exit"
+  ],
+  "corrections": [
+    "exact runtime-loop hook",
+    "CPU USD reference preprocessing",
+    "local same-asset reference relocation",
+    "explicit ROS Python/PYTHONPATH",
+    "odom-frame communication beacon",
+    "256x144 preview for tested DDS buffers",
+    "observed ROS clock timestamps",
+    "0.5s post-dispatch clock drain; thresholds unchanged"
+  ],
+  "physical_parent_goal_met": null,
+  "scope": "clean-directory startup and bounded physical navigation/interface validation; no paper LLM experiment rerun or physical mission certification",
+  "original_provenance_unchanged": true
+}

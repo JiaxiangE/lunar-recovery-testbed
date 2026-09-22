@@ -1,0 +1,4469 @@
+{
+  "trial_id": "E06_lava_abandonment-fd-s2",
+  "method": "llmp_shared_domain_fd_v2",
+  "axis_b": true,
+  "cell_id": "E06_lava_abandonment",
+  "seed": 2,
+  "development_control": false,
+  "domain_version": "paper4_domain_extension_v2",
+  "semantics_profile": "lava_source_execution_v1",
+  "status": "executed",
+  "representation_supported": true,
+  "attempts": [
+    {
+      "policy": "nominal",
+      "goal": {
+        "positive": [
+          "at_entry(relay_1)",
+          "at_entry(rover_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            4,
+            [
+              "in_storage(sample_1)",
+              "in_storage(sample_2)",
+              "in_storage(sample_3)",
+              "in_storage(sample_4)"
+            ]
+          ]
+        ]
+      },
+      "raw_translation_response": "\n\n{\n  \"goal_facts\": [\n    \"at_entry(relay_1)\",\n    \"at_entry(rover_1)\",\n    \"at_entry(rover_2)\",\n    \"at_entry(sampler_1)\"\n  ],\n  \"negative_goal_facts\": [],\n  \"goal_cardinality\": [\n    [\n      4,\n      [\n        \"in_storage(sample_1)\",\n        \"in_storage(sample_2)\",\n        \"in_storage(sample_3)\",\n        \"in_storage(sample_4)\"\n      ]\n    ]\n  ]\n}",
+      "translation_format": {
+        "accepted": true
+      },
+      "parsed_translation": {
+        "goal_facts": [
+          "at_entry(relay_1)",
+          "at_entry(rover_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)"
+        ],
+        "negative_goal_facts": [],
+        "goal_cardinality": [
+          [
+            4,
+            [
+              "in_storage(sample_1)",
+              "in_storage(sample_2)",
+              "in_storage(sample_3)",
+              "in_storage(sample_4)"
+            ]
+          ]
+        ]
+      },
+      "native": {
+        "method_id": "llmp",
+        "implementation_id": "llmp_shared_domain_fd_v2",
+        "native_status": "NATIVE_EXHAUSTED",
+        "native_success": false,
+        "canonical_plan": [],
+        "plan_length": 0,
+        "native_artifact": {
+          "domain_version": "paper4_domain_extension_v2",
+          "scenario_id": "lava",
+          "intended_goal_for_wrapper": {
+            "facts": [
+              "at_entry(relay_1)",
+              "at_entry(rover_1)",
+              "at_entry(rover_2)",
+              "at_entry(sampler_1)"
+            ],
+            "negative": [],
+            "cardinality": [
+              {
+                "threshold": 4,
+                "atoms": [
+                  "in_storage(sample_1)",
+                  "in_storage(sample_2)",
+                  "in_storage(sample_3)",
+                  "in_storage(sample_4)"
+                ]
+              }
+            ]
+          },
+          "supplied_goal_facts": [
+            "at_entry(relay_1)",
+            "at_entry(rover_1)",
+            "at_entry(rover_2)",
+            "at_entry(sampler_1)"
+          ],
+          "supplied_negative_goal_facts": [],
+          "supplied_goal_cardinality": [
+            {
+              "threshold": 4,
+              "atoms": [
+                "in_storage(sample_1)",
+                "in_storage(sample_2)",
+                "in_storage(sample_3)",
+                "in_storage(sample_4)"
+              ]
+            }
+          ],
+          "translation_source": "caller_owned_instrumented_session",
+          "model_api_calls": 0,
+          "actual_model_tokens": 0,
+          "planner_image": "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+          "planner_version_disclosure": "installed image created 2025-02-07; not the paper's 22.12.0 checkout",
+          "search_configuration": "eager_greedy([ff()])",
+          "timeout_s": 30.0,
+          "memory_mb": 2048,
+          "host_hard_wall_s": 30.0,
+          "memory_measurement_scope": "Docker cgroup limit; distinct from Windows Job committed-memory accounting",
+          "plan_optimality_claimed": false,
+          "symbolic_cost": "one unit per physical ground action; nominal runtime costs are measured separately",
+          "planner_invocations": 1,
+          "action_ids": [],
+          "work": {
+            "expanded_states": 0,
+            "generated_states": 0,
+            "evaluated_states": 1,
+            "plan_length": null,
+            "plan_cost": null,
+            "search_time_s": 0.0,
+            "total_time_s": 0.001829
+          },
+          "compiler_internal_robot_actions_added": 0,
+          "compiler_identity_mapping": "one PDDL symbol per grounded action; actor and parameters preserved",
+          "resources": {
+            "backend": "docker_cgroup_v2",
+            "memory_peak_bytes": 39170048,
+            "memory_peak_source": "/sys/fs/cgroup/memory.peak",
+            "memory_limit_bytes": 2147483648,
+            "limit_reason": null,
+            "hard_wall_limit_s": 30.0,
+            "accounting_difference": "Docker container memory includes kernel-accounted file cache; Windows Job Object reports committed allocation",
+            "container_wall_s": 0.1811217320000651,
+            "fd_returncode": 12,
+            "memory_accounting": "Linux cgroup v2 memory.peak: container tree including wrapper and file cache; not Windows committed memory",
+            "memory_events_after": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_before": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_delta": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_max_bytes": 2147483648,
+            "metrics_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-ld761jh1/resource_metrics.json",
+            "memory_max_event_count": 0,
+            "memory_pressure_observed": false,
+            "host_wall_s_including_setup_cleanup": 0.5785196000360884
+          },
+          "workdir": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-ld761jh1",
+          "domain_pddl_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-ld761jh1/domain.pddl",
+          "problem_pddl_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-ld761jh1/problem.pddl",
+          "compiler_wall_s": 0.00399450003169477,
+          "actual_fd_executable": "/workspace/downward/fast-downward.py",
+          "planner_command": [
+            "/home/public-user\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--name",
+            "paper4-fd-15280e55715b481b89bb097de7e16d22",
+            "--memory",
+            "2048m",
+            "--cpus",
+            "1",
+            "-v",
+            "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-ld761jh1:/wd",
+            "-w",
+            "/wd",
+            "--entrypoint",
+            "python3",
+            "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+            "/wd/resource_wrapper.py",
+            "/workspace/downward/fast-downward.py",
+            "--overall-time-limit",
+            "30s",
+            "--overall-memory-limit",
+            "2048",
+            "domain.pddl",
+            "problem.pddl",
+            "--search",
+            "eager_greedy([ff()])"
+          ],
+          "transport_invocations": 1,
+          "planner_wall_s": 0.5667520000133663,
+          "planner_returncode": 12,
+          "planner_reported_solution": false,
+          "mapper_status": "not_attempted",
+          "planner_stdout_tail": "INFO     planner time limit: 30s\nINFO     planner memory limit: 2048 MB\n\nINFO     Running translator.\nINFO     translator stdin: None\nINFO     translator time limit: 29s\nINFO     translator memory limit: 2048 MB\nINFO     translator command line string: /usr/bin/python3 /workspace/downward/builds/release/bin/translate/translate.py domain.pddl problem.pddl --sas-file output.sas\nParsing...\nParsing: [0.020s CPU, 0.045s wall-clock]\nNormalizing task... [0.010s CPU, 0.002s wall-clock]\nInstantiating...\nGenerating Datalog program... [0.000s CPU, 0.001s wall-clock]\nNormalizing Datalog program...\nNormalizing Datalog program: [0.000s CPU, 0.004s wall-clock]\nPreparing model... [0.000s CPU, 0.002s wall-clock]\nGenerated 1027 rules.\nComputing model... [0.000s CPU, 0.001s wall-clock]\n214 relevant atoms\n0 auxiliary atoms\n214 final queue length\n403 total queue pushes\nCompleting instantiation... [0.000s CPU, 0.001s wall-clock]\nInstantiating: [0.000s CPU, 0.010s wall-clock]\nNo relaxed solution! Generating unsolvable task...\nTranslator variables: 1\nTranslator derived variables: 0\nTranslator facts: 2\nTranslator goal facts: 1\nTranslator mutex groups: 0\nTranslator total mutex groups size: 0\nTranslator operators: 0\nTranslator axioms: 0\nTranslator task size: 4\nTranslator peak memory: 34752 KB\nWriting output... [0.000s CPU, 0.005s wall-clock]\nDone! [0.030s CPU, 0.062s wall-clock]\ntranslate exit code: 0\n\nINFO     Running search (release).\nINFO     search stdin: output.sas\nINFO     search time limit: 29s\nINFO     search memory limit: 2048 MB\nINFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas\n[t=0.001693s, 12120 KB] reading input...\n[t=0.001829s, 12120 KB] done reading input!\n[t=0.001829s, 12384 KB] Simplifying 0 unary operators... done! [0 unary operators]\n[t=0.001829s, 12384 KB] time to simplify: 0.000000s\n[t=0.001829s, 12384 KB] Initializing additive heuristic...\n[t=0.001829s, 12384 KB] Initializing FF heuristic...\n[t=0.001829s, 12384 KB] Building successor generator...done!\n[t=0.001829s, 12384 KB] peak memory difference for successor generator creation: 0 KB\n[t=0.001829s, 12384 KB] time for successor generation creation: 0.000000s\n[t=0.001829s, 12384 KB] Variables: 1\n[t=0.001829s, 12384 KB] FactPairs: 2\n[t=0.001829s, 12384 KB] Bytes per state: 4\n[t=0.001829s, 12384 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647\n[t=0.001829s, 12384 KB] Initial state is a dead end.\n[t=0.001829s, 12384 KB] Initial heuristic value for ff: infinity\n[t=0.001829s, 12384 KB] pruning method: none\n[t=0.001829s, 12384 KB] Completely explored state space -- no solution!\n[t=0.001829s, 12384 KB] Actual search time: 0.000000s\n[t=0.001829s, 12384 KB] Expanded 0 state(s).\n[t=0.001829s, 12384 KB] Reopened 0 state(s).\n[t=0.001829s, 12384 KB] Evaluated 1 state(s).\n[t=0.001829s, 12384 KB] Evaluations: 1\n[t=0.001829s, 12384 KB] Generated 0 state(s).\n[t=0.001829s, 12384 KB] Dead ends: 0 state(s).\n[t=0.001829s, 12384 KB] Number of registered states: 1\n[t=0.001829s, 12384 KB] Int hash set load factor: 1/1 = 1.000000\n[t=0.001829s, 12384 KB] Int hash set resizes: 0\n[t=0.001829s, 12384 KB] Search time: 0.000000s\n[t=0.001829s, 12384 KB] Total time: 0.001829s\nSearch stopped without finding a solution.\nPeak memory: 12384 KB\nRemove intermediate file output.sas\nsearch exit code: 12\n\nDriver aborting after search\nINFO     Planner time: 0.13s\n",
+          "planner_stderr_tail": "",
+          "native_log_reports_exhausted_space": true,
+          "exit_code_interpretation": "12 remains incomplete/exhausted; a log phrase alone is not promoted to a native unsolvability certificate"
+        },
+        "diagnostics": {
+          "reason": "Fast Downward/Docker returned 12",
+          "native_goal_certified": false,
+          "native_certifies_only_supplied_goal": true,
+          "intended_goal_checked_by_native": false,
+          "intended_goal_wrapper_credited_to_baseline": false
+        }
+      }
+    },
+    {
+      "policy": "common_pi_lava_abandonment_3_of_4",
+      "goal": {
+        "positive": [
+          "at_entry(relay_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            3,
+            [
+              "in_storage(sample_1)",
+              "in_storage(sample_2)",
+              "in_storage(sample_3)",
+              "in_storage(sample_4)"
+            ]
+          ]
+        ]
+      },
+      "raw_translation_response": "\n\n{\"goal_facts\":[\"at_entry(relay_1)\",\"at_entry(rover_2)\",\"at_entry(sampler_1)\"],\"negative_goal_facts\":[],\"goal_cardinality\":[[3,[\"in_storage(sample_1)\",\"in_storage(sample_2)\",\"in_storage(sample_3)\",\"in_storage(sample_4)\"]]]}",
+      "translation_format": {
+        "accepted": true
+      },
+      "parsed_translation": {
+        "goal_facts": [
+          "at_entry(relay_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)"
+        ],
+        "negative_goal_facts": [],
+        "goal_cardinality": [
+          [
+            3,
+            [
+              "in_storage(sample_1)",
+              "in_storage(sample_2)",
+              "in_storage(sample_3)",
+              "in_storage(sample_4)"
+            ]
+          ]
+        ]
+      },
+      "native": {
+        "method_id": "llmp",
+        "implementation_id": "llmp_shared_domain_fd_v2",
+        "native_status": "NATIVE_SOLVED",
+        "native_success": true,
+        "canonical_plan": [
+          {
+            "primitive": "low_light_navigation",
+            "agent_id": "rover_2",
+            "params": {
+              "target": "sample_1"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "sample_2"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_2"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "sample_3"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "entry"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "rover_2",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "rover_2",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_2"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          }
+        ],
+        "plan_length": 10,
+        "native_artifact": {
+          "domain_version": "paper4_domain_extension_v2",
+          "scenario_id": "lava",
+          "intended_goal_for_wrapper": {
+            "facts": [
+              "at_entry(relay_1)",
+              "at_entry(rover_2)",
+              "at_entry(sampler_1)"
+            ],
+            "negative": [],
+            "cardinality": [
+              {
+                "threshold": 3,
+                "atoms": [
+                  "in_storage(sample_1)",
+                  "in_storage(sample_2)",
+                  "in_storage(sample_3)",
+                  "in_storage(sample_4)"
+                ]
+              }
+            ]
+          },
+          "supplied_goal_facts": [
+            "at_entry(relay_1)",
+            "at_entry(rover_2)",
+            "at_entry(sampler_1)"
+          ],
+          "supplied_negative_goal_facts": [],
+          "supplied_goal_cardinality": [
+            {
+              "threshold": 3,
+              "atoms": [
+                "in_storage(sample_1)",
+                "in_storage(sample_2)",
+                "in_storage(sample_3)",
+                "in_storage(sample_4)"
+              ]
+            }
+          ],
+          "translation_source": "caller_owned_instrumented_session",
+          "model_api_calls": 0,
+          "actual_model_tokens": 0,
+          "planner_image": "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+          "planner_version_disclosure": "installed image created 2025-02-07; not the paper's 22.12.0 checkout",
+          "search_configuration": "eager_greedy([ff()])",
+          "timeout_s": 30.0,
+          "memory_mb": 2048,
+          "host_hard_wall_s": 30.0,
+          "memory_measurement_scope": "Docker cgroup limit; distinct from Windows Job committed-memory accounting",
+          "plan_optimality_claimed": false,
+          "symbolic_cost": "one unit per physical ground action; nominal runtime costs are measured separately",
+          "planner_invocations": 1,
+          "action_ids": [
+            "lava_action_0143",
+            "lava_action_0283",
+            "lava_action_0389",
+            "lava_action_0284",
+            "lava_action_0394",
+            "lava_action_0281",
+            "lava_action_0251",
+            "lava_action_0267",
+            "lava_action_0403",
+            "lava_action_0405"
+          ],
+          "work": {
+            "expanded_states": 11,
+            "generated_states": 176,
+            "evaluated_states": 86,
+            "plan_length": 10,
+            "plan_cost": 10,
+            "search_time_s": 0.0,
+            "total_time_s": 0.002311
+          },
+          "compiler_internal_robot_actions_added": 0,
+          "compiler_identity_mapping": "one PDDL symbol per grounded action; actor and parameters preserved",
+          "resources": {
+            "backend": "docker_cgroup_v2",
+            "memory_peak_bytes": 211128320,
+            "memory_peak_source": "/sys/fs/cgroup/memory.peak",
+            "memory_limit_bytes": 2147483648,
+            "limit_reason": null,
+            "hard_wall_limit_s": 30.0,
+            "accounting_difference": "Docker container memory includes kernel-accounted file cache; Windows Job Object reports committed allocation",
+            "container_wall_s": 4.032629436999969,
+            "fd_returncode": 0,
+            "memory_accounting": "Linux cgroup v2 memory.peak: container tree including wrapper and file cache; not Windows committed memory",
+            "memory_events_after": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_before": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_events_delta": {
+              "high": 0,
+              "low": 0,
+              "max": 0,
+              "oom": 0,
+              "oom_group_kill": 0,
+              "oom_kill": 0
+            },
+            "memory_max_bytes": 2147483648,
+            "metrics_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-1wdow1_a/resource_metrics.json",
+            "memory_max_event_count": 0,
+            "memory_pressure_observed": false,
+            "host_wall_s_including_setup_cleanup": 4.434488900005817
+          },
+          "workdir": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-1wdow1_a",
+          "domain_pddl_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-1wdow1_a/domain.pddl",
+          "problem_pddl_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-1wdow1_a/problem.pddl",
+          "compiler_wall_s": 0.0038499999791383743,
+          "actual_fd_executable": "/workspace/downward/fast-downward.py",
+          "planner_command": [
+            "/home/public-user\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin\\docker.EXE",
+            "run",
+            "--rm",
+            "--pull",
+            "never",
+            "--network",
+            "none",
+            "--name",
+            "paper4-fd-eb4ca2a323f1461cbfe5fd7b3062ad4d",
+            "--memory",
+            "2048m",
+            "--cpus",
+            "1",
+            "-v",
+            "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-1wdow1_a:/wd",
+            "-w",
+            "/wd",
+            "--entrypoint",
+            "python3",
+            "aibasel/downward@sha256:99eb54a2e55c76eb950f53a78899c9f5800f138ff604b6a657b5f977623bfd4d",
+            "/wd/resource_wrapper.py",
+            "/workspace/downward/fast-downward.py",
+            "--overall-time-limit",
+            "30s",
+            "--overall-memory-limit",
+            "2048",
+            "domain.pddl",
+            "problem.pddl",
+            "--search",
+            "eager_greedy([ff()])"
+          ],
+          "transport_invocations": 1,
+          "planner_wall_s": 4.415459299983922,
+          "planner_returncode": 0,
+          "planner_reported_solution": true,
+          "mapper_status": "validated",
+          "planner_stdout_tail": "bin/translate/translate.py domain.pddl problem.pddl --sas-file output.sas\nParsing...\nParsing: [0.030s CPU, 0.049s wall-clock]\nNormalizing task... [0.000s CPU, 0.002s wall-clock]\nInstantiating...\nGenerating Datalog program... [0.000s CPU, 0.001s wall-clock]\nNormalizing Datalog program...\nNormalizing Datalog program: [0.010s CPU, 0.004s wall-clock]\nPreparing model... [0.000s CPU, 0.002s wall-clock]\nGenerated 1035 rules.\nComputing model... [0.000s CPU, 0.001s wall-clock]\n220 relevant atoms\n0 auxiliary atoms\n220 final queue length\n412 total queue pushes\nCompleting instantiation... [0.000s CPU, 0.001s wall-clock]\nInstantiating: [0.010s CPU, 0.010s wall-clock]\nComputing fact groups...\nFinding invariants...\n125 initial candidates\nFinding invariants: [3.820s CPU, 3.810s wall-clock]\nChecking invariant weight... [0.010s CPU, 0.011s wall-clock]\nInstantiating groups... [0.000s CPU, 0.001s wall-clock]\nCollecting mutex groups... [0.000s CPU, 0.000s wall-clock]\nChoosing groups...\n60 uncovered facts\nChoosing groups: [0.000s CPU, 0.000s wall-clock]\nBuilding translation key... [0.000s CPU, 0.000s wall-clock]\nComputing fact groups: [3.830s CPU, 3.828s wall-clock]\nBuilding STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]\nBuilding dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]\nBuilding mutex information...\nBuilding mutex information: [0.000s CPU, 0.000s wall-clock]\nTranslating task...\nProcessing axioms...\nSimplifying axioms... [0.000s CPU, 0.000s wall-clock]\nTranslator axioms removed by simplifying: 0\nProcessing axioms: [0.000s CPU, 0.000s wall-clock]\nTranslating task: [0.010s CPU, 0.003s wall-clock]\n142 effect conditions simplified\n0 implied preconditions added\nDetecting unreachable propositions...\n0 operators removed\n0 axioms removed\n12 propositions removed\nDetecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]\nReordering and filtering variables...\n37 of 63 variables necessary.\n72 of 191 mutex groups necessary.\n63 of 121 operators necessary.\n4 of 4 axiom rules necessary.\nReordering and filtering variables: [0.000s CPU, 0.001s wall-clock]\nTranslator variables: 37\nTranslator derived variables: 1\nTranslator facts: 84\nTranslator goal facts: 1\nTranslator mutex groups: 72\nTranslator total mutex groups size: 176\nTranslator operators: 63\nTranslator axioms: 4\nTranslator task size: 772\nTranslator peak memory: 202692 KB\nWriting output... [0.000s CPU, 0.004s wall-clock]\nDone! [3.880s CPU, 3.898s wall-clock]\ntranslate exit code: 0\n\nINFO     Running search (release).\nINFO     search stdin: output.sas\nINFO     search time limit: 26s\nINFO     search memory limit: 2048 MB\nINFO     search command line string: /workspace/downward/builds/release/bin/downward --search 'eager_greedy([ff()])' --internal-plan-file sas_plan < output.sas\n[t=0.000000s, 12120 KB] reading input...\n[t=0.002123s, 12120 KB] done reading input!\n[t=0.002311s, 12384 KB] Simplifying 247 unary operators... done! [192 unary operators]\n[t=0.002311s, 12384 KB] time to simplify: 0.000000s\n[t=0.002311s, 12384 KB] Initializing additive heuristic...\n[t=0.002311s, 12384 KB] Initializing FF heuristic...\n[t=0.002311s, 12384 KB] Building successor generator...done!\n[t=0.002311s, 12384 KB] peak memory difference for successor generator creation: 0 KB\n[t=0.002311s, 12384 KB] time for successor generation creation: 0.000000s\n[t=0.002311s, 12384 KB] Variables: 37\n[t=0.002311s, 12384 KB] FactPairs: 84\n[t=0.002311s, 12384 KB] Bytes per state: 8\n[t=0.002311s, 12384 KB] Conducting best first search without reopening closed nodes, (real) bound = 2147483647\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 15\n[t=0.002311s, 12516 KB] g=0, 1 evaluated, 0 expanded\n[t=0.002311s, 12516 KB] Initial heuristic value for ff: 15\n[t=0.002311s, 12516 KB] pruning method: none\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 13\n[t=0.002311s, 12516 KB] g=1, 2 evaluated, 1 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 10\n[t=0.002311s, 12516 KB] g=1, 3 evaluated, 1 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 9\n[t=0.002311s, 12516 KB] g=2, 14 evaluated, 2 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 8\n[t=0.002311s, 12516 KB] g=3, 21 evaluated, 3 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 6\n[t=0.002311s, 12516 KB] g=4, 29 evaluated, 4 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 5\n[t=0.002311s, 12516 KB] g=5, 37 evaluated, 5 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 4\n[t=0.002311s, 12516 KB] g=6, 44 evaluated, 6 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 3\n[t=0.002311s, 12516 KB] g=7, 55 evaluated, 7 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 2\n[t=0.002311s, 12516 KB] g=8, 65 evaluated, 8 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 1\n[t=0.002311s, 12516 KB] g=9, 76 evaluated, 9 expanded\n[t=0.002311s, 12516 KB] New best heuristic value for ff: 0\n[t=0.002311s, 12516 KB] g=10, 86 evaluated, 10 expanded\n[t=0.002311s, 12516 KB] Solution found!\n[t=0.002311s, 12516 KB] Actual search time: 0.000000s\na00143  (1)\na00283  (1)\na00389  (1)\na00284  (1)\na00394  (1)\na00281  (1)\na00251  (1)\na00267  (1)\na00403  (1)\na00405  (1)\n[t=0.002311s, 12516 KB] Plan length: 10 step(s).\n[t=0.002311s, 12516 KB] Plan cost: 10\n[t=0.002311s, 12516 KB] Expanded 11 state(s).\n[t=0.002311s, 12516 KB] Reopened 0 state(s).\n[t=0.002311s, 12516 KB] Evaluated 86 state(s).\n[t=0.002311s, 12516 KB] Evaluations: 86\n[t=0.002311s, 12516 KB] Generated 176 state(s).\n[t=0.002311s, 12516 KB] Dead ends: 0 state(s).\n[t=0.002311s, 12516 KB] Number of registered states: 86\n[t=0.002311s, 12516 KB] Int hash set load factor: 86/128 = 0.671875\n[t=0.002311s, 12516 KB] Int hash set resizes: 7\n[t=0.002311s, 12516 KB] Search time: 0.000000s\n[t=0.002311s, 12516 KB] Total time: 0.002311s\nSolution found.\nPeak memory: 12516 KB\nRemove intermediate file output.sas\nsearch exit code: 0\n\nINFO     Planner time: 3.97s\n",
+          "planner_stderr_tail": "",
+          "native_log_reports_exhausted_space": false,
+          "exit_code_interpretation": "12 remains incomplete/exhausted; a log phrase alone is not promoted to a native unsolvability certificate",
+          "planner_plan_path": "artifacts/final_interface_refresh_v1/llmp/E06_lava_abandonment/s2/fd/fd-1wdow1_a/sas_plan",
+          "final_state": [
+            "agent_at(rover_1, sample_3)",
+            "agent_at(rover_2, sample_1)",
+            "agent_at(sampler_1, entry)",
+            "at_entry(relay_1)",
+            "at_entry(rover_2)",
+            "at_entry(sampler_1)",
+            "available(relay_1)",
+            "available(rover_2)",
+            "available(sampler_1)",
+            "cargo(rover_2, sample_1)",
+            "cargo(sampler_1, sample_2)",
+            "cargo(sampler_1, sample_3)",
+            "cargo_count(relay_1, 0)",
+            "cargo_count(rover_1, 0)",
+            "cargo_count(rover_2, 1)",
+            "cargo_count(sampler_1, 2)",
+            "has_collector(rover_1)",
+            "has_collector(rover_2)",
+            "has_collector(sampler_1)",
+            "has_volatiles_sensor(rover_1)",
+            "has_volatiles_sensor(rover_2)",
+            "in_storage(sample_1)",
+            "in_storage(sample_2)",
+            "in_storage(sample_3)",
+            "low_visibility",
+            "owned_by(sample_1, rover_2)",
+            "owned_by(sample_2, sampler_1)",
+            "owned_by(sample_3, sampler_1)",
+            "position(relay_1, 50.0, 50.0, 5.0)",
+            "position(rover_1, 50.0, 50.0, -40.0)",
+            "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+            "position(sampler_1, 50.0, 50.0, 0.0)",
+            "sample_status(sample_1, stored)",
+            "sample_status(sample_2, stored)",
+            "sample_status(sample_3, stored)",
+            "sample_status(sample_4, field)"
+          ],
+          "planner_plan_source": "sas_plan",
+          "compiled_plan_semantic_replay_valid": true
+        },
+        "diagnostics": {
+          "reason": "",
+          "native_goal_certified": true,
+          "native_certifies_only_supplied_goal": true,
+          "intended_goal_checked_by_native": false,
+          "intended_goal_wrapper_credited_to_baseline": false,
+          "zero_step_initial_goal_satisfied": false,
+          "search_finished_with_resource_limit": false
+        }
+      },
+      "common_symbolic_validation": {
+        "accepted": true,
+        "reason": "VERIFIED",
+        "action_ids": [
+          "lava_action_0143",
+          "lava_action_0283",
+          "lava_action_0389",
+          "lava_action_0284",
+          "lava_action_0394",
+          "lava_action_0281",
+          "lava_action_0251",
+          "lava_action_0267",
+          "lava_action_0403",
+          "lava_action_0405"
+        ],
+        "normalized_plan": [
+          {
+            "primitive": "low_light_navigation",
+            "agent_id": "rover_2",
+            "params": {
+              "target": "sample_1"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "sample_2"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_2"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "sample_3"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "entry"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "rover_2",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "rover_2",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_2"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          }
+        ],
+        "final_state": [
+          "agent_at(rover_1, sample_3)",
+          "agent_at(rover_2, sample_1)",
+          "agent_at(sampler_1, entry)",
+          "at_entry(relay_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)",
+          "available(relay_1)",
+          "available(rover_2)",
+          "available(sampler_1)",
+          "cargo(rover_2, sample_1)",
+          "cargo(sampler_1, sample_2)",
+          "cargo(sampler_1, sample_3)",
+          "cargo_count(relay_1, 0)",
+          "cargo_count(rover_1, 0)",
+          "cargo_count(rover_2, 1)",
+          "cargo_count(sampler_1, 2)",
+          "has_collector(rover_1)",
+          "has_collector(rover_2)",
+          "has_collector(sampler_1)",
+          "has_volatiles_sensor(rover_1)",
+          "has_volatiles_sensor(rover_2)",
+          "in_storage(sample_1)",
+          "in_storage(sample_2)",
+          "in_storage(sample_3)",
+          "low_visibility",
+          "owned_by(sample_1, rover_2)",
+          "owned_by(sample_2, sampler_1)",
+          "owned_by(sample_3, sampler_1)",
+          "position(relay_1, 50.0, 50.0, 5.0)",
+          "position(rover_1, 50.0, 50.0, -40.0)",
+          "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+          "position(sampler_1, 50.0, 50.0, 0.0)",
+          "sample_status(sample_1, stored)",
+          "sample_status(sample_2, stored)",
+          "sample_status(sample_3, stored)",
+          "sample_status(sample_4, field)"
+        ],
+        "solver_version": "5.1.0",
+        "solver_status": "unsat",
+        "solver_encode_check_s": 0.002681200043298304,
+        "verification_s": 0.0034924999927170575,
+        "grounding": {
+          "accepted": true,
+          "checked_through_step": null,
+          "complete": true,
+          "reason": "all steps grounded"
+        },
+        "symbolic_contract": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+        }
+      },
+      "common_resource_prediction": {
+        "resource_feasible": null,
+        "status": "NUMERIC_RESOURCE_UNKNOWN",
+        "prediction_dispatch_n": 0
+      },
+      "execution": {
+        "accepted": true,
+        "reason": "EXECUTED",
+        "execution_success": true,
+        "goal_met": true,
+        "recovery_required": true,
+        "dispatch_n": 10,
+        "executed_plan": [
+          {
+            "primitive": "low_light_navigation",
+            "agent_id": "rover_2",
+            "params": {
+              "target": "sample_1"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "sample_2"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_2"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "sample_3"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          },
+          {
+            "primitive": "move_to",
+            "agent_id": "sampler_1",
+            "params": {
+              "target": "entry"
+            }
+          },
+          {
+            "primitive": "sample_collect",
+            "agent_id": "rover_2",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "rover_2",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_2"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "sampler_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          }
+        ],
+        "execution_results": [
+          {
+            "success": true,
+            "primitive_name": "low_light_navigation",
+            "agent_id": "rover_2",
+            "failure_mode": null,
+            "elapsed_s": 80.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "move_to",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 60.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "sample_collect",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 40.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "move_to",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 60.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "sample_collect",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 40.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "move_to",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 60.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "sample_collect",
+            "agent_id": "rover_2",
+            "failure_mode": null,
+            "elapsed_s": 40.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "sample_store",
+            "agent_id": "rover_2",
+            "failure_mode": null,
+            "elapsed_s": 25.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "sample_store",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 25.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          },
+          {
+            "success": true,
+            "primitive_name": "sample_store",
+            "agent_id": "sampler_1",
+            "failure_mode": null,
+            "elapsed_s": 25.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          }
+        ],
+        "transition_observations": [
+          {
+            "actor": "rover_2",
+            "primitive": "low_light_navigation",
+            "position_before": [
+              50.0,
+              50.0,
+              -49.51783350058593
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "cargo_after": [],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "move_to",
+            "position_before": [
+              50.0,
+              50.0,
+              -49.51783350058593
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              -25.515908805880606
+            ],
+            "cargo_after": [],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "sample_collect",
+            "position_before": [
+              50.0,
+              50.0,
+              -25.515908805880606
+            ],
+            "sample_id": "sample_2",
+            "sample_position_before": [
+              50.0,
+              50.0,
+              -25.515908805880606
+            ],
+            "sample_status_before": "field",
+            "cargo_before": [],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": 0.0,
+            "position_after": [
+              50.0,
+              50.0,
+              -25.515908805880606
+            ],
+            "cargo_after": [
+              "sample_2"
+            ],
+            "sample_status_after": "in_rover",
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "move_to",
+            "position_before": [
+              50.0,
+              50.0,
+              -25.515908805880606
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [
+              "sample_2"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              -39.84114316166169
+            ],
+            "cargo_after": [
+              "sample_2"
+            ],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "sample_collect",
+            "position_before": [
+              50.0,
+              50.0,
+              -39.84114316166169
+            ],
+            "sample_id": "sample_3",
+            "sample_position_before": [
+              50.0,
+              50.0,
+              -39.84114316166169
+            ],
+            "sample_status_before": "field",
+            "cargo_before": [
+              "sample_2"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": 0.0,
+            "position_after": [
+              50.0,
+              50.0,
+              -39.84114316166169
+            ],
+            "cargo_after": [
+              "sample_2",
+              "sample_3"
+            ],
+            "sample_status_after": "in_rover",
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "move_to",
+            "position_before": [
+              50.0,
+              50.0,
+              -39.84114316166169
+            ],
+            "sample_id": null,
+            "sample_position_before": null,
+            "sample_status_before": null,
+            "cargo_before": [
+              "sample_2",
+              "sample_3"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              0.0
+            ],
+            "cargo_after": [
+              "sample_2",
+              "sample_3"
+            ],
+            "sample_status_after": null,
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "rover_2",
+            "primitive": "sample_collect",
+            "position_before": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "sample_id": "sample_1",
+            "sample_position_before": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "sample_status_before": "field",
+            "cargo_before": [],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": 0.0,
+            "position_after": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "cargo_after": [
+              "sample_1"
+            ],
+            "sample_status_after": "in_rover",
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "rover_2",
+            "primitive": "sample_store",
+            "position_before": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "sample_id": "sample_1",
+            "sample_position_before": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "sample_status_before": "in_rover",
+            "cargo_before": [
+              "sample_1"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              -10.688843703050097
+            ],
+            "cargo_after": [
+              "sample_1"
+            ],
+            "sample_status_after": "stored",
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "sample_store",
+            "position_before": [
+              50.0,
+              50.0,
+              0.0
+            ],
+            "sample_id": "sample_2",
+            "sample_position_before": [
+              50.0,
+              50.0,
+              -25.515908805880606
+            ],
+            "sample_status_before": "in_rover",
+            "cargo_before": [
+              "sample_2",
+              "sample_3"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              0.0
+            ],
+            "cargo_after": [
+              "sample_2",
+              "sample_3"
+            ],
+            "sample_status_after": "stored",
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          },
+          {
+            "actor": "sampler_1",
+            "primitive": "sample_store",
+            "position_before": [
+              50.0,
+              50.0,
+              0.0
+            ],
+            "sample_id": "sample_3",
+            "sample_position_before": [
+              50.0,
+              50.0,
+              -39.84114316166169
+            ],
+            "sample_status_before": "in_rover",
+            "cargo_before": [
+              "sample_2",
+              "sample_3"
+            ],
+            "base_storage_before": [],
+            "energy_wh_before": 350.0,
+            "collection_distance_before_m": null,
+            "position_after": [
+              50.0,
+              50.0,
+              0.0
+            ],
+            "cargo_after": [
+              "sample_2",
+              "sample_3"
+            ],
+            "sample_status_after": "stored",
+            "base_storage_after": [],
+            "energy_wh_after": 350.0,
+            "success": true
+          }
+        ],
+        "verification": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "action_ids": [
+            "lava_action_0143",
+            "lava_action_0283",
+            "lava_action_0389",
+            "lava_action_0284",
+            "lava_action_0394",
+            "lava_action_0281",
+            "lava_action_0251",
+            "lava_action_0267",
+            "lava_action_0403",
+            "lava_action_0405"
+          ],
+          "normalized_plan": [
+            {
+              "primitive": "low_light_navigation",
+              "agent_id": "rover_2",
+              "params": {
+                "target": "sample_1"
+              }
+            },
+            {
+              "primitive": "move_to",
+              "agent_id": "sampler_1",
+              "params": {
+                "target": "sample_2"
+              }
+            },
+            {
+              "primitive": "sample_collect",
+              "agent_id": "sampler_1",
+              "params": {
+                "sample_id": "sample_2"
+              }
+            },
+            {
+              "primitive": "move_to",
+              "agent_id": "sampler_1",
+              "params": {
+                "target": "sample_3"
+              }
+            },
+            {
+              "primitive": "sample_collect",
+              "agent_id": "sampler_1",
+              "params": {
+                "sample_id": "sample_3"
+              }
+            },
+            {
+              "primitive": "move_to",
+              "agent_id": "sampler_1",
+              "params": {
+                "target": "entry"
+              }
+            },
+            {
+              "primitive": "sample_collect",
+              "agent_id": "rover_2",
+              "params": {
+                "sample_id": "sample_1"
+              }
+            },
+            {
+              "primitive": "sample_store",
+              "agent_id": "rover_2",
+              "params": {
+                "sample_id": "sample_1"
+              }
+            },
+            {
+              "primitive": "sample_store",
+              "agent_id": "sampler_1",
+              "params": {
+                "sample_id": "sample_2"
+              }
+            },
+            {
+              "primitive": "sample_store",
+              "agent_id": "sampler_1",
+              "params": {
+                "sample_id": "sample_3"
+              }
+            }
+          ],
+          "final_state": [
+            "agent_at(rover_1, sample_3)",
+            "agent_at(rover_2, sample_1)",
+            "agent_at(sampler_1, entry)",
+            "at_entry(relay_1)",
+            "at_entry(rover_2)",
+            "at_entry(sampler_1)",
+            "available(relay_1)",
+            "available(rover_2)",
+            "available(sampler_1)",
+            "cargo(rover_2, sample_1)",
+            "cargo(sampler_1, sample_2)",
+            "cargo(sampler_1, sample_3)",
+            "cargo_count(relay_1, 0)",
+            "cargo_count(rover_1, 0)",
+            "cargo_count(rover_2, 1)",
+            "cargo_count(sampler_1, 2)",
+            "has_collector(rover_1)",
+            "has_collector(rover_2)",
+            "has_collector(sampler_1)",
+            "has_volatiles_sensor(rover_1)",
+            "has_volatiles_sensor(rover_2)",
+            "in_storage(sample_1)",
+            "in_storage(sample_2)",
+            "in_storage(sample_3)",
+            "low_visibility",
+            "owned_by(sample_1, rover_2)",
+            "owned_by(sample_2, sampler_1)",
+            "owned_by(sample_3, sampler_1)",
+            "position(relay_1, 50.0, 50.0, 5.0)",
+            "position(rover_1, 50.0, 50.0, -40.0)",
+            "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+            "position(sampler_1, 50.0, 50.0, 0.0)",
+            "sample_status(sample_1, stored)",
+            "sample_status(sample_2, stored)",
+            "sample_status(sample_3, stored)",
+            "sample_status(sample_4, field)"
+          ],
+          "solver_version": "5.1.0",
+          "solver_status": "unsat",
+          "solver_encode_check_s": 0.0034833999816328287,
+          "verification_s": 0.004778000002261251,
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          }
+        },
+        "final_state": {
+          "semantics_version": "lava_source_execution_v1",
+          "sim_time_s": 635.0,
+          "entry_pos": [
+            50.0,
+            50.0,
+            0.0
+          ],
+          "n_samples": 4,
+          "storage_fixture": {
+            "slots_per_collecting_actor": 4,
+            "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+          },
+          "agents": {
+            "rover_1": {
+              "id": "rover_1",
+              "agent_type": "ROVER",
+              "position": [
+                50.0,
+                50.0,
+                -40.0
+              ],
+              "depth_m": 40.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "agent_at(sample_3)"
+              ],
+              "cargo": [],
+              "has_volatiles_sensor": true,
+              "has_collector": true,
+              "storage_capacity": 4
+            },
+            "rover_2": {
+              "id": "rover_2",
+              "agent_type": "ROVER",
+              "position": [
+                50.0,
+                50.0,
+                -10.688843703050097
+              ],
+              "depth_m": 10.688843703050097,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "agent_at(sample_1)",
+                "at_entry"
+              ],
+              "cargo": [
+                "sample_1"
+              ],
+              "has_volatiles_sensor": true,
+              "has_collector": true,
+              "storage_capacity": 4
+            },
+            "sampler_1": {
+              "id": "sampler_1",
+              "agent_type": "SAMPLER",
+              "position": [
+                50.0,
+                50.0,
+                0.0
+              ],
+              "depth_m": -0.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "agent_at(entry)",
+                "at_entry"
+              ],
+              "cargo": [
+                "sample_2",
+                "sample_3"
+              ],
+              "has_volatiles_sensor": false,
+              "has_collector": true,
+              "storage_capacity": 4
+            },
+            "relay_1": {
+              "id": "relay_1",
+              "agent_type": "RELAY",
+              "position": [
+                50.0,
+                50.0,
+                5.0
+              ],
+              "depth_m": -5.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "at_entry"
+              ],
+              "cargo": [],
+              "has_volatiles_sensor": false,
+              "has_collector": false,
+              "storage_capacity": 0
+            }
+          },
+          "samples": {
+            "sample_1": {
+              "depth_m": 10.688843703050097,
+              "status": "stored",
+              "location": [
+                50.0,
+                50.0,
+                -10.688843703050097
+              ],
+              "owner": "rover_2"
+            },
+            "sample_2": {
+              "depth_m": 25.515908805880606,
+              "status": "stored",
+              "location": [
+                50.0,
+                50.0,
+                -25.515908805880606
+              ],
+              "owner": "sampler_1"
+            },
+            "sample_3": {
+              "depth_m": 39.84114316166169,
+              "status": "stored",
+              "location": [
+                50.0,
+                50.0,
+                -39.84114316166169
+              ],
+              "owner": "sampler_1"
+            },
+            "sample_4": {
+              "depth_m": 49.51783350058593,
+              "status": "field",
+              "location": [
+                50.0,
+                50.0,
+                -49.51783350058593
+              ],
+              "owner": null
+            }
+          },
+          "tipped": [
+            "rover_1"
+          ],
+          "disabled_agents": [],
+          "injected_unreachable": [],
+          "injected_comm_offline": [],
+          "comm_outage_until": {},
+          "peer_conflict": [],
+          "low_visibility": true,
+          "mission_infeasible": false,
+          "pending_failures": [
+            [
+              "rover_1",
+              "move_to",
+              "L-03_tip_over"
+            ]
+          ],
+          "agent_busy_s": {
+            "rover_1": 60.0,
+            "rover_2": 205.0,
+            "sampler_1": 370.0,
+            "relay_1": 0.0
+          }
+        },
+        "final_facts": [
+          "agent_at(rover_1, sample_3)",
+          "agent_at(rover_2, sample_1)",
+          "agent_at(sampler_1, entry)",
+          "at_entry(relay_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)",
+          "available(relay_1)",
+          "available(rover_2)",
+          "available(sampler_1)",
+          "cargo(rover_2, sample_1)",
+          "cargo(sampler_1, sample_2)",
+          "cargo(sampler_1, sample_3)",
+          "cargo_count(relay_1, 0)",
+          "cargo_count(rover_1, 0)",
+          "cargo_count(rover_2, 1)",
+          "cargo_count(sampler_1, 2)",
+          "has_collector(rover_1)",
+          "has_collector(rover_2)",
+          "has_collector(sampler_1)",
+          "has_volatiles_sensor(rover_1)",
+          "has_volatiles_sensor(rover_2)",
+          "in_storage(sample_1)",
+          "in_storage(sample_2)",
+          "in_storage(sample_3)",
+          "low_visibility",
+          "owned_by(sample_1, rover_2)",
+          "owned_by(sample_2, sampler_1)",
+          "owned_by(sample_3, sampler_1)",
+          "position(relay_1, 50.0, 50.0, 5.0)",
+          "position(rover_1, 50.0, 50.0, -40.0)",
+          "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+          "position(sampler_1, 50.0, 50.0, 0.0)",
+          "sample_status(sample_1, stored)",
+          "sample_status(sample_2, stored)",
+          "sample_status(sample_3, stored)",
+          "sample_status(sample_4, field)"
+        ],
+        "elapsed_s": 455.0,
+        "energy_consumed_wh": null,
+        "wrapper_wall_s": 0.02729729999555275,
+        "actual_radio_delivery_observed": false,
+        "timing_kind": "nominal simulator work time; not hardware latency"
+      }
+    }
+  ],
+  "execution": {
+    "accepted": true,
+    "reason": "EXECUTED",
+    "execution_success": true,
+    "goal_met": true,
+    "recovery_required": true,
+    "dispatch_n": 10,
+    "executed_plan": [
+      {
+        "primitive": "low_light_navigation",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "sample_1"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "sampler_1",
+        "params": {
+          "target": "sample_2"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "sampler_1",
+        "params": {
+          "sample_id": "sample_2"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "sampler_1",
+        "params": {
+          "target": "sample_3"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "sampler_1",
+        "params": {
+          "sample_id": "sample_3"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "sampler_1",
+        "params": {
+          "target": "entry"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_1"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_1"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "sampler_1",
+        "params": {
+          "sample_id": "sample_2"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "sampler_1",
+        "params": {
+          "sample_id": "sample_3"
+        }
+      }
+    ],
+    "execution_results": [
+      {
+        "success": true,
+        "primitive_name": "low_light_navigation",
+        "agent_id": "rover_2",
+        "failure_mode": null,
+        "elapsed_s": 80.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "move_to",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 60.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "sample_collect",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 40.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "move_to",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 60.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "sample_collect",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 40.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "move_to",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 60.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "sample_collect",
+        "agent_id": "rover_2",
+        "failure_mode": null,
+        "elapsed_s": 40.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "sample_store",
+        "agent_id": "rover_2",
+        "failure_mode": null,
+        "elapsed_s": 25.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "sample_store",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 25.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      },
+      {
+        "success": true,
+        "primitive_name": "sample_store",
+        "agent_id": "sampler_1",
+        "failure_mode": null,
+        "elapsed_s": 25.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      }
+    ],
+    "transition_observations": [
+      {
+        "actor": "rover_2",
+        "primitive": "low_light_navigation",
+        "position_before": [
+          50.0,
+          50.0,
+          -49.51783350058593
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "cargo_after": [],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "move_to",
+        "position_before": [
+          50.0,
+          50.0,
+          -49.51783350058593
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "cargo_after": [],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "sample_collect",
+        "position_before": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "sample_id": "sample_2",
+        "sample_position_before": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "sample_status_before": "field",
+        "cargo_before": [],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": 0.0,
+        "position_after": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "cargo_after": [
+          "sample_2"
+        ],
+        "sample_status_after": "in_rover",
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "move_to",
+        "position_before": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [
+          "sample_2"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "cargo_after": [
+          "sample_2"
+        ],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "sample_collect",
+        "position_before": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "sample_id": "sample_3",
+        "sample_position_before": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "sample_status_before": "field",
+        "cargo_before": [
+          "sample_2"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": 0.0,
+        "position_after": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "cargo_after": [
+          "sample_2",
+          "sample_3"
+        ],
+        "sample_status_after": "in_rover",
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "move_to",
+        "position_before": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [
+          "sample_2",
+          "sample_3"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "cargo_after": [
+          "sample_2",
+          "sample_3"
+        ],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "rover_2",
+        "primitive": "sample_collect",
+        "position_before": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "sample_id": "sample_1",
+        "sample_position_before": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "sample_status_before": "field",
+        "cargo_before": [],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": 0.0,
+        "position_after": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "cargo_after": [
+          "sample_1"
+        ],
+        "sample_status_after": "in_rover",
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "rover_2",
+        "primitive": "sample_store",
+        "position_before": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "sample_id": "sample_1",
+        "sample_position_before": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "sample_status_before": "in_rover",
+        "cargo_before": [
+          "sample_1"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "cargo_after": [
+          "sample_1"
+        ],
+        "sample_status_after": "stored",
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "sample_store",
+        "position_before": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "sample_id": "sample_2",
+        "sample_position_before": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "sample_status_before": "in_rover",
+        "cargo_before": [
+          "sample_2",
+          "sample_3"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "cargo_after": [
+          "sample_2",
+          "sample_3"
+        ],
+        "sample_status_after": "stored",
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      },
+      {
+        "actor": "sampler_1",
+        "primitive": "sample_store",
+        "position_before": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "sample_id": "sample_3",
+        "sample_position_before": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "sample_status_before": "in_rover",
+        "cargo_before": [
+          "sample_2",
+          "sample_3"
+        ],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "cargo_after": [
+          "sample_2",
+          "sample_3"
+        ],
+        "sample_status_after": "stored",
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      }
+    ],
+    "verification": {
+      "accepted": true,
+      "reason": "VERIFIED",
+      "action_ids": [
+        "lava_action_0143",
+        "lava_action_0283",
+        "lava_action_0389",
+        "lava_action_0284",
+        "lava_action_0394",
+        "lava_action_0281",
+        "lava_action_0251",
+        "lava_action_0267",
+        "lava_action_0403",
+        "lava_action_0405"
+      ],
+      "normalized_plan": [
+        {
+          "primitive": "low_light_navigation",
+          "agent_id": "rover_2",
+          "params": {
+            "target": "sample_1"
+          }
+        },
+        {
+          "primitive": "move_to",
+          "agent_id": "sampler_1",
+          "params": {
+            "target": "sample_2"
+          }
+        },
+        {
+          "primitive": "sample_collect",
+          "agent_id": "sampler_1",
+          "params": {
+            "sample_id": "sample_2"
+          }
+        },
+        {
+          "primitive": "move_to",
+          "agent_id": "sampler_1",
+          "params": {
+            "target": "sample_3"
+          }
+        },
+        {
+          "primitive": "sample_collect",
+          "agent_id": "sampler_1",
+          "params": {
+            "sample_id": "sample_3"
+          }
+        },
+        {
+          "primitive": "move_to",
+          "agent_id": "sampler_1",
+          "params": {
+            "target": "entry"
+          }
+        },
+        {
+          "primitive": "sample_collect",
+          "agent_id": "rover_2",
+          "params": {
+            "sample_id": "sample_1"
+          }
+        },
+        {
+          "primitive": "sample_store",
+          "agent_id": "rover_2",
+          "params": {
+            "sample_id": "sample_1"
+          }
+        },
+        {
+          "primitive": "sample_store",
+          "agent_id": "sampler_1",
+          "params": {
+            "sample_id": "sample_2"
+          }
+        },
+        {
+          "primitive": "sample_store",
+          "agent_id": "sampler_1",
+          "params": {
+            "sample_id": "sample_3"
+          }
+        }
+      ],
+      "final_state": [
+        "agent_at(rover_1, sample_3)",
+        "agent_at(rover_2, sample_1)",
+        "agent_at(sampler_1, entry)",
+        "at_entry(relay_1)",
+        "at_entry(rover_2)",
+        "at_entry(sampler_1)",
+        "available(relay_1)",
+        "available(rover_2)",
+        "available(sampler_1)",
+        "cargo(rover_2, sample_1)",
+        "cargo(sampler_1, sample_2)",
+        "cargo(sampler_1, sample_3)",
+        "cargo_count(relay_1, 0)",
+        "cargo_count(rover_1, 0)",
+        "cargo_count(rover_2, 1)",
+        "cargo_count(sampler_1, 2)",
+        "has_collector(rover_1)",
+        "has_collector(rover_2)",
+        "has_collector(sampler_1)",
+        "has_volatiles_sensor(rover_1)",
+        "has_volatiles_sensor(rover_2)",
+        "in_storage(sample_1)",
+        "in_storage(sample_2)",
+        "in_storage(sample_3)",
+        "low_visibility",
+        "owned_by(sample_1, rover_2)",
+        "owned_by(sample_2, sampler_1)",
+        "owned_by(sample_3, sampler_1)",
+        "position(relay_1, 50.0, 50.0, 5.0)",
+        "position(rover_1, 50.0, 50.0, -40.0)",
+        "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+        "position(sampler_1, 50.0, 50.0, 0.0)",
+        "sample_status(sample_1, stored)",
+        "sample_status(sample_2, stored)",
+        "sample_status(sample_3, stored)",
+        "sample_status(sample_4, field)"
+      ],
+      "solver_version": "5.1.0",
+      "solver_status": "unsat",
+      "solver_encode_check_s": 0.0034833999816328287,
+      "verification_s": 0.004778000002261251,
+      "grounding": {
+        "accepted": true,
+        "checked_through_step": null,
+        "complete": true,
+        "reason": "all steps grounded"
+      },
+      "symbolic_contract": {
+        "accepted": true,
+        "reason": "VERIFIED",
+        "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+      }
+    },
+    "final_state": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 635.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -40.0
+          ],
+          "depth_m": 40.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_3)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -10.688843703050097
+          ],
+          "depth_m": 10.688843703050097,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_1)",
+            "at_entry"
+          ],
+          "cargo": [
+            "sample_1"
+          ],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            0.0
+          ],
+          "depth_m": -0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [
+            "sample_2",
+            "sample_3"
+          ],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 10.688843703050097,
+          "status": "stored",
+          "location": [
+            50.0,
+            50.0,
+            -10.688843703050097
+          ],
+          "owner": "rover_2"
+        },
+        "sample_2": {
+          "depth_m": 25.515908805880606,
+          "status": "stored",
+          "location": [
+            50.0,
+            50.0,
+            -25.515908805880606
+          ],
+          "owner": "sampler_1"
+        },
+        "sample_3": {
+          "depth_m": 39.84114316166169,
+          "status": "stored",
+          "location": [
+            50.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "owner": "sampler_1"
+        },
+        "sample_4": {
+          "depth_m": 49.51783350058593,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [
+        "rover_1"
+      ],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [],
+      "comm_outage_until": {},
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [
+        [
+          "rover_1",
+          "move_to",
+          "L-03_tip_over"
+        ]
+      ],
+      "agent_busy_s": {
+        "rover_1": 60.0,
+        "rover_2": 205.0,
+        "sampler_1": 370.0,
+        "relay_1": 0.0
+      }
+    },
+    "final_facts": [
+      "agent_at(rover_1, sample_3)",
+      "agent_at(rover_2, sample_1)",
+      "agent_at(sampler_1, entry)",
+      "at_entry(relay_1)",
+      "at_entry(rover_2)",
+      "at_entry(sampler_1)",
+      "available(relay_1)",
+      "available(rover_2)",
+      "available(sampler_1)",
+      "cargo(rover_2, sample_1)",
+      "cargo(sampler_1, sample_2)",
+      "cargo(sampler_1, sample_3)",
+      "cargo_count(relay_1, 0)",
+      "cargo_count(rover_1, 0)",
+      "cargo_count(rover_2, 1)",
+      "cargo_count(sampler_1, 2)",
+      "has_collector(rover_1)",
+      "has_collector(rover_2)",
+      "has_collector(sampler_1)",
+      "has_volatiles_sensor(rover_1)",
+      "has_volatiles_sensor(rover_2)",
+      "in_storage(sample_1)",
+      "in_storage(sample_2)",
+      "in_storage(sample_3)",
+      "low_visibility",
+      "owned_by(sample_1, rover_2)",
+      "owned_by(sample_2, sampler_1)",
+      "owned_by(sample_3, sampler_1)",
+      "position(relay_1, 50.0, 50.0, 5.0)",
+      "position(rover_1, 50.0, 50.0, -40.0)",
+      "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+      "position(sampler_1, 50.0, 50.0, 0.0)",
+      "sample_status(sample_1, stored)",
+      "sample_status(sample_2, stored)",
+      "sample_status(sample_3, stored)",
+      "sample_status(sample_4, field)"
+    ],
+    "elapsed_s": 455.0,
+    "energy_consumed_wh": null,
+    "wrapper_wall_s": 0.02729729999555275,
+    "actual_radio_delivery_observed": false,
+    "timing_kind": "nominal simulator work time; not hardware latency"
+  },
+  "selected_policy": "common_pi_lava_abandonment_3_of_4",
+  "original_goal_met": false,
+  "degraded_goal_met": true,
+  "original_goal_initially_met": false,
+  "original_suffix_still_valid": false,
+  "original_suffix_validity_scope": "symbolic/authorization obligations only; numeric execution energy is not certified",
+  "repair_required_by_observed_network": true,
+  "original_information": {
+    "tree": {
+      "root_id": "scene",
+      "nodes": {
+        "scene": {
+          "id": "scene",
+          "layer": "S",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(relay_1) & at_entry(rover_1) & at_entry(rover_2) & at_entry(sampler_1)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(relay_1)",
+                "at_entry(rover_1)",
+                "at_entry(rover_2)",
+                "at_entry(sampler_1)"
+              ],
+              "negative": [],
+              "cardinality": [
+                [
+                  4,
+                  [
+                    "in_storage(sample_1)",
+                    "in_storage(sample_2)",
+                    "in_storage(sample_3)",
+                    "in_storage(sample_4)"
+                  ]
+                ]
+              ]
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": null,
+          "children_ids": [
+            "mission_1",
+            "mission_2",
+            "mission_3"
+          ],
+          "formal_postcondition": "at_entry(relay_1) & at_entry(rover_1) & at_entry(rover_2) & at_entry(sampler_1)"
+        },
+        "mission_1": {
+          "id": "mission_1",
+          "layer": "M",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "agent_at(rover_1, sample_3) & agent_at(rover_2, sample_4) & agent_at(sampler_1, sample_4)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "agent_at(rover_1, sample_3)",
+                "agent_at(rover_2, sample_4)",
+                "agent_at(sampler_1, sample_4)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "scene",
+          "children_ids": [
+            "deployment_0",
+            "deployment_1",
+            "deployment_2"
+          ],
+          "required_agent_types": []
+        },
+        "deployment_0": {
+          "id": "deployment_0",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "agent_at(sampler_1, sample_4)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "agent_at(sampler_1, sample_4)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "deployment_0.p1"
+          ],
+          "assigned_agent_id": "sampler_1",
+          "required_primitives": []
+        },
+        "deployment_0.p1": {
+          "id": "deployment_0.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "deployment_0",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_4"
+          }
+        },
+        "deployment_1": {
+          "id": "deployment_1",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "agent_at(rover_2, sample_4)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "agent_at(rover_2, sample_4)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "deployment_0"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "deployment_1.p1"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "deployment_1.p1": {
+          "id": "deployment_1.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "deployment_1",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_4"
+          }
+        },
+        "deployment_2": {
+          "id": "deployment_2",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "agent_at(rover_1, sample_3)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "agent_at(rover_1, sample_3)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "deployment_1"
+          ],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "deployment_2.p1"
+          ],
+          "assigned_agent_id": "rover_1",
+          "required_primitives": []
+        },
+        "deployment_2.p1": {
+          "id": "deployment_2.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "deployment_2",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_3"
+          }
+        },
+        "mission_2": {
+          "id": "mission_2",
+          "layer": "M",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "in_storage(sample_1) & in_storage(sample_2) & in_storage(sample_3) & in_storage(sample_4)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "in_storage(sample_1)",
+                "in_storage(sample_2)",
+                "in_storage(sample_3)",
+                "in_storage(sample_4)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "mission_1"
+          ],
+          "parent_id": "scene",
+          "children_ids": [
+            "store_sample_1",
+            "store_sample_2",
+            "store_sample_3",
+            "store_sample_4"
+          ],
+          "required_agent_types": []
+        },
+        "store_sample_1": {
+          "id": "store_sample_1",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "in_storage(sample_1)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "in_storage(sample_1)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "store_sample_1.p1",
+            "store_sample_1.p2",
+            "store_sample_1.p3"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "store_sample_1.p1": {
+          "id": "store_sample_1.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "store_sample_1",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_1"
+          }
+        },
+        "store_sample_1.p2": {
+          "id": "store_sample_1.p2",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_1.p1"
+          ],
+          "parent_id": "store_sample_1",
+          "children_ids": [],
+          "primitive_name": "sample_collect",
+          "primitive_args": {
+            "sample_id": "sample_1"
+          }
+        },
+        "store_sample_1.p3": {
+          "id": "store_sample_1.p3",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_1.p2"
+          ],
+          "parent_id": "store_sample_1",
+          "children_ids": [],
+          "primitive_name": "sample_store",
+          "primitive_args": {
+            "sample_id": "sample_1"
+          }
+        },
+        "store_sample_2": {
+          "id": "store_sample_2",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "in_storage(sample_2)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "in_storage(sample_2)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_1"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "store_sample_2.p1",
+            "store_sample_2.p2",
+            "store_sample_2.p3"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "store_sample_2.p1": {
+          "id": "store_sample_2.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "store_sample_2",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_2"
+          }
+        },
+        "store_sample_2.p2": {
+          "id": "store_sample_2.p2",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_2.p1"
+          ],
+          "parent_id": "store_sample_2",
+          "children_ids": [],
+          "primitive_name": "sample_collect",
+          "primitive_args": {
+            "sample_id": "sample_2"
+          }
+        },
+        "store_sample_2.p3": {
+          "id": "store_sample_2.p3",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_2.p2"
+          ],
+          "parent_id": "store_sample_2",
+          "children_ids": [],
+          "primitive_name": "sample_store",
+          "primitive_args": {
+            "sample_id": "sample_2"
+          }
+        },
+        "store_sample_3": {
+          "id": "store_sample_3",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "in_storage(sample_3)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "in_storage(sample_3)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_2"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "store_sample_3.p1",
+            "store_sample_3.p2",
+            "store_sample_3.p3"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "store_sample_3.p1": {
+          "id": "store_sample_3.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "store_sample_3",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_3"
+          }
+        },
+        "store_sample_3.p2": {
+          "id": "store_sample_3.p2",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_3.p1"
+          ],
+          "parent_id": "store_sample_3",
+          "children_ids": [],
+          "primitive_name": "sample_collect",
+          "primitive_args": {
+            "sample_id": "sample_3"
+          }
+        },
+        "store_sample_3.p3": {
+          "id": "store_sample_3.p3",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_3.p2"
+          ],
+          "parent_id": "store_sample_3",
+          "children_ids": [],
+          "primitive_name": "sample_store",
+          "primitive_args": {
+            "sample_id": "sample_3"
+          }
+        },
+        "store_sample_4": {
+          "id": "store_sample_4",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "in_storage(sample_4)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "in_storage(sample_4)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_3"
+          ],
+          "parent_id": "mission_2",
+          "children_ids": [
+            "store_sample_4.p1",
+            "store_sample_4.p2",
+            "store_sample_4.p3"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "store_sample_4.p1": {
+          "id": "store_sample_4.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "store_sample_4",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "sample_4"
+          }
+        },
+        "store_sample_4.p2": {
+          "id": "store_sample_4.p2",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_4.p1"
+          ],
+          "parent_id": "store_sample_4",
+          "children_ids": [],
+          "primitive_name": "sample_collect",
+          "primitive_args": {
+            "sample_id": "sample_4"
+          }
+        },
+        "store_sample_4.p3": {
+          "id": "store_sample_4.p3",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "store_sample_4.p2"
+          ],
+          "parent_id": "store_sample_4",
+          "children_ids": [],
+          "primitive_name": "sample_store",
+          "primitive_args": {
+            "sample_id": "sample_4"
+          }
+        },
+        "mission_3": {
+          "id": "mission_3",
+          "layer": "M",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(rover_1) & at_entry(rover_2) & at_entry(sampler_1)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(rover_1)",
+                "at_entry(rover_2)",
+                "at_entry(sampler_1)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "mission_2"
+          ],
+          "parent_id": "scene",
+          "children_ids": [
+            "return_rover_1",
+            "return_rover_2",
+            "return_sampler_1"
+          ],
+          "required_agent_types": []
+        },
+        "return_rover_1": {
+          "id": "return_rover_1",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(rover_1)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(rover_1)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "mission_3",
+          "children_ids": [
+            "return_rover_1.p1"
+          ],
+          "assigned_agent_id": "rover_1",
+          "required_primitives": []
+        },
+        "return_rover_1.p1": {
+          "id": "return_rover_1.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "return_rover_1",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "entry"
+          }
+        },
+        "return_rover_2": {
+          "id": "return_rover_2",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(rover_2)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(rover_2)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "return_rover_1"
+          ],
+          "parent_id": "mission_3",
+          "children_ids": [
+            "return_rover_2.p1"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "return_rover_2.p1": {
+          "id": "return_rover_2.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "return_rover_2",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "entry"
+          }
+        },
+        "return_sampler_1": {
+          "id": "return_sampler_1",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(sampler_1)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(sampler_1)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [
+            "return_rover_2"
+          ],
+          "parent_id": "mission_3",
+          "children_ids": [
+            "return_sampler_1.p1"
+          ],
+          "assigned_agent_id": "sampler_1",
+          "required_primitives": []
+        },
+        "return_sampler_1.p1": {
+          "id": "return_sampler_1.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "return_sampler_1",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "entry"
+          }
+        }
+      }
+    },
+    "original_plan": [
+      {
+        "primitive": "move_to",
+        "agent_id": "sampler_1",
+        "params": {
+          "target": "sample_4"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "sample_4"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_1",
+        "params": {
+          "target": "sample_3"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "sample_1"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_1"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_1"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "sample_2"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_2"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_2"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "sample_3"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_3"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_3"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "sample_4"
+        }
+      },
+      {
+        "primitive": "sample_collect",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_4"
+        }
+      },
+      {
+        "primitive": "sample_store",
+        "agent_id": "rover_2",
+        "params": {
+          "sample_id": "sample_4"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_1",
+        "params": {
+          "target": "entry"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "entry"
+        }
+      },
+      {
+        "primitive": "move_to",
+        "agent_id": "sampler_1",
+        "params": {
+          "target": "entry"
+        }
+      }
+    ],
+    "original_observation": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 0.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 10.688843703050097,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -10.688843703050097
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.515908805880606,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.515908805880606
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 39.84114316166169,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51783350058593,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [],
+      "comm_outage_until": {},
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [],
+      "agent_busy_s": {
+        "rover_1": 0.0,
+        "rover_2": 0.0,
+        "sampler_1": 0.0,
+        "relay_1": 0.0
+      }
+    },
+    "pre_deviation_observation": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 180.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "depth_m": 39.84114316166169,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_3)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "depth_m": 49.51783350058593,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_4)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "depth_m": 49.51783350058593,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_4)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 10.688843703050097,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -10.688843703050097
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.515908805880606,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.515908805880606
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 39.84114316166169,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51783350058593,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [],
+      "comm_outage_until": {},
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [],
+      "agent_busy_s": {
+        "rover_1": 60.0,
+        "rover_2": 60.0,
+        "sampler_1": 60.0,
+        "relay_1": 0.0
+      }
+    },
+    "executed_prefix": [
+      {
+        "node_id": "deployment_0.p1",
+        "step": {
+          "primitive": "move_to",
+          "agent_id": "sampler_1",
+          "params": {
+            "target": "sample_4"
+          }
+        },
+        "result": {
+          "success": true,
+          "primitive_name": "move_to",
+          "agent_id": "sampler_1",
+          "failure_mode": null,
+          "elapsed_s": 60.0,
+          "energy_consumed_wh": null,
+          "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+        }
+      },
+      {
+        "node_id": "deployment_1.p1",
+        "step": {
+          "primitive": "move_to",
+          "agent_id": "rover_2",
+          "params": {
+            "target": "sample_4"
+          }
+        },
+        "result": {
+          "success": true,
+          "primitive_name": "move_to",
+          "agent_id": "rover_2",
+          "failure_mode": null,
+          "elapsed_s": 60.0,
+          "energy_consumed_wh": null,
+          "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+        }
+      },
+      {
+        "node_id": "deployment_2.p1",
+        "step": {
+          "primitive": "move_to",
+          "agent_id": "rover_1",
+          "params": {
+            "target": "sample_3"
+          }
+        },
+        "result": {
+          "success": true,
+          "primitive_name": "move_to",
+          "agent_id": "rover_1",
+          "failure_mode": null,
+          "elapsed_s": 60.0,
+          "energy_consumed_wh": null,
+          "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+        }
+      }
+    ],
+    "executed_prefix_ids": [
+      "deployment_0.p1",
+      "deployment_1.p1",
+      "deployment_2.p1"
+    ],
+    "observed_deviation": {
+      "id": "inj_lava_001",
+      "symptom": "L-03_tip_over",
+      "trigger": {
+        "type": "position",
+        "agent": "rover_1",
+        "tube_section_meters": [
+          30,
+          50
+        ]
+      },
+      "target": {
+        "agent": "rover_1"
+      },
+      "parameters": {
+        "tip_angle_degrees": 35,
+        "recovery_possible": false
+      }
+    },
+    "post_deviation_observation": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 180.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -40.0
+          ],
+          "depth_m": 40.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_3)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "depth_m": 49.51783350058593,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_4)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "depth_m": 49.51783350058593,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(sample_4)"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 10.688843703050097,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -10.688843703050097
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.515908805880606,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.515908805880606
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 39.84114316166169,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51783350058593,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51783350058593
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [
+        "rover_1"
+      ],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [],
+      "comm_outage_until": {},
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [
+        [
+          "rover_1",
+          "move_to",
+          "L-03_tip_over"
+        ]
+      ],
+      "agent_busy_s": {
+        "rover_1": 60.0,
+        "rover_2": 60.0,
+        "sampler_1": 60.0,
+        "relay_1": 0.0
+      }
+    },
+    "public_policy": {
+      "id": "common_pi_lava_abandonment_3_of_4",
+      "eligible": true,
+      "source": "author-added PI common abandonment; no natural S or disconnected-rover S capability claim",
+      "nominal_goal": {
+        "positive": [
+          "at_entry(relay_1)",
+          "at_entry(rover_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            4,
+            [
+              "in_storage(sample_1)",
+              "in_storage(sample_2)",
+              "in_storage(sample_3)",
+              "in_storage(sample_4)"
+            ]
+          ]
+        ]
+      },
+      "fallback_goal": {
+        "positive": [
+          "at_entry(relay_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)"
+        ],
+        "negative": [],
+        "cardinality": [
+          [
+            3,
+            [
+              "in_storage(sample_1)",
+              "in_storage(sample_2)",
+              "in_storage(sample_3)",
+              "in_storage(sample_4)"
+            ]
+          ]
+        ]
+      }
+    },
+    "shared_resource_information": {
+      "scenario": "lava",
+      "numeric_resource_model": "unknown",
+      "reason": "No approved numeric movement/task energy source for this execution world.",
+      "formal_energy_guarantee": false
+    },
+    "resource_assistance_contract": {
+      "permitted_regrouping_scopes": [
+        "M",
+        "S"
+      ],
+      "parent_obligations": "preserve all named delivery, custody and explicit source duties; Task-only keeps its return/delivery and actor",
+      "prediction": "public observed PSR simulator rollout; same ResourceSupport.forecast interface for all five methods",
+      "limits": {
+        "prediction_calls": 64,
+        "search_calls": 2,
+        "candidate_rollouts": 2112,
+        "world_steps": 100000,
+        "work_wall_s": 120.0,
+        "worker_wall_s": 30.0,
+        "memory_mb": 2048
+      },
+      "search_limits": {
+        "max_candidate_rollouts": 1024,
+        "max_world_steps": 30000,
+        "search_wall_s": 24.0,
+        "hard_wall_s": 30.0,
+        "memory_mb": 2048
+      },
+      "method_aid": "Ours and flat independently search the same declared delivery family; HTN/BT replan with their own kernel; FD retains its own planner"
+    }
+  },
+  "final_observation": {
+    "semantics_version": "lava_source_execution_v1",
+    "sim_time_s": 635.0,
+    "entry_pos": [
+      50.0,
+      50.0,
+      0.0
+    ],
+    "n_samples": 4,
+    "storage_fixture": {
+      "slots_per_collecting_actor": 4,
+      "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+    },
+    "agents": {
+      "rover_1": {
+        "id": "rover_1",
+        "agent_type": "ROVER",
+        "position": [
+          50.0,
+          50.0,
+          -40.0
+        ],
+        "depth_m": 40.0,
+        "energy_wh": 350.0,
+        "initial_energy_wh": 350.0,
+        "facts": [
+          "agent_at(sample_3)"
+        ],
+        "cargo": [],
+        "has_volatiles_sensor": true,
+        "has_collector": true,
+        "storage_capacity": 4
+      },
+      "rover_2": {
+        "id": "rover_2",
+        "agent_type": "ROVER",
+        "position": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "depth_m": 10.688843703050097,
+        "energy_wh": 350.0,
+        "initial_energy_wh": 350.0,
+        "facts": [
+          "agent_at(sample_1)",
+          "at_entry"
+        ],
+        "cargo": [
+          "sample_1"
+        ],
+        "has_volatiles_sensor": true,
+        "has_collector": true,
+        "storage_capacity": 4
+      },
+      "sampler_1": {
+        "id": "sampler_1",
+        "agent_type": "SAMPLER",
+        "position": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "depth_m": -0.0,
+        "energy_wh": 350.0,
+        "initial_energy_wh": 350.0,
+        "facts": [
+          "agent_at(entry)",
+          "at_entry"
+        ],
+        "cargo": [
+          "sample_2",
+          "sample_3"
+        ],
+        "has_volatiles_sensor": false,
+        "has_collector": true,
+        "storage_capacity": 4
+      },
+      "relay_1": {
+        "id": "relay_1",
+        "agent_type": "RELAY",
+        "position": [
+          50.0,
+          50.0,
+          5.0
+        ],
+        "depth_m": -5.0,
+        "energy_wh": 350.0,
+        "initial_energy_wh": 350.0,
+        "facts": [
+          "at_entry"
+        ],
+        "cargo": [],
+        "has_volatiles_sensor": false,
+        "has_collector": false,
+        "storage_capacity": 0
+      }
+    },
+    "samples": {
+      "sample_1": {
+        "depth_m": 10.688843703050097,
+        "status": "stored",
+        "location": [
+          50.0,
+          50.0,
+          -10.688843703050097
+        ],
+        "owner": "rover_2"
+      },
+      "sample_2": {
+        "depth_m": 25.515908805880606,
+        "status": "stored",
+        "location": [
+          50.0,
+          50.0,
+          -25.515908805880606
+        ],
+        "owner": "sampler_1"
+      },
+      "sample_3": {
+        "depth_m": 39.84114316166169,
+        "status": "stored",
+        "location": [
+          50.0,
+          50.0,
+          -39.84114316166169
+        ],
+        "owner": "sampler_1"
+      },
+      "sample_4": {
+        "depth_m": 49.51783350058593,
+        "status": "field",
+        "location": [
+          50.0,
+          50.0,
+          -49.51783350058593
+        ],
+        "owner": null
+      }
+    },
+    "tipped": [
+      "rover_1"
+    ],
+    "disabled_agents": [],
+    "injected_unreachable": [],
+    "injected_comm_offline": [],
+    "comm_outage_until": {},
+    "peer_conflict": [],
+    "low_visibility": true,
+    "mission_infeasible": false,
+    "pending_failures": [
+      [
+        "rover_1",
+        "move_to",
+        "L-03_tip_over"
+      ]
+    ],
+    "agent_busy_s": {
+      "rover_1": 60.0,
+      "rover_2": 205.0,
+      "sampler_1": 370.0,
+      "relay_1": 0.0
+    }
+  },
+  "final_facts": [
+    "agent_at(rover_1, sample_3)",
+    "agent_at(rover_2, sample_1)",
+    "agent_at(sampler_1, entry)",
+    "at_entry(relay_1)",
+    "at_entry(rover_2)",
+    "at_entry(sampler_1)",
+    "available(relay_1)",
+    "available(rover_2)",
+    "available(sampler_1)",
+    "cargo(rover_2, sample_1)",
+    "cargo(sampler_1, sample_2)",
+    "cargo(sampler_1, sample_3)",
+    "cargo_count(relay_1, 0)",
+    "cargo_count(rover_1, 0)",
+    "cargo_count(rover_2, 1)",
+    "cargo_count(sampler_1, 2)",
+    "has_collector(rover_1)",
+    "has_collector(rover_2)",
+    "has_collector(sampler_1)",
+    "has_volatiles_sensor(rover_1)",
+    "has_volatiles_sensor(rover_2)",
+    "in_storage(sample_1)",
+    "in_storage(sample_2)",
+    "in_storage(sample_3)",
+    "low_visibility",
+    "owned_by(sample_1, rover_2)",
+    "owned_by(sample_2, sampler_1)",
+    "owned_by(sample_3, sampler_1)",
+    "position(relay_1, 50.0, 50.0, 5.0)",
+    "position(rover_1, 50.0, 50.0, -40.0)",
+    "position(rover_2, 50.0, 50.0, -10.688843703050097)",
+    "position(sampler_1, 50.0, 50.0, 0.0)",
+    "sample_status(sample_1, stored)",
+    "sample_status(sample_2, stored)",
+    "sample_status(sample_3, stored)",
+    "sample_status(sample_4, field)"
+  ],
+  "final_radio_observation": {
+    "connected_by_actor": {
+      "rover_1": false,
+      "rover_2": true,
+      "sampler_1": true,
+      "relay_1": true
+    },
+    "source": "LavaExecutionWorld.comm_connected_to_base",
+    "supervisory_policy": "Connected",
+    "interpretation": "physical source-world radio after execution; reaching a return goal does not itself restore communication"
+  },
+  "dispatch_n": 10,
+  "logical_model_calls": 2,
+  "model_logical_cap": 2,
+  "stage_observations": {
+    "native_kernel_attempted": true,
+    "model_transport_attempts": 2,
+    "common_execution_boundary_reached": true
+  },
+  "actual_model_api_calls": 2,
+  "actual_provider_tokens": 136946,
+  "wall_s": 92.93707540002652,
+  "scope": "development fixtures; not held-out model or overall method performance",
+  "policy_selection_credit": "shared PI policy A",
+  "runtime_cost_scope": "PSR actual simulator energy; Construction/Lava numeric energy unknown; durations nominal",
+  "resource_accounting_scope": "host hard wall30s per solver goal; Windows Job committed memory2GiB vs Docker cgroup2GiB, distinct peak counters",
+  "resource_assistance": {
+    "implementation": "resource_assistance_v1",
+    "limits": {
+      "prediction_calls": 64,
+      "search_calls": 2,
+      "candidate_rollouts": 2112,
+      "world_steps": 100000,
+      "work_wall_s": 120.0,
+      "worker_wall_s": 30.0,
+      "memory_mb": 2048
+    },
+    "metrics": {
+      "candidate_rollouts": 0,
+      "prediction_world_steps": 0,
+      "prediction_wall_s": 0.0,
+      "standalone_prediction_wall_s": 0.0,
+      "local_search_wall_s": 0.0,
+      "proposal_validation_wall_s": 0.0034951000125147402,
+      "prediction_calls": 0,
+      "search_calls": 0,
+      "work_counters_complete": true,
+      "resource_wall_s": 0.0034951000125147402,
+      "total_wall_s": 92.93707540002652
+    },
+    "events": [
+      {
+        "kind": "forecast",
+        "result": {
+          "resource_feasible": null,
+          "status": "NUMERIC_RESOURCE_UNKNOWN",
+          "prediction_dispatch_n": 0
+        }
+      }
+    ],
+    "formal_resource_guarantee": false,
+    "time_accounting": "resource_wall is standalone forecast + inclusive search + external validation; prediction_wall includes nested search forecasts and must not be added again"
+  },
+  "resource_input": {
+    "scenario": "lava",
+    "numeric_resource_model": "unknown",
+    "reason": "No approved numeric movement/task energy source for this execution world.",
+    "formal_energy_guarantee": false
+  },
+  "local_work": {
+    "candidate_rollouts": 0,
+    "prediction_world_steps": 0,
+    "prediction_wall_s": 0.0,
+    "standalone_prediction_wall_s": 0.0,
+    "local_search_wall_s": 0.0,
+    "proposal_validation_wall_s": 0.0034951000125147402,
+    "prediction_calls": 0,
+    "search_calls": 0,
+    "work_counters_complete": true,
+    "resource_wall_s": 0.0034951000125147402,
+    "total_wall_s": 92.98357610002859,
+    "native_wall_s": 5.013008500041906,
+    "execution_wall_s": 0.02729729999555275,
+    "native_replan_calls": 0
+  },
+  "parent_goal_results": {
+    "nominal": {
+      "parent_goal_met": false,
+      "missing_positive": [
+        "at_entry(rover_1)"
+      ],
+      "forbidden_present": [],
+      "cardinality": [
+        {
+          "required": 4,
+          "achieved": 3,
+          "shortfall": 1,
+          "missing_members": [
+            "in_storage(sample_4)"
+          ]
+        }
+      ]
+    },
+    "common_pi_lava_abandonment_3_of_4": {
+      "parent_goal_met": true,
+      "missing_positive": [],
+      "forbidden_present": [],
+      "cardinality": [
+        {
+          "required": 3,
+          "achieved": 3,
+          "shortfall": 0,
+          "missing_members": [
+            "in_storage(sample_4)"
+          ]
+        }
+      ]
+    }
+  },
+  "repair_process": {
+    "version": "repair_process_observation_v1",
+    "candidate_stages": [
+      {
+        "candidate_record": "/attempts/0",
+        "format": {
+          "accepted": true
+        },
+        "grounding": null,
+        "symbolic_contract": null,
+        "resource_prediction": null
+      },
+      {
+        "candidate_record": "/attempts/1",
+        "format": {
+          "accepted": true
+        },
+        "grounding": {
+          "accepted": true,
+          "checked_through_step": null,
+          "complete": true,
+          "reason": "all steps grounded"
+        },
+        "symbolic_contract": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+        },
+        "resource_prediction": {
+          "resource_feasible": null,
+          "status": "NUMERIC_RESOURCE_UNKNOWN",
+          "record": "/attempts/1/common_resource_prediction"
+        }
+      }
+    ],
+    "child_or_parent_retries": [],
+    "scope_escalations": [],
+    "resource_search_records": [],
+    "adoption": {
+      "origin": "native_kernel",
+      "candidate_record": "/execution/verification/normalized_plan"
+    },
+    "adopted_matches_execution_validation": true,
+    "adopted_syntax_equals_grounded_plan": true,
+    "actual_is_validated_prefix": true,
+    "observed_mechanisms_nonexclusive": {
+      "model_candidate_used_without_resource_change": false,
+      "hierarchical_retry_occurred": false,
+      "scope_escalation_occurred": false,
+      "adopted_resource_search_changed_candidate": false
+    },
+    "prefix_recomposition_adopted": false,
+    "parent_result": {
+      "parent_goal_met": true,
+      "missing_positive": [],
+      "forbidden_present": [],
+      "cardinality": [
+        {
+          "required": 3,
+          "achieved": 3,
+          "shortfall": 0,
+          "missing_members": [
+            "in_storage(sample_4)"
+          ]
+        }
+      ]
+    },
+    "interpretation": "Process observations can overlap. Module invocation, candidate change and success do not establish causal benefit; CL-023 requires comparison arms."
+  },
+  "prefix_recomposition_enabled": false,
+  "legacy_resource_search_setting": {
+    "assistance_limits": {
+      "prediction_calls": 64,
+      "search_calls": 2,
+      "candidate_rollouts": 2112,
+      "world_steps": 100000,
+      "work_wall_s": 120.0,
+      "worker_wall_s": 30.0,
+      "memory_mb": 2048
+    },
+    "search_limits": {
+      "max_candidate_rollouts": 1024,
+      "max_world_steps": 30000,
+      "search_wall_s": 24.0,
+      "hard_wall_s": 30.0,
+      "memory_mb": 2048
+    }
+  },
+  "adopted_candidate": [
+    {
+      "primitive": "low_light_navigation",
+      "agent_id": "rover_2",
+      "params": {
+        "target": "sample_1"
+      }
+    },
+    {
+      "primitive": "move_to",
+      "agent_id": "sampler_1",
+      "params": {
+        "target": "sample_2"
+      }
+    },
+    {
+      "primitive": "sample_collect",
+      "agent_id": "sampler_1",
+      "params": {
+        "sample_id": "sample_2"
+      }
+    },
+    {
+      "primitive": "move_to",
+      "agent_id": "sampler_1",
+      "params": {
+        "target": "sample_3"
+      }
+    },
+    {
+      "primitive": "sample_collect",
+      "agent_id": "sampler_1",
+      "params": {
+        "sample_id": "sample_3"
+      }
+    },
+    {
+      "primitive": "move_to",
+      "agent_id": "sampler_1",
+      "params": {
+        "target": "entry"
+      }
+    },
+    {
+      "primitive": "sample_collect",
+      "agent_id": "rover_2",
+      "params": {
+        "sample_id": "sample_1"
+      }
+    },
+    {
+      "primitive": "sample_store",
+      "agent_id": "rover_2",
+      "params": {
+        "sample_id": "sample_1"
+      }
+    },
+    {
+      "primitive": "sample_store",
+      "agent_id": "sampler_1",
+      "params": {
+        "sample_id": "sample_2"
+      }
+    },
+    {
+      "primitive": "sample_store",
+      "agent_id": "sampler_1",
+      "params": {
+        "sample_id": "sample_3"
+      }
+    }
+  ],
+  "task_id": "E06_lava_abandonment",
+  "model_seed": 2,
+  "implementation_profile": "resource_integrated_comparison_v2",
+  "policy_eligible": true,
+  "model_source": "caller-owned model session",
+  "method_improvement": "symmetric independently invoked resource search for Ours/flat; independent native kernels use common forecast",
+  "model_tokens": 136946,
+  "communication": {
+    "attempts": 0,
+    "delivered": null,
+    "source": "local source tokens are not measured radio delivery"
+  },
+  "cost_accounting": {
+    "total_wall_s": "observed inclusive arm wall time, not a sum of nested components",
+    "prediction_wall_s": "forecast compute including the subset inside local_search_wall_s",
+    "execution_wall_s": "actual execution boundary, including its mandatory revalidation and binding",
+    "native_wall_s": "includes native parsing/mapping/verification inside the native worker",
+    "proposal_validation_wall_s": "outer candidate and rebuilt-child/parent checks; excludes native/internal execution checks",
+    "task_preparation": "shared fixture/witness preparation is recorded per task, not charged as each arm's search"
+  },
+  "selected_goal_initially_met": false,
+  "new_recovery_success": true,
+  "resource_reorganization_used": false,
+  "mechanism_metrics": {
+    "version": "mechanism_observation_v1",
+    "actions": {
+      "original_remaining_n": 15,
+      "actual_executed_n": 10,
+      "actual_preserved_action_n": 2,
+      "actual_preserved_outside_fault_n": 0,
+      "removed_or_replaced_outside_fault_n": 12,
+      "unmatched_actual_action_n": 8,
+      "matched_original_actual_indices": [
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "fault_original_indices": [
+        0,
+        1,
+        2
+      ],
+      "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+      "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions",
+      "fault_scope_definition": "original Task containing observed failed primitive; fixed across methods, not selected repair scope"
+    },
+    "adopted_plan_changes": {
+      "original_remaining_n": 15,
+      "actual_executed_n": 10,
+      "actual_preserved_action_n": 2,
+      "actual_preserved_outside_fault_n": 0,
+      "removed_or_replaced_outside_fault_n": 12,
+      "unmatched_actual_action_n": 8,
+      "matched_original_actual_indices": [
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "fault_original_indices": [
+        0,
+        1,
+        2
+      ],
+      "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+      "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions"
+    },
+    "events": [],
+    "regeneration_tokens_new_calls": {
+      "known_lower_bound": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "unknown_request_n": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "request_n": 0,
+      "scope": "completed response usage; transport retries/unknown posts remain separately in the existing ledger"
+    },
+    "regeneration_ancestry_complete": true,
+    "regeneration_token_interpretation": "observed linked calls only; missing ancestry makes this a partial lower bound, not total regeneration cost",
+    "regeneration_unmatched_request_n": 0,
+    "scope_escalations": [],
+    "parent_invalidated_work": [],
+    "first_discovered_error_cost": null,
+    "operational_replay_n": 0,
+    "physical_prefix_n": 3,
+    "physical_prefix_source": "original_information.executed_prefix; distinct from generated verification",
+    "source_obligations": {
+      "original_goal_met": false,
+      "selected_policy": "common_pi_lava_abandonment_3_of_4",
+      "approved_policy_changed": true,
+      "implementation_action_rewrite_is_goal_change": false
+    },
+    "causal_benefit_established": false
+  },
+  "final_translation_builder": "literal_goal_translation_v7",
+  "result_version": "final_interface_refresh_v1",
+  "source_calls": null,
+  "replay_only": false
+}

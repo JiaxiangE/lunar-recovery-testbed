@@ -1,0 +1,17 @@
+scenario: PSR
+type: positive_standard
+source: curated_for_d_m_psr   # CC-authored on PI delegation (P1-3 d_m few-shot gap)
+# A MULTI-sample Mission: emit ONE move->collect->store chain per sample named in the post.
+context:
+  mission_goal: "collect ice samples 2 and 4 into rover storage"
+  mission_postcondition: "stored(sample_2) & stored(sample_4)"
+  current_state: "deployed(rover_1)"
+expected_output:
+  tasks:
+    - {id: t1, assigned_agent_id: rover_1, precondition: "deployed(rover_1)", postcondition: "at_location(rover_1)", required_primitives: [move_to], context: {params: {position: "sample_2.pos"}}}
+    - {id: t2, assigned_agent_id: rover_1, precondition: "at_location(rover_1)", postcondition: "sample_collected(sample_2)", required_primitives: [sample_collect], dependencies: [t1], context: {params: {id: sample_2}}}
+    - {id: t3, assigned_agent_id: rover_1, precondition: "sample_collected(sample_2)", postcondition: "stored(sample_2)", required_primitives: [sample_store], dependencies: [t2], context: {params: {id: sample_2}}}
+    - {id: t4, assigned_agent_id: rover_1, precondition: "stored(sample_2)", postcondition: "at_location(rover_1)", required_primitives: [move_to], dependencies: [t3], context: {params: {position: "sample_4.pos"}}}
+    - {id: t5, assigned_agent_id: rover_1, precondition: "at_location(rover_1)", postcondition: "sample_collected(sample_4)", required_primitives: [sample_collect], dependencies: [t4], context: {params: {id: sample_4}}}
+    - {id: t6, assigned_agent_id: rover_1, precondition: "sample_collected(sample_4)", postcondition: "stored(sample_4)", required_primitives: [sample_store], dependencies: [t5], context: {params: {id: sample_4}}}
+rationale: "COVERAGE: produce one move->collect->store chain for EVERY sample in the Mission postcondition (here sample_2 AND sample_4) so the Task posts jointly entail it (Contract 1). Use ONLY the sample ids the Mission names — never introduce another sample (e.g. sample_1). Chain preconditions so each is implied by the prior post (Contract 3); put a concrete grounding hint (sample_N.pos / sample_N) in context.params."

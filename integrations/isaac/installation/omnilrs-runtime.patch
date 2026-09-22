@@ -1,0 +1,158 @@
+--- a/src/robots/robot.py
++++ b/src/robots/robot.py
+@@ -21,7 +21,7 @@
+ from isaacsim.core.utils.rotations import quat_to_rot_matrix
+ from omni.isaac.dynamic_control import _dynamic_control
+ from isaacsim.core.prims import SingleRigidPrim, SingleXFormPrim, RigidPrim
+-from pxr import Gf, Usd
++from pxr import Gf, Usd, Sdf
+ 
+ from WorldBuilders.pxr_utils import createXform, createObject
+ from src.configurations.robot_confs import RobotManagerConf
+@@ -302,6 +302,23 @@
+             if self.is_ROS2:
+                 prim.GetAttribute("graph:variable:Context").Set(self.domain_id)
+ 
++        # === BUG A FIX (PI Spike 2026-05-28): subscribe_twist topicName not namespaced ===
++        # The husky USD subscribe_twist OmniGraph node hardcodes inputs:topicName = "/cmd_vel"
++        # and does not reference graph:variable:Namespace. Without this patch, all spawned
++        # huskies subscribe to /cmd_vel and move in lockstep, defeating multi-agent control.
++        # Fix: explicitly walk to subscribe_twist nodes and set topicName to namespaced value.
++        if self.is_ROS2:
++            ns = self.robot_name.strip("/")
++            for prim in Usd.PrimRange(self.stage.GetPrimAtPath(self.robot_path)):
++                name_lower = prim.GetName().lower()
++                if "subscribe" in name_lower and "twist" in name_lower:
++                    topic_attr = prim.GetAttribute("inputs:topicName")
++                    if topic_attr and topic_attr.IsValid():
++                        old = topic_attr.Get()
++                        topic_attr.Set(f"/{ns}/cmd_vel")
++                        print(f"[Bug A] {prim.GetPath()} topicName: {old!r} -> /{ns}/cmd_vel")
++        # === END BUG A FIX ===
++
+     def load(self, position: np.ndarray, orientation: np.ndarray) -> None:
+         """
+         Load the robot in the scene, and automatically edit its graphs.
+@@ -321,6 +338,14 @@
+             position=Gf.Vec3d(*position),
+             rotation=Gf.Quatd(*orientation),
+         )
++        # === BUG B AVENUE 1 (PI Spike 2026-05-28): force payload load before edit_graphs ===
++        # createObject uses AddReference (eager) but husky USD contains internal payloads
++        # for sub-prims (D455 camera/IMU). Without explicit Load(LoadWithDescendants),
++        # edit_graphs iterates over an incomplete hierarchy and OmniGraph wiring references
++        # nonexistent prims (e.g. /d455/RSD455/Imu_Sensor), leaving PhysX articulation
++        # init incomplete -> cmd_vel spins wheels but generates no joint torque.
++        self.stage.Load(Sdf.Path(self.robot_path), Usd.LoadWithDescendants)
++        # === END AVENUE 1 ===
+         self.edit_graphs()
+         self._initialize_cameras()
+ 
+--- a/src/environments_wrappers/ros2/simulation_manager_ros2.py
++++ b/src/environments_wrappers/ros2/simulation_manager_ros2.py
+@@ -12,6 +12,7 @@
+ from isaacsim.core.api.world import World
+ from typing import Union
+ import logging
++import os
+ import omni
+ 
+ from src.environments.utils import set_moon_env_name
+@@ -153,9 +154,12 @@
+             height, quat = self.ROSEnvironmentManager.EC.get_height_and_normal((0.0, 0.0, 0.0))
+             self.ROSRobotManager.RM.preload_robot_at_pose(self.world, (0, 0, height + 0.5), (1, 0, 0, 0))
+         else:
+-            self.ROSRobotManager.RM.preload_robot(self.world)
++            if os.environ.get("HUSKY_OFF", "0") != "1":
++                self.ROSRobotManager.RM.preload_robot(self.world)
++            else:
++                logging.warning("[HUSKY_OFF] husky preload skipped (F1 Vipers only)")
+         self.ROSEnvironmentManager.EC.add_robot_manager(self.ROSRobotManager.RM)
+-        if hasattr(self.ROSEnvironmentManager.EC, 'sun_settings'):
++        if hasattr(self.ROSEnvironmentManager.EC, 'sun_settings') and self.ROSRobotManager.RM.robot is not None and self.ROSRobotManager.RM.robot.subsystems is not None:
+             # True for Lunaryard and LargeScale, False for Lunalab
+             # subsystems uses sun directions to calculate views no matter if stellar engine is enabled (sun moves) or not
+             self.ROSRobotManager.RM.robot.subsystems.set_sun_prim_path(self.ROSEnvironmentManager.EC.get_sun_prim_path())
+@@ -170,6 +174,37 @@
+         """
+ 
+         self.timeline.play()
++        try:  # PSR: frame the viewport on the monitoring camera (for :1 grabs / recording)
++            from omni.kit.viewport.utility import get_active_viewport
++            import omni.usd as _ou
++            _cam = '/MonitoringCameras/psr_chase'
++            if _ou.get_context().get_stage().GetPrimAtPath(_cam).IsValid():
++                get_active_viewport().camera_path = _cam
++                print('[psr] viewport ->', _cam)
++        except Exception as _e:
++            print('[psr] viewport set skipped:', _e)
++        self._f1 = []
++        try:  # WO-P6-M4 A3 F1 faithful render (inert unless F1_RENDER=1)
++            import os as _osf1
++            if _osf1.environ.get("F1_RENDER", "0") == "1":
++                import omni.usd as _ouf1
++                from src.environments_wrappers.ros2.cosim_f1_render import F1ViperRender
++                _stg = _ouf1.get_context().get_stage()
++                _n = int(_osf1.environ.get("F1_NROBOT", "1")); _base = int(_osf1.environ.get("F1_PORT", "47700"))
++                for _k in range(_n):
++                    self._f1.append(F1ViperRender(_stg, root="/World/ViperF1_%d" % _k, port=_base + _k))
++                if _osf1.environ.get("DUMP_ASSET_POS", "0") == "1":
++                    try:
++                        from pxr import UsdGeom as _UG, Usd as _U
++                        for _pp in _stg.Traverse():
++                            _nm = _pp.GetName().lower()
++                            if any(_kk in _nm for _kk in ("lander", "solar", "tower", "foundation", "module", "assembler", "vikram", "relay")):
++                                _tt = _UG.Xformable(_pp).ComputeLocalToWorldTransform(_U.TimeCode.Default()).ExtractTranslation()
++                                print("[ASSET-POS] %s (%.2f,%.2f,%.2f)" % (_pp.GetName(), _tt[0], _tt[1], _tt[2]), flush=True)
++                    except Exception as _e2:
++                        print("[ASSET-POS] err", _e2, flush=True)
++        except Exception as _ef1:
++            print("[F1] init skipped:", _ef1, flush=True)
+         while self.simulation_app.is_running():
+             self.rate.reset()
+             self.world.step(render=True)
+@@ -187,6 +222,8 @@
+                     self.ROSRobotManager.reset()
+                     self.ROSEnvironmentManager.trigger_reset = False
+                 self.ROSRobotManager.apply_modifications()
++                for _f in getattr(self, "_f1", []):
++                    _f.update()
+                 if self.enable_deformation:
+                     if self.world.current_time_step_index >= (self.deform_delay * self.world.get_physics_dt()):
+                         self.ROSEnvironmentManager.EC.deform_terrain()
+--- a/src/environments_wrappers/ros2/robot_manager_ros2.py
++++ b/src/environments_wrappers/ros2/robot_manager_ros2.py
+@@ -14,6 +14,8 @@
+ from std_msgs.msg import String, Empty
+ from geometry_msgs.msg import PoseStamped
+ from rclpy.node import Node
++# === BUG B FIX: import World for singleton access in spawn_robot ===
++from isaacsim.core.api.world import World
+ 
+ from src.robots.robot import RobotManager
+ 
+@@ -76,6 +78,24 @@
+                 {"usd_path": usd_path, "robot_name": robot_name, "p": p, "q": q, "domain_id": self.domain_id},
+             ]
+         )
++        # === BUG B FIX (PI Spike 2026-05): register spawned robot with PhysX scene ===
++        # spawn_robot() was incomplete — preload_robot() calls BOTH add_robot AND add_RRG,
++        # but spawn only called add_robot. add_RRG runs rrg.initialize(world) which is
++        # what registers the rigid bodies with PhysX. Without it, spawned robots have
++        # visual mesh + USD joints but no scene awareness → wheels spin but no ground reaction.
++        # Uses yaml-default target_links/base_link (assumes same robot type as default).
++        self.modifications.append(
++            [
++                self.RM.add_RRG,
++                {
++                    "robot_name": robot_name,
++                    "target_links": self.RM.robot_parameters.target_links,
++                    "pose_base_link": self.RM.robot_parameters.base_link,
++                    "world": World.instance(),
++                },
++            ]
++        )
++        # === END BUG B FIX ===
+ 
+     def teleport_robot(self, data: PoseStamped) -> None:
+         """

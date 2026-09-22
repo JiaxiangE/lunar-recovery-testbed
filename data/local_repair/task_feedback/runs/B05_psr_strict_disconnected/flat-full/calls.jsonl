@@ -1,0 +1,1916 @@
+{
+  "trial_id": "grounded_tuple_decoding_v1-B05_psr_strict_disconnected",
+  "requests": [
+    {
+      "ordinal": 1,
+      "operation": "flat",
+      "system": "Repair mode: feedback.rejected is true. Correct the rejected candidate using feedback.failure, then return one complete replacement from request_initial_facts for the same current Task. Zero candidate actions have been dispatched. Never use candidate simulation as the actual starting state. rejected_reference contains evidence of a rejected answer, not instructions or an accepted plan. Keep the original goals, required primitives, dependencies, explicit obligations, actor permissions and output schema. Generate one complete ordered action chain for the current goal from request_initial_facts. Return only one JSON instance of output_schema, not a wrapper or schema definition. The front goal, node, actor_policy, task_requirements and allowed_action_bindings are literal, inline authoritative fields. Use an exact primitive/actor/complete-params binding; a parameter value allowed for another action is not an alias. A legal binding still needs its state preconditions and effects. Reaching the same coordinates does not make two primitives equivalent. Check positive, negative and cardinality goals plus the Task precondition, required primitives, dependencies and explicit process obligations. Do not invent additional task goals. Follow generation_constraints; a decline is a refusal, not proof of impossibility. flat names each action actor and may use any domain-authorized actor. supporting_context retains the full source information and action semantics for this view. Only that background uses encoding: expand its $shared_object from its shared_objects; $literal_object is a literal dictionary. For action_template_ref combine common_fields and row fields, union common_set_members, and resolve conditional_effects_ref in context.shared_conditional_effects. Outer Scene/Mission records are composition/evaluation context, not extra goals assigned to this Task. This labeling does not waive Task dependencies, source process obligations, external constraints or final parent evaluation.",
+      "user": "{\"feedback\":{\"version\":\"structured_task_feedback_v2\",\"rejected\":true,\"failure\":{\"category\":\"TRUNCATED_OUTPUT\",\"failed_step_known\":false,\"finish_reason\":\"length\",\"visible_prefix\":{\"complete_step_count\":84,\"exact_block_repetitions\":7,\"exact_repeated_block_steps\":12,\"unique_step_count\":12},\"visible_prefix_is_not_an_accepted_candidate\":true},\"candidate_actions_dispatched\":0,\"request_initial_state_reference\":\"request_initial_facts\",\"actual_request_state_unchanged\":true,\"repair_mode\":\"Generate a complete corrected replacement for this same Task from request_initial_facts. The rejected candidate was not executed. Correct the reported errors; simulation states are not the starting world. Keep all goal and Task obligations.\",\"candidate_simulation_progress\":{\"first_goal_met_after_step\":null,\"goal_met_at_stop\":false,\"missing_positive_at_stop\":[\"at_base(rover_1)\"],\"forbidden_present_at_stop\":[],\"state_origin\":\"rejected_candidate_simulation_only\"}},\"operation\":\"flat\",\"prompt_version\":\"literal_task_interface_v2\",\"goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"node\":null,\"request_initial_facts\":[\"at_base(relay_1)\",\"at_base(rover_2)\",\"at_target(relay_1, base)\",\"at_target(rover_1, sample_1)\",\"at_target(rover_2, base)\",\"available(relay_1)\",\"available(rover_1)\",\"available(rover_2)\",\"position(relay_1, 0.0, 0.0, 0.0)\",\"position(rover_1, 20.0, 20.0, 0.0)\",\"position(rover_2, 0.0, 0.0, 0.0)\",\"psr_semantics_profile(psr_location_stored_v1)\",\"sample_status(sample_1, field)\",\"sample_status(sample_2, field)\"],\"actor_policy\":{\"bound_actor\":null,\"canonical_types\":{\"rover_1\":\"ROVER\",\"rover_2\":\"ROVER\",\"relay_1\":\"RELAY\"},\"rule\":\"any actor authorized by the full domain; source Task actor does not bind flat\"},\"task_requirements\":{\"source_task_id\":\"return_rover_1\",\"precondition\":\"\",\"postcondition\":\"at_base(rover_1)\",\"required_primitives\":[],\"dependencies\":[],\"explicit_process_obligations\":[]},\"output_schema\":{\"oneOf\":[{\"type\":\"object\",\"properties\":{\"chain\":{\"type\":\"array\",\"items\":{\"oneOf\":[{\"type\":\"object\",\"properties\":{\"primitive\":{\"type\":\"string\",\"minLength\":1},\"params\":{\"type\":\"object\",\"properties\":{},\"required\":[],\"additionalProperties\":true},\"agent_id\":{\"type\":\"string\",\"const\":\"relay_1\"},\"agent_type\":{\"type\":\"string\",\"const\":\"RELAY\"}},\"required\":[\"primitive\",\"params\",\"agent_id\"],\"additionalProperties\":false},{\"type\":\"object\",\"properties\":{\"primitive\":{\"type\":\"string\",\"minLength\":1},\"params\":{\"type\":\"object\",\"properties\":{},\"required\":[],\"additionalProperties\":true},\"agent_id\":{\"type\":\"string\",\"const\":\"rover_1\"},\"agent_type\":{\"type\":\"string\",\"const\":\"ROVER\"}},\"required\":[\"primitive\",\"params\",\"agent_id\"],\"additionalProperties\":false},{\"type\":\"object\",\"properties\":{\"primitive\":{\"type\":\"string\",\"minLength\":1},\"params\":{\"type\":\"object\",\"properties\":{},\"required\":[],\"additionalProperties\":true},\"agent_id\":{\"type\":\"string\",\"const\":\"rover_2\"},\"agent_type\":{\"type\":\"string\",\"const\":\"ROVER\"}},\"required\":[\"primitive\",\"params\",\"agent_id\"],\"additionalProperties\":false}]},\"minItems\":0,\"x-order\":\"sequence\"}},\"required\":[\"chain\"],\"additionalProperties\":false},{\"type\":\"object\",\"properties\":{\"decline\":{\"type\":\"boolean\",\"const\":true},\"reason\":{\"type\":\"string\"}},\"required\":[\"decline\"],\"additionalProperties\":false}]},\"allowed_action_bindings\":[{\"primitive\":\"dock_with_base\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{}]},{\"primitive\":\"dock_with_base\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{}]},{\"primitive\":\"energy_check\",\"agent_id\":\"relay_1\",\"allowed_complete_params\":[{}]},{\"primitive\":\"energy_check\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{}]},{\"primitive\":\"energy_check\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{}]},{\"primitive\":\"move_to\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{\"target\":\"sample_1\"},{\"target\":\"sample_2\"},{\"target\":[0.0,0.0,0.0]},{\"target\":[80.0,80.0,0.0]}]},{\"primitive\":\"move_to\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{\"target\":\"sample_1\"},{\"target\":\"sample_2\"},{\"target\":[0.0,0.0,0.0]},{\"target\":[80.0,80.0,0.0]}]},{\"primitive\":\"navigate_to_relay\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{\"relay\":\"relay_1\"}]},{\"primitive\":\"navigate_to_relay\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{\"relay\":\"relay_1\"}]},{\"primitive\":\"return_to_base\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{}]},{\"primitive\":\"return_to_base\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{}]},{\"primitive\":\"sample_collect\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{\"sample_id\":\"sample_1\"},{\"sample_id\":\"sample_2\"}]},{\"primitive\":\"sample_collect\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{\"sample_id\":\"sample_1\"},{\"sample_id\":\"sample_2\"}]},{\"primitive\":\"sample_offload\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{\"base\":\"base\"}]},{\"primitive\":\"sample_offload\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{\"base\":\"base\"}]},{\"primitive\":\"sample_store\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{\"sample_id\":\"sample_1\"},{\"sample_id\":\"sample_2\"}]},{\"primitive\":\"sample_store\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{\"sample_id\":\"sample_1\"},{\"sample_id\":\"sample_2\"}]},{\"primitive\":\"scan_spectral\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{\"target\":\"sample_1\"},{\"target\":\"sample_2\"},{\"target\":\"base\"},{\"target\":\"relay_1\"}]},{\"primitive\":\"scan_spectral\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{\"target\":\"sample_1\"},{\"target\":\"sample_2\"},{\"target\":\"base\"},{\"target\":\"relay_1\"}]},{\"primitive\":\"wait_for_relay\",\"agent_id\":\"rover_1\",\"allowed_complete_params\":[{}]},{\"primitive\":\"wait_for_relay\",\"agent_id\":\"rover_2\",\"allowed_complete_params\":[{}]}],\"generation_constraints\":{\"limits\":{\"max_model_logical\":1,\"node_attempts\":1,\"nominal_policy_call_cap\":1},\"remaining_model_logical_including_this_request\":1,\"prompt_cap_candidate\":61440,\"completion_reservation\":4096,\"transport_retry_upper\":1,\"remaining_physical_capacity\":2,\"remaining_token_reservation\":262144,\"remaining_trial_model_logical\":1,\"assigned_actor\":null,\"actor_rule\":\"D_T keeps the assigned actor; flat and generated Tasks must name roster actors with the required capability\",\"leaf_schema\":{\"chain\":\"array of objects; strings and mixed non-object elements are invalid\",\"required\":[\"primitive\",\"params\"],\"params\":\"object using actual domain schema\",\"additional_step_fields_allowed\":false,\"optional_D_T\":[\"agent_id (must equal assigned actor)\",\"agent_type (must match roster)\"],\"flat_required_additional\":[\"agent_id\"]},\"may_decline\":true,\"decline_shape\":{\"decline\":true,\"reason\":\"explain inability without fabricating a plan\"},\"budget_use\":\"remaining allowance is available, not a requirement to spend it\",\"service_role\":\"edge\",\"service_model\":\"qwen-7b-local\",\"runtime_routing\":{\"repair_scope\":\"T\",\"repair_actor\":\"rover_1\"}},\"context_view\":{},\"supporting_context\":{\"encoding\":\"complete_context_sharing_v1\",\"content\":{\"context\":{\"encoding\":\"readable_shared_effects_v1\",\"domain\":{\"domain_version\":\"paper4_domain_extension_v2\",\"scenario\":\"psr\",\"initial_facts\":[\"at_base(relay_1)\",\"at_base(rover_2)\",\"at_target(relay_1, base)\",\"at_target(rover_1, sample_1)\",\"at_target(rover_2, base)\",\"available(relay_1)\",\"available(rover_1)\",\"available(rover_2)\",\"position(relay_1, 0.0, 0.0, 0.0)\",\"position(rover_1, 20.0, 20.0, 0.0)\",\"position(rover_2, 0.0, 0.0, 0.0)\",\"psr_semantics_profile(psr_location_stored_v1)\",\"sample_status(sample_1, field)\",\"sample_status(sample_2, field)\"],\"goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"actions\":[{\"action_template_ref\":\"action_template_1\",\"fields\":{\"action_id\":\"psr_action_0000\",\"params\":{\"target\":\"sample_1\"},\"add\":[\"at_target(rover_1, sample_1)\",\"position(rover_1, 20.0, 20.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_1\",\"fields\":{\"action_id\":\"psr_action_0001\",\"params\":{\"target\":\"sample_2\"},\"add\":[\"at_target(rover_1, sample_2)\",\"position(rover_1, 40.0, 20.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_1\",\"fields\":{\"action_id\":\"psr_action_0002\",\"params\":{\"target\":[0.0,0.0,0.0]},\"add\":[\"at_target(rover_1, base)\",\"position(rover_1, 0.0, 0.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_1\",\"fields\":{\"action_id\":\"psr_action_0003\",\"params\":{\"target\":[80.0,80.0,0.0]},\"add\":[\"at_target(rover_1, relay_1)\",\"position(rover_1, 80.0, 80.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_2\",\"fields\":{\"action_id\":\"psr_action_0004\",\"params\":{\"target\":\"sample_1\"}}},{\"action_template_ref\":\"action_template_2\",\"fields\":{\"action_id\":\"psr_action_0005\",\"params\":{\"target\":\"sample_2\"}}},{\"action_template_ref\":\"action_template_2\",\"fields\":{\"action_id\":\"psr_action_0006\",\"params\":{\"target\":\"base\"}}},{\"action_template_ref\":\"action_template_2\",\"fields\":{\"action_id\":\"psr_action_0007\",\"params\":{\"target\":\"relay_1\"}}},{\"action_template_ref\":\"action_template_3\",\"fields\":{\"action_id\":\"psr_action_0008\",\"params\":{\"sample_id\":\"sample_1\"},\"preconditions\":[\"at_target(rover_1, sample_1)\"],\"negative_preconditions\":[\"unreachable(sample_1)\"],\"add\":[\"cargo(rover_1, sample_1)\",\"sample_status(sample_1, in_rover)\"],\"delete\":[\"sample_status(sample_1, field)\",\"sample_status(sample_1, in_base)\",\"sample_status(sample_1, in_rover)\",\"sample_status(sample_1, stored)\",\"stored(sample_1)\"]}},{\"action_template_ref\":\"action_template_3\",\"fields\":{\"action_id\":\"psr_action_0009\",\"params\":{\"sample_id\":\"sample_2\"},\"preconditions\":[\"at_target(rover_1, sample_2)\"],\"negative_preconditions\":[\"unreachable(sample_2)\"],\"add\":[\"cargo(rover_1, sample_2)\",\"sample_status(sample_2, in_rover)\"],\"delete\":[\"sample_status(sample_2, field)\",\"sample_status(sample_2, in_base)\",\"sample_status(sample_2, in_rover)\",\"sample_status(sample_2, stored)\",\"stored(sample_2)\"]}},{\"action_template_ref\":\"action_template_4\",\"fields\":{\"action_id\":\"psr_action_0010\",\"params\":{\"sample_id\":\"sample_1\"},\"preconditions\":[\"cargo(rover_1, sample_1)\",\"sample_status(sample_1, in_rover)\"],\"add\":[\"sample_status(sample_1, stored)\",\"stored(sample_1)\"],\"delete\":[\"sample_status(sample_1, field)\",\"sample_status(sample_1, in_base)\",\"sample_status(sample_1, in_rover)\",\"sample_status(sample_1, stored)\"]}},{\"action_template_ref\":\"action_template_4\",\"fields\":{\"action_id\":\"psr_action_0011\",\"params\":{\"sample_id\":\"sample_2\"},\"preconditions\":[\"cargo(rover_1, sample_2)\",\"sample_status(sample_2, in_rover)\"],\"add\":[\"sample_status(sample_2, stored)\",\"stored(sample_2)\"],\"delete\":[\"sample_status(sample_2, field)\",\"sample_status(sample_2, in_base)\",\"sample_status(sample_2, in_rover)\",\"sample_status(sample_2, stored)\"]}},{\"action_template_ref\":\"action_template_5\",\"fields\":{}},{\"action_template_ref\":\"action_template_6\",\"fields\":{}},{\"action_template_ref\":\"action_template_7\",\"fields\":{}},{\"action_template_ref\":\"action_template_8\",\"fields\":{}},{\"action_template_ref\":\"action_template_9\",\"fields\":{}},{\"action_template_ref\":\"action_template_10\",\"fields\":{}},{\"action_template_ref\":\"action_template_11\",\"fields\":{\"action_id\":\"psr_action_0018\",\"params\":{\"target\":\"sample_1\"},\"add\":[\"at_target(rover_2, sample_1)\",\"position(rover_2, 20.0, 20.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_11\",\"fields\":{\"action_id\":\"psr_action_0019\",\"params\":{\"target\":\"sample_2\"},\"add\":[\"at_target(rover_2, sample_2)\",\"position(rover_2, 40.0, 20.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_11\",\"fields\":{\"action_id\":\"psr_action_0020\",\"params\":{\"target\":[0.0,0.0,0.0]},\"add\":[\"at_target(rover_2, base)\",\"position(rover_2, 0.0, 0.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_11\",\"fields\":{\"action_id\":\"psr_action_0021\",\"params\":{\"target\":[80.0,80.0,0.0]},\"add\":[\"at_target(rover_2, relay_1)\",\"position(rover_2, 80.0, 80.0, 0.0)\"]}},{\"action_template_ref\":\"action_template_12\",\"fields\":{\"action_id\":\"psr_action_0022\",\"params\":{\"target\":\"sample_1\"}}},{\"action_template_ref\":\"action_template_12\",\"fields\":{\"action_id\":\"psr_action_0023\",\"params\":{\"target\":\"sample_2\"}}},{\"action_template_ref\":\"action_template_12\",\"fields\":{\"action_id\":\"psr_action_0024\",\"params\":{\"target\":\"base\"}}},{\"action_template_ref\":\"action_template_12\",\"fields\":{\"action_id\":\"psr_action_0025\",\"params\":{\"target\":\"relay_1\"}}},{\"action_template_ref\":\"action_template_13\",\"fields\":{\"action_id\":\"psr_action_0026\",\"params\":{\"sample_id\":\"sample_1\"},\"preconditions\":[\"at_target(rover_2, sample_1)\"],\"negative_preconditions\":[\"unreachable(sample_1)\"],\"add\":[\"cargo(rover_2, sample_1)\",\"sample_status(sample_1, in_rover)\"],\"delete\":[\"sample_status(sample_1, field)\",\"sample_status(sample_1, in_base)\",\"sample_status(sample_1, in_rover)\",\"sample_status(sample_1, stored)\",\"stored(sample_1)\"]}},{\"action_template_ref\":\"action_template_13\",\"fields\":{\"action_id\":\"psr_action_0027\",\"params\":{\"sample_id\":\"sample_2\"},\"preconditions\":[\"at_target(rover_2, sample_2)\"],\"negative_preconditions\":[\"unreachable(sample_2)\"],\"add\":[\"cargo(rover_2, sample_2)\",\"sample_status(sample_2, in_rover)\"],\"delete\":[\"sample_status(sample_2, field)\",\"sample_status(sample_2, in_base)\",\"sample_status(sample_2, in_rover)\",\"sample_status(sample_2, stored)\",\"stored(sample_2)\"]}},{\"action_template_ref\":\"action_template_14\",\"fields\":{\"action_id\":\"psr_action_0028\",\"params\":{\"sample_id\":\"sample_1\"},\"preconditions\":[\"cargo(rover_2, sample_1)\",\"sample_status(sample_1, in_rover)\"],\"add\":[\"sample_status(sample_1, stored)\",\"stored(sample_1)\"],\"delete\":[\"sample_status(sample_1, field)\",\"sample_status(sample_1, in_base)\",\"sample_status(sample_1, in_rover)\",\"sample_status(sample_1, stored)\"]}},{\"action_template_ref\":\"action_template_14\",\"fields\":{\"action_id\":\"psr_action_0029\",\"params\":{\"sample_id\":\"sample_2\"},\"preconditions\":[\"cargo(rover_2, sample_2)\",\"sample_status(sample_2, in_rover)\"],\"add\":[\"sample_status(sample_2, stored)\",\"stored(sample_2)\"],\"delete\":[\"sample_status(sample_2, field)\",\"sample_status(sample_2, in_base)\",\"sample_status(sample_2, in_rover)\",\"sample_status(sample_2, stored)\"]}},{\"action_template_ref\":\"action_template_15\",\"fields\":{}},{\"action_template_ref\":\"action_template_16\",\"fields\":{}},{\"action_template_ref\":\"action_template_17\",\"fields\":{}},{\"action_template_ref\":\"action_template_18\",\"fields\":{}},{\"action_template_ref\":\"action_template_19\",\"fields\":{}},{\"action_template_ref\":\"action_template_20\",\"fields\":{}},{\"action_template_ref\":\"action_template_21\",\"fields\":{}}],\"argument_policy\":\"Choose the listed actor and complete params shape; finite grounding only. State prerequisites still apply.\",\"cost_scope\":\"formal action model excludes numeric runtime consumption; execution reports actual/unknown costs\",\"communication_policy\":{\"state\":\"Disconnected\"},\"resource_constraints\":{},\"actor_types\":{\"rover_1\":\"ROVER\",\"rover_2\":\"ROVER\",\"relay_1\":\"RELAY\"},\"action_templates\":{\"action_template_1\":{\"common_fields\":{\"primitive\":\"move_to\",\"agent_id\":\"rover_1\",\"required_arguments\":[\"target\"],\"preconditions\":[\"available(rover_1)\"],\"negative_preconditions\":[],\"delete\":{\"$shared_object\":\"object_1\"},\"conditional_effects\":[],\"nominal_duration_s\":60.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{\"add\":[\"at_location(rover_1)\"]}},\"action_template_2\":{\"common_fields\":{\"primitive\":\"scan_spectral\",\"agent_id\":\"rover_1\",\"required_arguments\":[\"target\"],\"preconditions\":[\"at_location(rover_1)\",\"available(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"scanned(rover_1)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":30.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_3\":{\"common_fields\":{\"primitive\":\"sample_collect\",\"agent_id\":\"rover_1\",\"required_arguments\":[\"sample_id\"],\"conditional_effects\":[],\"nominal_duration_s\":45.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{\"preconditions\":[\"available(rover_1)\"],\"add\":[\"sample_collected(rover_1)\"]}},\"action_template_4\":{\"common_fields\":{\"primitive\":\"sample_store\",\"agent_id\":\"rover_1\",\"required_arguments\":[\"sample_id\"],\"negative_preconditions\":[],\"conditional_effects\":[],\"nominal_duration_s\":20.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{\"preconditions\":[\"available(rover_1)\",\"sample_collected(rover_1)\"],\"add\":[\"sample_stored(rover_1)\"]}},\"action_template_5\":{\"common_fields\":{\"action_id\":\"psr_action_0012\",\"primitive\":\"energy_check\",\"agent_id\":\"rover_1\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"available(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"energy_checked(rover_1)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":5.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_6\":{\"common_fields\":{\"action_id\":\"psr_action_0013\",\"primitive\":\"navigate_to_relay\",\"agent_id\":\"rover_1\",\"params\":{\"relay\":\"relay_1\"},\"required_arguments\":[\"relay\"],\"preconditions\":[\"available(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"at_relay(rover_1)\",\"at_target(rover_1, relay_1)\",\"position(rover_1, 80.0, 80.0, 0.0)\"],\"delete\":{\"$shared_object\":\"object_1\"},\"conditional_effects\":[],\"nominal_duration_s\":80.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_7\":{\"common_fields\":{\"action_id\":\"psr_action_0014\",\"primitive\":\"wait_for_relay\",\"agent_id\":\"rover_1\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"at_relay(rover_1)\",\"available(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"relay_linked(rover_1)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":30.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_8\":{\"common_fields\":{\"action_id\":\"psr_action_0015\",\"primitive\":\"return_to_base\",\"agent_id\":\"rover_1\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"available(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"at_base(rover_1)\",\"at_target(rover_1, base)\",\"position(rover_1, 0.0, 0.0, 0.0)\"],\"delete\":[\"at_location(rover_1)\",\"at_relay(rover_1)\",\"at_target(rover_1, base)\",\"at_target(rover_1, relay_1)\",\"at_target(rover_1, sample_1)\",\"at_target(rover_1, sample_2)\",\"position(rover_1, 0.0, 0.0, 0.0)\",\"position(rover_1, 20.0, 20.0, 0.0)\",\"position(rover_1, 40.0, 20.0, 0.0)\",\"position(rover_1, 80.0, 80.0, 0.0)\"],\"conditional_effects\":[],\"nominal_duration_s\":90.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_9\":{\"common_fields\":{\"action_id\":\"psr_action_0016\",\"primitive\":\"dock_with_base\",\"agent_id\":\"rover_1\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"at_base(rover_1)\",\"available(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"docked(rover_1)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":30.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_10\":{\"common_fields\":{\"action_id\":\"psr_action_0017\",\"primitive\":\"sample_offload\",\"agent_id\":\"rover_1\",\"params\":{\"base\":\"base\"},\"required_arguments\":[\"base\"],\"preconditions\":[\"at_base(rover_1)\",\"available(rover_1)\",\"sample_stored(rover_1)\"],\"negative_preconditions\":[],\"add\":[\"sample_offloaded(rover_1)\"],\"delete\":[\"sample_stored(rover_1)\"],\"nominal_duration_s\":40.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"],\"conditional_effects_ref\":\"effect_group_1\"},\"common_set_members\":{}},\"action_template_11\":{\"common_fields\":{\"primitive\":\"move_to\",\"agent_id\":\"rover_2\",\"required_arguments\":[\"target\"],\"preconditions\":[\"available(rover_2)\"],\"negative_preconditions\":[],\"delete\":{\"$shared_object\":\"object_2\"},\"conditional_effects\":[],\"nominal_duration_s\":60.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{\"add\":[\"at_location(rover_2)\"]}},\"action_template_12\":{\"common_fields\":{\"primitive\":\"scan_spectral\",\"agent_id\":\"rover_2\",\"required_arguments\":[\"target\"],\"preconditions\":[\"at_location(rover_2)\",\"available(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"scanned(rover_2)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":30.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_13\":{\"common_fields\":{\"primitive\":\"sample_collect\",\"agent_id\":\"rover_2\",\"required_arguments\":[\"sample_id\"],\"conditional_effects\":[],\"nominal_duration_s\":45.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{\"preconditions\":[\"available(rover_2)\"],\"add\":[\"sample_collected(rover_2)\"]}},\"action_template_14\":{\"common_fields\":{\"primitive\":\"sample_store\",\"agent_id\":\"rover_2\",\"required_arguments\":[\"sample_id\"],\"negative_preconditions\":[],\"conditional_effects\":[],\"nominal_duration_s\":20.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{\"preconditions\":[\"available(rover_2)\",\"sample_collected(rover_2)\"],\"add\":[\"sample_stored(rover_2)\"]}},\"action_template_15\":{\"common_fields\":{\"action_id\":\"psr_action_0030\",\"primitive\":\"energy_check\",\"agent_id\":\"rover_2\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"available(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"energy_checked(rover_2)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":5.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_16\":{\"common_fields\":{\"action_id\":\"psr_action_0031\",\"primitive\":\"navigate_to_relay\",\"agent_id\":\"rover_2\",\"params\":{\"relay\":\"relay_1\"},\"required_arguments\":[\"relay\"],\"preconditions\":[\"available(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"at_relay(rover_2)\",\"at_target(rover_2, relay_1)\",\"position(rover_2, 80.0, 80.0, 0.0)\"],\"delete\":{\"$shared_object\":\"object_2\"},\"conditional_effects\":[],\"nominal_duration_s\":80.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_17\":{\"common_fields\":{\"action_id\":\"psr_action_0032\",\"primitive\":\"wait_for_relay\",\"agent_id\":\"rover_2\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"at_relay(rover_2)\",\"available(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"relay_linked(rover_2)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":30.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_18\":{\"common_fields\":{\"action_id\":\"psr_action_0033\",\"primitive\":\"return_to_base\",\"agent_id\":\"rover_2\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"available(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"at_base(rover_2)\",\"at_target(rover_2, base)\",\"position(rover_2, 0.0, 0.0, 0.0)\"],\"delete\":[\"at_location(rover_2)\",\"at_relay(rover_2)\",\"at_target(rover_2, base)\",\"at_target(rover_2, relay_1)\",\"at_target(rover_2, sample_1)\",\"at_target(rover_2, sample_2)\",\"position(rover_2, 0.0, 0.0, 0.0)\",\"position(rover_2, 20.0, 20.0, 0.0)\",\"position(rover_2, 40.0, 20.0, 0.0)\",\"position(rover_2, 80.0, 80.0, 0.0)\"],\"conditional_effects\":[],\"nominal_duration_s\":90.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_19\":{\"common_fields\":{\"action_id\":\"psr_action_0034\",\"primitive\":\"dock_with_base\",\"agent_id\":\"rover_2\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"at_base(rover_2)\",\"available(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"docked(rover_2)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":30.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}},\"action_template_20\":{\"common_fields\":{\"action_id\":\"psr_action_0035\",\"primitive\":\"sample_offload\",\"agent_id\":\"rover_2\",\"params\":{\"base\":\"base\"},\"required_arguments\":[\"base\"],\"preconditions\":[\"at_base(rover_2)\",\"available(rover_2)\",\"sample_stored(rover_2)\"],\"negative_preconditions\":[],\"add\":[\"sample_offloaded(rover_2)\"],\"delete\":[\"sample_stored(rover_2)\"],\"nominal_duration_s\":40.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"],\"conditional_effects_ref\":\"effect_group_2\"},\"common_set_members\":{}},\"action_template_21\":{\"common_fields\":{\"action_id\":\"psr_action_0036\",\"primitive\":\"energy_check\",\"agent_id\":\"relay_1\",\"params\":{},\"required_arguments\":[],\"preconditions\":[\"available(relay_1)\"],\"negative_preconditions\":[],\"add\":[\"energy_checked(relay_1)\"],\"delete\":[],\"conditional_effects\":[],\"nominal_duration_s\":5.0,\"numeric_planning_energy_cost\":null,\"source_references\":[\"experiments/psr_primitive_spec.py\",\"worlds/psr_world.py:apply_structured_effects\",\"validation/psr_named.py\",\"primitives/psr/strict_profile.py\"]},\"common_set_members\":{}}}},\"shared_conditional_effects\":{\"effect_group_1\":[{\"positive_guards\":[\"cargo(rover_1, sample_1)\",\"sample_status(sample_1, stored)\"],\"negative_guards\":[],\"add\":[\"in_base_storage(sample_1)\",\"sample_status(sample_1, in_base)\"],\"delete\":[\"cargo(rover_1, sample_1)\",\"sample_status(sample_1, in_rover)\",\"sample_status(sample_1, stored)\",\"stored(sample_1)\"]},{\"positive_guards\":[\"cargo(rover_1, sample_2)\",\"sample_status(sample_2, stored)\"],\"negative_guards\":[],\"add\":[\"in_base_storage(sample_2)\",\"sample_status(sample_2, in_base)\"],\"delete\":[\"cargo(rover_1, sample_2)\",\"sample_status(sample_2, in_rover)\",\"sample_status(sample_2, stored)\",\"stored(sample_2)\"]}],\"effect_group_2\":[{\"positive_guards\":[\"cargo(rover_2, sample_1)\",\"sample_status(sample_1, stored)\"],\"negative_guards\":[],\"add\":[\"in_base_storage(sample_1)\",\"sample_status(sample_1, in_base)\"],\"delete\":[\"cargo(rover_2, sample_1)\",\"sample_status(sample_1, in_rover)\",\"sample_status(sample_1, stored)\",\"stored(sample_1)\"]},{\"positive_guards\":[\"cargo(rover_2, sample_2)\",\"sample_status(sample_2, stored)\"],\"negative_guards\":[],\"add\":[\"in_base_storage(sample_2)\",\"sample_status(sample_2, in_base)\"],\"delete\":[\"cargo(rover_2, sample_2)\",\"sample_status(sample_2, in_rover)\",\"sample_status(sample_2, stored)\",\"stored(sample_2)\"]}]}},\"original_information\":{\"tree\":{\"root_id\":\"scene\",\"nodes\":{\"scene\":{\"id\":\"scene\",\"layer\":\"S\",\"goal_nl\":\"\",\"precondition\":\"\",\"postcondition\":\"at_base(rover_1)\",\"context\":{\"domain_goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]}},\"status\":\"pending\",\"estimated_duration_s\":0.0,\"dependencies\":[],\"parent_id\":null,\"children_ids\":[\"mission_1\"],\"formal_postcondition\":\"at_base(rover_1)\"},\"mission_1\":{\"$shared_object\":\"object_8\"},\"return_rover_1\":{\"$shared_object\":\"object_6\"},\"return_rover_1.p1\":{\"id\":\"return_rover_1.p1\",\"layer\":\"P\",\"goal_nl\":\"\",\"precondition\":\"\",\"postcondition\":\"\",\"context\":{},\"status\":\"pending\",\"estimated_duration_s\":0.0,\"dependencies\":[],\"parent_id\":\"return_rover_1\",\"children_ids\":[],\"primitive_name\":\"return_to_base\",\"primitive_args\":{}}}},\"original_plan\":[{\"primitive\":\"return_to_base\",\"agent_id\":\"rover_1\",\"params\":{}}],\"original_observation\":{\"$shared_object\":\"object_5\"},\"pre_deviation_observation\":{\"$shared_object\":\"object_5\"},\"executed_prefix\":[],\"executed_prefix_ids\":[],\"observed_deviation\":{\"kind\":\"existing_PSR_radio_hook\",\"agent\":\"rover_1\",\"author_added_fixture_target\":true,\"source\":\"PSRWorld.injected_comm_offline; preserves prior B05 developer actor/position, not canonical inj_psr_002\"},\"post_deviation_observation\":{\"$shared_object\":\"object_5\"},\"public_policy\":{\"id\":null,\"eligible\":false,\"source\":null,\"nominal_goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"fallback_goal\":null},\"shared_resource_information\":{\"scenario\":\"psr\",\"numeric_resource_model\":\"PSRWorld deterministic simulator\",\"formal_energy_guarantee\":false,\"source\":[\"simulation/energy_model.py\",\"paper4_impl/primitives/psr/primitives.py\"],\"config\":{\"travel_cost_per_m\":0.5,\"slope_factor\":0.02,\"task_base_cost\":5.0,\"low_energy_threshold\":10.0},\"travel_rule\":\"distance_3d * (travel_cost_per_m + abs(target_slope_deg) * slope_factor)\",\"runtime_failure_rule\":\"An action fails before effects if actor.energy_wh < action_cost_wh.\",\"low_energy_threshold_note\":\"Config threshold is not an extra return obligation in PSRWorld.step.\",\"actors\":{\"relay_1\":{\"position\":[0.0,0.0,0.0],\"energy_wh\":400.0,\"cargo\":[],\"agent_type\":\"RELAY\",\"available\":true,\"capabilities\":[\"communicate_status\",\"energy_check\"]},\"rover_1\":{\"position\":[20.0,20.0,0.0],\"energy_wh\":400.0,\"cargo\":[],\"agent_type\":\"ROVER\",\"available\":true,\"capabilities\":{\"$shared_object\":\"object_3\"}},\"rover_2\":{\"position\":[0.0,0.0,0.0],\"energy_wh\":400.0,\"cargo\":[],\"agent_type\":\"ROVER\",\"available\":true,\"capabilities\":{\"$shared_object\":\"object_3\"}}},\"samples\":{\"sample_1\":{\"position\":[20.0,20.0,0.0],\"status\":\"field\",\"target_slope_deg\":0.0,\"traversable\":true,\"unreachable\":false},\"sample_2\":{\"position\":[40.0,20.0,0.0],\"status\":\"field\",\"target_slope_deg\":0.0,\"traversable\":true,\"unreachable\":false}},\"base\":{\"position\":[0.0,0.0,0.0],\"target_slope_deg\":0.0},\"nonmovement_cost_wh\":{\"scan_spectral\":5.0,\"sample_collect\":5.0,\"sample_store\":5.0,\"energy_check\":5.0,\"communicate_status\":5.0,\"communicate_relay\":5.0,\"wait_for_relay\":5.0,\"dock_with_base\":5.0,\"sample_offload\":5.0}},\"microstudy_task_contract\":{\"source_task\":{\"$shared_object\":\"object_6\"},\"current_goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"parent_goal_reported_separately\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"flat_actor_policy\":\"may use any source-authorized actor; this source Task identifies the requested obligation, not an additional flat actor restriction\"}},\"outer_composition_reference\":{\"evaluation_parent_goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"scene_alignment_record\":{\"$shared_object\":\"object_7\"},\"scope_note\":\"outer Scene/Mission composition/evaluation context; these root children are not children to generate inside the current Task; actual Task dependencies and explicit process duties above remain required\"},\"original_generation_constraints_record\":{\"limits\":{\"max_model_logical\":1,\"node_attempts\":1,\"max_children\":6,\"nominal_policy_call_cap\":1},\"remaining_model_logical_including_this_request\":1,\"prompt_cap_candidate\":61440,\"completion_reservation\":4096,\"transport_retry_upper\":1,\"remaining_physical_capacity\":2,\"remaining_token_reservation\":262144,\"remaining_trial_model_logical\":1,\"max_immediate_children\":null,\"assigned_actor\":null,\"actor_rule\":\"D_T keeps the assigned actor; flat and generated Tasks must name roster actors with the required capability\",\"dependency_rule\":\"acyclic dependencies on siblings only; ids globally unique in the retained hierarchy\",\"reserved_node_ids\":[],\"child_contract_rule\":\"textual postconditions and domain_goal positives agree; explicit negative/cardinality conditions remain obligations; complete parent checked after all deletes\",\"leaf_schema\":{\"chain\":\"array of objects; strings and mixed non-object elements are invalid\",\"required\":[\"primitive\",\"params\"],\"params\":\"object using actual domain schema\",\"additional_step_fields_allowed\":false,\"optional_D_T\":[\"agent_id (must equal assigned actor)\",\"agent_type (must match roster)\"],\"flat_required_additional\":[\"agent_id\"]},\"may_decline\":true,\"decline_shape\":{\"decline\":true,\"reason\":\"explain inability without fabricating a plan\"},\"budget_use\":\"remaining allowance is available, not a requirement to spend it\",\"service_role\":\"edge\",\"service_model\":\"qwen-7b-local\",\"runtime_routing\":{\"repair_scope\":\"T\",\"repair_actor\":\"rover_1\"},\"scene_alignment\":{\"$shared_object\":\"object_7\"},\"output_limit_scope\":{\"hierarchy_child_limit_applies_to\":[\"D_S.missions\",\"D_M.tasks\"],\"current_output_is_child_specifications\":false,\"primitive_chain_inherits_child_limit\":false,\"meaning\":\"The tree max_children parameter is used for Mission/Task specification counts and call-budget derivation. It is not an action-count limit on D_T or flat. Read output_schema for the actual array shape; output/context/execution/resource constraints still apply.\"}}},\"shared_objects\":{\"object_1\":[\"at_base(rover_1)\",\"at_target(rover_1, base)\",\"at_target(rover_1, relay_1)\",\"at_target(rover_1, sample_1)\",\"at_target(rover_1, sample_2)\",\"docked(rover_1)\",\"position(rover_1, 0.0, 0.0, 0.0)\",\"position(rover_1, 20.0, 20.0, 0.0)\",\"position(rover_1, 40.0, 20.0, 0.0)\",\"position(rover_1, 80.0, 80.0, 0.0)\"],\"object_2\":[\"at_base(rover_2)\",\"at_target(rover_2, base)\",\"at_target(rover_2, relay_1)\",\"at_target(rover_2, sample_1)\",\"at_target(rover_2, sample_2)\",\"docked(rover_2)\",\"position(rover_2, 0.0, 0.0, 0.0)\",\"position(rover_2, 20.0, 20.0, 0.0)\",\"position(rover_2, 40.0, 20.0, 0.0)\",\"position(rover_2, 80.0, 80.0, 0.0)\"],\"object_3\":[\"communicate_relay\",\"communicate_status\",\"dock_with_base\",\"energy_check\",\"move_to\",\"navigate_to_relay\",\"return_to_base\",\"sample_collect\",\"sample_offload\",\"sample_store\",\"scan_spectral\",\"wait_for_relay\"],\"object_4\":[{\"$shared_object\":\"object_8\"}],\"object_5\":{\"sim_time_s\":0.0,\"agents\":{\"$shared_object\":\"object_9\"},\"samples\":{\"sample_1\":{\"location\":[20.0,20.0,0.0],\"status\":\"field\"},\"sample_2\":{\"location\":[40.0,20.0,0.0],\"status\":\"field\"}},\"base_storage\":[],\"semantics_profile\":\"psr_location_stored_v1\",\"collection_tolerance_m\":0.5},\"object_6\":{\"id\":\"return_rover_1\",\"layer\":\"T\",\"goal_nl\":\"\",\"precondition\":\"\",\"postcondition\":\"at_base(rover_1)\",\"context\":{\"domain_goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]}},\"status\":\"pending\",\"estimated_duration_s\":0.0,\"dependencies\":[],\"parent_id\":\"mission_1\",\"children_ids\":[\"return_rover_1.p1\"],\"assigned_agent_id\":\"rover_1\",\"required_primitives\":[]},\"object_7\":{\"authorized_scene_replacement\":false,\"policy_replacement\":false,\"policy_id\":null,\"goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]},\"root_id\":\"scene\",\"replaced_children_ids\":[],\"retained_children\":{\"$shared_object\":\"object_4\"},\"external_dependencies\":[],\"source_precondition\":\"\",\"explicit_process_obligations\":[]},\"object_8\":{\"id\":\"mission_1\",\"layer\":\"M\",\"goal_nl\":\"\",\"precondition\":\"\",\"postcondition\":\"at_base(rover_1)\",\"context\":{\"domain_goal\":{\"positive\":[\"at_base(rover_1)\"],\"negative\":[],\"cardinality\":[]}},\"status\":\"pending\",\"estimated_duration_s\":0.0,\"dependencies\":[],\"parent_id\":\"scene\",\"children_ids\":[\"return_rover_1\"],\"required_agent_types\":[]},\"object_9\":{\"rover_1\":{\"position\":[20.0,20.0,0.0],\"energy_wh\":400.0,\"facts\":[],\"cargo\":[]},\"rover_2\":{\"position\":[0.0,0.0,0.0],\"energy_wh\":400.0,\"facts\":[\"at_base\"],\"cargo\":[]},\"relay_1\":{\"position\":[0.0,0.0,0.0],\"energy_wh\":400.0,\"facts\":[\"at_base\"],\"cargo\":[]}}}},\"rejected_reference\":{\"reference_kind\":\"rejected_reference_not_executed_not_authoritative_start_state\",\"source_trial\":\"artifacts\\\\grounded_task_interface_v1_real\\\\runs\\\\B05_psr_strict_disconnected\\\\flat-full\\\\trial.json\",\"source_feedback_record\":\"artifacts\\\\grounded_task_feedback_v1\\\\preparation\\\\B05_psr_strict_disconnected\\\\flat-full\\\\feedback.json\",\"prior_status\":\"candidate_format_rejected\",\"raw_response\":\"{\\n  \\\"chain\\\": [\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_1\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_1\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"move_to\\\",\\n      \\\"params\\\": {\\n        \\\"target\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_collect\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n      \\\"primitive\\\": \\\"sample_store\\\",\\n      \\\"params\\\": {\\n        \\\"sample_id\\\": \\\"sample_2\\\"\\n      },\\n      \\\"agent_id\\\": \\\"rover_2\\\",\\n      \\\"agent_type\\\": \\\"ROVER\\\"\\n    },\\n    {\\n\",\"candidate_simulation\":{\"first_goal_met_after_step\":null,\"forbidden_present_at_stop\":[],\"goal_met_at_stop\":false,\"missing_positive_at_stop\":[\"at_base(rover_1)\"],\"repeated_symbolic_states\":[{\"after_step\":15,\"same_as_after_step\":13},{\"after_step\":16,\"same_as_after_step\":12},{\"after_step\":17,\"same_as_after_step\":11},{\"after_step\":18,\"same_as_after_step\":12},{\"after_step\":21,\"same_as_after_step\":19},{\"after_step\":22,\"same_as_after_step\":12},{\"after_step\":23,\"same_as_after_step\":11},{\"after_step\":24,\"same_as_after_step\":12},{\"after_step\":25,\"same_as_after_step\":13},{\"after_step\":26,\"same_as_after_step\":14},{\"after_step\":27,\"same_as_after_step\":13},{\"after_step\":28,\"same_as_after_step\":12},{\"after_step\":29,\"same_as_after_step\":11},{\"after_step\":30,\"same_as_after_step\":12},{\"after_step\":31,\"same_as_after_step\":19},{\"after_step\":32,\"same_as_after_step\":20},{\"after_step\":33,\"same_as_after_step\":19},{\"after_step\":34,\"same_as_after_step\":12},{\"after_step\":35,\"same_as_after_step\":11},{\"after_step\":36,\"same_as_after_step\":12},{\"after_step\":37,\"same_as_after_step\":13},{\"after_step\":38,\"same_as_after_step\":14},{\"after_step\":39,\"same_as_after_step\":13},{\"after_step\":40,\"same_as_after_step\":12},{\"after_step\":41,\"same_as_after_step\":11},{\"after_step\":42,\"same_as_after_step\":12},{\"after_step\":43,\"same_as_after_step\":19},{\"after_step\":44,\"same_as_after_step\":20},{\"after_step\":45,\"same_as_after_step\":19},{\"after_step\":46,\"same_as_after_step\":12},{\"after_step\":47,\"same_as_after_step\":11},{\"after_step\":48,\"same_as_after_step\":12},{\"after_step\":49,\"same_as_after_step\":13},{\"after_step\":50,\"same_as_after_step\":14},{\"after_step\":51,\"same_as_after_step\":13},{\"after_step\":52,\"same_as_after_step\":12},{\"after_step\":53,\"same_as_after_step\":11},{\"after_step\":54,\"same_as_after_step\":12},{\"after_step\":55,\"same_as_after_step\":19},{\"after_step\":56,\"same_as_after_step\":20},{\"after_step\":57,\"same_as_after_step\":19},{\"after_step\":58,\"same_as_after_step\":12},{\"after_step\":59,\"same_as_after_step\":11},{\"after_step\":60,\"same_as_after_step\":12},{\"after_step\":61,\"same_as_after_step\":13},{\"after_step\":62,\"same_as_after_step\":14},{\"after_step\":63,\"same_as_after_step\":13},{\"after_step\":64,\"same_as_after_step\":12},{\"after_step\":65,\"same_as_after_step\":11},{\"after_step\":66,\"same_as_after_step\":12},{\"after_step\":67,\"same_as_after_step\":19},{\"after_step\":68,\"same_as_after_step\":20},{\"after_step\":69,\"same_as_after_step\":19},{\"after_step\":70,\"same_as_after_step\":12},{\"after_step\":71,\"same_as_after_step\":11},{\"after_step\":72,\"same_as_after_step\":12},{\"after_step\":73,\"same_as_after_step\":13},{\"after_step\":74,\"same_as_after_step\":14},{\"after_step\":75,\"same_as_after_step\":13},{\"after_step\":76,\"same_as_after_step\":12},{\"after_step\":77,\"same_as_after_step\":11},{\"after_step\":78,\"same_as_after_step\":12},{\"after_step\":79,\"same_as_after_step\":19},{\"after_step\":80,\"same_as_after_step\":20},{\"after_step\":81,\"same_as_after_step\":19},{\"after_step\":82,\"same_as_after_step\":12},{\"after_step\":83,\"same_as_after_step\":11},{\"after_step\":84,\"same_as_after_step\":12}],\"scope\":\"read-only candidate simulation; never actual history, a dispatch certificate, or a resource feasibility claim\",\"state\":[\"at_base(relay_1)\",\"at_location(rover_1)\",\"at_location(rover_2)\",\"at_target(relay_1, base)\",\"at_target(rover_1, sample_2)\",\"at_target(rover_2, sample_2)\",\"available(relay_1)\",\"available(rover_1)\",\"available(rover_2)\",\"cargo(rover_1, sample_1)\",\"cargo(rover_1, sample_2)\",\"cargo(rover_2, sample_1)\",\"cargo(rover_2, sample_2)\",\"position(relay_1, 0.0, 0.0, 0.0)\",\"position(rover_1, 40.0, 20.0, 0.0)\",\"position(rover_2, 40.0, 20.0, 0.0)\",\"psr_semantics_profile(psr_location_stored_v1)\",\"sample_collected(rover_1)\",\"sample_collected(rover_2)\",\"sample_status(sample_1, stored)\",\"sample_status(sample_2, stored)\",\"sample_stored(rover_1)\",\"sample_stored(rover_2)\",\"stored(sample_1)\",\"stored(sample_2)\"],\"symbolic_steps_applied\":84},\"executed_history_prefix_ids\":[],\"executed_history_scope\":\"preexisting physical source history; candidate simulation does not extend it\",\"parse_error\":{\"accepted\":false,\"reason\":\"Expecting property name enclosed in double quotes: line 676 column 1 (char 13629)\"}}}",
+      "route": {
+        "role": "edge",
+        "model": "qwen-7b-local",
+        "host": "workstation",
+        "endpoint": "http://127.0.0.1:18000/v1",
+        "weights": "/opt/paper4-runtime/models/edge/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+        "quantization": "Q4_K_M",
+        "backend": "llama.cpp 5266f24da75dc449bd56cbed7addb9c8e4a6a73e; CUDA 13.0; sm_89",
+        "context_tokens": 65536,
+        "output_tokens": 4096,
+        "observed_ready": true,
+        "placement": "workstation_simulated_edge",
+        "repair_scope": "T",
+        "generated_layer": "flat",
+        "actor": "rover_1",
+        "communication": "Disconnected",
+        "communication_revision": 0,
+        "execution_host": "LAPTOP-NO67QA6O",
+        "onboard_inference": false
+      },
+      "response": "{\n  \"chain\": [\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"return_to_base\",\n      \"params\": {},\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    }\n  ]\n}",
+      "response_format": {
+        "type": "json_schema",
+        "json_schema": {
+          "name": "grounded_tuple_decoding_v1",
+          "strict": true,
+          "schema": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "chain": {
+                    "type": "array",
+                    "items": {
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "dock_with_base"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "dock_with_base"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "energy_check"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "relay_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "RELAY"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "energy_check"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "energy_check"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "array",
+                                  "prefixItems": [
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 3,
+                                  "maxItems": 3
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "array",
+                                  "prefixItems": [
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        80.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        80.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 3,
+                                  "maxItems": 3
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "array",
+                                  "prefixItems": [
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 3,
+                                  "maxItems": 3
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "move_to"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "array",
+                                  "prefixItems": [
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        80.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        80.0
+                                      ]
+                                    },
+                                    {
+                                      "type": "number",
+                                      "enum": [
+                                        0.0
+                                      ]
+                                    }
+                                  ],
+                                  "minItems": 3,
+                                  "maxItems": 3
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "navigate_to_relay"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "relay": {
+                                  "type": "string",
+                                  "enum": [
+                                    "relay_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "relay"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "navigate_to_relay"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "relay": {
+                                  "type": "string",
+                                  "enum": [
+                                    "relay_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "relay"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "return_to_base"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "return_to_base"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_collect"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_collect"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_collect"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_collect"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_offload"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "base": {
+                                  "type": "string",
+                                  "enum": [
+                                    "base"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "base"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_offload"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "base": {
+                                  "type": "string",
+                                  "enum": [
+                                    "base"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "base"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_store"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_store"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_store"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "sample_store"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "sample_id": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "sample_id"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "base"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "relay_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "base"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "relay_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_1"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "scan_spectral"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {
+                                "target": {
+                                  "type": "string",
+                                  "enum": [
+                                    "sample_2"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "target"
+                              ],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "wait_for_relay"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_1"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        },
+                        {
+                          "type": "object",
+                          "properties": {
+                            "primitive": {
+                              "type": "string",
+                              "enum": [
+                                "wait_for_relay"
+                              ]
+                            },
+                            "params": {
+                              "type": "object",
+                              "properties": {},
+                              "required": [],
+                              "additionalProperties": false
+                            },
+                            "agent_id": {
+                              "type": "string",
+                              "enum": [
+                                "rover_2"
+                              ]
+                            },
+                            "agent_type": {
+                              "type": "string",
+                              "enum": [
+                                "ROVER"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "primitive",
+                            "params",
+                            "agent_id"
+                          ],
+                          "additionalProperties": false
+                        }
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "chain"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "decline": {
+                    "type": "boolean",
+                    "enum": [
+                      true
+                    ]
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "decline"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        }
+      },
+      "decoding_profile": "grounded_tuple_decoding_v1",
+      "logical_call_id": "logical-1-81f61651ec6d45cbae222c51fc53aaa2",
+      "request_measurement": {
+        "policy": "full_request_metering_v1",
+        "request_utf8_bytes": 82032,
+        "full_envelope_utf8_bytes": 82032,
+        "bytes_hard_cap": 8388608,
+        "bytes_fit": true,
+        "components": {
+          "messages_utf8_bytes": 66858,
+          "tools_utf8_bytes": 0,
+          "response_format_utf8_bytes": 15073,
+          "template_utf8_bytes": 0,
+          "maximum_additional_feedback_utf8_bytes": 0
+        },
+        "accounting_scope": "assembled wire JSON plus explicit template plus maximum additional feedback allowance; JSON component sizes are diagnostic and not summed twice",
+        "proxy": {
+          "name": "unicode_word_punctuation_proxy",
+          "version": "3.14.3",
+          "source": "Python re.findall(r'\\w+|[^\\w\\s]', text); not a provider tokenizer",
+          "count": 34028,
+          "estimated_fits_prompt_cap": true,
+          "is_provider_upper_bound": false,
+          "unrepresented_feedback_allowance_bytes": 0
+        },
+        "provider_input_tokens_upper_bound": 16779,
+        "provider_fits": true,
+        "provider_counter": {
+          "name": "deployed_llama_full_schema_template_and_tokenizer",
+          "version": "llama.cpp 5266f24da75dc449bd56cbed7addb9c8e4a6a73e; CUDA 13.0; sm_89",
+          "source": "pinned server /apply-template full request through same oaicompat_chat_params_parse as generation, then /tokenize"
+        },
+        "declared_template_available": false,
+        "prompt_cap": 61440,
+        "completion_cap": 4096,
+        "provider_input_limit": 65536,
+        "provider_completion_limit": 4096,
+        "provider_window_limit": 65536,
+        "unknown_reason": null,
+        "completion_accounting": {
+          "wire_parameter": "max_tokens",
+          "wire_limit": 4096,
+          "overrun_allowance": 0,
+          "ledger_reserved_completion_tokens": 4096,
+          "includes_reasoning": true,
+          "scope": "llama.cpp max_tokens covers reasoning plus final output; optional reasoning usage detail may be unknown"
+        }
+      },
+      "tokenizer_measurement": {
+        "logical_input_tokens": 16779,
+        "cache_reduction_claimed": false,
+        "response_schema_sent_to_same_template_parser": true
+      },
+      "transport_pending": false,
+      "provider_response": {
+        "id": "chatcmpl-eOhSJfQ1bULtIKqBsTDsQqHjNzac238P",
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "{\n  \"chain\": [\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_1\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_collect\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"sample_store\",\n      \"params\": {\n        \"sample_id\": \"sample_2\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    },\n    {\n      \"primitive\": \"return_to_base\",\n      \"params\": {},\n      \"agent_id\": \"rover_1\",\n      \"agent_type\": \"ROVER\"\n    }\n  ]\n}",
+              "refusal": null,
+              "role": "assistant",
+              "annotations": null,
+              "audio": null,
+              "function_call": null,
+              "tool_calls": null
+            }
+          }
+        ],
+        "created": 1789823239,
+        "model": "qwen-7b-local",
+        "object": "chat.completion",
+        "metadata": null,
+        "moderation": null,
+        "service_tier": null,
+        "system_fingerprint": "b1-5266f24",
+        "usage": {
+          "completion_tokens": 632,
+          "prompt_tokens": 16779,
+          "total_tokens": 17411,
+          "completion_tokens_details": null,
+          "prompt_tokens_details": {
+            "audio_tokens": null,
+            "cache_write_tokens": null,
+            "cached_tokens": 0,
+            "image_tokens": null,
+            "text_tokens": null
+          }
+        },
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 16779,
+          "prompt_ms": 19117.703,
+          "prompt_per_token_ms": 1.1393827403301746,
+          "prompt_per_second": 877.6682010385871,
+          "predicted_n": 632,
+          "predicted_ms": 16583.517,
+          "predicted_per_token_ms": 26.2813264659271,
+          "predicted_per_second": 38.04982984007554
+        }
+      },
+      "cache_telemetry": {
+        "cached_prompt_tokens": 0,
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 16779,
+          "prompt_ms": 19117.703,
+          "prompt_per_token_ms": 1.1393827403301746,
+          "prompt_per_second": 877.6682010385871,
+          "predicted_n": 632,
+          "predicted_ms": 16583.517,
+          "predicted_per_token_ms": 26.2813264659271,
+          "predicted_per_second": 38.04982984007554
+        },
+        "logical_input_tokens_not_discounted": {
+          "logical_input_tokens": 16779,
+          "cache_reduction_claimed": false,
+          "response_schema_sent_to_same_template_parser": true
+        }
+      }
+    }
+  ],
+  "output_contract_version": "paper4_generation_output_v3",
+  "logical_calls": [
+    {
+      "logical_call_id": "logical-1-81f61651ec6d45cbae222c51fc53aaa2",
+      "ordinal": 1,
+      "fixture_id": "local-role-edge",
+      "stage": "generation",
+      "model": "qwen-7b-local",
+      "endpoint_hostname": "private-endpoint-redacted",
+      "prompt_version": "literal_task_interface_v2",
+      "temperature": 0.0,
+      "max_tokens": 4096,
+      "prompt_token_cap": 61440,
+      "prompt_token_upper_bound": 16779,
+      "seed": 1,
+      "measurement_provenance": "actual",
+      "transport_attestation": "openai_sdk_max_retries_0",
+      "sdk_max_retries": 0,
+      "retry_policy_id": "bounded_transport_v1_408_409_429_5xx",
+      "max_physical_attempts": 2,
+      "started_at_utc": "2026-09-19T13:06:41.078602Z",
+      "ended_at_utc": "2026-09-19T13:07:17.293964Z",
+      "elapsed_s": 36.21568640001351,
+      "outcome": "transport_succeeded",
+      "parse_outcome": "pending",
+      "physical_attempt_ids": [
+        "physical-1-4d324e4871e248b1bd71cce65efb87d3"
+      ],
+      "usage": {
+        "prompt_tokens": 16779,
+        "completion_tokens": 632,
+        "total_tokens": 17411,
+        "provenance": "actual",
+        "reasoning_tokens": "unavailable"
+      },
+      "response_model": "qwen-7b-local",
+      "response_request_id": "chatcmpl-eOhSJfQ1bULtIKqBsTDsQqHjNzac238P"
+    }
+  ],
+  "physical_attempts": [
+    {
+      "physical_attempt_id": "physical-1-4d324e4871e248b1bd71cce65efb87d3",
+      "logical_call_id": "logical-1-81f61651ec6d45cbae222c51fc53aaa2",
+      "ordinal": 1,
+      "stage": "generation",
+      "model": "qwen-7b-local",
+      "endpoint_hostname": "private-endpoint-redacted",
+      "prompt_version": "literal_task_interface_v2",
+      "temperature": 0.0,
+      "max_tokens": 4096,
+      "prompt_token_cap": 61440,
+      "prompt_token_upper_bound": 16779,
+      "seed": 1,
+      "measurement_provenance": "actual",
+      "transport_attestation": "openai_sdk_max_retries_0",
+      "sdk_max_retries": 0,
+      "retry_policy_id": "bounded_transport_v1_408_409_429_5xx",
+      "started_at_utc": "2026-09-19T13:06:41.078641Z",
+      "ended_at_utc": "2026-09-19T13:07:17.293870Z",
+      "elapsed_s": 36.21513490000507,
+      "outcome": "success",
+      "http_status": "unavailable",
+      "api_outcome": "success",
+      "error_type": "unavailable",
+      "usage": {
+        "prompt_tokens": 16779,
+        "completion_tokens": 632,
+        "total_tokens": 17411,
+        "provenance": "actual",
+        "reasoning_tokens": "unavailable"
+      },
+      "response_model": "qwen-7b-local",
+      "response_request_id": "chatcmpl-eOhSJfQ1bULtIKqBsTDsQqHjNzac238P"
+    }
+  ],
+  "budget": {
+    "max_logical_calls": 1,
+    "max_physical_attempts": 2,
+    "max_total_tokens": 262144,
+    "logical_calls_reserved": 1,
+    "physical_attempt_capacity_reserved": 2,
+    "token_capacity_reserved": 131072,
+    "physical_attempts_started": 1,
+    "observed_tokens": 17411
+  },
+  "logical_n": 1,
+  "actual_api_calls": 1,
+  "actual_provider_tokens": 17411,
+  "evidence_class": "role_routed_generation; inspect transport provenance",
+  "actual_physical_posts": 1,
+  "known_provider_tokens": 17411,
+  "synthetic_ledger_tokens": 0,
+  "unknown_usage_physical_n": 0
+}

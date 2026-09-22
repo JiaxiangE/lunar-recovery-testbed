@@ -1,0 +1,123 @@
+{
+  "candidate": [
+    {
+      "primitive": "move_to",
+      "agent_id": "rover_1",
+      "params": {
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "primitive": "return_to_base",
+      "agent_id": "rover_1",
+      "params": {}
+    }
+  ],
+  "symbolic_verification": {
+    "accepted": true,
+    "reason": "VERIFIED",
+    "action_ids": [
+      "psr_action_0002",
+      "psr_action_0015"
+    ],
+    "normalized_plan": [
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_1",
+        "params": {
+          "target": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "primitive": "return_to_base",
+        "agent_id": "rover_1",
+        "params": {}
+      }
+    ],
+    "final_state": [
+      "at_base(relay_1)",
+      "at_base(rover_1)",
+      "at_base(rover_2)",
+      "at_target(relay_1, base)",
+      "at_target(rover_1, base)",
+      "at_target(rover_2, base)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "position(relay_1, 0.0, 0.0, 0.0)",
+      "position(rover_1, 0.0, 0.0, 0.0)",
+      "position(rover_2, 0.0, 0.0, 0.0)",
+      "psr_semantics_profile(psr_location_stored_v1)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)"
+    ],
+    "solver_version": "5.1.0",
+    "solver_status": "unsat",
+    "solver_encode_check_s": 0.004965399974025786,
+    "verification_s": 0.04662490007467568,
+    "grounding": {
+      "accepted": true,
+      "checked_through_step": null,
+      "complete": true,
+      "reason": "all steps grounded"
+    },
+    "symbolic_contract": {
+      "accepted": true,
+      "reason": "VERIFIED",
+      "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+    }
+  },
+  "commands": [
+    {
+      "candidate_index": 0,
+      "primitive": "move_to",
+      "actor": "rover_1",
+      "namespace": "husky",
+      "target_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_projection": "existing ROS MoveTo target_x/target_y; vertical goal not certified"
+    },
+    {
+      "candidate_index": 1,
+      "primitive": "return_to_base",
+      "actor": "rover_1",
+      "namespace": "husky",
+      "target_xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_projection": "existing ROS MoveTo target_x/target_y; vertical goal not certified"
+    }
+  ],
+  "supported": true,
+  "reason": "motion_mapping_available",
+  "source_trial": "artifacts\\lg3_b05\\s1\\c01\\ours\\trial.json",
+  "actor_id": "rover_1",
+  "base_xyz": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initial_actor_xyz": [
+    20.0,
+    20.0,
+    0.0
+  ],
+  "scope": "saved candidate planar-motion transfer control; not a new model call or full physical PSR proof",
+  "body_frame": "base_link",
+  "body_frame_source": "negative_actor_rgb5s.json same rgb5s-v2 scene",
+  "rgb_pose_max_age_s": 0.5,
+  "rgb_publication_period_wall_s": 5.0
+}

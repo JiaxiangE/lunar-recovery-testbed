@@ -1,0 +1,838 @@
+{
+  "roots": [
+    "assets/Terrains/crater_spline_profiles.pkl",
+    "assets/Textures/Earth/earth_color_with_clouds.tif",
+    "assets/Textures/GravelStones.mdl",
+    "assets/Textures/LunarRegolith8k.mdl",
+    "assets/Textures/Sand.mdl",
+    "assets/USD_Assets/common/Earth.usd",
+    "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+    "assets/USD_Assets/construction/construction_block.usda",
+    "assets/USD_Assets/construction/solar_panel.usda",
+    "assets/USD_Assets/lava/lava_tube.usda",
+    "assets/USD_Assets/psr/ice_deposit.usda",
+    "assets/USD_Assets/psr/relay_station.usda",
+    "assets/USD_Assets/robots/nograph_husky.usd",
+    "assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+    "assets/USD_Assets/rocks/lunalab_rocks/rock_1/rock1.usd",
+    "assets/USD_Assets/rocks/lunalab_rocks/rock_2/rock2.usd",
+    "assets/USD_Assets/rocks/lunalab_rocks/rock_3/rock3.usd",
+    "assets/USD_Assets/rocks/lunalab_rocks/rock_4/rock4.usd"
+  ],
+  "files": [
+    {
+      "path": "assets/Terrains/crater_spline_profiles.pkl",
+      "status": "present",
+      "bytes": 117932,
+      "sha256": "dc8f99c82bb93cc6b8cd037373caf5dd44b3a85493568df6d484e7690ec134a8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 131,
+        "lfs_oid_sha256": "dc8f99c82bb93cc6b8cd037373caf5dd44b3a85493568df6d484e7690ec134a8"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/Earth/earth_color_with_clouds.tif",
+      "status": "present",
+      "bytes": 14322314,
+      "sha256": "2d9201762c3a26ff11563b5e4dd1e85387632f9fcae476d209f4e44ade00750a",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "2d9201762c3a26ff11563b5e4dd1e85387632f9fcae476d209f4e44ade00750a"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/GravelStones.mdl",
+      "status": "present",
+      "bytes": 1881,
+      "sha256": "7620c0c7b9516c6c42e2fb0735d020b0cc6d1b21e1cb892652ab12dfa5088aae",
+      "decoder": "MDL literal texture path inspection",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 129,
+        "lfs_oid_sha256": "7620c0c7b9516c6c42e2fb0735d020b0cc6d1b21e1cb892652ab12dfa5088aae"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/LunarRegolith8k.mdl",
+      "status": "present",
+      "bytes": 2232,
+      "sha256": "a9a79822169b8e5d1f520b87502c14ffc896ba9319958b1a73a5e62ba47751a9",
+      "decoder": "MDL literal texture path inspection",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 129,
+        "lfs_oid_sha256": "a9a79822169b8e5d1f520b87502c14ffc896ba9319958b1a73a5e62ba47751a9"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/Sand.mdl",
+      "status": "present",
+      "bytes": 1496,
+      "sha256": "03ac34075bafc7ad403b4b2377e9cc7647c4dd34e47f817b4bf343decdcabb15",
+      "decoder": "MDL literal texture path inspection",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 129,
+        "lfs_oid_sha256": "03ac34075bafc7ad403b4b2377e9cc7647c4dd34e47f817b4bf343decdcabb15"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/common/Earth.usd",
+      "status": "present",
+      "bytes": 58759,
+      "sha256": "57e078c56274322f6f749536a15bd528ad0a01c2fdeae8ad8a21e184157ac3dc",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 130,
+        "lfs_oid_sha256": "57e078c56274322f6f749536a15bd528ad0a01c2fdeae8ad8a21e184157ac3dc"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "status": "present",
+      "bytes": 2970333,
+      "sha256": "37c5e322f8384ead98b0d7dd7763d56565a431dcf2aca72b07556004a9f67a4c",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "37c5e322f8384ead98b0d7dd7763d56565a431dcf2aca72b07556004a9f67a4c"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/construction/construction_block.usda",
+      "status": "present",
+      "bytes": 1189,
+      "sha256": "73992178ed848ee72d0ba35ac6637aa34ef1edf03a8f92446b8b4e7a22e650dc",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": false
+      }
+    },
+    {
+      "path": "assets/USD_Assets/construction/solar_panel.usda",
+      "status": "present",
+      "bytes": 1383,
+      "sha256": "d00708694537e194231ab6f5e053def484ff012e1c1e03b20f13d905f7061a27",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": false
+      }
+    },
+    {
+      "path": "assets/USD_Assets/lava/lava_tube.usda",
+      "status": "present",
+      "bytes": 2250,
+      "sha256": "c5bdb2cd6208c01194d0ed663111375d52f84278ae5977626a9671a0b01f027b",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": false
+      }
+    },
+    {
+      "path": "assets/USD_Assets/psr/ice_deposit.usda",
+      "status": "present",
+      "bytes": 979,
+      "sha256": "dd587fc7876f856957b77d966c32b272357e0603392248f982af0871b450342c",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": false
+      }
+    },
+    {
+      "path": "assets/USD_Assets/psr/relay_station.usda",
+      "status": "present",
+      "bytes": 1199,
+      "sha256": "2744c8b4d508ded3dacbb6e601aacdcba6fe6181666f3a5febacd73dc27c71d8",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": false
+      }
+    },
+    {
+      "path": "assets/USD_Assets/robots/nograph_husky.usd",
+      "status": "present",
+      "bytes": 1592224,
+      "sha256": "858ee649efbff0ac250dd5f9d9b43dca6b6c7c3d6fdcdee3f78acca437a499fd",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "858ee649efbff0ac250dd5f9d9b43dca6b6c7c3d6fdcdee3f78acca437a499fd"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+      "status": "present",
+      "bytes": 3340295,
+      "sha256": "0eeacb4fbd256e4539bde341a75113cda88cf3b7c5b9b2b5c3a77e40275ad252",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "0eeacb4fbd256e4539bde341a75113cda88cf3b7c5b9b2b5c3a77e40275ad252"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/rock1.usd",
+      "status": "present",
+      "bytes": 5861109,
+      "sha256": "c489c87c5fbc112c3fade8c9f1e8b55b06ed2d46fb1052e7b2ccb7b1353ed3d1",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "c489c87c5fbc112c3fade8c9f1e8b55b06ed2d46fb1052e7b2ccb7b1353ed3d1"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/rock2.usd",
+      "status": "present",
+      "bytes": 5871875,
+      "sha256": "594fa454ae9bb3cf66075474c80a7dd76c544ba83c307866104b898261840739",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "594fa454ae9bb3cf66075474c80a7dd76c544ba83c307866104b898261840739"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/rock3.usd",
+      "status": "present",
+      "bytes": 5788710,
+      "sha256": "2bb84a764bbfd3953fe66057d4234fcfb20aa90fb18e6a7126ae76be7740bd5b",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "2bb84a764bbfd3953fe66057d4234fcfb20aa90fb18e6a7126ae76be7740bd5b"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/rock4.usd",
+      "status": "present",
+      "bytes": 5809929,
+      "sha256": "a545d8dbaf20d943dcc274eeb8aff77aef02e4765a5ed2ec28fb98f89ff2a235",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "a545d8dbaf20d943dcc274eeb8aff77aef02e4765a5ed2ec28fb98f89ff2a235"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/GravelStones/gravel_stones_diff_4k.png",
+      "status": "present",
+      "bytes": 103267942,
+      "sha256": "bf37e0d8af9a348f87694a0405b9ea6392472eaff685cf0cd944d6224f239fe8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 134,
+        "lfs_oid_sha256": "bf37e0d8af9a348f87694a0405b9ea6392472eaff685cf0cd944d6224f239fe8"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/GravelStones/gravel_stones_nor_dx_4k.exr",
+      "status": "present",
+      "bytes": 38300342,
+      "sha256": "eabaf4fcf0b130cb0b4c030e2a899b233ad0f56fa73621eb3f1b660b9ff1e4a7",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "eabaf4fcf0b130cb0b4c030e2a899b233ad0f56fa73621eb3f1b660b9ff1e4a7"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/GravelStones/gravel_stones_rough_4k.exr",
+      "status": "present",
+      "bytes": 17968565,
+      "sha256": "250bc7be8e6ea84b82020341cd9fc618ee93824b2b3bb0cc46ae0366a79df014",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "250bc7be8e6ea84b82020341cd9fc618ee93824b2b3bb0cc46ae0366a79df014"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/LunarRegolith8k/LunarRegolith8k_ao.png",
+      "status": "present",
+      "bytes": 120692486,
+      "sha256": "cabac6f18ff7a59b3b184dfce457d4b49c26050d51a829c89c7ebe5919782c49",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 134,
+        "lfs_oid_sha256": "cabac6f18ff7a59b3b184dfce457d4b49c26050d51a829c89c7ebe5919782c49"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/LunarRegolith8k/LunarRegolith8k_diff.png",
+      "status": "present",
+      "bytes": 321983653,
+      "sha256": "ec682e4027b5fc9d6b34cdb03a27b23a7a2928ae2b020791ec058cea94bba75b",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 134,
+        "lfs_oid_sha256": "ec682e4027b5fc9d6b34cdb03a27b23a7a2928ae2b020791ec058cea94bba75b"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/LunarRegolith8k/LunarRegolith8k_nor_gl.png",
+      "status": "present",
+      "bytes": 366101948,
+      "sha256": "c5e3c95dfa341f28762a772351d040db1a2891e364edf04b90589cb3e61d961d",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 134,
+        "lfs_oid_sha256": "c5e3c95dfa341f28762a772351d040db1a2891e364edf04b90589cb3e61d961d"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/LunarRegolith8k/LunarRegolith8k_rough.png",
+      "status": "present",
+      "bytes": 285063382,
+      "sha256": "92c6b88c0b3e3290b567086433bc30e99e9fa971f8d05d0579fed5f667309cad",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 134,
+        "lfs_oid_sha256": "92c6b88c0b3e3290b567086433bc30e99e9fa971f8d05d0579fed5f667309cad"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/Sand/Sand_BaseColor.png",
+      "status": "present",
+      "bytes": 7008586,
+      "sha256": "2ad6e38dac1e9f73b3459de197a6d7abbaa2a443e07dff947a9124898e5ad238",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "2ad6e38dac1e9f73b3459de197a6d7abbaa2a443e07dff947a9124898e5ad238"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/Sand/Sand_Normal.png",
+      "status": "present",
+      "bytes": 10434051,
+      "sha256": "50723faa527aee465dc7ce459474d97b69cbd2bde93a109f68067c0a36d31306",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "50723faa527aee465dc7ce459474d97b69cbd2bde93a109f68067c0a36d31306"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/Textures/Sand/Sand_ORM.png",
+      "status": "present",
+      "bytes": 3518201,
+      "sha256": "105a4565a202aa4a8ed48052d2b70bf5f0bead021f1c11262539bde07e826ec1",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "105a4565a202aa4a8ed48052d2b70bf5f0bead021f1c11262539bde07e826ec1"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/common/OmniPBR.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/common/lander/Vikram/OmniGlass.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/common/rsd455.usd",
+      "status": "present",
+      "bytes": 4461918,
+      "sha256": "9d96721c959de9c601359d930a781afdf5d04e5d5328b74acff26c8a5885dccb",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 132,
+        "lfs_oid_sha256": "9d96721c959de9c601359d930a781afdf5d04e5d5328b74acff26c8a5885dccb"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/robots/OmniPBR.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/robots/vlp16.usd",
+      "status": "present",
+      "bytes": 25274,
+      "sha256": "a03b78ac6ab8b05648e8a06b1e5e318bfd548b77e17aa4662e09d2efd9ad8e2f",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 130,
+        "lfs_oid_sha256": "a03b78ac6ab8b05648e8a06b1e5e318bfd548b77e17aa4662e09d2efd9ad8e2f"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/OmniPBR.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/textures/rock1_u1_v1_diffuse.png",
+      "status": "present",
+      "bytes": 15509270,
+      "sha256": "082bdcf17cbabcaff1c1144f5553b50945303e79cbe8eb8e2c8497884e26361e",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "082bdcf17cbabcaff1c1144f5553b50945303e79cbe8eb8e2c8497884e26361e"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/textures/rock1_u1_v1_normal.png",
+      "status": "present",
+      "bytes": 17562818,
+      "sha256": "78a68c8ddebed6c087b65f44619fe63dddf884e509a0b11f8dbb0c9458b3538b",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "78a68c8ddebed6c087b65f44619fe63dddf884e509a0b11f8dbb0c9458b3538b"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/OmniPBR.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/textures/rock2_u1_v1_diffuse.png",
+      "status": "present",
+      "bytes": 17016197,
+      "sha256": "06f446978785a1e0391a2157a12850d12bfd47abdbe9c31b9bcf6463dfeaa449",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "06f446978785a1e0391a2157a12850d12bfd47abdbe9c31b9bcf6463dfeaa449"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/textures/rock2_u1_v1_normal.png",
+      "status": "present",
+      "bytes": 20776855,
+      "sha256": "e12dbefa5bb6bfa3d11cf5fd0c1fcd8b44b1b4171be52e7e121d4f73c4737bfc",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "e12dbefa5bb6bfa3d11cf5fd0c1fcd8b44b1b4171be52e7e121d4f73c4737bfc"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/OmniPBR.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/textures/rock3_u1_v1_diffuse.png",
+      "status": "present",
+      "bytes": 17896629,
+      "sha256": "3513327bd5066e0a5e803537afb1ed40bb36c7244d020f9081a4c68792c06b10",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "3513327bd5066e0a5e803537afb1ed40bb36c7244d020f9081a4c68792c06b10"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/textures/rock3_u1_v1_normal.png",
+      "status": "present",
+      "bytes": 24610952,
+      "sha256": "6e32684f107625fd90fa5af1f1009777cd136315c062f7050d0ec23d139890a4",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "6e32684f107625fd90fa5af1f1009777cd136315c062f7050d0ec23d139890a4"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/OmniPBR.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/textures/rock4_u1_v1_diffuse.png",
+      "status": "present",
+      "bytes": 16583415,
+      "sha256": "6b1b8e4b2dc0c726d586342d5182f679bb91aea1cbcdd3963217ea2c9f12b1b5",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "6b1b8e4b2dc0c726d586342d5182f679bb91aea1cbcdd3963217ea2c9f12b1b5"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/textures/rock4_u1_v1_normal.png",
+      "status": "present",
+      "bytes": 19429428,
+      "sha256": "cc66aea409f3c39aced052c4c240916655c55d5adde5613909e0724b4e064d15",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 133,
+        "lfs_oid_sha256": "cc66aea409f3c39aced052c4c240916655c55d5adde5613909e0724b4e064d15"
+      },
+      "matches_recorded_LFS_oid": true
+    },
+    {
+      "path": "assets/USD_Assets/common/OmniGlass.mdl",
+      "status": "missing",
+      "git_at_captured_commit": {},
+      "resolution_note": "vendor MDL module absent relative to USD; vendor search-path resolution not verified"
+    },
+    {
+      "path": "assets/USD_Assets/robots/file:/home/public-user/junnosuke/velodyne-vlp16.usd",
+      "status": "missing",
+      "git_at_captured_commit": {}
+    },
+    {
+      "path": "assets/USD_Assets/robots/velodyne-vlp16.usd",
+      "status": "present",
+      "bytes": 265940,
+      "sha256": "7a443a4804940109e6db9b5a2f3df2fd5f42c2d1a5f2c47dec4784708b734c15",
+      "decoder": "OpenUSD Sdf 26.8",
+      "git_at_captured_commit": {
+        "tracked_at_captured_commit": true,
+        "git_blob_bytes": 131,
+        "lfs_oid_sha256": "7a443a4804940109e6db9b5a2f3df2fd5f42c2d1a5f2c47dec4784708b734c15"
+      },
+      "matches_recorded_LFS_oid": true
+    }
+  ],
+  "edges": [
+    {
+      "from": "assets/Textures/GravelStones.mdl",
+      "reference": "./GravelStones/gravel_stones_diff_4k.png",
+      "to": "assets/Textures/GravelStones/gravel_stones_diff_4k.png"
+    },
+    {
+      "from": "assets/Textures/GravelStones.mdl",
+      "reference": "./GravelStones/gravel_stones_nor_dx_4k.exr",
+      "to": "assets/Textures/GravelStones/gravel_stones_nor_dx_4k.exr"
+    },
+    {
+      "from": "assets/Textures/GravelStones.mdl",
+      "reference": "./GravelStones/gravel_stones_rough_4k.exr",
+      "to": "assets/Textures/GravelStones/gravel_stones_rough_4k.exr"
+    },
+    {
+      "from": "assets/Textures/LunarRegolith8k.mdl",
+      "reference": "./LunarRegolith8k/LunarRegolith8k_ao.png",
+      "to": "assets/Textures/LunarRegolith8k/LunarRegolith8k_ao.png"
+    },
+    {
+      "from": "assets/Textures/LunarRegolith8k.mdl",
+      "reference": "./LunarRegolith8k/LunarRegolith8k_diff.png",
+      "to": "assets/Textures/LunarRegolith8k/LunarRegolith8k_diff.png"
+    },
+    {
+      "from": "assets/Textures/LunarRegolith8k.mdl",
+      "reference": "./LunarRegolith8k/LunarRegolith8k_nor_gl.png",
+      "to": "assets/Textures/LunarRegolith8k/LunarRegolith8k_nor_gl.png"
+    },
+    {
+      "from": "assets/Textures/LunarRegolith8k.mdl",
+      "reference": "./LunarRegolith8k/LunarRegolith8k_rough.png",
+      "to": "assets/Textures/LunarRegolith8k/LunarRegolith8k_rough.png"
+    },
+    {
+      "from": "assets/Textures/Sand.mdl",
+      "reference": "./Sand/Sand_BaseColor.png",
+      "to": "assets/Textures/Sand/Sand_BaseColor.png"
+    },
+    {
+      "from": "assets/Textures/Sand.mdl",
+      "reference": "./Sand/Sand_Normal.png",
+      "to": "assets/Textures/Sand/Sand_Normal.png"
+    },
+    {
+      "from": "assets/Textures/Sand.mdl",
+      "reference": "./Sand/Sand_ORM.png",
+      "to": "assets/Textures/Sand/Sand_ORM.png"
+    },
+    {
+      "from": "assets/USD_Assets/common/Earth.usd",
+      "reference": "../../Textures/Earth/earth_color_with_clouds.tif",
+      "to": "assets/Textures/Earth/earth_color_with_clouds.tif"
+    },
+    {
+      "from": "assets/USD_Assets/common/Earth.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/common/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "OmniGlass.mdl",
+      "to": "assets/USD_Assets/common/lander/Vikram/OmniGlass.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/robots/nograph_husky.usd",
+      "reference": "../common/rsd455.usd",
+      "to": "assets/USD_Assets/common/rsd455.usd"
+    },
+    {
+      "from": "assets/USD_Assets/robots/nograph_husky.usd",
+      "reference": "./vlp16.usd",
+      "to": "assets/USD_Assets/robots/vlp16.usd"
+    },
+    {
+      "from": "assets/USD_Assets/robots/nograph_husky.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/robots/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+      "reference": "../common/rsd455.usd",
+      "to": "assets/USD_Assets/common/rsd455.usd"
+    },
+    {
+      "from": "assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+      "reference": "./vlp16.usd",
+      "to": "assets/USD_Assets/robots/vlp16.usd"
+    },
+    {
+      "from": "assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/robots/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/rock1.usd",
+      "reference": "./textures/rock1_u1_v1_diffuse.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/textures/rock1_u1_v1_diffuse.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/rock1.usd",
+      "reference": "./textures/rock1_u1_v1_normal.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/textures/rock1_u1_v1_normal.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/rock1.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_1/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/rock2.usd",
+      "reference": "./textures/rock2_u1_v1_diffuse.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/textures/rock2_u1_v1_diffuse.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/rock2.usd",
+      "reference": "./textures/rock2_u1_v1_normal.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/textures/rock2_u1_v1_normal.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/rock2.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_2/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/rock3.usd",
+      "reference": "./textures/rock3_u1_v1_diffuse.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/textures/rock3_u1_v1_diffuse.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/rock3.usd",
+      "reference": "./textures/rock3_u1_v1_normal.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/textures/rock3_u1_v1_normal.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/rock3.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_3/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/rock4.usd",
+      "reference": "./textures/rock4_u1_v1_diffuse.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/textures/rock4_u1_v1_diffuse.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/rock4.usd",
+      "reference": "./textures/rock4_u1_v1_normal.png",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/textures/rock4_u1_v1_normal.png"
+    },
+    {
+      "from": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/rock4.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/rocks/lunalab_rocks/rock_4/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/common/rsd455.usd",
+      "reference": "OmniGlass.mdl",
+      "to": "assets/USD_Assets/common/OmniGlass.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/common/rsd455.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/common/OmniPBR.mdl"
+    },
+    {
+      "from": "assets/USD_Assets/robots/vlp16.usd",
+      "reference": "./velodyne-vlp16.usd",
+      "to": "assets/USD_Assets/robots/velodyne-vlp16.usd"
+    },
+    {
+      "from": "assets/USD_Assets/robots/vlp16.usd",
+      "reference": "file:/home/public-user/junnosuke/velodyne-vlp16.usd",
+      "to": "assets/USD_Assets/robots/file:/home/public-user/junnosuke/velodyne-vlp16.usd"
+    },
+    {
+      "from": "assets/USD_Assets/robots/velodyne-vlp16.usd",
+      "reference": "OmniPBR.mdl",
+      "to": "assets/USD_Assets/robots/OmniPBR.mdl"
+    }
+  ],
+  "external": [
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/black_baseColor.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/black_normal.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/foil_baseColor.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/foil_metallicRoughness_metal.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/foil_metallicRoughness_rough.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/foil_normal.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/metal_baseColor.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/metal_metallicRoughness_metal.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/metal_metallicRoughness_rough_scale0.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+      "reference": "./Chandrayaan_3_vikram_lander.usdz[0/solar.001_baseColor.jpg]",
+      "resolution": "external resolver or absolute path; not fetched",
+      "member_present_in_captured_usdz": true
+    },
+    {
+      "from": "assets/USD_Assets/robots/nograph_husky.usd",
+      "reference": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+      "resolution": "external resolver or absolute path; not fetched"
+    },
+    {
+      "from": "assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+      "reference": "omniverse://localhost/NVIDIA/Assets/Isaac/4.0/Isaac/Sensors/Intel/RealSense/rsd455.usd",
+      "resolution": "external resolver or absolute path; not fetched"
+    },
+    {
+      "from": "assets/USD_Assets/common/rsd455.usd",
+      "reference": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized.mdl",
+      "resolution": "external resolver or absolute path; not fetched"
+    },
+    {
+      "from": "assets/USD_Assets/common/rsd455.usd",
+      "reference": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast.mdl",
+      "resolution": "external resolver or absolute path; not fetched"
+    },
+    {
+      "from": "assets/USD_Assets/common/rsd455.usd",
+      "reference": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_ABS.mdl",
+      "resolution": "external resolver or absolute path; not fetched"
+    }
+  ],
+  "scope": "literal authored USD/MDL paths from three named configs plus terrain material and Earth defaults; dynamic resolver/shader-generated dependencies not certified",
+  "lander_archive": {
+    "path": "/opt/OmniLRS/assets/USD_Assets/common/lander/Vikram/Chandrayaan_3_vikram_lander.usdz",
+    "bytes": 9062924,
+    "sha256": "96eec8a55ba05137566b42d06980723e9d36b175c19bd6d4d2951c61f84f2318",
+    "members": [
+      "scene.usdc",
+      "0/foil_baseColor.jpg",
+      "0/foil_metallicRoughness_metal.jpg",
+      "0/foil_metallicRoughness_rough.jpg",
+      "0/foil_normal.jpg",
+      "0/metal_baseColor.jpg",
+      "0/metal_metallicRoughness_metal.jpg",
+      "0/metal_metallicRoughness_rough_scale0.jpg",
+      "0/black_baseColor.jpg",
+      "0/black_normal.jpg",
+      "0/solar.001_baseColor.jpg"
+    ]
+  },
+  "license_notes": "No asset-specific notice found in inspected robot/lander/rocks/texture directories. External assets are not redistributed."
+}

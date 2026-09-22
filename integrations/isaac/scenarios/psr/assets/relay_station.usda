@@ -1,0 +1,40 @@
+#usda 1.0
+(
+    defaultPrim = "relay_station"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+# Simple comm-RELAY station prop for the PSR scene: a base + a 3 m mast + a panel "antenna".
+# Placed partway down the wall; the comm_evaluator's relay hop (rover->relay->base) keys off it.
+def Xform "relay_station"
+{
+    def Cylinder "base"
+    {
+        double radius = 0.4
+        double height = 0.2
+        uniform token axis = "Z"
+        color3f[] primvars:displayColor = [(0.5, 0.5, 0.55)]
+        double3 xformOp:translate = (0, 0, 0.1)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Cylinder "mast"
+    {
+        double radius = 0.07
+        double height = 3.0
+        uniform token axis = "Z"
+        color3f[] primvars:displayColor = [(0.55, 0.55, 0.6)]
+        double3 xformOp:translate = (0, 0, 1.6)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+
+    def Cube "antenna"
+    {
+        double size = 1.0
+        color3f[] primvars:displayColor = [(0.85, 0.85, 0.9)]
+        float3 xformOp:scale = (0.7, 0.12, 0.5)
+        double3 xformOp:translate = (0, 0, 3.2)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+    }
+}

@@ -1,0 +1,12 @@
+# Goal: drive the namespaced rover to a planar target and stop.
+float64 target_x
+float64 target_y
+string ns           # robot namespace, e.g. "husky"
+---
+# Result
+bool reached
+float64 final_x
+float64 final_y
+---
+# Feedback
+float64 distance_remaining

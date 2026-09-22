@@ -1,0 +1,219 @@
+{
+  "adverse_count": 0,
+  "api_counters": {
+    "logical_calls": 300,
+    "physical_attempts": 300,
+    "tokens": 575642
+  },
+  "authorization_ceiling": {
+    "logical_calls": 1200,
+    "physical_attempts": 2400,
+    "tokens": 12288000
+  },
+  "authorized_repeats": 100,
+  "calibration_evidence_id": "wave3_p_fix_batch_a_pt_p_t_m_v1",
+  "cause_p_smoothed_u_t_minus_u_p": -0.1513395753547555,
+  "completed_repeats": 100,
+  "coverage": {
+    "M": {
+      "M": {
+        "fixed": 0,
+        "n": 0
+      },
+      "P": {
+        "fixed": 0,
+        "n": 0
+      },
+      "S": {
+        "fixed": 0,
+        "n": 0
+      },
+      "T": {
+        "fixed": 0,
+        "n": 0
+      }
+    },
+    "P": {
+      "M": {
+        "fixed": 0,
+        "n": 100
+      },
+      "P": {
+        "fixed": 100,
+        "n": 100
+      },
+      "S": {
+        "fixed": 0,
+        "n": 0
+      },
+      "T": {
+        "fixed": 78,
+        "n": 100
+      }
+    },
+    "S": {
+      "M": {
+        "fixed": 0,
+        "n": 0
+      },
+      "P": {
+        "fixed": 0,
+        "n": 0
+      },
+      "S": {
+        "fixed": 0,
+        "n": 0
+      },
+      "T": {
+        "fixed": 0,
+        "n": 0
+      }
+    },
+    "T": {
+      "M": {
+        "fixed": 0,
+        "n": 100
+      },
+      "P": {
+        "fixed": 100,
+        "n": 100
+      },
+      "S": {
+        "fixed": 0,
+        "n": 0
+      },
+      "T": {
+        "fixed": 78,
+        "n": 100
+      }
+    }
+  },
+  "evidence_class": "calibration_intervention/non_performance",
+  "fit_method": "profile_mle_lambda_0.001_to_5_step_0.001_plus_empirical_p_lucky",
+  "fit_quality": {
+    "brier_score": 0.12887896404030585,
+    "deviance": 273.901559319242,
+    "lambda_grid_boundary_hit": false,
+    "lambda_profile_step": 0.001,
+    "mcfadden_pseudo_r2": 0.40219962934384645,
+    "null_log_likelihood": -405.37340597482375
+  },
+  "fit_scope": "PT_ONLY",
+  "fitted_params": {
+    "lambda_": 2.295,
+    "p_lucky": 0.26
+  },
+  "fixed_utility_weights": {
+    "cost": 0.01,
+    "mks": 0.05,
+    "risk": 1.0,
+    "tcr": 5.0
+  },
+  "held_out_seeds": [
+    101,
+    200
+  ],
+  "invalid_or_symbolic_count": 0,
+  "log_likelihood": -242.33237234589706,
+  "m_s_terminal_observations": 0,
+  "observation_count": 600,
+  "observed_counters": {
+    "logical_calls": 300,
+    "physical_attempts": 300,
+    "tokens": 575642
+  },
+  "p_reachable_cause_p_smoothed_0_95": true,
+  "p_reachable_in_diagnostic_tables": true,
+  "parameter_intervals_95": {
+    "lambda_": [
+      1.944,
+      2.711
+    ],
+    "p_lucky": [
+      0.21362060325993487,
+      0.3124480229278472
+    ]
+  },
+  "run_phase": "stage1_intermediate_freeze",
+  "schema_version": "wave3_p_fix_stage1_summary_v1",
+  "scorer_s_row": "DEFERRED_PENDING_SOURCE_BACKED_BINDING",
+  "status": "STAGE1_INTERMEDIATE_FROZEN",
+  "utility_tables": {
+    "pure": {
+      "M": {
+        "selected_scope": "M",
+        "utility": {
+          "M": 3.2161930336584814,
+          "P": -2.75,
+          "S": -0.11076429186684894,
+          "T": -1.01
+        }
+      },
+      "P": {
+        "selected_scope": "P",
+        "utility": {
+          "M": 2.7148849192232176,
+          "P": 4.446193033658481,
+          "S": -1.060515402665748,
+          "T": 4.1392357081331514
+        }
+      },
+      "S": {
+        "selected_scope": "S",
+        "utility": {
+          "M": -1.98,
+          "P": -4.75,
+          "S": -0.06380696634151878,
+          "T": -3.01
+        }
+      },
+      "T": {
+        "selected_scope": "T",
+        "utility": {
+          "M": 3.1692357081331513,
+          "P": -0.75,
+          "S": -0.5651150807767826,
+          "T": 4.186193033658482
+        }
+      }
+    },
+    "smoothed_0_95": {
+      "M": {
+        "selected_scope": "M",
+        "utility": {
+          "M": 3.1204520590981635,
+          "P": -2.630063449439025,
+          "S": -0.13338336810324108,
+          "T": -0.8709095209701394
+        }
+      },
+      "P": {
+        "selected_scope": "P",
+        "utility": {
+          "M": 2.652564485625251,
+          "P": 4.086383381975557,
+          "S": -1.0198177381822129,
+          "T": 3.935043806620801
+        }
+      },
+      "S": {
+        "selected_scope": "S",
+        "utility": {
+          "M": -1.729328105649752,
+          "P": -4.496730116105691,
+          "S": -0.08955653094626531,
+          "T": -2.737576187636806
+        }
+      },
+      "T": {
+        "selected_scope": "T",
+        "utility": {
+          "M": 3.0766252219411885,
+          "P": -0.7633967827723589,
+          "S": -0.5574441044191787,
+          "T": 3.978870643777776
+        }
+      }
+    }
+  }
+}

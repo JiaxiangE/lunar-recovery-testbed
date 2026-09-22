@@ -1,0 +1,987 @@
+{
+  "version": "edge_repair_view_applicability_v1",
+  "cells": [
+    {
+      "cell": "R_T_psr_collection_position_drift",
+      "input_supported": true,
+      "audit": {
+        "cell_id": "R_T_psr_collection_position_drift",
+        "scope_stratum": "T",
+        "scenario": "psr",
+        "category": "repair_required",
+        "category_scope": "symbolic obligations and actor authorization; numerical execution energy remains a separate observation",
+        "resource_stress_control": false,
+        "actual_prefix_n": 1,
+        "observed_deviation": {
+          "kind": "author_added_observed_actor_displacement",
+          "symptom": "SAMPLE_POSITION_MISMATCH",
+          "agent": "rover_1",
+          "position_before": [
+            20.0,
+            20.0,
+            0.0
+          ],
+          "position_after": [
+            21.0,
+            20.0,
+            0.0
+          ],
+          "attempt": {
+            "primitive": "sample_collect",
+            "agent_id": "rover_1",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          "result": {
+            "success": false,
+            "primitive_name": "sample_collect",
+            "agent_id": "rover_1",
+            "failure_mode": "SAMPLE_POSITION_MISMATCH",
+            "elapsed_s": 0.0,
+            "energy_consumed_wh": 0.0,
+            "facts_added": [],
+            "detail": "actor is not within 0.5 m of this named sample"
+          }
+        },
+        "original_suffix": [
+          {
+            "primitive": "sample_collect",
+            "agent_id": "rover_1",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "rover_1",
+            "params": {
+              "sample_id": "sample_1"
+            }
+          }
+        ],
+        "suffix_symbolic": {
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET",
+          "step_index": 0,
+          "grounding": {
+            "accepted": null,
+            "checked_through_step": 0,
+            "complete": false,
+            "reason": "PRECONDITION_UNMET"
+          },
+          "symbolic_contract": {
+            "accepted": false,
+            "reason": "PRECONDITION_UNMET",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "verification_s": 3.369999467395246e-05
+        },
+        "first_invalid_original_step": {
+          "primitive": "sample_collect",
+          "agent_id": "rover_1",
+          "params": {
+            "sample_id": "sample_1"
+          }
+        },
+        "first_invalid_original_node": "store_sample_1.p2",
+        "remaining_obligations": {
+          "positive": [
+            "stored(sample_1)"
+          ],
+          "negative": [],
+          "cardinality": []
+        },
+        "original_task_obligations": [
+          {
+            "task_id": "store_sample_1",
+            "assigned_actor": "rover_1",
+            "dependencies": [],
+            "remaining_leaf_ids": [
+              "store_sample_1.p2",
+              "store_sample_1.p3"
+            ],
+            "executed_leaf_ids": [
+              "store_sample_1.p1"
+            ],
+            "goal": {
+              "positive": [
+                "stored(sample_1)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          }
+        ],
+        "public_policy": {
+          "id": null,
+          "eligible": false,
+          "source": null,
+          "nominal_goal": {
+            "positive": [
+              "stored(sample_1)"
+            ],
+            "negative": [],
+            "cardinality": []
+          },
+          "fallback_goal": null
+        },
+        "witnesses": [
+          {
+            "policy": "nominal",
+            "plan": [
+              {
+                "primitive": "move_to",
+                "agent_id": "rover_1",
+                "params": {
+                  "target": "sample_1"
+                }
+              },
+              {
+                "primitive": "sample_collect",
+                "agent_id": "rover_1",
+                "params": {
+                  "sample_id": "sample_1"
+                }
+              },
+              {
+                "primitive": "sample_store",
+                "agent_id": "rover_1",
+                "params": {
+                  "sample_id": "sample_1"
+                }
+              }
+            ],
+            "symbolic": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "action_ids": [
+                "psr_action_0000",
+                "psr_action_0008",
+                "psr_action_0010"
+              ],
+              "normalized_plan": [
+                {
+                  "primitive": "move_to",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "target": "sample_1"
+                  }
+                },
+                {
+                  "primitive": "sample_collect",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_1"
+                  }
+                },
+                {
+                  "primitive": "sample_store",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_1"
+                  }
+                }
+              ],
+              "final_state": [
+                "at_base(relay_1)",
+                "at_base(rover_2)",
+                "at_location(rover_1)",
+                "at_target(relay_1, base)",
+                "at_target(rover_1, sample_1)",
+                "at_target(rover_2, base)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "cargo(rover_1, sample_1)",
+                "position(relay_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 20.0, 20.0, 0.0)",
+                "position(rover_2, 0.0, 0.0, 0.0)",
+                "psr_semantics_profile(psr_location_stored_v1)",
+                "sample_collected(rover_1)",
+                "sample_status(sample_1, stored)",
+                "sample_status(sample_2, field)",
+                "sample_stored(rover_1)",
+                "stored(sample_1)"
+              ],
+              "solver_version": "5.1.0",
+              "solver_status": "unsat",
+              "solver_encode_check_s": 0.004619299987098202,
+              "verification_s": 0.026355500012869015,
+              "grounding": {
+                "accepted": true,
+                "checked_through_step": null,
+                "complete": true,
+                "reason": "all steps grounded"
+              },
+              "symbolic_contract": {
+                "accepted": true,
+                "reason": "VERIFIED",
+                "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+              }
+            },
+            "physical_steps": [
+              {
+                "step": {
+                  "primitive": "move_to",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "target": "sample_1"
+                  }
+                },
+                "result": {
+                  "success": true,
+                  "primitive_name": "move_to",
+                  "agent_id": "rover_1",
+                  "failure_mode": null,
+                  "elapsed_s": 60.0,
+                  "energy_consumed_wh": 0.5,
+                  "facts_added": [
+                    "at_location"
+                  ],
+                  "detail": ""
+                }
+              },
+              {
+                "step": {
+                  "primitive": "sample_collect",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_1"
+                  }
+                },
+                "result": {
+                  "success": true,
+                  "primitive_name": "sample_collect",
+                  "agent_id": "rover_1",
+                  "failure_mode": null,
+                  "elapsed_s": 45.0,
+                  "energy_consumed_wh": 5.0,
+                  "facts_added": [
+                    "sample_collected"
+                  ],
+                  "detail": ""
+                }
+              },
+              {
+                "step": {
+                  "primitive": "sample_store",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_1"
+                  }
+                },
+                "result": {
+                  "success": true,
+                  "primitive_name": "sample_store",
+                  "agent_id": "rover_1",
+                  "failure_mode": null,
+                  "elapsed_s": 20.0,
+                  "energy_consumed_wh": 5.0,
+                  "facts_added": [
+                    "sample_stored"
+                  ],
+                  "detail": ""
+                }
+              }
+            ],
+            "execution_success": true,
+            "actual_goal_met": true,
+            "final_observation": {
+              "sim_time_s": 185.0,
+              "agents": {
+                "rover_1": {
+                  "position": [
+                    20.0,
+                    20.0,
+                    0.0
+                  ],
+                  "energy_wh": 375.35786437626905,
+                  "facts": [
+                    "at_location",
+                    "sample_collected",
+                    "sample_stored"
+                  ],
+                  "cargo": [
+                    "sample_1"
+                  ]
+                },
+                "rover_2": {
+                  "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "energy_wh": 400.0,
+                  "facts": [
+                    "at_base"
+                  ],
+                  "cargo": []
+                },
+                "relay_1": {
+                  "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "energy_wh": 400.0,
+                  "facts": [
+                    "at_base"
+                  ],
+                  "cargo": []
+                }
+              },
+              "samples": {
+                "sample_1": {
+                  "location": [
+                    20.0,
+                    20.0,
+                    0.0
+                  ],
+                  "status": "stored"
+                },
+                "sample_2": {
+                  "location": [
+                    40.0,
+                    20.0,
+                    0.0
+                  ],
+                  "status": "field"
+                }
+              },
+              "base_storage": [],
+              "semantics_profile": "psr_location_stored_v1",
+              "collection_tolerance_m": 0.5,
+              "experiment_supervisory_link": {
+                "state": "Disconnected",
+                "revision": 0
+              }
+            },
+            "given_to_methods_as_answer": false
+          }
+        ],
+        "provenance": {
+          "evidence_class": "author_added_development_recovery_fixture_non_evidence",
+          "selection_basis": "failed obligation and source/observed transition, fixed before method execution",
+          "source_injection": null,
+          "scope_stratum": "T",
+          "coordinate_seed": 0,
+          "model_seed_is_task_replication": false,
+          "policy_source": null,
+          "communication_interpretation": "shared supervisory request context; no claim of restored robot radio"
+        },
+        "same_method_input_fields": [
+          "world",
+          "original_observation",
+          "original_tree",
+          "original_plan",
+          "executed_prefix",
+          "observed_deviation",
+          "remaining_obligations",
+          "public_policy"
+        ],
+        "model_seed_is_independent_task": false
+      },
+      "bounds": {
+        "max_children": 6,
+        "node_attempts": 2,
+        "scope_model_upper": {
+          "P": 0,
+          "T": 2,
+          "M": 26,
+          "S": 314
+        },
+        "per_goal_all_scope_upper": 342,
+        "policy_goals": 1,
+        "trial_model_upper": 2,
+        "derivation": "B(T)=a; B(M)=a*(1+b*B(T)); B(S)=a*(1+b*B(M)); sum permitted scope attempts, then sum policy goals. Includes regeneration of every accepted prefix after a parent failure.",
+        "actual_goal_scope_bounds": [
+          {
+            "policy": "nominal",
+            "scopes": [
+              "T"
+            ],
+            "logical_upper": 2
+          }
+        ],
+        "nominal_policy_upper": 2,
+        "source": "same frozen rule/selector, actor communication scopes and public Scene rewrite policy as production; independent of model outcomes"
+      },
+      "matched_input_ready": true
+    },
+    {
+      "cell": "R_T_lava_collection_position_drift",
+      "input_supported": true,
+      "audit": {
+        "cell_id": "R_T_lava_collection_position_drift",
+        "scope_stratum": "T",
+        "scenario": "lava",
+        "category": "repair_required",
+        "category_scope": "symbolic obligations and actor authorization; numerical execution energy remains a separate observation",
+        "resource_stress_control": false,
+        "actual_prefix_n": 1,
+        "observed_deviation": {
+          "kind": "author_added_observed_actor_displacement",
+          "symptom": "PRECONDITION_UNMET",
+          "agent": "rover_1",
+          "position_before": [
+            50.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "position_after": [
+            51.0,
+            50.0,
+            -39.84114316166169
+          ],
+          "attempt": {
+            "primitive": "sample_collect",
+            "agent_id": "rover_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          },
+          "result": {
+            "success": false,
+            "primitive_name": "sample_collect",
+            "agent_id": "rover_1",
+            "failure_mode": "PRECONDITION_UNMET",
+            "elapsed_s": 0.0,
+            "energy_consumed_wh": null,
+            "detail": "actor must be at the field sample"
+          }
+        },
+        "original_suffix": [
+          {
+            "primitive": "sample_collect",
+            "agent_id": "rover_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          },
+          {
+            "primitive": "sample_store",
+            "agent_id": "rover_1",
+            "params": {
+              "sample_id": "sample_3"
+            }
+          }
+        ],
+        "suffix_symbolic": {
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET",
+          "step_index": 0,
+          "grounding": {
+            "accepted": null,
+            "checked_through_step": 0,
+            "complete": false,
+            "reason": "PRECONDITION_UNMET"
+          },
+          "symbolic_contract": {
+            "accepted": false,
+            "reason": "PRECONDITION_UNMET",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "verification_s": 0.00013460000627674162
+        },
+        "first_invalid_original_step": {
+          "primitive": "sample_collect",
+          "agent_id": "rover_1",
+          "params": {
+            "sample_id": "sample_3"
+          }
+        },
+        "first_invalid_original_node": "store_sample_3.p2",
+        "remaining_obligations": {
+          "positive": [
+            "in_storage(sample_3)"
+          ],
+          "negative": [],
+          "cardinality": []
+        },
+        "original_task_obligations": [
+          {
+            "task_id": "store_sample_3",
+            "assigned_actor": "rover_1",
+            "dependencies": [],
+            "remaining_leaf_ids": [
+              "store_sample_3.p2",
+              "store_sample_3.p3"
+            ],
+            "executed_leaf_ids": [
+              "store_sample_3.p1"
+            ],
+            "goal": {
+              "positive": [
+                "in_storage(sample_3)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          }
+        ],
+        "public_policy": {
+          "id": null,
+          "eligible": false,
+          "source": null,
+          "nominal_goal": {
+            "positive": [
+              "in_storage(sample_3)"
+            ],
+            "negative": [],
+            "cardinality": []
+          },
+          "fallback_goal": null
+        },
+        "witnesses": [
+          {
+            "policy": "nominal",
+            "plan": [
+              {
+                "primitive": "move_to",
+                "agent_id": "rover_1",
+                "params": {
+                  "target": "sample_3"
+                }
+              },
+              {
+                "primitive": "sample_collect",
+                "agent_id": "rover_1",
+                "params": {
+                  "sample_id": "sample_3"
+                }
+              },
+              {
+                "primitive": "sample_store",
+                "agent_id": "rover_1",
+                "params": {
+                  "sample_id": "sample_3"
+                }
+              }
+            ],
+            "symbolic": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "action_ids": [
+                "lava_action_0010",
+                "lava_action_0119",
+                "lava_action_0131"
+              ],
+              "normalized_plan": [
+                {
+                  "primitive": "move_to",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "target": "sample_3"
+                  }
+                },
+                {
+                  "primitive": "sample_collect",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_3"
+                  }
+                },
+                {
+                  "primitive": "sample_store",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_3"
+                  }
+                }
+              ],
+              "final_state": [
+                "agent_at(rover_1, sample_3)",
+                "agent_at(rover_2, entry)",
+                "agent_at(sampler_1, entry)",
+                "at_entry(relay_1)",
+                "at_entry(rover_2)",
+                "at_entry(sampler_1)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "available(sampler_1)",
+                "cargo(rover_1, sample_3)",
+                "cargo_count(relay_1, 0)",
+                "cargo_count(rover_1, 1)",
+                "cargo_count(rover_2, 0)",
+                "cargo_count(sampler_1, 0)",
+                "has_collector(rover_1)",
+                "has_collector(rover_2)",
+                "has_collector(sampler_1)",
+                "has_volatiles_sensor(rover_1)",
+                "has_volatiles_sensor(rover_2)",
+                "in_storage(sample_3)",
+                "low_visibility",
+                "owned_by(sample_3, rover_1)",
+                "position(relay_1, 50.0, 50.0, 5.0)",
+                "position(rover_1, 50.0, 50.0, -39.84114316166169)",
+                "position(rover_2, 50.0, 50.0, 0.0)",
+                "position(sampler_1, 50.0, 50.0, 0.0)",
+                "sample_status(sample_1, field)",
+                "sample_status(sample_2, field)",
+                "sample_status(sample_3, stored)",
+                "sample_status(sample_4, field)"
+              ],
+              "solver_version": "5.1.0",
+              "solver_status": "unsat",
+              "solver_encode_check_s": 0.001753599994117394,
+              "verification_s": 0.002075600001262501,
+              "grounding": {
+                "accepted": true,
+                "checked_through_step": null,
+                "complete": true,
+                "reason": "all steps grounded"
+              },
+              "symbolic_contract": {
+                "accepted": true,
+                "reason": "VERIFIED",
+                "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+              }
+            },
+            "physical_steps": [
+              {
+                "step": {
+                  "primitive": "move_to",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "target": "sample_3"
+                  }
+                },
+                "result": {
+                  "success": true,
+                  "primitive_name": "move_to",
+                  "agent_id": "rover_1",
+                  "failure_mode": null,
+                  "elapsed_s": 60.0,
+                  "energy_consumed_wh": null,
+                  "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+                }
+              },
+              {
+                "step": {
+                  "primitive": "sample_collect",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_3"
+                  }
+                },
+                "result": {
+                  "success": true,
+                  "primitive_name": "sample_collect",
+                  "agent_id": "rover_1",
+                  "failure_mode": null,
+                  "elapsed_s": 40.0,
+                  "energy_consumed_wh": null,
+                  "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+                }
+              },
+              {
+                "step": {
+                  "primitive": "sample_store",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_3"
+                  }
+                },
+                "result": {
+                  "success": true,
+                  "primitive_name": "sample_store",
+                  "agent_id": "rover_1",
+                  "failure_mode": null,
+                  "elapsed_s": 25.0,
+                  "energy_consumed_wh": null,
+                  "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+                }
+              }
+            ],
+            "execution_success": true,
+            "actual_goal_met": true,
+            "final_observation": {
+              "semantics_version": "lava_source_execution_v1",
+              "sim_time_s": 185.0,
+              "entry_pos": [
+                50.0,
+                50.0,
+                0.0
+              ],
+              "n_samples": 4,
+              "storage_fixture": {
+                "slots_per_collecting_actor": 4,
+                "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+              },
+              "agents": {
+                "rover_1": {
+                  "id": "rover_1",
+                  "agent_type": "ROVER",
+                  "position": [
+                    50.0,
+                    50.0,
+                    -39.84114316166169
+                  ],
+                  "depth_m": 39.84114316166169,
+                  "energy_wh": 350.0,
+                  "initial_energy_wh": 350.0,
+                  "facts": [
+                    "agent_at(sample_3)"
+                  ],
+                  "cargo": [
+                    "sample_3"
+                  ],
+                  "has_volatiles_sensor": true,
+                  "has_collector": true,
+                  "storage_capacity": 4
+                },
+                "rover_2": {
+                  "id": "rover_2",
+                  "agent_type": "ROVER",
+                  "position": [
+                    50.0,
+                    50.0,
+                    -0.0
+                  ],
+                  "depth_m": 0.0,
+                  "energy_wh": 350.0,
+                  "initial_energy_wh": 350.0,
+                  "facts": [
+                    "agent_at(entry)",
+                    "at_entry"
+                  ],
+                  "cargo": [],
+                  "has_volatiles_sensor": true,
+                  "has_collector": true,
+                  "storage_capacity": 4
+                },
+                "sampler_1": {
+                  "id": "sampler_1",
+                  "agent_type": "SAMPLER",
+                  "position": [
+                    50.0,
+                    50.0,
+                    -0.0
+                  ],
+                  "depth_m": 0.0,
+                  "energy_wh": 350.0,
+                  "initial_energy_wh": 350.0,
+                  "facts": [
+                    "agent_at(entry)",
+                    "at_entry"
+                  ],
+                  "cargo": [],
+                  "has_volatiles_sensor": false,
+                  "has_collector": true,
+                  "storage_capacity": 4
+                },
+                "relay_1": {
+                  "id": "relay_1",
+                  "agent_type": "RELAY",
+                  "position": [
+                    50.0,
+                    50.0,
+                    5.0
+                  ],
+                  "depth_m": -5.0,
+                  "energy_wh": 350.0,
+                  "initial_energy_wh": 350.0,
+                  "facts": [
+                    "at_entry"
+                  ],
+                  "cargo": [],
+                  "has_volatiles_sensor": false,
+                  "has_collector": false,
+                  "storage_capacity": 0
+                }
+              },
+              "samples": {
+                "sample_1": {
+                  "depth_m": 10.688843703050097,
+                  "status": "field",
+                  "location": [
+                    50.0,
+                    50.0,
+                    -10.688843703050097
+                  ],
+                  "owner": null
+                },
+                "sample_2": {
+                  "depth_m": 25.515908805880606,
+                  "status": "field",
+                  "location": [
+                    50.0,
+                    50.0,
+                    -25.515908805880606
+                  ],
+                  "owner": null
+                },
+                "sample_3": {
+                  "depth_m": 39.84114316166169,
+                  "status": "stored",
+                  "location": [
+                    50.0,
+                    50.0,
+                    -39.84114316166169
+                  ],
+                  "owner": "rover_1"
+                },
+                "sample_4": {
+                  "depth_m": 49.51783350058593,
+                  "status": "field",
+                  "location": [
+                    50.0,
+                    50.0,
+                    -49.51783350058593
+                  ],
+                  "owner": null
+                }
+              },
+              "tipped": [],
+              "disabled_agents": [],
+              "injected_unreachable": [],
+              "injected_comm_offline": [],
+              "comm_outage_until": {},
+              "peer_conflict": [],
+              "low_visibility": true,
+              "mission_infeasible": false,
+              "pending_failures": [],
+              "agent_busy_s": {
+                "rover_1": 185.0,
+                "rover_2": 0.0,
+                "sampler_1": 0.0,
+                "relay_1": 0.0
+              },
+              "experiment_supervisory_link": {
+                "state": "Disconnected",
+                "revision": 0
+              }
+            },
+            "given_to_methods_as_answer": false
+          }
+        ],
+        "provenance": {
+          "evidence_class": "author_added_development_recovery_fixture_non_evidence",
+          "selection_basis": "failed obligation and source/observed transition, fixed before method execution",
+          "source_injection": null,
+          "scope_stratum": "T",
+          "coordinate_seed": 0,
+          "model_seed_is_task_replication": false,
+          "policy_source": null,
+          "communication_interpretation": "shared supervisory request context; no claim of restored robot radio"
+        },
+        "same_method_input_fields": [
+          "world",
+          "original_observation",
+          "original_tree",
+          "original_plan",
+          "executed_prefix",
+          "observed_deviation",
+          "remaining_obligations",
+          "public_policy"
+        ],
+        "model_seed_is_independent_task": false
+      },
+      "bounds": {
+        "max_children": 6,
+        "node_attempts": 2,
+        "scope_model_upper": {
+          "P": 0,
+          "T": 2,
+          "M": 26,
+          "S": 314
+        },
+        "per_goal_all_scope_upper": 342,
+        "policy_goals": 1,
+        "trial_model_upper": 2,
+        "derivation": "B(T)=a; B(M)=a*(1+b*B(T)); B(S)=a*(1+b*B(M)); sum permitted scope attempts, then sum policy goals. Includes regeneration of every accepted prefix after a parent failure.",
+        "actual_goal_scope_bounds": [
+          {
+            "policy": "nominal",
+            "scopes": [
+              "T"
+            ],
+            "logical_upper": 2
+          }
+        ],
+        "nominal_policy_upper": 2,
+        "source": "same frozen rule/selector, actor communication scopes and public Scene rewrite policy as production; independent of model outcomes"
+      },
+      "matched_input_ready": false
+    }
+  ],
+  "requests": [
+    {
+      "cell": "R_T_psr_collection_position_drift",
+      "arm": "ours_full",
+      "operation": "D_T",
+      "source_calls": "artifacts/edge_repair_view_applicability_v1/offline/stub/R_T_psr_collection_position_drift/ours_full/calls.jsonl",
+      "input_tokens": 11921,
+      "output_reservation": 4096,
+      "fits": true
+    },
+    {
+      "cell": "R_T_psr_collection_position_drift",
+      "arm": "ours_view",
+      "operation": "D_T",
+      "source_calls": "artifacts/edge_repair_view_applicability_v1/offline/stub/R_T_psr_collection_position_drift/ours_view/calls.jsonl",
+      "input_tokens": 8338,
+      "output_reservation": 4096,
+      "fits": true
+    },
+    {
+      "cell": "R_T_psr_collection_position_drift",
+      "arm": "flat_full",
+      "operation": "flat",
+      "source_calls": "artifacts/edge_repair_view_applicability_v1/offline/stub/R_T_psr_collection_position_drift/flat_full/calls.jsonl",
+      "input_tokens": 11830,
+      "output_reservation": 4096,
+      "fits": true
+    },
+    {
+      "cell": "R_T_lava_collection_position_drift",
+      "arm": "ours_full",
+      "operation": "D_T",
+      "source_calls": "artifacts/edge_repair_view_applicability_v1/offline/stub/R_T_lava_collection_position_drift/ours_full/calls.jsonl",
+      "input_tokens": 66272,
+      "output_reservation": 4096,
+      "fits": false
+    },
+    {
+      "cell": "R_T_lava_collection_position_drift",
+      "arm": "ours_view",
+      "operation": "D_T",
+      "source_calls": "artifacts/edge_repair_view_applicability_v1/offline/stub/R_T_lava_collection_position_drift/ours_view/calls.jsonl",
+      "input_tokens": 25992,
+      "output_reservation": 4096,
+      "fits": true
+    },
+    {
+      "cell": "R_T_lava_collection_position_drift",
+      "arm": "flat_full",
+      "operation": "flat",
+      "source_calls": "artifacts/edge_repair_view_applicability_v1/offline/stub/R_T_lava_collection_position_drift/flat_full/calls.jsonl",
+      "input_tokens": 66178,
+      "output_reservation": 4096,
+      "fits": false
+    }
+  ],
+  "view_checks": [
+    {
+      "cell": "R_T_psr_collection_position_drift",
+      "full_actions": 51,
+      "view_actions": 23,
+      "actor": "rover_1",
+      "preserved_all_authorized_actions_and_effects": true,
+      "other_facts_and_public_information_unchanged": true
+    },
+    {
+      "cell": "R_T_lava_collection_position_drift",
+      "full_actions": 409,
+      "view_actions": 140,
+      "actor": "rover_1",
+      "preserved_all_authorized_actions_and_effects": true,
+      "other_facts_and_public_information_unchanged": true
+    }
+  ],
+  "ready_for_limited_run": false,
+  "preparation_wall_s": null,
+  "timing_scope": "preparation/tokenizer elapsed time was not instrumented; unknown, not zero; stub trial CPU metrics separate"
+}

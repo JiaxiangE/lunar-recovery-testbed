@@ -1,0 +1,524 @@
+{
+  "selection_rule": "Exclude the six base32 decisions and the independent Larger-input Lava study; keep all records, policies and duplicate/reused decisions from the remaining listed source trials. Selection does not use outcome.",
+  "entries": {
+    "artifacts/base27_scene_alignment/base27/s1/c01/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s1/c01/ours/B05_psr_strict_disconnected-ours-s1/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 1,
+          "physical_attempt_records": 1,
+          "known_provider_tokens_lower_bound": 6837,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 6.31671769998502,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s1/c02/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s1/c02/ours/B02_psr_connected_named_store-ours-s1/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 2,
+          "physical_attempt_records": 2,
+          "known_provider_tokens_lower_bound": 22417,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 129.4886457999237,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s1/c03/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s1/c03/ours/E05_lava_communication_return-ours-s1/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 1,
+          "physical_attempt_records": 1,
+          "known_provider_tokens_lower_bound": 38616,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 97.7590425000526,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s1/c04/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s1/c04/ours/R_M_psr_collector_authorization_loss-ours-s1/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 3,
+          "physical_attempt_records": 3,
+          "known_provider_tokens_lower_bound": 43667,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 439.96310450008605,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s1/c05/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s1/c05/ours/R_S_construction_prefix_source_inj005-ours-s1/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 7,
+          "physical_attempt_records": 7,
+          "known_provider_tokens_lower_bound": 228278,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 1545.730713800178,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s1/c06/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s1/c06/ours/E06_lava_abandonment-ours-s1/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 13,
+          "physical_attempt_records": 13,
+          "known_provider_tokens_lower_bound": 657564,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 3745.3600147999823,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s2/c01/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s2/c01/ours/B05_psr_strict_disconnected-ours-s2/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 1,
+          "physical_attempt_records": 1,
+          "known_provider_tokens_lower_bound": 6837,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 4.8381981999846175,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s2/c02/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s2/c02/ours/B02_psr_connected_named_store-ours-s2/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 2,
+          "physical_attempt_records": 2,
+          "known_provider_tokens_lower_bound": 22262,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 118.85653739992995,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s2/c03/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s2/c03/ours/E05_lava_communication_return-ours-s2/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 1,
+          "physical_attempt_records": 1,
+          "known_provider_tokens_lower_bound": 38616,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 97.89397860004101,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s2/c04/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s2/c04/ours/R_M_psr_collector_authorization_loss-ours-s2/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 3,
+          "physical_attempt_records": 3,
+          "known_provider_tokens_lower_bound": 41526,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 342.07073869998567,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/base27/s2/c05/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s2/c05/ours/R_S_construction_prefix_source_inj005-ours-s2/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 4,
+          "physical_attempt_records": 4,
+          "known_provider_tokens_lower_bound": 136400,
+          "unknown_usage_attempts": 0,
+          "known_transport_seconds": 1100.4944374999031,
+          "unknown_transport_duration_attempts": 0,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/base27_scene_alignment/recovery_2026_09_09_b/base27/s2/c06/ours/trial.json": {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "whole_recorded_path_cost": {
+          "source_files": [
+            "artifacts/base27_scene_alignment/base27/s2/c06/ours/E06_lava_abandonment-ours-s2/calls.jsonl",
+            "artifacts/base27_scene_alignment/recovery_2026_09_09/base27/s2/c06/ours/E06_lava_abandonment-ours-s2/calls.jsonl",
+            "artifacts/base27_scene_alignment/recovery_2026_09_09_b/base27/s2/c06/ours/E06_lava_abandonment-ours-s2/calls.jsonl"
+          ],
+          "logical_records_including_interrupted": 16,
+          "physical_attempt_records": 17,
+          "known_provider_tokens_lower_bound": 679959,
+          "unknown_usage_attempts": 3,
+          "known_transport_seconds": 3722.211518200231,
+          "unknown_transport_duration_attempts": 1,
+          "interpretation": "original prefix counted once; replay source pointers are not new calls; connection attempts need not imply server receipt; unknown usage stays unknown"
+        }
+      },
+      "aliases": []
+    },
+    "artifacts/diagnosis_scope_alignment_v2/offline_v2/trial.json": {
+      "study": "diagnosis_scope_alignment_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/diagnosis_scope_alignment_v2/offline_v2/mechanism_psr_n2_local_v2-ours-s1/calls.jsonl"
+      },
+      "aliases": [
+        "diagnosis_scope_flat_v2"
+      ]
+    },
+    "artifacts/diagnosis_scope_alignment_v2/connected_refinement/trial.json": {
+      "study": "diagnosis_scope_alignment_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/diagnosis_scope_alignment_v2/connected_refinement/mechanism_psr_n2_local_v2-ours-s1/calls.jsonl"
+      },
+      "aliases": [
+        "diagnosis_scope_flat_v2"
+      ]
+    },
+    "artifacts/candidate_error_retry_v1/ours/control/trial.json": {
+      "study": "candidate_error_retry_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "source_calls": "artifacts/candidate_error_retry_v1/ours/control/mechanism_psr_n2_local-ours-s1/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/candidate_error_retry_v1/ours/stimulus/trial.json": {
+      "study": "candidate_error_retry_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "source_calls": "artifacts/candidate_error_retry_v1/ours/stimulus/mechanism_psr_n2_local-ours-s1/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/late_candidate_retry_v2/n2/ours/control/trial.json": {
+      "study": "late_candidate_retry_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "method": "ours",
+        "source_calls": "artifacts/late_candidate_retry_v2/n2/ours/control/mechanism_psr_n2_global_v2-ours-s1/calls.jsonl"
+      },
+      "aliases": [
+        "task_capability_pruning_v1"
+      ]
+    },
+    "artifacts/task_capability_pruning_v1/on/trial.json": {
+      "study": "task_capability_pruning_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/task_capability_pruning_v1/on/mechanism_psr_n2_global_v2-ours-s1/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/late_candidate_retry_v3/ours/control/trial.json": {
+      "study": "late_candidate_retry_v3",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/late_candidate_retry_v3/ours/control/mechanism_psr_n2_global_v2-ours-s2/calls.jsonl",
+        "method": "ours"
+      },
+      "aliases": []
+    },
+    "artifacts/late_candidate_retry_v3/ours/stimulus/trial.json": {
+      "study": "late_candidate_retry_v3",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/late_candidate_retry_v3/ours/stimulus/mechanism_psr_n2_global_v2-ours-s2/calls.jsonl",
+        "method": "ours"
+      },
+      "aliases": []
+    },
+    "artifacts/feedback_state_clarity_v1/ours/stimulus/trial.json": {
+      "study": "feedback_state_clarity_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/feedback_state_clarity_v1/ours/stimulus/mechanism_psr_n2_global_v2-ours-s2/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_full/trial.json": {
+      "study": "edge_repair_view_applicability_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "arm": "ours_full",
+        "source_calls": "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_full/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_view/trial.json": {
+      "study": "edge_repair_view_applicability_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "arm": "ours_view",
+        "source_calls": "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_view/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/communication_closure_v1/degraded_smoke/trial.json": {
+      "study": "communication_closure_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/communication_closure_v1/degraded_smoke/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/communication_closure_v1/reconnect_control/trial.json": {
+      "study": "communication_closure_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/communication_closure_v1/reconnect_control/calls.jsonl"
+      },
+      "aliases": []
+    },
+    "artifacts/communication_closure_v1/reconnect_event/trial.json": {
+      "study": "communication_closure_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "hint": {
+        "source_calls": "artifacts/communication_closure_v1/reconnect_event/calls.jsonl"
+      },
+      "aliases": []
+    }
+  },
+  "mentions": [
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s1/c01/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s1/c02/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s1/c03/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s1/c04/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s1/c05/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s1/c06/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s2/c01/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s2/c02/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s2/c03/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s2/c04/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/base27/s2/c05/ours/trial.json"
+    },
+    {
+      "study": "main_v5",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/base27_scene_alignment/recovery_2026_09_09_b/base27/s2/c06/ours/trial.json"
+    },
+    {
+      "study": "diagnosis_scope_alignment_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/diagnosis_scope_alignment_v2/offline_v2/trial.json"
+    },
+    {
+      "study": "diagnosis_scope_alignment_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/diagnosis_scope_alignment_v2/connected_refinement/trial.json"
+    },
+    {
+      "study": "diagnosis_scope_flat_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/diagnosis_scope_alignment_v2/offline_v2/trial.json"
+    },
+    {
+      "study": "diagnosis_scope_flat_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/diagnosis_scope_alignment_v2/connected_refinement/trial.json"
+    },
+    {
+      "study": "candidate_error_retry_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/candidate_error_retry_v1/ours/control/trial.json"
+    },
+    {
+      "study": "candidate_error_retry_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/candidate_error_retry_v1/ours/stimulus/trial.json"
+    },
+    {
+      "study": "late_candidate_retry_v2",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/late_candidate_retry_v2/n2/ours/control/trial.json"
+    },
+    {
+      "study": "task_capability_pruning_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/late_candidate_retry_v2/n2/ours/control/trial.json"
+    },
+    {
+      "study": "task_capability_pruning_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/task_capability_pruning_v1/on/trial.json"
+    },
+    {
+      "study": "late_candidate_retry_v3",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/late_candidate_retry_v3/ours/control/trial.json"
+    },
+    {
+      "study": "late_candidate_retry_v3",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/late_candidate_retry_v3/ours/stimulus/trial.json"
+    },
+    {
+      "study": "feedback_state_clarity_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/feedback_state_clarity_v1/ours/stimulus/trial.json"
+    },
+    {
+      "study": "edge_repair_view_applicability_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_full/trial.json"
+    },
+    {
+      "study": "edge_repair_view_applicability_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_view/trial.json"
+    },
+    {
+      "study": "communication_closure_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/communication_closure_v1/degraded_smoke/trial.json"
+    },
+    {
+      "study": "communication_closure_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/communication_closure_v1/reconnect_control/trial.json"
+    },
+    {
+      "study": "communication_closure_v1",
+      "index_source": "paper_inputs/scope_subset.json",
+      "source_trial": "artifacts/communication_closure_v1/reconnect_event/trial.json"
+    }
+  ],
+  "expected": {
+    "native_records": 30,
+    "unique_decisions": 26,
+    "communication_changed": 7
+  }
+}

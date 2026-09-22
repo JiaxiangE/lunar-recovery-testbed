@@ -1,0 +1,1235 @@
+{
+  "version": "feedback_state_clarity_v1",
+  "rows": [
+    {
+      "label": "ours",
+      "source_trial": "artifacts/feedback_state_clarity_v1/ours/stimulus/trial.json",
+      "status": "executed",
+      "goal": true,
+      "source_calls": "artifacts/feedback_state_clarity_v1/ours/stimulus/mechanism_psr_n2_global_v2-ours-s2/calls.jsonl",
+      "new_cost": {
+        "logical_requests": 1,
+        "physical_attempts": 1,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 12699,
+          "completion_tokens": 2795,
+          "total_tokens": 15494
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 129.41748730000108,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "dispatch_n": 6,
+      "world_s": 250.0,
+      "world_energy_wh": 44.14213562373095,
+      "unit_wall_s": 131.28033850000065,
+      "local_work": {
+        "candidate_rollouts": 1,
+        "prediction_world_steps": 6,
+        "prediction_wall_s": 0.006236699991859496,
+        "standalone_prediction_wall_s": 0.5520099999994272,
+        "local_search_wall_s": 0.0,
+        "proposal_validation_wall_s": 0.033702799992170185,
+        "prediction_calls": 1,
+        "search_calls": 0,
+        "work_counters_complete": true,
+        "resource_wall_s": 0.5857127999915974,
+        "total_wall_s": 131.29746849999356,
+        "native_wall_s": 0.0,
+        "execution_wall_s": 0.016109100004541688,
+        "native_replan_calls": 0
+      },
+      "full_cost": {
+        "logical_requests": 5,
+        "physical_attempts": 5,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 51046,
+          "completion_tokens": 26350,
+          "total_tokens": 77396
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 1197.0661383999977,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+      },
+      "full_cost_by_operation": {
+        "diagnosis": {
+          "logical_requests": 1,
+          "physical_attempts": 1,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 2239,
+            "completion_tokens": 6061,
+            "total_tokens": 8300
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 273.3501954999956,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_S": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_M": {
+          "logical_requests": 1,
+          "physical_attempts": 1,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 12157,
+            "completion_tokens": 10547,
+            "total_tokens": 22704
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 474.04693569999654,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_T": {
+          "logical_requests": 3,
+          "physical_attempts": 3,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 36650,
+            "completion_tokens": 9742,
+            "total_tokens": 46392
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 449.6690072000056,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "flat": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        }
+      },
+      "binding": {
+        "version": "repair_process_observation_v1",
+        "candidate_stages": [
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/0",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/1",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/2",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": null,
+              "checked_through_step": 0,
+              "complete": false,
+              "reason": "PRECONDITION_UNMET"
+            },
+            "symbolic_contract": {
+              "accepted": false,
+              "reason": "PRECONDITION_UNMET",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/3",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/attempts/0",
+            "format": null,
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": {
+              "resource_feasible": true,
+              "status": "PREDICTED",
+              "record": "/attempts/0/native/attempts/0/resource_prediction"
+            }
+          }
+        ],
+        "child_or_parent_retries": [
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/3",
+            "layer": "T",
+            "candidate_changed": true
+          }
+        ],
+        "scope_escalations": [],
+        "resource_search_records": [],
+        "adoption": {
+          "origin": "composed_model",
+          "scope_attempt_index": 0,
+          "candidate_record": "/attempts/0/native/adopted_candidate"
+        },
+        "adopted_matches_execution_validation": true,
+        "adopted_syntax_equals_grounded_plan": true,
+        "actual_is_validated_prefix": true,
+        "observed_mechanisms_nonexclusive": {
+          "model_candidate_used_without_resource_change": true,
+          "hierarchical_retry_occurred": true,
+          "scope_escalation_occurred": false,
+          "adopted_resource_search_changed_candidate": false
+        },
+        "prefix_recomposition_adopted": false,
+        "parent_result": {
+          "parent_goal_met": true,
+          "missing_positive": [],
+          "forbidden_present": [],
+          "cardinality": []
+        },
+        "interpretation": "Process observations can overlap. Module invocation, candidate change and success do not establish causal benefit; CL-023 requires comparison arms."
+      },
+      "pruning": null,
+      "communication": null,
+      "segment_local_work": null,
+      "initial_scope": "M",
+      "final_scope": "M",
+      "diagnosis": [
+        {
+          "mode": "connected_refinement",
+          "failure": {
+            "symptom": "ACTOR_UNAVAILABLE",
+            "agent_id": "rover_1",
+            "node_id": "store_sample_1.p2",
+            "context": {
+              "scenario": "psr",
+              "observed_deviation": {
+                "kind": "author_added_actor_capability_loss",
+                "agent": "rover_1",
+                "symptom": "ACTOR_UNAVAILABLE",
+                "attempt": {
+                  "primitive": "sample_collect",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_1"
+                  }
+                },
+                "result": {
+                  "success": false,
+                  "primitive_name": "sample_collect",
+                  "agent_id": "rover_1",
+                  "failure_mode": "ACTOR_UNAVAILABLE",
+                  "elapsed_s": 0.0,
+                  "energy_consumed_wh": 0.0,
+                  "facts_added": [],
+                  "detail": "primitive absent from observed actor capabilities"
+                },
+                "scope_note": "sample_collect was removed from this actor capability set; the attempted collection failed actor authorization.",
+                "removed_capability": "sample_collect",
+                "observed_capabilities": [
+                  "communicate_relay",
+                  "communicate_status",
+                  "dock_with_base",
+                  "energy_check",
+                  "move_to",
+                  "navigate_to_relay",
+                  "return_to_base",
+                  "sample_offload",
+                  "sample_store",
+                  "scan_spectral",
+                  "wait_for_relay"
+                ]
+              },
+              "observations": {
+                "pre_deviation_observation": {
+                  "sim_time_s": 60.0,
+                  "agents": {
+                    "rover_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "energy_wh": 385.85786437626905,
+                      "facts": [
+                        "at_location"
+                      ],
+                      "cargo": []
+                    },
+                    "rover_2": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    },
+                    "relay_1": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    }
+                  },
+                  "samples": {
+                    "sample_1": {
+                      "location": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    },
+                    "sample_2": {
+                      "location": [
+                        40.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    }
+                  },
+                  "base_storage": [],
+                  "semantics_profile": "psr_location_stored_v1",
+                  "collection_tolerance_m": 0.5
+                },
+                "post_deviation_observation": {
+                  "sim_time_s": 60.0,
+                  "agents": {
+                    "rover_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "energy_wh": 385.85786437626905,
+                      "facts": [
+                        "at_location"
+                      ],
+                      "cargo": []
+                    },
+                    "rover_2": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    },
+                    "relay_1": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    }
+                  },
+                  "samples": {
+                    "sample_1": {
+                      "location": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    },
+                    "sample_2": {
+                      "location": [
+                        40.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    }
+                  },
+                  "base_storage": [],
+                  "semantics_profile": "psr_location_stored_v1",
+                  "collection_tolerance_m": 0.5
+                },
+                "executed_prefix": [
+                  {
+                    "node_id": "store_sample_1.p1",
+                    "step": {
+                      "primitive": "move_to",
+                      "agent_id": "rover_1",
+                      "params": {
+                        "target": "sample_1"
+                      }
+                    },
+                    "result": {
+                      "success": true,
+                      "primitive_name": "move_to",
+                      "agent_id": "rover_1",
+                      "failure_mode": null,
+                      "elapsed_s": 60.0,
+                      "energy_consumed_wh": 14.142135623730951,
+                      "facts_added": [
+                        "at_location"
+                      ],
+                      "detail": ""
+                    }
+                  }
+                ],
+                "shared_resource_information": {
+                  "scenario": "psr",
+                  "numeric_resource_model": "PSRWorld deterministic simulator",
+                  "formal_energy_guarantee": false,
+                  "source": [
+                    "simulation/energy_model.py",
+                    "paper4_impl/primitives/psr/primitives.py"
+                  ],
+                  "config": {
+                    "travel_cost_per_m": 0.5,
+                    "slope_factor": 0.02,
+                    "task_base_cost": 5.0,
+                    "low_energy_threshold": 10.0
+                  },
+                  "travel_rule": "distance_3d * (travel_cost_per_m + abs(target_slope_deg) * slope_factor)",
+                  "runtime_failure_rule": "An action fails before effects if actor.energy_wh < action_cost_wh.",
+                  "low_energy_threshold_note": "Config threshold is not an extra return obligation in PSRWorld.step.",
+                  "actors": {
+                    "relay_1": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "cargo": [],
+                      "agent_type": "RELAY",
+                      "available": true,
+                      "capabilities": [
+                        "communicate_status",
+                        "energy_check"
+                      ]
+                    },
+                    "rover_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "energy_wh": 385.85786437626905,
+                      "cargo": [],
+                      "agent_type": "ROVER",
+                      "available": true,
+                      "capabilities": [
+                        "communicate_relay",
+                        "communicate_status",
+                        "dock_with_base",
+                        "energy_check",
+                        "move_to",
+                        "navigate_to_relay",
+                        "return_to_base",
+                        "sample_offload",
+                        "sample_store",
+                        "scan_spectral",
+                        "wait_for_relay"
+                      ]
+                    },
+                    "rover_2": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "cargo": [],
+                      "agent_type": "ROVER",
+                      "available": true,
+                      "capabilities": [
+                        "communicate_relay",
+                        "communicate_status",
+                        "dock_with_base",
+                        "energy_check",
+                        "move_to",
+                        "navigate_to_relay",
+                        "return_to_base",
+                        "sample_collect",
+                        "sample_offload",
+                        "sample_store",
+                        "scan_spectral",
+                        "wait_for_relay"
+                      ]
+                    }
+                  },
+                  "samples": {
+                    "sample_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field",
+                      "target_slope_deg": 0.0,
+                      "traversable": true,
+                      "unreachable": false
+                    },
+                    "sample_2": {
+                      "position": [
+                        40.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field",
+                      "target_slope_deg": 0.0,
+                      "traversable": true,
+                      "unreachable": false
+                    }
+                  },
+                  "base": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "target_slope_deg": 0.0
+                  },
+                  "nonmovement_cost_wh": {
+                    "scan_spectral": 5.0,
+                    "sample_collect": 5.0,
+                    "sample_store": 5.0,
+                    "energy_check": 5.0,
+                    "communicate_status": 5.0,
+                    "communicate_relay": 5.0,
+                    "wait_for_relay": 5.0,
+                    "dock_with_base": 5.0,
+                    "sample_offload": 5.0
+                  }
+                }
+              },
+              "current_facts": [
+                "at_base(relay_1)",
+                "at_base(rover_2)",
+                "at_location(rover_1)",
+                "at_target(relay_1, base)",
+                "at_target(rover_1, sample_1)",
+                "at_target(rover_2, base)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "position(relay_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 20.0, 20.0, 0.0)",
+                "position(rover_2, 0.0, 0.0, 0.0)",
+                "psr_semantics_profile(psr_location_stored_v1)",
+                "sample_status(sample_1, field)",
+                "sample_status(sample_2, field)"
+              ]
+            }
+          },
+          "rule_matched": false,
+          "rule_confident": false,
+          "client_injected": true,
+          "llm_requested": true,
+          "fallback_reason": null,
+          "logical_before": 0,
+          "return_type": "str",
+          "diagnosis_source": "llm_smoothed",
+          "parse_ok": true,
+          "posterior": {
+            "P": 0.2,
+            "T": 0.25,
+            "M": 0.05,
+            "S": 0.5
+          },
+          "logical_after": 1,
+          "interpretation": "cause-level posterior feeds frozen utility selector; not a chosen scope or diagnosis-accuracy score"
+        }
+      ],
+      "generated_actions": {
+        "original_remaining_n": 5,
+        "actual_executed_n": 6,
+        "actual_preserved_action_n": 0,
+        "actual_preserved_outside_fault_n": 0,
+        "removed_or_replaced_outside_fault_n": 3,
+        "unmatched_actual_action_n": 6,
+        "matched_original_actual_indices": [],
+        "fault_original_indices": [
+          0,
+          1
+        ],
+        "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+        "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions",
+        "fault_scope_definition": "original Task containing observed failed primitive; fixed across methods, not selected repair scope"
+      },
+      "source_control_trial": "artifacts/late_candidate_retry_v3/ours/control/trial.json",
+      "own_control_cost": {
+        "logical_requests": 4,
+        "physical_attempts": 4,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 38347,
+          "completion_tokens": 23555,
+          "total_tokens": 61902
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 1067.6486510999966,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "additional_tokens": 15494,
+      "first_retry": {
+        "source_calls": "artifacts/feedback_state_clarity_v1/ours/stimulus/mechanism_psr_n2_global_v2-ours-s2/calls.jsonl",
+        "ordinal": 1,
+        "parsed_plan": [
+          {
+            "primitive": "move_to",
+            "params": {
+              "target": "sample_2"
+            },
+            "agent_id": "rover_2"
+          },
+          {
+            "primitive": "sample_collect",
+            "params": {
+              "sample_id": "sample_2"
+            },
+            "agent_id": "rover_2"
+          },
+          {
+            "primitive": "sample_store",
+            "params": {
+              "sample_id": "sample_2"
+            },
+            "agent_id": "rover_2"
+          }
+        ],
+        "parse_error": null,
+        "feedback": {
+          "actor": "rover_2",
+          "candidate_actions_dispatched": 0,
+          "entity": "sample_2",
+          "error_category": "PRECONDITION_UNMET",
+          "executed_history_prefix_ids": [
+            "store_sample_1.p1"
+          ],
+          "executed_history_scope": "preexisting physical source history; candidate simulation does not extend it",
+          "failed_predicate": "at_target(rover_2, sample_2)",
+          "feedback_version": "feedback_state_clarity_v1",
+          "remaining_obligations": {
+            "cardinality": [],
+            "negative": [],
+            "positive": [
+              "stored(sample_2)"
+            ]
+          },
+          "request_goal": {
+            "cardinality": [],
+            "negative": [],
+            "positive": [
+              "stored(sample_2)"
+            ]
+          },
+          "request_initial_state": [
+            "at_base(relay_1)",
+            "at_location(rover_1)",
+            "at_location(rover_2)",
+            "at_target(relay_1, base)",
+            "at_target(rover_1, sample_1)",
+            "at_target(rover_2, sample_1)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "cargo(rover_2, sample_1)",
+            "position(relay_1, 0.0, 0.0, 0.0)",
+            "position(rover_1, 20.0, 20.0, 0.0)",
+            "position(rover_2, 20.0, 20.0, 0.0)",
+            "psr_semantics_profile(psr_location_stored_v1)",
+            "sample_collected(rover_2)",
+            "sample_status(sample_1, stored)",
+            "sample_status(sample_2, field)",
+            "sample_stored(rover_2)",
+            "stored(sample_1)"
+          ],
+          "request_node_id": "task_rover2_store_sample_2",
+          "request_state_origin": "planning_state_after_verified_prefix",
+          "required_output_scope": "complete_current_child_replacement_from_request_initial_state",
+          "validation_failure_state": [
+            "at_base(relay_1)",
+            "at_location(rover_1)",
+            "at_location(rover_2)",
+            "at_target(relay_1, base)",
+            "at_target(rover_1, sample_1)",
+            "at_target(rover_2, sample_1)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "cargo(rover_2, sample_1)",
+            "position(relay_1, 0.0, 0.0, 0.0)",
+            "position(rover_1, 20.0, 20.0, 0.0)",
+            "position(rover_2, 20.0, 20.0, 0.0)",
+            "psr_semantics_profile(psr_location_stored_v1)",
+            "sample_collected(rover_2)",
+            "sample_status(sample_1, stored)",
+            "sample_status(sample_2, field)",
+            "sample_stored(rover_2)",
+            "stored(sample_1)"
+          ],
+          "validation_failure_state_origin": "candidate_simulation_before_failed_step"
+        }
+      },
+      "error_applicable": true,
+      "retention_eligible": true,
+      "retained_child_n": 1,
+      "retained_action_n": 3,
+      "new_requests_for_retained_nodes": 0,
+      "child_retry_n": 1,
+      "parent_regeneration_n": 0,
+      "probe_local_work": {
+        "rollouts": 3,
+        "world_steps": 7,
+        "wall_s": 0.0015959000011207536
+      },
+      "prefix_reuse": {
+        "source_calls": "artifacts/late_candidate_retry_v3/ours/control/mechanism_psr_n2_global_v2-ours-s2/calls.jsonl",
+        "used_n": 4,
+        "selected_n": 4,
+        "validation": "SavedResponseSession checks operation, node, goal and complete state/domain view",
+        "new_model_calls": 0,
+        "interpretation": "method-internal matched initial answers; initial work charged to each path, generated only once"
+      }
+    },
+    {
+      "label": "flat",
+      "source_trial": "artifacts/feedback_state_clarity_v1/flat/stimulus/trial.json",
+      "status": "executed",
+      "goal": true,
+      "source_calls": "artifacts/feedback_state_clarity_v1/flat/stimulus/mechanism_psr_n2_global_v2-flat-s2/calls.jsonl",
+      "new_cost": {
+        "logical_requests": 1,
+        "physical_attempts": 1,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 12438,
+          "completion_tokens": 6754,
+          "total_tokens": 19192
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 305.7874653000181,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "dispatch_n": 6,
+      "world_s": 250.0,
+      "world_energy_wh": 44.14213562373095,
+      "unit_wall_s": 306.5323219999991,
+      "local_work": {
+        "candidate_rollouts": 1,
+        "prediction_world_steps": 6,
+        "prediction_wall_s": 0.006571899983100593,
+        "standalone_prediction_wall_s": 0.5288163000077475,
+        "local_search_wall_s": 0.0,
+        "proposal_validation_wall_s": 0.007641699994564988,
+        "prediction_calls": 1,
+        "search_calls": 0,
+        "work_counters_complete": true,
+        "resource_wall_s": 0.5364580000023125,
+        "total_wall_s": 306.54706490000535,
+        "native_wall_s": 0.0,
+        "execution_wall_s": 0.01149129998520948,
+        "native_replan_calls": 0
+      },
+      "full_cost": {
+        "logical_requests": 2,
+        "physical_attempts": 2,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 24219,
+          "completion_tokens": 11795,
+          "total_tokens": 36014
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 534.9706140000199,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+      },
+      "full_cost_by_operation": {
+        "diagnosis": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_S": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_M": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_T": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "flat": {
+          "logical_requests": 2,
+          "physical_attempts": 2,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 24219,
+            "completion_tokens": 11795,
+            "total_tokens": 36014
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 534.9706140000199,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        }
+      },
+      "binding": {
+        "version": "repair_process_observation_v1",
+        "candidate_stages": [
+          {
+            "candidate_record": "/attempts/0/native/attempts/0",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": null,
+              "checked_through_step": 3,
+              "complete": false,
+              "reason": "PRECONDITION_UNMET"
+            },
+            "symbolic_contract": {
+              "accepted": false,
+              "reason": "PRECONDITION_UNMET",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null
+          },
+          {
+            "candidate_record": "/attempts/0/native/attempts/1",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": {
+              "resource_feasible": true,
+              "status": "PREDICTED",
+              "record": "/attempts/0/native/attempts/1/resource_prediction"
+            }
+          }
+        ],
+        "child_or_parent_retries": [],
+        "scope_escalations": [],
+        "resource_search_records": [],
+        "adoption": {
+          "origin": "model",
+          "candidate_attempt_index": 1,
+          "candidate_record": "/attempts/0/native/adopted_candidate"
+        },
+        "adopted_matches_execution_validation": true,
+        "adopted_syntax_equals_grounded_plan": false,
+        "actual_is_validated_prefix": true,
+        "observed_mechanisms_nonexclusive": {
+          "model_candidate_used_without_resource_change": true,
+          "hierarchical_retry_occurred": false,
+          "scope_escalation_occurred": false,
+          "adopted_resource_search_changed_candidate": false
+        },
+        "prefix_recomposition_adopted": false,
+        "parent_result": {
+          "parent_goal_met": true,
+          "missing_positive": [],
+          "forbidden_present": [],
+          "cardinality": []
+        },
+        "interpretation": "Process observations can overlap. Module invocation, candidate change and success do not establish causal benefit; CL-023 requires comparison arms."
+      },
+      "pruning": null,
+      "communication": null,
+      "segment_local_work": null,
+      "initial_scope": null,
+      "final_scope": null,
+      "diagnosis": [
+        null
+      ],
+      "generated_actions": {
+        "original_remaining_n": 5,
+        "actual_executed_n": 6,
+        "actual_preserved_action_n": 0,
+        "actual_preserved_outside_fault_n": 0,
+        "removed_or_replaced_outside_fault_n": 3,
+        "unmatched_actual_action_n": 6,
+        "matched_original_actual_indices": [],
+        "fault_original_indices": [
+          0,
+          1
+        ],
+        "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+        "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions",
+        "fault_scope_definition": "original Task containing observed failed primitive; fixed across methods, not selected repair scope"
+      },
+      "source_control_trial": "artifacts/late_candidate_retry_v3/flat/control/trial.json",
+      "own_control_cost": {
+        "logical_requests": 1,
+        "physical_attempts": 1,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 11781,
+          "completion_tokens": 5041,
+          "total_tokens": 16822
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 229.18314870000177,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "additional_tokens": 19192,
+      "first_retry": {
+        "source_calls": "artifacts/feedback_state_clarity_v1/flat/stimulus/mechanism_psr_n2_global_v2-flat-s2/calls.jsonl",
+        "ordinal": 1,
+        "parsed_plan": [
+          {
+            "primitive": "move_to",
+            "params": {
+              "target": "sample_1"
+            },
+            "agent_id": "rover_2",
+            "agent_type": "ROVER"
+          },
+          {
+            "primitive": "sample_collect",
+            "params": {
+              "sample_id": "sample_1"
+            },
+            "agent_id": "rover_2",
+            "agent_type": "ROVER"
+          },
+          {
+            "primitive": "sample_store",
+            "params": {
+              "sample_id": "sample_1"
+            },
+            "agent_id": "rover_2",
+            "agent_type": "ROVER"
+          },
+          {
+            "primitive": "move_to",
+            "params": {
+              "target": "sample_2"
+            },
+            "agent_id": "rover_2",
+            "agent_type": "ROVER"
+          },
+          {
+            "primitive": "sample_collect",
+            "params": {
+              "sample_id": "sample_2"
+            },
+            "agent_id": "rover_2",
+            "agent_type": "ROVER"
+          },
+          {
+            "primitive": "sample_store",
+            "params": {
+              "sample_id": "sample_2"
+            },
+            "agent_id": "rover_2",
+            "agent_type": "ROVER"
+          }
+        ],
+        "parse_error": null,
+        "feedback": {
+          "actor": "rover_2",
+          "candidate_actions_dispatched": 0,
+          "entity": "sample_2",
+          "error_category": "PRECONDITION_UNMET",
+          "executed_history_prefix_ids": [
+            "store_sample_1.p1"
+          ],
+          "executed_history_scope": "preexisting physical source history; candidate simulation does not extend it",
+          "failed_predicate": "at_target(rover_2, sample_2)",
+          "feedback_version": "feedback_state_clarity_v1",
+          "remaining_obligations": {
+            "cardinality": [],
+            "negative": [],
+            "positive": [
+              "stored(sample_1)",
+              "stored(sample_2)"
+            ]
+          },
+          "request_goal": {
+            "cardinality": [],
+            "negative": [],
+            "positive": [
+              "stored(sample_1)",
+              "stored(sample_2)"
+            ]
+          },
+          "request_initial_state": [
+            "at_base(relay_1)",
+            "at_base(rover_2)",
+            "at_location(rover_1)",
+            "at_target(relay_1, base)",
+            "at_target(rover_1, sample_1)",
+            "at_target(rover_2, base)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "position(relay_1, 0.0, 0.0, 0.0)",
+            "position(rover_1, 20.0, 20.0, 0.0)",
+            "position(rover_2, 0.0, 0.0, 0.0)",
+            "psr_semantics_profile(psr_location_stored_v1)",
+            "sample_status(sample_1, field)",
+            "sample_status(sample_2, field)"
+          ],
+          "request_node_id": null,
+          "request_state_origin": "actual_world_snapshot",
+          "required_output_scope": "complete_parent_plan_from_request_initial_state",
+          "validation_failure_state": [
+            "at_base(relay_1)",
+            "at_location(rover_1)",
+            "at_location(rover_2)",
+            "at_target(relay_1, base)",
+            "at_target(rover_1, sample_1)",
+            "at_target(rover_2, sample_1)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "cargo(rover_2, sample_1)",
+            "position(relay_1, 0.0, 0.0, 0.0)",
+            "position(rover_1, 20.0, 20.0, 0.0)",
+            "position(rover_2, 20.0, 20.0, 0.0)",
+            "psr_semantics_profile(psr_location_stored_v1)",
+            "sample_collected(rover_2)",
+            "sample_status(sample_1, stored)",
+            "sample_status(sample_2, field)",
+            "sample_stored(rover_2)",
+            "stored(sample_1)"
+          ],
+          "validation_failure_state_origin": "candidate_simulation_before_failed_step"
+        }
+      },
+      "error_applicable": true,
+      "retention_eligible": null,
+      "retained_child_n": 0,
+      "retained_action_n": 0,
+      "new_requests_for_retained_nodes": 0,
+      "child_retry_n": 0,
+      "parent_regeneration_n": 0,
+      "probe_local_work": {
+        "rollouts": 3,
+        "world_steps": 10,
+        "wall_s": 0.006802000003517605
+      },
+      "prefix_reuse": {
+        "source_calls": "artifacts/late_candidate_retry_v3/flat/control/mechanism_psr_n2_global_v2-flat-s2/calls.jsonl",
+        "used_n": 1,
+        "selected_n": 1,
+        "validation": "SavedResponseSession checks operation, node, goal and complete state/domain view",
+        "new_model_calls": 0,
+        "interpretation": "method-internal matched initial answers; initial work charged to each path, generated only once"
+      }
+    }
+  ],
+  "unique_new_cost": {
+    "logical_requests": 2,
+    "physical_attempts": 2,
+    "known_tokens_lower_bound": {
+      "prompt_tokens": 25137,
+      "completion_tokens": 9549,
+      "total_tokens": 34686
+    },
+    "unknown_usage_attempts": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "transport_elapsed_s_lower_bound": 435.20495260001917,
+    "transport_elapsed_unknown_n": 0,
+    "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+  },
+  "planned_conditions": 2,
+  "independent_inputs": 1,
+  "response_seeds": [
+    2
+  ],
+  "scope": "two own-control matched retry conditions; feedback explanation only. No population success rate, no pure retention causal estimate; historical 55.3% unchanged."
+}

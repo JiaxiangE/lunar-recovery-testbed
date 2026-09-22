@@ -1,0 +1,62 @@
+#usda 1.0
+(
+    defaultPrim = "lava_tube"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+# Self-built lava-tube void (design 8.3): ceiling + 2 side walls + a back wall, OPEN at the -Y
+# mouth, no floor (rover drives on the lunaryard surface). Origin = mouth-centre at floor; void
+# +Y 0..15 m, 8 m wide (x -4..4). Walls extend DOWN to local z=-1 so they meet/penetrate the
+# cratered regolith (no base gaps); ceiling at z=3.5. static_assets applies collision to all
+# children. Place with orientation [0,0,0,1] (static_assets quats are x,y,z,w; identity = upright).
+def Xform "lava_tube"
+{
+    rel material:binding = </lava_tube/Basalt>
+
+    def Cube "ceiling"
+    {
+        double size = 1.0
+        float3 xformOp:scale = (8.3, 15.0, 0.3)
+        double3 xformOp:translate = (0, 7.5, 3.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        color3f[] primvars:displayColor = [(0.10, 0.09, 0.08)]
+    }
+    def Cube "wall_left"
+    {
+        double size = 1.0
+        float3 xformOp:scale = (0.3, 15.0, 4.5)
+        double3 xformOp:translate = (-4.0, 7.5, 1.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        color3f[] primvars:displayColor = [(0.12, 0.11, 0.10)]
+    }
+    def Cube "wall_right"
+    {
+        double size = 1.0
+        float3 xformOp:scale = (0.3, 15.0, 4.5)
+        double3 xformOp:translate = (4.0, 7.5, 1.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        color3f[] primvars:displayColor = [(0.12, 0.11, 0.10)]
+    }
+    def Cube "wall_back"
+    {
+        double size = 1.0
+        float3 xformOp:scale = (8.3, 0.3, 4.5)
+        double3 xformOp:translate = (0, 15.0, 1.25)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+        color3f[] primvars:displayColor = [(0.12, 0.11, 0.10)]
+    }
+
+    def Material "Basalt"
+    {
+        token outputs:surface.connect = </lava_tube/Basalt/Shader.outputs:surface>
+        def Shader "Shader"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.11, 0.10, 0.09)
+            float inputs:metallic = 0
+            float inputs:roughness = 0.9
+            token outputs:surface
+        }
+    }
+}

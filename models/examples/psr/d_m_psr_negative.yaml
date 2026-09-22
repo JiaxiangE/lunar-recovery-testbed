@@ -1,0 +1,16 @@
+scenario: PSR
+type: negative
+source: curated_for_d_m_psr   # CC-authored on PI delegation
+context:
+  mission_postcondition: "stored(sample_1)"
+  current_state: "deployed(rover_1)"
+attempted_output:
+  tasks:
+    - id: task_1_collect
+      goal_nl: "collect the ice sample"
+      assigned_agent_id: rover_1
+      precondition: "at_location(rover_1)"          # ← bad: not implied by current state (no move_to first)
+      postcondition: "stored(sample_ice)"           # ← bad: invented entity; not the real sample_1
+      required_primitives: [sample_collect]
+rationale: "Two defects. (1) Contract 3: task_1's precondition at_location(rover_1) is NOT implied by the current state deployed(rover_1) — a move_to Task must come first to produce at_location. (2) Argument validity: 'sample_ice' is not a real entity; the Mission is about sample_1, so the postcondition can never entail stored(sample_1) (Contract 1 fails too). Always reference the REAL sample ids from the Mission goal and bridge every precondition with a prior Task."
+validator_feedback: "Task task_1_collect precondition (at_location(rover_1)) not implied by initial state + prior postconditions; task postconditions do not jointly entail Mission post (stored(sample_1)); references unknown entity 'sample_ice'."

@@ -1,0 +1,1381 @@
+{
+  "host": "localhost.localdomain",
+  "platform": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+  "z3": "5.1.0",
+  "module_import_wall_s": 0.6261140220003654,
+  "source_case_build_wall_s": 0.41101886100022966,
+  "records": [
+    {
+      "case": "B05_saved_positive",
+      "candidate_source": "/home/public-user/paper4_runtime/project/artifacts/orin_parallel_2026_09_08/matched64k/run/s1/c01/ours/B05_psr_strict_disconnected-ours-s1/calls.jsonl",
+      "plan": [
+        {
+          "primitive": "move_to",
+          "params": {
+            "target": [
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "agent_id": "rover_1",
+          "agent_type": "ROVER"
+        },
+        {
+          "primitive": "return_to_base",
+          "params": {},
+          "agent_id": "rover_1",
+          "agent_type": "ROVER"
+        }
+      ],
+      "samples": [
+        {
+          "ordinal": 0,
+          "diagnosis_s": 4.307300059736008e-05,
+          "selector_s": 0.0001972879999811994,
+          "scope": "T",
+          "solver_check_s": 0.00017085499985114438,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.007371665999926336,
+          "full_common_gate_s": 0.00783091500034061,
+          "core_wall_s": 0.00814667000031477,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 1,
+          "diagnosis_s": 3.1968999792297836e-05,
+          "selector_s": 0.00011955599984503351,
+          "scope": "T",
+          "solver_check_s": 7.696299962844932e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0020295149997764383,
+          "full_common_gate_s": 0.002295796999533195,
+          "core_wall_s": 0.002474011999765935,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 2,
+          "diagnosis_s": 1.0495999958948232e-05,
+          "selector_s": 7.584300055896165e-05,
+          "scope": "T",
+          "solver_check_s": 6.880300043121679e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0018377320002400666,
+          "full_common_gate_s": 0.0020612610005628085,
+          "core_wall_s": 0.0021625119998134323,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 3,
+          "diagnosis_s": 8.896000508684665e-06,
+          "selector_s": 7.168299998738803e-05,
+          "scope": "T",
+          "solver_check_s": 7.350699979724595e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0017813469994507614,
+          "full_common_gate_s": 0.0019886179998138687,
+          "core_wall_s": 0.0020843339998464216,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 4,
+          "diagnosis_s": 9.344000318378676e-06,
+          "selector_s": 7.11070006218506e-05,
+          "scope": "T",
+          "solver_check_s": 7.673799973417772e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.001795011000467639,
+          "full_common_gate_s": 0.001997322000534041,
+          "core_wall_s": 0.002092589000312728,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 5,
+          "diagnosis_s": 9.280999620386865e-06,
+          "selector_s": 7.254600041051162e-05,
+          "scope": "T",
+          "solver_check_s": 7.228999947983539e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0018057959996440331,
+          "full_common_gate_s": 0.002014827000493824,
+          "core_wall_s": 0.002123694999681902,
+          "accepted": true,
+          "reason": "VERIFIED"
+        }
+      ],
+      "warm_median_s": {
+        "diagnosis_s": 9.344000318378676e-06,
+        "selector_s": 7.254600041051162e-05,
+        "solver_check_s": 7.350699979724595e-05,
+        "encode_check_s": 0.0018057959996440331,
+        "full_common_gate_s": 0.002014827000493824,
+        "core_wall_s": 0.002123694999681902
+      },
+      "scope_note": "encode+check includes atom/Boolean/assertion construction and Solver.check; common gate also includes full action grounding/state rollout/goal checks. Core adds rule diagnosis/selector. No numeric resource forecast, model generation, imports, case construction or dispatch is hidden in these labels.",
+      "actual_source_world_execution": {
+        "accepted": true,
+        "reason": "EXECUTED",
+        "execution_success": true,
+        "goal_met": true,
+        "recovery_required": true,
+        "dispatch_n": 2,
+        "executed_plan": [
+          {
+            "primitive": "move_to",
+            "agent_id": "rover_1",
+            "params": {
+              "target": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "primitive": "return_to_base",
+            "agent_id": "rover_1",
+            "params": {}
+          }
+        ],
+        "execution_results": [
+          {
+            "success": true,
+            "primitive_name": "move_to",
+            "agent_id": "rover_1",
+            "failure_mode": null,
+            "elapsed_s": 60.0,
+            "energy_consumed_wh": 14.142135623730951,
+            "facts_added": [
+              "at_location"
+            ],
+            "detail": ""
+          },
+          {
+            "success": true,
+            "primitive_name": "return_to_base",
+            "agent_id": "rover_1",
+            "failure_mode": null,
+            "elapsed_s": 90.0,
+            "energy_consumed_wh": 0.0,
+            "facts_added": [
+              "at_base"
+            ],
+            "detail": ""
+          }
+        ],
+        "verification": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "action_ids": [
+            "psr_action_0002",
+            "psr_action_0015"
+          ],
+          "normalized_plan": [
+            {
+              "primitive": "move_to",
+              "agent_id": "rover_1",
+              "params": {
+                "target": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "primitive": "return_to_base",
+              "agent_id": "rover_1",
+              "params": {}
+            }
+          ],
+          "final_state": [
+            "at_base(relay_1)",
+            "at_base(rover_1)",
+            "at_base(rover_2)",
+            "at_target(relay_1, base)",
+            "at_target(rover_1, base)",
+            "at_target(rover_2, base)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "position(relay_1, 0.0, 0.0, 0.0)",
+            "position(rover_1, 0.0, 0.0, 0.0)",
+            "position(rover_2, 0.0, 0.0, 0.0)",
+            "psr_semantics_profile(psr_location_stored_v1)",
+            "sample_status(sample_1, field)",
+            "sample_status(sample_2, field)"
+          ],
+          "solver_version": "5.1.0",
+          "solver_status": "unsat",
+          "solver_encode_check_s": 0.0021069590002298355,
+          "verification_s": 0.0023319900001297356,
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          }
+        },
+        "final_state": {
+          "sim_time_s": 150.0,
+          "agents": {
+            "rover_1": {
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "energy_wh": 385.85786437626905,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": []
+            },
+            "rover_2": {
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "energy_wh": 400.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": []
+            },
+            "relay_1": {
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "energy_wh": 400.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": []
+            }
+          },
+          "samples": {
+            "sample_1": {
+              "location": [
+                20.0,
+                20.0,
+                0.0
+              ],
+              "status": "field"
+            },
+            "sample_2": {
+              "location": [
+                40.0,
+                20.0,
+                0.0
+              ],
+              "status": "field"
+            }
+          },
+          "base_storage": [],
+          "semantics_profile": "psr_location_stored_v1",
+          "collection_tolerance_m": 0.5
+        },
+        "final_facts": [
+          "at_base(relay_1)",
+          "at_base(rover_1)",
+          "at_base(rover_2)",
+          "at_target(relay_1, base)",
+          "at_target(rover_1, base)",
+          "at_target(rover_2, base)",
+          "available(relay_1)",
+          "available(rover_1)",
+          "available(rover_2)",
+          "position(relay_1, 0.0, 0.0, 0.0)",
+          "position(rover_1, 0.0, 0.0, 0.0)",
+          "position(rover_2, 0.0, 0.0, 0.0)",
+          "psr_semantics_profile(psr_location_stored_v1)",
+          "sample_status(sample_1, field)",
+          "sample_status(sample_2, field)"
+        ],
+        "elapsed_s": 150.0,
+        "energy_consumed_wh": 14.142135623730951,
+        "wrapper_wall_s": 0.009098737999920559,
+        "actual_radio_delivery_observed": false,
+        "timing_kind": "nominal simulator work time; not hardware latency",
+        "offload_audit": {
+          "version": "psr_offload_step_state_v1",
+          "evidence_source": "actual execution only; not original candidate simulation",
+          "offloads": [],
+          "parent_goal_met": true,
+          "missing_positive": [],
+          "forbidden_present": [],
+          "cardinality": []
+        }
+      }
+    },
+    {
+      "case": "E05_source_return_witness",
+      "candidate_source": "source-defined move_to(entry); author-selected witness, not model output",
+      "plan": [
+        {
+          "primitive": "move_to",
+          "agent_id": "rover_2",
+          "params": {
+            "target": "entry"
+          }
+        }
+      ],
+      "samples": [
+        {
+          "ordinal": 0,
+          "diagnosis_s": 1.2417000107234344e-05,
+          "selector_s": 9.123499967245152e-05,
+          "scope": "T",
+          "solver_check_s": 8.560300011595245e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.003115539000646095,
+          "full_common_gate_s": 0.003418751000026532,
+          "core_wall_s": 0.0035431080004855176,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 1,
+          "diagnosis_s": 1.0400000064691994e-05,
+          "selector_s": 7.632300003024284e-05,
+          "scope": "T",
+          "solver_check_s": 7.942699994600844e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0029832459995304816,
+          "full_common_gate_s": 0.0032065839995993883,
+          "core_wall_s": 0.0033081230003517703,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 2,
+          "diagnosis_s": 9.503999535809271e-06,
+          "selector_s": 7.449900022038491e-05,
+          "scope": "T",
+          "solver_check_s": 7.744200047454797e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0029944159996375674,
+          "full_common_gate_s": 0.0032102000004670117,
+          "core_wall_s": 0.003307770999526838,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 3,
+          "diagnosis_s": 8.959999831859022e-06,
+          "selector_s": 7.293100043170853e-05,
+          "scope": "T",
+          "solver_check_s": 7.587499931105413e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0029623179998452542,
+          "full_common_gate_s": 0.0031774619992575026,
+          "core_wall_s": 0.003273434000220732,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 4,
+          "diagnosis_s": 9.536000106891152e-06,
+          "selector_s": 7.046700011414941e-05,
+          "scope": "T",
+          "solver_check_s": 7.929900039016502e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.002970733999973163,
+          "full_common_gate_s": 0.0031821339998714393,
+          "core_wall_s": 0.0032755450001786812,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 5,
+          "diagnosis_s": 9.409000085724983e-06,
+          "selector_s": 7.13299996277783e-05,
+          "scope": "T",
+          "solver_check_s": 7.49789996916661e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.00295390200062684,
+          "full_common_gate_s": 0.0031605650001438335,
+          "core_wall_s": 0.0032557369995629415,
+          "accepted": true,
+          "reason": "VERIFIED"
+        }
+      ],
+      "warm_median_s": {
+        "diagnosis_s": 9.503999535809271e-06,
+        "selector_s": 7.293100043170853e-05,
+        "solver_check_s": 7.744200047454797e-05,
+        "encode_check_s": 0.002970733999973163,
+        "full_common_gate_s": 0.0031821339998714393,
+        "core_wall_s": 0.0032755450001786812
+      },
+      "scope_note": "encode+check includes atom/Boolean/assertion construction and Solver.check; common gate also includes full action grounding/state rollout/goal checks. Core adds rule diagnosis/selector. No numeric resource forecast, model generation, imports, case construction or dispatch is hidden in these labels.",
+      "actual_source_world_execution": {
+        "accepted": true,
+        "reason": "EXECUTED",
+        "execution_success": true,
+        "goal_met": true,
+        "recovery_required": true,
+        "dispatch_n": 1,
+        "executed_plan": [
+          {
+            "primitive": "move_to",
+            "agent_id": "rover_2",
+            "params": {
+              "target": "entry"
+            }
+          }
+        ],
+        "execution_results": [
+          {
+            "success": true,
+            "primitive_name": "move_to",
+            "agent_id": "rover_2",
+            "failure_mode": null,
+            "elapsed_s": 60.0,
+            "energy_consumed_wh": null,
+            "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+          }
+        ],
+        "verification": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "action_ids": [
+            "lava_action_0048"
+          ],
+          "normalized_plan": [
+            {
+              "primitive": "move_to",
+              "agent_id": "rover_2",
+              "params": {
+                "target": "entry"
+              }
+            }
+          ],
+          "final_state": [
+            "agent_at(rover_1, entry)",
+            "agent_at(rover_2, entry)",
+            "agent_at(sampler_1, entry)",
+            "at_entry(relay_1)",
+            "at_entry(rover_1)",
+            "at_entry(rover_2)",
+            "at_entry(sampler_1)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "available(sampler_1)",
+            "cargo_count(relay_1, 0)",
+            "cargo_count(rover_1, 0)",
+            "cargo_count(rover_2, 0)",
+            "cargo_count(sampler_1, 0)",
+            "has_collector(rover_1)",
+            "has_collector(rover_2)",
+            "has_collector(sampler_1)",
+            "has_volatiles_sensor(rover_1)",
+            "has_volatiles_sensor(rover_2)",
+            "low_visibility",
+            "outage_clock(108)",
+            "position(relay_1, 50.0, 50.0, 5.0)",
+            "position(rover_1, 50.0, 50.0, 0.0)",
+            "position(rover_2, 50.0, 50.0, 0.0)",
+            "position(sampler_1, 50.0, 50.0, 0.0)",
+            "radio_outage(rover_2)",
+            "sample_status(sample_1, field)",
+            "sample_status(sample_2, field)",
+            "sample_status(sample_3, field)",
+            "sample_status(sample_4, field)"
+          ],
+          "solver_version": "5.1.0",
+          "solver_status": "unsat",
+          "solver_encode_check_s": 0.004083896000338427,
+          "verification_s": 0.004520136000792263,
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          }
+        },
+        "final_state": {
+          "semantics_version": "lava_source_execution_v1",
+          "sim_time_s": 660.0,
+          "entry_pos": [
+            50.0,
+            50.0,
+            0.0
+          ],
+          "n_samples": 4,
+          "storage_fixture": {
+            "slots_per_collecting_actor": 4,
+            "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+          },
+          "agents": {
+            "rover_1": {
+              "id": "rover_1",
+              "agent_type": "ROVER",
+              "position": [
+                50.0,
+                50.0,
+                -0.0
+              ],
+              "depth_m": 0.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "agent_at(entry)",
+                "at_entry"
+              ],
+              "cargo": [],
+              "has_volatiles_sensor": true,
+              "has_collector": true,
+              "storage_capacity": 4
+            },
+            "rover_2": {
+              "id": "rover_2",
+              "agent_type": "ROVER",
+              "position": [
+                50.0,
+                50.0,
+                0.0
+              ],
+              "depth_m": -0.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "agent_at(entry)",
+                "at_entry"
+              ],
+              "cargo": [],
+              "has_volatiles_sensor": true,
+              "has_collector": true,
+              "storage_capacity": 4
+            },
+            "sampler_1": {
+              "id": "sampler_1",
+              "agent_type": "SAMPLER",
+              "position": [
+                50.0,
+                50.0,
+                -0.0
+              ],
+              "depth_m": 0.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "agent_at(entry)",
+                "at_entry"
+              ],
+              "cargo": [],
+              "has_volatiles_sensor": false,
+              "has_collector": true,
+              "storage_capacity": 4
+            },
+            "relay_1": {
+              "id": "relay_1",
+              "agent_type": "RELAY",
+              "position": [
+                50.0,
+                50.0,
+                5.0
+              ],
+              "depth_m": -5.0,
+              "energy_wh": 350.0,
+              "initial_energy_wh": 350.0,
+              "facts": [
+                "at_entry"
+              ],
+              "cargo": [],
+              "has_volatiles_sensor": false,
+              "has_collector": false,
+              "storage_capacity": 0
+            }
+          },
+          "samples": {
+            "sample_1": {
+              "depth_m": 9.268728488224802,
+              "status": "field",
+              "location": [
+                50.0,
+                50.0,
+                -9.268728488224802
+              ],
+              "owner": null
+            },
+            "sample_2": {
+              "depth_m": 25.694867473874467,
+              "status": "field",
+              "location": [
+                50.0,
+                50.0,
+                -25.694867473874467
+              ],
+              "owner": null
+            },
+            "sample_3": {
+              "depth_m": 40.52754923795323,
+              "status": "field",
+              "location": [
+                50.0,
+                50.0,
+                -40.52754923795323
+              ],
+              "owner": null
+            },
+            "sample_4": {
+              "depth_m": 49.51013805147884,
+              "status": "field",
+              "location": [
+                50.0,
+                50.0,
+                -49.51013805147884
+              ],
+              "owner": null
+            }
+          },
+          "tipped": [],
+          "disabled_agents": [],
+          "injected_unreachable": [],
+          "injected_comm_offline": [
+            "rover_2"
+          ],
+          "comm_outage_until": {
+            "rover_2": 1200.0
+          },
+          "peer_conflict": [],
+          "low_visibility": true,
+          "mission_infeasible": false,
+          "pending_failures": [],
+          "agent_busy_s": {
+            "rover_1": 0.0,
+            "rover_2": 60.0,
+            "sampler_1": 0.0,
+            "relay_1": 0.0
+          }
+        },
+        "final_facts": [
+          "agent_at(rover_1, entry)",
+          "agent_at(rover_2, entry)",
+          "agent_at(sampler_1, entry)",
+          "at_entry(relay_1)",
+          "at_entry(rover_1)",
+          "at_entry(rover_2)",
+          "at_entry(sampler_1)",
+          "available(relay_1)",
+          "available(rover_1)",
+          "available(rover_2)",
+          "available(sampler_1)",
+          "cargo_count(relay_1, 0)",
+          "cargo_count(rover_1, 0)",
+          "cargo_count(rover_2, 0)",
+          "cargo_count(sampler_1, 0)",
+          "has_collector(rover_1)",
+          "has_collector(rover_2)",
+          "has_collector(sampler_1)",
+          "has_volatiles_sensor(rover_1)",
+          "has_volatiles_sensor(rover_2)",
+          "low_visibility",
+          "outage_clock(108)",
+          "position(relay_1, 50.0, 50.0, 5.0)",
+          "position(rover_1, 50.0, 50.0, 0.0)",
+          "position(rover_2, 50.0, 50.0, 0.0)",
+          "position(sampler_1, 50.0, 50.0, 0.0)",
+          "radio_outage(rover_2)",
+          "sample_status(sample_1, field)",
+          "sample_status(sample_2, field)",
+          "sample_status(sample_3, field)",
+          "sample_status(sample_4, field)"
+        ],
+        "elapsed_s": 60.0,
+        "energy_consumed_wh": null,
+        "wrapper_wall_s": 0.6464866850001272,
+        "actual_radio_delivery_observed": false,
+        "timing_kind": "nominal simulator work time; not hardware latency"
+      }
+    },
+    {
+      "case": "E05_saved_precondition_rejection",
+      "candidate_source": "/home/public-user/paper4_runtime/project/artifacts/orin_parallel_2026_09_08/matched64k/run/s1/c03/ours/E05_lava_communication_return-ours-s1/calls.jsonl request1",
+      "plan": [
+        {
+          "primitive": "move_to",
+          "params": {
+            "target": "entry"
+          },
+          "agent_id": "rover_2"
+        },
+        {
+          "primitive": "sample_collect",
+          "params": {
+            "sample_id": "sample_1"
+          },
+          "agent_id": "rover_2"
+        },
+        {
+          "primitive": "sample_collect",
+          "params": {
+            "sample_id": "sample_2"
+          },
+          "agent_id": "rover_2"
+        },
+        {
+          "primitive": "sample_collect",
+          "params": {
+            "sample_id": "sample_3"
+          },
+          "agent_id": "rover_2"
+        },
+        {
+          "primitive": "sample_collect",
+          "params": {
+            "sample_id": "sample_4"
+          },
+          "agent_id": "rover_2"
+        },
+        {
+          "primitive": "move_to",
+          "params": {
+            "target": "entry"
+          },
+          "agent_id": "rover_2"
+        }
+      ],
+      "samples": [
+        {
+          "ordinal": 0,
+          "diagnosis_s": 4.83859994346858e-05,
+          "selector_s": 0.0001592700000401237,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.0005193480001253192,
+          "core_wall_s": 0.0007812449994162307,
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET"
+        },
+        {
+          "ordinal": 1,
+          "diagnosis_s": 9.473000318394043e-06,
+          "selector_s": 7.062599979690276e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00033972399978665635,
+          "core_wall_s": 0.0004343529999459861,
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET"
+        },
+        {
+          "ordinal": 2,
+          "diagnosis_s": 8.351999895239715e-06,
+          "selector_s": 6.441799996537156e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00032513200039829826,
+          "core_wall_s": 0.0004101590002392186,
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET"
+        },
+        {
+          "ordinal": 3,
+          "diagnosis_s": 7.136000022001099e-06,
+          "selector_s": 6.157100051495945e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.0003202679999958491,
+          "core_wall_s": 0.00040046300000540214,
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET"
+        },
+        {
+          "ordinal": 4,
+          "diagnosis_s": 6.847999429737683e-06,
+          "selector_s": 6.208200011315057e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00031908400069369236,
+          "core_wall_s": 0.0003992789997937507,
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET"
+        },
+        {
+          "ordinal": 5,
+          "diagnosis_s": 6.848000339232385e-06,
+          "selector_s": 6.121800015534973e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00032058699980552774,
+          "core_wall_s": 0.00039889500021672575,
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET"
+        }
+      ],
+      "warm_median_s": {
+        "diagnosis_s": 7.136000022001099e-06,
+        "selector_s": 6.208200011315057e-05,
+        "solver_check_s": null,
+        "encode_check_s": null,
+        "full_common_gate_s": 0.00032058699980552774,
+        "core_wall_s": 0.00040046300000540214
+      },
+      "scope_note": "encode+check includes atom/Boolean/assertion construction and Solver.check; common gate also includes full action grounding/state rollout/goal checks. Core adds rule diagnosis/selector. No numeric resource forecast, model generation, imports, case construction or dispatch is hidden in these labels.",
+      "actual_source_world_execution": {
+        "accepted": false,
+        "reason": "PRECONDITION_UNMET",
+        "step_index": 1,
+        "grounding": {
+          "accepted": null,
+          "checked_through_step": 1,
+          "complete": false,
+          "reason": "PRECONDITION_UNMET"
+        },
+        "symbolic_contract": {
+          "accepted": false,
+          "reason": "PRECONDITION_UNMET",
+          "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+        },
+        "verification_s": 0.0004984500001228298,
+        "dispatch_n": 0,
+        "execution_success": null,
+        "goal_met": null
+      }
+    },
+    {
+      "case": "E05_saved_mapping_rejection",
+      "candidate_source": "/home/public-user/paper4_runtime/project/artifacts/orin_parallel_2026_09_08/matched64k/run/s1/c03/ours/E05_lava_communication_return-ours-s1/calls.jsonl request2",
+      "plan": [
+        {
+          "primitive": "move_to",
+          "params": {
+            "target": "entry"
+          },
+          "agent_id": "rover_2"
+        },
+        {
+          "primitive": "volatiles_reading_published",
+          "params": {
+            "target": "entry"
+          },
+          "agent_id": "rover_2"
+        }
+      ],
+      "samples": [
+        {
+          "ordinal": 0,
+          "diagnosis_s": 4.7649999942223076e-05,
+          "selector_s": 0.0001637819996176404,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.0003439490001255763,
+          "core_wall_s": 0.0006139750003057998,
+          "accepted": false,
+          "reason": "MAPPER_REJECTED"
+        },
+        {
+          "ordinal": 1,
+          "diagnosis_s": 9.08899983187439e-06,
+          "selector_s": 7.251400074892445e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00016230999972322024,
+          "core_wall_s": 0.00025783399996726075,
+          "accepted": false,
+          "reason": "MAPPER_REJECTED"
+        },
+        {
+          "ordinal": 2,
+          "diagnosis_s": 7.936000656627584e-06,
+          "selector_s": 6.480299998656847e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00015344599978561746,
+          "core_wall_s": 0.00023818499994376907,
+          "accepted": false,
+          "reason": "MAPPER_REJECTED"
+        },
+        {
+          "ordinal": 3,
+          "diagnosis_s": 7.58399983169511e-06,
+          "selector_s": 6.349099930957891e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00015245299982780125,
+          "core_wall_s": 0.00023578499985887902,
+          "accepted": false,
+          "reason": "MAPPER_REJECTED"
+        },
+        {
+          "ordinal": 4,
+          "diagnosis_s": 7.07199978933204e-06,
+          "selector_s": 6.211399977473775e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.0001500529997429112,
+          "core_wall_s": 0.00023111199971026508,
+          "accepted": false,
+          "reason": "MAPPER_REJECTED"
+        },
+        {
+          "ordinal": 5,
+          "diagnosis_s": 6.721000318066217e-06,
+          "selector_s": 6.121800015534973e-05,
+          "scope": "T",
+          "solver_check_s": null,
+          "solver_check_calls": 0,
+          "encode_check_s": null,
+          "full_common_gate_s": 0.00015046999942569528,
+          "core_wall_s": 0.0002294490004715044,
+          "accepted": false,
+          "reason": "MAPPER_REJECTED"
+        }
+      ],
+      "warm_median_s": {
+        "diagnosis_s": 7.58399983169511e-06,
+        "selector_s": 6.349099930957891e-05,
+        "solver_check_s": null,
+        "encode_check_s": null,
+        "full_common_gate_s": 0.00015245299982780125,
+        "core_wall_s": 0.00023578499985887902
+      },
+      "scope_note": "encode+check includes atom/Boolean/assertion construction and Solver.check; common gate also includes full action grounding/state rollout/goal checks. Core adds rule diagnosis/selector. No numeric resource forecast, model generation, imports, case construction or dispatch is hidden in these labels.",
+      "actual_source_world_execution": {
+        "accepted": false,
+        "reason": "MAPPER_REJECTED",
+        "step_index": 1,
+        "grounding": {
+          "accepted": false,
+          "checked_through_step": 1,
+          "complete": true,
+          "reason": "MAPPER_REJECTED"
+        },
+        "symbolic_contract": {
+          "accepted": null,
+          "reason": "MAPPER_REJECTED",
+          "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+        },
+        "verification_s": 0.00032298800033458974,
+        "dispatch_n": 0,
+        "execution_success": null,
+        "goal_met": null
+      }
+    },
+    {
+      "case": "B05_author_added_state_offset",
+      "state": {
+        "sim_time_s": 0.0,
+        "agents": {
+          "rover_1": {
+            "position": [
+              23.0,
+              17.0,
+              0.0
+            ],
+            "energy_wh": 400.0,
+            "facts": [],
+            "cargo": []
+          },
+          "rover_2": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "energy_wh": 400.0,
+            "facts": [
+              "at_base"
+            ],
+            "cargo": []
+          },
+          "relay_1": {
+            "position": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "energy_wh": 400.0,
+            "facts": [
+              "at_base"
+            ],
+            "cargo": []
+          }
+        },
+        "samples": {
+          "sample_1": {
+            "location": [
+              20.0,
+              20.0,
+              0.0
+            ],
+            "status": "field"
+          },
+          "sample_2": {
+            "location": [
+              40.0,
+              20.0,
+              0.0
+            ],
+            "status": "field"
+          }
+        },
+        "base_storage": [],
+        "semantics_profile": "psr_location_stored_v1",
+        "collection_tolerance_m": 0.5
+      },
+      "candidate_source": "/home/public-user/paper4_runtime/project/artifacts/orin_parallel_2026_09_08/matched64k/run/s1/c01/ours/B05_psr_strict_disconnected-ours-s1/calls.jsonl",
+      "stale_binding_execution": {
+        "accepted": false,
+        "reason": "INITIAL_STATE_CHANGED",
+        "dispatch_n": 0,
+        "goal_met": null,
+        "offload_audit": {
+          "version": "psr_offload_step_state_v1",
+          "evidence_source": "actual execution only; not original candidate simulation",
+          "offloads": [],
+          "parent_goal_met": false,
+          "missing_positive": [
+            "at_base(rover_1)"
+          ],
+          "forbidden_present": [],
+          "cardinality": []
+        }
+      },
+      "samples": [
+        {
+          "ordinal": 0,
+          "diagnosis_s": 2.9601000278489664e-05,
+          "selector_s": 0.00011664500016195234,
+          "scope": "T",
+          "solver_check_s": 0.00013869299982616212,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0028562019997480093,
+          "full_common_gate_s": 0.003136307999739074,
+          "core_wall_s": 0.0033241239998460514,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 1,
+          "diagnosis_s": 1.9425000573392026e-05,
+          "selector_s": 9.334700007457286e-05,
+          "scope": "T",
+          "solver_check_s": 8.205099948099814e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0019821220002995688,
+          "full_common_gate_s": 0.0022097139999459614,
+          "core_wall_s": 0.0023420390007231617,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 2,
+          "diagnosis_s": 1.2032000086037442e-05,
+          "selector_s": 7.977900077094091e-05,
+          "scope": "T",
+          "solver_check_s": 7.088300026225625e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0018435249994581682,
+          "full_common_gate_s": 0.0020602039994628285,
+          "core_wall_s": 0.0021679210003640037,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 3,
+          "diagnosis_s": 1.068800065695541e-05,
+          "selector_s": 7.485100013582269e-05,
+          "scope": "T",
+          "solver_check_s": 7.21950000297511e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0018449649996910011,
+          "full_common_gate_s": 0.002058701000350993,
+          "core_wall_s": 0.0021592800003418233,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 4,
+          "diagnosis_s": 1.00799998108414e-05,
+          "selector_s": 7.584300055896165e-05,
+          "scope": "T",
+          "solver_check_s": 7.024200021987781e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.00179958699936833,
+          "full_common_gate_s": 0.002009099000133574,
+          "core_wall_s": 0.002109646000462817,
+          "accepted": true,
+          "reason": "VERIFIED"
+        },
+        {
+          "ordinal": 5,
+          "diagnosis_s": 9.473000318394043e-06,
+          "selector_s": 7.293099952221382e-05,
+          "scope": "T",
+          "solver_check_s": 7.469100000889739e-05,
+          "solver_check_calls": 1,
+          "encode_check_s": 0.0018222120006612386,
+          "full_common_gate_s": 0.0020489720000114175,
+          "core_wall_s": 0.002145936000488291,
+          "accepted": true,
+          "reason": "VERIFIED"
+        }
+      ],
+      "warm_median_s": {
+        "diagnosis_s": 1.068800065695541e-05,
+        "selector_s": 7.584300055896165e-05,
+        "solver_check_s": 7.21950000297511e-05,
+        "encode_check_s": 0.0018435249994581682,
+        "full_common_gate_s": 0.002058701000350993,
+        "core_wall_s": 0.0021592800003418233
+      },
+      "scope_note": "encode+check includes atom/Boolean/assertion construction and Solver.check; common gate also includes full action grounding/state rollout/goal checks. Core adds rule diagnosis/selector. No numeric resource forecast, model generation, imports, case construction or dispatch is hidden in these labels.",
+      "actual_source_world_execution": {
+        "accepted": true,
+        "reason": "EXECUTED",
+        "execution_success": true,
+        "goal_met": true,
+        "recovery_required": true,
+        "dispatch_n": 2,
+        "executed_plan": [
+          {
+            "primitive": "move_to",
+            "agent_id": "rover_1",
+            "params": {
+              "target": [
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          {
+            "primitive": "return_to_base",
+            "agent_id": "rover_1",
+            "params": {}
+          }
+        ],
+        "execution_results": [
+          {
+            "success": true,
+            "primitive_name": "move_to",
+            "agent_id": "rover_1",
+            "failure_mode": null,
+            "elapsed_s": 60.0,
+            "energy_consumed_wh": 14.300349646075091,
+            "facts_added": [
+              "at_location"
+            ],
+            "detail": ""
+          },
+          {
+            "success": true,
+            "primitive_name": "return_to_base",
+            "agent_id": "rover_1",
+            "failure_mode": null,
+            "elapsed_s": 90.0,
+            "energy_consumed_wh": 0.0,
+            "facts_added": [
+              "at_base"
+            ],
+            "detail": ""
+          }
+        ],
+        "verification": {
+          "accepted": true,
+          "reason": "VERIFIED",
+          "action_ids": [
+            "psr_action_0002",
+            "psr_action_0015"
+          ],
+          "normalized_plan": [
+            {
+              "primitive": "move_to",
+              "agent_id": "rover_1",
+              "params": {
+                "target": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            {
+              "primitive": "return_to_base",
+              "agent_id": "rover_1",
+              "params": {}
+            }
+          ],
+          "final_state": [
+            "at_base(relay_1)",
+            "at_base(rover_1)",
+            "at_base(rover_2)",
+            "at_target(relay_1, base)",
+            "at_target(rover_1, base)",
+            "at_target(rover_2, base)",
+            "available(relay_1)",
+            "available(rover_1)",
+            "available(rover_2)",
+            "position(relay_1, 0.0, 0.0, 0.0)",
+            "position(rover_1, 0.0, 0.0, 0.0)",
+            "position(rover_2, 0.0, 0.0, 0.0)",
+            "psr_semantics_profile(psr_location_stored_v1)",
+            "sample_status(sample_1, field)",
+            "sample_status(sample_2, field)"
+          ],
+          "solver_version": "5.1.0",
+          "solver_status": "unsat",
+          "solver_encode_check_s": 0.0020681730002252152,
+          "verification_s": 0.0022837010001239832,
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          }
+        },
+        "final_state": {
+          "sim_time_s": 150.0,
+          "agents": {
+            "rover_1": {
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "energy_wh": 385.6996503539249,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": []
+            },
+            "rover_2": {
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "energy_wh": 400.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": []
+            },
+            "relay_1": {
+              "position": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "energy_wh": 400.0,
+              "facts": [
+                "at_base"
+              ],
+              "cargo": []
+            }
+          },
+          "samples": {
+            "sample_1": {
+              "location": [
+                20.0,
+                20.0,
+                0.0
+              ],
+              "status": "field"
+            },
+            "sample_2": {
+              "location": [
+                40.0,
+                20.0,
+                0.0
+              ],
+              "status": "field"
+            }
+          },
+          "base_storage": [],
+          "semantics_profile": "psr_location_stored_v1",
+          "collection_tolerance_m": 0.5
+        },
+        "final_facts": [
+          "at_base(relay_1)",
+          "at_base(rover_1)",
+          "at_base(rover_2)",
+          "at_target(relay_1, base)",
+          "at_target(rover_1, base)",
+          "at_target(rover_2, base)",
+          "available(relay_1)",
+          "available(rover_1)",
+          "available(rover_2)",
+          "position(relay_1, 0.0, 0.0, 0.0)",
+          "position(rover_1, 0.0, 0.0, 0.0)",
+          "position(rover_2, 0.0, 0.0, 0.0)",
+          "psr_semantics_profile(psr_location_stored_v1)",
+          "sample_status(sample_1, field)",
+          "sample_status(sample_2, field)"
+        ],
+        "elapsed_s": 150.0,
+        "energy_consumed_wh": 14.30034964607512,
+        "wrapper_wall_s": 0.006929825000042911,
+        "actual_radio_delivery_observed": false,
+        "timing_kind": "nominal simulator work time; not hardware latency",
+        "offload_audit": {
+          "version": "psr_offload_step_state_v1",
+          "evidence_source": "actual execution only; not original candidate simulation",
+          "offloads": [],
+          "parent_goal_met": true,
+          "missing_positive": [],
+          "forbidden_present": [],
+          "cardinality": []
+        }
+      }
+    }
+  ],
+  "configuration": {
+    "passes_per_workload": 6,
+    "model_calls": 0,
+    "application_deadline_s": null,
+    "repeats": "within-process first pass then warm repeats; only the first workload has a process-first gate call. Repeats are not independent task states.",
+    "execution": "source-world simulation; no physical motors; stored candidates and one declared source witness",
+    "pure_check_missing": "null when malformed/precondition/goal filtering returns before a solver check, not zero-cost proof"
+  },
+  "interpretation": "Absolute deployment timings only. No cross-hardware ratio, guaranteed deadline, general reliability rate or new model-generation claim."
+}

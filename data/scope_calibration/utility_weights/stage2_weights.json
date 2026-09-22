@@ -1,0 +1,4314 @@
+{
+  "schema_version": "wave3_selector_stage2_weights_v2",
+  "stage1_evidence": "artifacts/wave3_p_fix_batch_a/summary.json",
+  "stage2": {
+    "definitions_commit": "4ac8008a",
+    "label_alignment_narrow_check": {
+      "inj_psr_001": {
+        "aligned": true,
+        "expected_cause_level": "P",
+        "physical_effect": "primitive move_to failure hook (wheel stuck)",
+        "physical_failure_level": "P",
+        "source": "paper4_impl/injection/loader.py PSR_INJECTIONS/apply_effect"
+      },
+      "inj_psr_003": {
+        "aligned": true,
+        "expected_cause_level": "T",
+        "physical_effect": "Task target sample_4 made unreachable",
+        "physical_failure_level": "T",
+        "source": "paper4_impl/injection/loader.py PSR_INJECTIONS/apply_effect"
+      },
+      "inj_psr_004": {
+        "aligned": true,
+        "expected_cause_level": "M",
+        "physical_effect": "Mission resource/actor allocation invalidated by critical energy",
+        "physical_failure_level": "M",
+        "source": "paper4_impl/injection/loader.py PSR_INJECTIONS/apply_effect"
+      }
+    },
+    "new_weights": {
+      "cost": 0.01,
+      "mks": 0.05,
+      "risk": 1.0,
+      "tcr": 5.0
+    },
+    "old_weights": {
+      "cost": 0.01,
+      "mks": 0.05,
+      "risk": 1.0,
+      "tcr": 5.0
+    },
+    "p_anchor_robustness_without_full_distribution": {
+      "nonparametric": {
+        "direction_agrees_with_parameterized": true,
+        "model_form_note": "direct Batch-A rates represent zero overscope gain; analytic p_fix can only approximate zero gain as lambda grows",
+        "p_fix_P_given_P": 1.0,
+        "p_fix_T_given_P": 1.0,
+        "tcr_term_difference": 0.0,
+        "u_t_minus_u_p": -0.76
+      },
+      "parameterized": {
+        "ci_entirely_above_reachability_threshold": false,
+        "lambda_ci_95": [
+          1.944,
+          2.711
+        ],
+        "lambda_point_estimate": 2.295,
+        "selected_scope": "P",
+        "u_t_minus_u_p": -0.15133957535475506
+      }
+    },
+    "pareto_frontier": [
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.02,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "risk": 0.5,
+        "subtree_cost_total": 159.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 3,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 9.0,
+        "mks": 0.1,
+        "risk": 0.5,
+        "subtree_cost_total": 70.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "risk": 0.5,
+        "subtree_cost_total": 159.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.1,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 10.0
+      }
+    ],
+    "pareto_frontier_count": 7,
+    "scenarios": [
+      {
+        "agent_type": "CONNECTED_GENERIC",
+        "base_reachable": true,
+        "c_edge": [
+          "P",
+          "T"
+        ],
+        "capability_provenance": "connected_all_scopes_available",
+        "cause_level": "P",
+        "posterior": {
+          "M": 0.05000000000000001,
+          "P": 0.85,
+          "S": 0.05000000000000001,
+          "T": 0.05000000000000001
+        },
+        "scenario_id": "connected_diagonal_P"
+      },
+      {
+        "agent_type": "CONNECTED_GENERIC",
+        "base_reachable": true,
+        "c_edge": [
+          "P",
+          "T"
+        ],
+        "capability_provenance": "connected_all_scopes_available",
+        "cause_level": "T",
+        "posterior": {
+          "M": 0.05000000000000001,
+          "P": 0.05000000000000001,
+          "S": 0.05000000000000001,
+          "T": 0.85
+        },
+        "scenario_id": "connected_diagonal_T"
+      },
+      {
+        "agent_type": "CONNECTED_GENERIC",
+        "base_reachable": true,
+        "c_edge": [
+          "P",
+          "T"
+        ],
+        "capability_provenance": "connected_all_scopes_available",
+        "cause_level": "M",
+        "posterior": {
+          "M": 0.85,
+          "P": 0.05000000000000001,
+          "S": 0.05000000000000001,
+          "T": 0.05000000000000001
+        },
+        "scenario_id": "connected_diagonal_M"
+      },
+      {
+        "agent_type": "CONNECTED_GENERIC",
+        "base_reachable": true,
+        "c_edge": [
+          "P",
+          "T"
+        ],
+        "capability_provenance": "connected_all_scopes_available",
+        "cause_level": "S",
+        "posterior": {
+          "M": 0.05000000000000001,
+          "P": 0.05000000000000001,
+          "S": 0.85,
+          "T": 0.05000000000000001
+        },
+        "scenario_id": "connected_diagonal_S"
+      },
+      {
+        "agent_type": "RELAY",
+        "base_reachable": false,
+        "c_edge": [
+          "P"
+        ],
+        "capability_provenance": "PSR/Lava L1 Contract \u00a7S3 relay_C_edge",
+        "cause_level": "P",
+        "posterior": {
+          "M": 0.05000000000000001,
+          "P": 0.85,
+          "S": 0.05000000000000001,
+          "T": 0.05000000000000001
+        },
+        "scenario_id": "disconnected_relay_P"
+      },
+      {
+        "agent_type": "ROVER",
+        "base_reachable": false,
+        "c_edge": [
+          "P",
+          "T"
+        ],
+        "capability_provenance": "PSR/Lava L1 Contract \u00a7S3 rover_C_edge",
+        "cause_level": "T",
+        "posterior": {
+          "M": 0.05000000000000001,
+          "P": 0.05000000000000001,
+          "S": 0.05000000000000001,
+          "T": 0.85
+        },
+        "scenario_id": "disconnected_rover_T"
+      },
+      {
+        "agent_type": "SAMPLER",
+        "base_reachable": false,
+        "c_edge": [
+          "P",
+          "T",
+          "M"
+        ],
+        "capability_provenance": "LavaTube L1 Contract \u00a7S3 sampler_C_edge",
+        "cause_level": "M",
+        "posterior": {
+          "M": 0.85,
+          "P": 0.05000000000000001,
+          "S": 0.05000000000000001,
+          "T": 0.05000000000000001
+        },
+        "scenario_id": "disconnected_sampler_M"
+      }
+    ],
+    "selected_metrics": {
+      "actual_base_contacts_total": 4,
+      "escalation_free_success_count": 7,
+      "escalation_free_success_rate": 1.0,
+      "llm_cost_total": 15.0,
+      "subtree_cost_total": 159.0
+    },
+    "sensitivity_27": [
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 178.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 0.5,
+        "subtree_cost_total": 178.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.02,
+        "pareto_nondominated": true,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 10.0,
+        "mks": 0.05,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 75.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "pareto_nondominated": true,
+        "risk": 0.5,
+        "subtree_cost_total": 159.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "pareto_nondominated": true,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 10.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 75.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 3,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 9.0,
+        "mks": 0.1,
+        "pareto_nondominated": true,
+        "risk": 0.5,
+        "subtree_cost_total": 70.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 3,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 11.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 1.0,
+        "subtree_cost_total": 89.0,
+        "tcr": 5.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 178.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 0.5,
+        "subtree_cost_total": 178.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 1.0,
+        "subtree_cost_total": 178.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.05,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 178.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "pareto_nondominated": true,
+        "risk": 0.5,
+        "subtree_cost_total": 159.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.05,
+        "pareto_nondominated": true,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 10.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 75.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": false,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 6,
+        "escalation_free_success_rate": 0.8571428571428571,
+        "llm_cost_total": 10.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 0.5,
+        "subtree_cost_total": 75.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 15.0,
+        "mks": 0.1,
+        "pareto_nondominated": true,
+        "risk": 1.0,
+        "subtree_cost_total": 159.0,
+        "tcr": 10.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 22.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 262.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 22.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 0.5,
+        "subtree_cost_total": 262.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 22.0,
+        "mks": 0.02,
+        "pareto_nondominated": false,
+        "risk": 1.0,
+        "subtree_cost_total": 262.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.05,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 178.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.05,
+        "pareto_nondominated": false,
+        "risk": 0.5,
+        "subtree_cost_total": 178.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.05,
+        "pareto_nondominated": false,
+        "risk": 1.0,
+        "subtree_cost_total": 178.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 0.2,
+        "subtree_cost_total": 178.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 0.5,
+        "subtree_cost_total": 178.0,
+        "tcr": 20.0
+      },
+      {
+        "actual_base_contacts_total": 4,
+        "cost": 0.01,
+        "decisions": [
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "connected_diagonal_P",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_T",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "connected_diagonal_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          },
+          {
+            "actual_base_contacts": 1,
+            "agent_type": "CONNECTED_GENERIC",
+            "base_reachable": true,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "S",
+            "escalation_free_success": true,
+            "llm_cost": 6.0,
+            "scenario_id": "connected_diagonal_S",
+            "selected_scope": "S",
+            "subtree_cost": 90.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "RELAY",
+            "base_reachable": false,
+            "c_edge": [
+              "P"
+            ],
+            "cause_level": "P",
+            "escalation_free_success": true,
+            "llm_cost": 0.0,
+            "scenario_id": "disconnected_relay_P",
+            "selected_scope": "P",
+            "subtree_cost": 1.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "ROVER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T"
+            ],
+            "cause_level": "T",
+            "escalation_free_success": true,
+            "llm_cost": 1.0,
+            "scenario_id": "disconnected_rover_T",
+            "selected_scope": "T",
+            "subtree_cost": 6.0
+          },
+          {
+            "actual_base_contacts": 0,
+            "agent_type": "SAMPLER",
+            "base_reachable": false,
+            "c_edge": [
+              "P",
+              "T",
+              "M"
+            ],
+            "cause_level": "M",
+            "escalation_free_success": true,
+            "llm_cost": 3.0,
+            "scenario_id": "disconnected_sampler_M",
+            "selected_scope": "M",
+            "subtree_cost": 25.0
+          }
+        ],
+        "escalation_free_success_count": 7,
+        "escalation_free_success_rate": 1.0,
+        "llm_cost_total": 17.0,
+        "mks": 0.1,
+        "pareto_nondominated": false,
+        "risk": 1.0,
+        "subtree_cost_total": 178.0,
+        "tcr": 20.0
+      }
+    ],
+    "stage1_p_fix": {
+      "lambda_": 2.295,
+      "p_lucky": 0.26
+    },
+    "status": "STAGE2_WEIGHTS_FROZEN",
+    "tie_break_rationale": "Preserve the Stage-1 value policy whenever it remains nondominated; otherwise choose the nearest grid policy. Exact distance ties use declared ascending grid order. This avoids post-result preference among subtree, LLM, and base-contact costs.",
+    "tie_break_rule_id": "pareto_then_min_grid_distance_to_stage1_weights_v1",
+    "weights_changed": false
+  },
+  "stage3": {
+    "groups": [
+      {
+        "injection": "inj_const_001",
+        "n": 2,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "inj_const_003",
+        "n": 1,
+        "rule_recomputed_scope": "M",
+        "scenario": "construction",
+        "stored_scope": "T"
+      },
+      {
+        "injection": "ood_construction_S1_fast_01",
+        "n": 3,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "ood_construction_S1_medium_01",
+        "n": 5,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "ood_construction_S1_slow_01",
+        "n": 8,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "ood_construction_S3_01",
+        "n": 5,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "ood_construction_S4_01",
+        "n": 5,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "ood_construction_S5_01",
+        "n": 5,
+        "rule_recomputed_scope": "T",
+        "scenario": "construction",
+        "stored_scope": "M"
+      },
+      {
+        "injection": "ood_psr_S5_01",
+        "n": 2,
+        "rule_recomputed_scope": "T",
+        "scenario": "psr",
+        "stored_scope": "M"
+      }
+    ],
+    "mismatch_count": 36,
+    "missing_input": "per-trial historical posterior for ambiguous real-LLM diagnosis",
+    "reason": "raw.json stores sigma and unconstrained argmax but not the posterior; expected labels may not be used to synthesize runtime posterior",
+    "status": "BLOCKED_HISTORICAL_DIAGNOSIS_POSTERIOR_MISSING"
+  },
+  "stage_c_authorized": false
+}

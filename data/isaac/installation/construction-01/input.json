@@ -1,0 +1,104 @@
+{
+  "candidate": [
+    {
+      "primitive": "move_to",
+      "agent_id": "rover_1",
+      "params": {
+        "target": [
+          0.599969482421875,
+          0.0,
+          -1.128656029701233
+        ]
+      }
+    }
+  ],
+  "symbolic_verification": {
+    "accepted": true,
+    "reason": "VERIFIED",
+    "action_ids": [
+      "psr_action_0004"
+    ],
+    "normalized_plan": [
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_1",
+        "params": {
+          "target": [
+            0.599969482421875,
+            0.0,
+            -1.128656029701233
+          ]
+        }
+      }
+    ],
+    "final_state": [
+      "at_base(relay_1)",
+      "at_base(rover_2)",
+      "at_location(rover_1)",
+      "at_target(relay_1, base)",
+      "at_target(rover_1, release_waypoint)",
+      "at_target(rover_2, base)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "position(relay_1, 0.0, 0.0, 0.0)",
+      "position(rover_1, 0.599969482421875, 0.0, -1.128656029701233)",
+      "position(rover_2, 0.0, 0.0, 0.0)",
+      "psr_semantics_profile(psr_location_stored_v1)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)"
+    ],
+    "solver_version": "5.1.0",
+    "solver_status": "unsat",
+    "solver_encode_check_s": 0.005881199991563335,
+    "verification_s": 0.031921899993903935,
+    "grounding": {
+      "accepted": true,
+      "checked_through_step": null,
+      "complete": true,
+      "reason": "all steps grounded"
+    },
+    "symbolic_contract": {
+      "accepted": true,
+      "reason": "VERIFIED",
+      "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+    }
+  },
+  "commands": [
+    {
+      "candidate_index": 0,
+      "primitive": "move_to",
+      "actor": "rover_1",
+      "namespace": "husky",
+      "target_xyz": [
+        0.599969482421875,
+        0.0,
+        -1.128656029701233
+      ],
+      "motion_projection": "existing ROS MoveTo target_x/target_y; vertical goal not certified"
+    }
+  ],
+  "supported": true,
+  "reason": "motion_mapping_available",
+  "source_trial": "release_installation_check/construction",
+  "actor_id": "rover_1",
+  "initial_actor_xyz": [
+    -3.0517578125e-05,
+    0.0,
+    -1.128656029701233
+  ],
+  "base_xyz": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "body_frame": "base_link",
+  "release_fixture": {
+    "physical_scene": "construction",
+    "offset_x_m": 0.6,
+    "coordinate_frame": "odom",
+    "scope": "new adapter navigation fixture; release_waypoint is a registered navigation target, not a physical relay/sample/cargo claim; no paper trial reused"
+  },
+  "rgb_pose_max_age_s": 0.5,
+  "rgb_clock_max_wait_wall_s": 2.0
+}

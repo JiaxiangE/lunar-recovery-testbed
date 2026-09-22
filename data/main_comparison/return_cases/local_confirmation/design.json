@@ -1,0 +1,85 @@
+{
+  "version": "literal_goal_translation_v7",
+  "units": [
+    [
+      "B05_psr_strict_disconnected",
+      "llmp",
+      1
+    ],
+    [
+      "B05_psr_strict_disconnected",
+      "llmp",
+      2
+    ],
+    [
+      "E05_lava_communication_return",
+      "llmp",
+      1
+    ],
+    [
+      "E05_lava_communication_return",
+      "llmp",
+      2
+    ],
+    [
+      "long_psr",
+      "D_T",
+      1
+    ],
+    [
+      "long_psr",
+      "flat",
+      1
+    ]
+  ],
+  "services": {
+    "edge": {
+      "role": "edge",
+      "model": "qwen-7b-local",
+      "host": "workstation",
+      "endpoint": "http://127.0.0.1:18000/v1",
+      "weights": "/opt/paper4-runtime/models/edge/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf",
+      "quantization": "Q4_K_M",
+      "backend": "llama.cpp 5266f24da75dc449bd56cbed7addb9c8e4a6a73e; CUDA 13.0; sm_89",
+      "context_tokens": 65536,
+      "output_tokens": 4096,
+      "observed_ready": true,
+      "placement": "workstation_simulated_edge"
+    },
+    "base": {
+      "role": "base",
+      "model": "qwen3.8-27b-diagnostic",
+      "host": "workstation",
+      "endpoint": "http://127.0.0.1:18002/v1",
+      "weights": "/opt/paper4-runtime/models/qwen3.8-27b",
+      "quantization": "BF16",
+      "backend": "vllm 0.21.0; transformers 5.9.0; TP2; NCCL; eager; GPUs0,1",
+      "context_tokens": 131072,
+      "output_tokens": 32768,
+      "observed_ready": true,
+      "placement": "workstation_base"
+    }
+  },
+  "source": "WORK_ORDER_MECHANISM_METRICS_AND_SMALL_FIXES A only",
+  "logical_upper": 6,
+  "physical_upper": 12,
+  "tokens_upper": 1572864,
+  "structure": "4 translations (one per single-policy unit) + 2 single-request long-chain diagnostics",
+  "local_cost": "actual full-template tokenizer, provider usage, wall and native/search/world cost; local is not free",
+  "sampling": {
+    "edge": {
+      "temperature": 0.0
+    },
+    "base": {
+      "temperature": 1.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "presence_penalty": 0.0,
+      "repetition_penalty": 1.0
+    }
+  },
+  "translation_retry": "none; strict original parser; no old response rescoring",
+  "mechanism_comparison": "not enabled; design review pending",
+  "request_timeout_s": 21600
+}

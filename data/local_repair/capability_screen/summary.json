@@ -1,0 +1,1663 @@
+{
+  "study": "task_capability_pruning_v1",
+  "historical_control": {
+    "label": "historical_control",
+    "source_trial": "artifacts/late_candidate_retry_v2/n2/ours/control/trial.json",
+    "status": "executed",
+    "goal": true,
+    "source_calls": "artifacts/late_candidate_retry_v2/n2/ours/control/mechanism_psr_n2_global_v2-ours-s1/calls.jsonl",
+    "new_cost": {
+      "logical_requests": 5,
+      "physical_attempts": 5,
+      "known_tokens_lower_bound": {
+        "prompt_tokens": 50217,
+        "completion_tokens": 16927,
+        "total_tokens": 67144
+      },
+      "unknown_usage_attempts": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "transport_elapsed_s_lower_bound": 766.1410654000065,
+      "transport_elapsed_unknown_n": 0,
+      "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+    },
+    "dispatch_n": 6,
+    "world_s": 250.0,
+    "world_energy_wh": 44.14213562373095,
+    "unit_wall_s": 768.3710767000011,
+    "local_work": {
+      "candidate_rollouts": 1,
+      "prediction_world_steps": 6,
+      "prediction_wall_s": 0.007771600001433399,
+      "standalone_prediction_wall_s": 0.7229789999983041,
+      "local_search_wall_s": 0.0,
+      "proposal_validation_wall_s": 0.03581530000519706,
+      "prediction_calls": 1,
+      "search_calls": 0,
+      "work_counters_complete": true,
+      "resource_wall_s": 0.7587943000035011,
+      "total_wall_s": 768.3810997999972,
+      "native_wall_s": 0.0,
+      "execution_wall_s": 0.007079299997712951,
+      "native_replan_calls": 0
+    },
+    "full_cost": {
+      "logical_requests": 5,
+      "physical_attempts": 5,
+      "known_tokens_lower_bound": {
+        "prompt_tokens": 50217,
+        "completion_tokens": 16927,
+        "total_tokens": 67144
+      },
+      "unknown_usage_attempts": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0
+      },
+      "transport_elapsed_s_lower_bound": 766.1410654000065,
+      "transport_elapsed_unknown_n": 0,
+      "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+    },
+    "full_cost_by_operation": {
+      "diagnosis": {
+        "logical_requests": 1,
+        "physical_attempts": 1,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 2239,
+          "completion_tokens": 473,
+          "total_tokens": 2712
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 22.39021440000215,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "D_S": {
+        "logical_requests": 0,
+        "physical_attempts": 0,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 0,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "D_M": {
+        "logical_requests": 1,
+        "physical_attempts": 1,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 12157,
+          "completion_tokens": 5930,
+          "total_tokens": 18087
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 266.52781069999764,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "D_T": {
+        "logical_requests": 3,
+        "physical_attempts": 3,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 35821,
+          "completion_tokens": 10524,
+          "total_tokens": 46345
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 477.2230403000067,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "flat": {
+        "logical_requests": 0,
+        "physical_attempts": 0,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 0,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      }
+    },
+    "binding": {
+      "version": "repair_process_observation_v1",
+      "candidate_stages": [
+        {
+          "candidate_record": "/attempts/0/native/generated_hierarchy/0",
+          "format": {
+            "accepted": true
+          },
+          "grounding": null,
+          "symbolic_contract": null,
+          "resource_prediction": null,
+          "resource_scope": "resource forecast is recorded for the composed complete candidate"
+        },
+        {
+          "candidate_record": "/attempts/0/native/generated_hierarchy/1",
+          "format": {
+            "accepted": true
+          },
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "resource_prediction": null,
+          "resource_scope": "resource forecast is recorded for the composed complete candidate"
+        },
+        {
+          "candidate_record": "/attempts/0/native/generated_hierarchy/2",
+          "format": {
+            "accepted": true
+          },
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "resource_prediction": null,
+          "resource_scope": "resource forecast is recorded for the composed complete candidate"
+        },
+        {
+          "candidate_record": "/attempts/0/native/generated_hierarchy/3",
+          "format": {
+            "accepted": true
+          },
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "resource_prediction": null,
+          "resource_scope": "resource forecast is recorded for the composed complete candidate"
+        },
+        {
+          "candidate_record": "/attempts/0/native/attempts/0",
+          "format": null,
+          "grounding": {
+            "accepted": false,
+            "checked_through_step": 0,
+            "complete": true,
+            "reason": "MAPPER_REJECTED"
+          },
+          "symbolic_contract": {
+            "accepted": null,
+            "reason": "MAPPER_REJECTED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "resource_prediction": null
+        },
+        {
+          "candidate_record": "/attempts/0/native/attempts/1",
+          "format": null,
+          "grounding": null,
+          "symbolic_contract": null,
+          "resource_prediction": null
+        },
+        {
+          "candidate_record": "/attempts/0/native/attempts/2",
+          "format": null,
+          "grounding": {
+            "accepted": true,
+            "checked_through_step": null,
+            "complete": true,
+            "reason": "all steps grounded"
+          },
+          "symbolic_contract": {
+            "accepted": true,
+            "reason": "VERIFIED",
+            "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+          },
+          "resource_prediction": {
+            "resource_feasible": true,
+            "status": "PREDICTED",
+            "record": "/attempts/0/native/attempts/2/resource_prediction"
+          }
+        }
+      ],
+      "child_or_parent_retries": [],
+      "scope_escalations": [
+        {
+          "from": "P",
+          "to": "T",
+          "previous_attempt_reason": "MAPPER_REJECTED"
+        },
+        {
+          "from": "T",
+          "to": "M",
+          "previous_attempt_reason": "{\"actor\": null, \"current_state\": [\"at_base(relay_1)\", \"at_base(rover_2)\", \"at_location(rover_1)\", \"at_target(relay_1, base)\", \"at_target(rover_1, sample_1)\", \"at_target(rover_2, base)\", \"available(relay_1)\", \"available(rover_1)\", \"available(rover_2)\", \"position(relay_1, 0.0, 0.0, 0.0)\", \"position(rover_1, 20.0, 20.0, 0.0)\", \"position(rover_2, 0.0, 0.0, 0.0)\", \"psr_semantics_profile(psr_location_stored_v1)\", \"sample_status(sample_1, field)\", \"sample_status(sample_2, field)\"], \"entity\": null, \"error_category\": \"MODEL_DECLINED\", \"failed_predicate\": null, \"remaining_obligations\": {\"cardinality\": [], \"negative\": [], \"positive\": [\"stored(sample_1)\"]}}"
+        }
+      ],
+      "resource_search_records": [],
+      "adoption": {
+        "origin": "composed_model",
+        "scope_attempt_index": 2,
+        "candidate_record": "/attempts/0/native/adopted_candidate"
+      },
+      "adopted_matches_execution_validation": true,
+      "adopted_syntax_equals_grounded_plan": false,
+      "actual_is_validated_prefix": true,
+      "observed_mechanisms_nonexclusive": {
+        "model_candidate_used_without_resource_change": true,
+        "hierarchical_retry_occurred": false,
+        "scope_escalation_occurred": true,
+        "adopted_resource_search_changed_candidate": false
+      },
+      "prefix_recomposition_adopted": false,
+      "parent_result": {
+        "parent_goal_met": true,
+        "missing_positive": [],
+        "forbidden_present": [],
+        "cardinality": []
+      },
+      "interpretation": "Process observations can overlap. Module invocation, candidate change and success do not establish causal benefit; CL-023 requires comparison arms."
+    },
+    "pruning": null,
+    "communication": null,
+    "segment_local_work": null,
+    "initial_scope": "P",
+    "final_scope": "M",
+    "diagnosis": [
+      {
+        "mode": "connected_refinement",
+        "failure": {
+          "symptom": "ACTOR_UNAVAILABLE",
+          "agent_id": "rover_1",
+          "node_id": "store_sample_1.p2",
+          "context": {
+            "scenario": "psr",
+            "observed_deviation": {
+              "kind": "author_added_actor_capability_loss",
+              "agent": "rover_1",
+              "symptom": "ACTOR_UNAVAILABLE",
+              "attempt": {
+                "primitive": "sample_collect",
+                "agent_id": "rover_1",
+                "params": {
+                  "sample_id": "sample_1"
+                }
+              },
+              "result": {
+                "success": false,
+                "primitive_name": "sample_collect",
+                "agent_id": "rover_1",
+                "failure_mode": "ACTOR_UNAVAILABLE",
+                "elapsed_s": 0.0,
+                "energy_consumed_wh": 0.0,
+                "facts_added": [],
+                "detail": "primitive absent from observed actor capabilities"
+              },
+              "scope_note": "sample_collect was removed from this actor capability set; the attempted collection failed actor authorization.",
+              "removed_capability": "sample_collect",
+              "observed_capabilities": [
+                "communicate_relay",
+                "communicate_status",
+                "dock_with_base",
+                "energy_check",
+                "move_to",
+                "navigate_to_relay",
+                "return_to_base",
+                "sample_offload",
+                "sample_store",
+                "scan_spectral",
+                "wait_for_relay"
+              ]
+            },
+            "observations": {
+              "pre_deviation_observation": {
+                "sim_time_s": 60.0,
+                "agents": {
+                  "rover_1": {
+                    "position": [
+                      20.0,
+                      20.0,
+                      0.0
+                    ],
+                    "energy_wh": 385.85786437626905,
+                    "facts": [
+                      "at_location"
+                    ],
+                    "cargo": []
+                  },
+                  "rover_2": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "energy_wh": 400.0,
+                    "facts": [
+                      "at_base"
+                    ],
+                    "cargo": []
+                  },
+                  "relay_1": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "energy_wh": 400.0,
+                    "facts": [
+                      "at_base"
+                    ],
+                    "cargo": []
+                  }
+                },
+                "samples": {
+                  "sample_1": {
+                    "location": [
+                      20.0,
+                      20.0,
+                      0.0
+                    ],
+                    "status": "field"
+                  },
+                  "sample_2": {
+                    "location": [
+                      40.0,
+                      20.0,
+                      0.0
+                    ],
+                    "status": "field"
+                  }
+                },
+                "base_storage": [],
+                "semantics_profile": "psr_location_stored_v1",
+                "collection_tolerance_m": 0.5
+              },
+              "post_deviation_observation": {
+                "sim_time_s": 60.0,
+                "agents": {
+                  "rover_1": {
+                    "position": [
+                      20.0,
+                      20.0,
+                      0.0
+                    ],
+                    "energy_wh": 385.85786437626905,
+                    "facts": [
+                      "at_location"
+                    ],
+                    "cargo": []
+                  },
+                  "rover_2": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "energy_wh": 400.0,
+                    "facts": [
+                      "at_base"
+                    ],
+                    "cargo": []
+                  },
+                  "relay_1": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "energy_wh": 400.0,
+                    "facts": [
+                      "at_base"
+                    ],
+                    "cargo": []
+                  }
+                },
+                "samples": {
+                  "sample_1": {
+                    "location": [
+                      20.0,
+                      20.0,
+                      0.0
+                    ],
+                    "status": "field"
+                  },
+                  "sample_2": {
+                    "location": [
+                      40.0,
+                      20.0,
+                      0.0
+                    ],
+                    "status": "field"
+                  }
+                },
+                "base_storage": [],
+                "semantics_profile": "psr_location_stored_v1",
+                "collection_tolerance_m": 0.5
+              },
+              "executed_prefix": [
+                {
+                  "node_id": "store_sample_1.p1",
+                  "step": {
+                    "primitive": "move_to",
+                    "agent_id": "rover_1",
+                    "params": {
+                      "target": "sample_1"
+                    }
+                  },
+                  "result": {
+                    "success": true,
+                    "primitive_name": "move_to",
+                    "agent_id": "rover_1",
+                    "failure_mode": null,
+                    "elapsed_s": 60.0,
+                    "energy_consumed_wh": 14.142135623730951,
+                    "facts_added": [
+                      "at_location"
+                    ],
+                    "detail": ""
+                  }
+                }
+              ],
+              "shared_resource_information": {
+                "scenario": "psr",
+                "numeric_resource_model": "PSRWorld deterministic simulator",
+                "formal_energy_guarantee": false,
+                "source": [
+                  "simulation/energy_model.py",
+                  "paper4_impl/primitives/psr/primitives.py"
+                ],
+                "config": {
+                  "travel_cost_per_m": 0.5,
+                  "slope_factor": 0.02,
+                  "task_base_cost": 5.0,
+                  "low_energy_threshold": 10.0
+                },
+                "travel_rule": "distance_3d * (travel_cost_per_m + abs(target_slope_deg) * slope_factor)",
+                "runtime_failure_rule": "An action fails before effects if actor.energy_wh < action_cost_wh.",
+                "low_energy_threshold_note": "Config threshold is not an extra return obligation in PSRWorld.step.",
+                "actors": {
+                  "relay_1": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "energy_wh": 400.0,
+                    "cargo": [],
+                    "agent_type": "RELAY",
+                    "available": true,
+                    "capabilities": [
+                      "communicate_status",
+                      "energy_check"
+                    ]
+                  },
+                  "rover_1": {
+                    "position": [
+                      20.0,
+                      20.0,
+                      0.0
+                    ],
+                    "energy_wh": 385.85786437626905,
+                    "cargo": [],
+                    "agent_type": "ROVER",
+                    "available": true,
+                    "capabilities": [
+                      "communicate_relay",
+                      "communicate_status",
+                      "dock_with_base",
+                      "energy_check",
+                      "move_to",
+                      "navigate_to_relay",
+                      "return_to_base",
+                      "sample_offload",
+                      "sample_store",
+                      "scan_spectral",
+                      "wait_for_relay"
+                    ]
+                  },
+                  "rover_2": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "energy_wh": 400.0,
+                    "cargo": [],
+                    "agent_type": "ROVER",
+                    "available": true,
+                    "capabilities": [
+                      "communicate_relay",
+                      "communicate_status",
+                      "dock_with_base",
+                      "energy_check",
+                      "move_to",
+                      "navigate_to_relay",
+                      "return_to_base",
+                      "sample_collect",
+                      "sample_offload",
+                      "sample_store",
+                      "scan_spectral",
+                      "wait_for_relay"
+                    ]
+                  }
+                },
+                "samples": {
+                  "sample_1": {
+                    "position": [
+                      20.0,
+                      20.0,
+                      0.0
+                    ],
+                    "status": "field",
+                    "target_slope_deg": 0.0,
+                    "traversable": true,
+                    "unreachable": false
+                  },
+                  "sample_2": {
+                    "position": [
+                      40.0,
+                      20.0,
+                      0.0
+                    ],
+                    "status": "field",
+                    "target_slope_deg": 0.0,
+                    "traversable": true,
+                    "unreachable": false
+                  }
+                },
+                "base": {
+                  "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                  ],
+                  "target_slope_deg": 0.0
+                },
+                "nonmovement_cost_wh": {
+                  "scan_spectral": 5.0,
+                  "sample_collect": 5.0,
+                  "sample_store": 5.0,
+                  "energy_check": 5.0,
+                  "communicate_status": 5.0,
+                  "communicate_relay": 5.0,
+                  "wait_for_relay": 5.0,
+                  "dock_with_base": 5.0,
+                  "sample_offload": 5.0
+                }
+              }
+            },
+            "current_facts": [
+              "at_base(relay_1)",
+              "at_base(rover_2)",
+              "at_location(rover_1)",
+              "at_target(relay_1, base)",
+              "at_target(rover_1, sample_1)",
+              "at_target(rover_2, base)",
+              "available(relay_1)",
+              "available(rover_1)",
+              "available(rover_2)",
+              "position(relay_1, 0.0, 0.0, 0.0)",
+              "position(rover_1, 20.0, 20.0, 0.0)",
+              "position(rover_2, 0.0, 0.0, 0.0)",
+              "psr_semantics_profile(psr_location_stored_v1)",
+              "sample_status(sample_1, field)",
+              "sample_status(sample_2, field)"
+            ]
+          }
+        },
+        "rule_matched": false,
+        "rule_confident": false,
+        "client_injected": true,
+        "llm_requested": true,
+        "fallback_reason": null,
+        "logical_before": 0,
+        "return_type": "str",
+        "diagnosis_source": "llm_smoothed",
+        "parse_ok": true,
+        "posterior": {
+          "P": 0.915,
+          "T": 0.041,
+          "M": 0.022000000000000002,
+          "S": 0.022000000000000002
+        },
+        "logical_after": 1,
+        "interpretation": "cause-level posterior feeds frozen utility selector; not a chosen scope or diagnosis-accuracy score"
+      }
+    ],
+    "generated_actions": {
+      "original_remaining_n": 5,
+      "actual_executed_n": 6,
+      "actual_preserved_action_n": 0,
+      "actual_preserved_outside_fault_n": 0,
+      "removed_or_replaced_outside_fault_n": 3,
+      "unmatched_actual_action_n": 6,
+      "matched_original_actual_indices": [],
+      "fault_original_indices": [
+        0,
+        1
+      ],
+      "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+      "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions",
+      "fault_scope_definition": "original Task containing observed failed primitive; fixed across methods, not selected repair scope"
+    }
+  },
+  "new_units": [
+    {
+      "label": "on",
+      "source_trial": "artifacts/task_capability_pruning_v1/on/trial.json",
+      "status": "executed",
+      "goal": true,
+      "source_calls": "artifacts/task_capability_pruning_v1/on/mechanism_psr_n2_global_v2-ours-s1/calls.jsonl",
+      "new_cost": {
+        "logical_requests": 3,
+        "physical_attempts": 3,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 36135,
+          "completion_tokens": 17540,
+          "total_tokens": 53675
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 800.1035229000117,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "physical transport usage/time including failures; not isolated GPU time or continuous full-path wall; unknown is not zero"
+      },
+      "dispatch_n": 6,
+      "world_s": 250.0,
+      "world_energy_wh": 44.14213562373095,
+      "unit_wall_s": 802.002628000002,
+      "local_work": {
+        "candidate_rollouts": 1,
+        "prediction_world_steps": 6,
+        "prediction_wall_s": 0.006015200007823296,
+        "standalone_prediction_wall_s": 0.5471752000012202,
+        "local_search_wall_s": 0.0,
+        "proposal_validation_wall_s": 0.039685499999905005,
+        "prediction_calls": 1,
+        "search_calls": 0,
+        "work_counters_complete": true,
+        "resource_wall_s": 0.5868607000011252,
+        "total_wall_s": 802.0195966000028,
+        "native_wall_s": 0.0,
+        "execution_wall_s": 0.020566499995766208,
+        "native_replan_calls": 0
+      },
+      "full_cost": {
+        "logical_requests": 4,
+        "physical_attempts": 4,
+        "known_tokens_lower_bound": {
+          "prompt_tokens": 38374,
+          "completion_tokens": 18013,
+          "total_tokens": 56387
+        },
+        "unknown_usage_attempts": {
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0
+        },
+        "transport_elapsed_s_lower_bound": 822.4937373000139,
+        "transport_elapsed_unknown_n": 0,
+        "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+      },
+      "full_cost_by_operation": {
+        "diagnosis": {
+          "logical_requests": 1,
+          "physical_attempts": 1,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 2239,
+            "completion_tokens": 473,
+            "total_tokens": 2712
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 22.39021440000215,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_S": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_M": {
+          "logical_requests": 1,
+          "physical_attempts": 1,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 12157,
+            "completion_tokens": 10781,
+            "total_tokens": 22938
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 489.3128713000042,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "D_T": {
+          "logical_requests": 2,
+          "physical_attempts": 2,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 23978,
+            "completion_tokens": 6759,
+            "total_tokens": 30737
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 310.79065160000755,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        },
+        "flat": {
+          "logical_requests": 0,
+          "physical_attempts": 0,
+          "known_tokens_lower_bound": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "unknown_usage_attempts": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0
+          },
+          "transport_elapsed_s_lower_bound": 0,
+          "transport_elapsed_unknown_n": 0,
+          "accounting": "required method-internal prefix plus new branch work; not a unique experiment bill"
+        }
+      },
+      "binding": {
+        "version": "repair_process_observation_v1",
+        "candidate_stages": [
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/0",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/1",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/generated_hierarchy/2",
+            "format": {
+              "accepted": true
+            },
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null,
+            "resource_scope": "resource forecast is recorded for the composed complete candidate"
+          },
+          {
+            "candidate_record": "/attempts/0/native/attempts/0",
+            "format": null,
+            "grounding": {
+              "accepted": false,
+              "checked_through_step": 0,
+              "complete": true,
+              "reason": "MAPPER_REJECTED"
+            },
+            "symbolic_contract": {
+              "accepted": null,
+              "reason": "MAPPER_REJECTED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": null
+          },
+          {
+            "candidate_record": "/attempts/0/native/attempts/1",
+            "format": null,
+            "grounding": null,
+            "symbolic_contract": null,
+            "resource_prediction": null
+          },
+          {
+            "candidate_record": "/attempts/0/native/attempts/2",
+            "format": null,
+            "grounding": {
+              "accepted": true,
+              "checked_through_step": null,
+              "complete": true,
+              "reason": "all steps grounded"
+            },
+            "symbolic_contract": {
+              "accepted": true,
+              "reason": "VERIFIED",
+              "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+            },
+            "resource_prediction": {
+              "resource_feasible": true,
+              "status": "PREDICTED",
+              "record": "/attempts/0/native/attempts/2/resource_prediction"
+            }
+          }
+        ],
+        "child_or_parent_retries": [],
+        "scope_escalations": [
+          {
+            "from": "P",
+            "to": "T",
+            "previous_attempt_reason": "MAPPER_REJECTED"
+          },
+          {
+            "from": "T",
+            "to": "M",
+            "previous_attempt_reason": "TASK_POSITIVE_GOAL_UNREACHABLE"
+          }
+        ],
+        "resource_search_records": [],
+        "adoption": {
+          "origin": "composed_model",
+          "scope_attempt_index": 2,
+          "candidate_record": "/attempts/0/native/adopted_candidate"
+        },
+        "adopted_matches_execution_validation": true,
+        "adopted_syntax_equals_grounded_plan": false,
+        "actual_is_validated_prefix": true,
+        "observed_mechanisms_nonexclusive": {
+          "model_candidate_used_without_resource_change": true,
+          "hierarchical_retry_occurred": false,
+          "scope_escalation_occurred": true,
+          "adopted_resource_search_changed_candidate": false
+        },
+        "prefix_recomposition_adopted": false,
+        "parent_result": {
+          "parent_goal_met": true,
+          "missing_positive": [],
+          "forbidden_present": [],
+          "cardinality": []
+        },
+        "interpretation": "Process observations can overlap. Module invocation, candidate change and success do not establish causal benefit; CL-023 requires comparison arms."
+      },
+      "pruning": {
+        "version": "task_capability_pruning_v1",
+        "events": [
+          {
+            "node": {
+              "id": "store_sample_1",
+              "layer": "T",
+              "goal_nl": "",
+              "precondition": "",
+              "postcondition": "stored(sample_1)",
+              "context": {
+                "domain_goal": {
+                  "positive": [
+                    "stored(sample_1)"
+                  ],
+                  "negative": [],
+                  "cardinality": []
+                }
+              },
+              "status": "pending",
+              "estimated_duration_s": 0.0,
+              "dependencies": [],
+              "parent_id": "mission_1",
+              "children_ids": [
+                "store_sample_1.p1",
+                "store_sample_1.p2",
+                "store_sample_1.p3"
+              ],
+              "assigned_agent_id": "rover_1",
+              "required_primitives": []
+            },
+            "parent_event_index": null,
+            "start_state": [
+              "at_base(relay_1)",
+              "at_base(rover_2)",
+              "at_location(rover_1)",
+              "at_target(relay_1, base)",
+              "at_target(rover_1, sample_1)",
+              "at_target(rover_2, base)",
+              "available(relay_1)",
+              "available(rover_1)",
+              "available(rover_2)",
+              "position(relay_1, 0.0, 0.0, 0.0)",
+              "position(rover_1, 20.0, 20.0, 0.0)",
+              "position(rover_2, 0.0, 0.0, 0.0)",
+              "psr_semantics_profile(psr_location_stored_v1)",
+              "sample_status(sample_1, field)",
+              "sample_status(sample_2, field)"
+            ],
+            "actor": "rover_1",
+            "pruned": true,
+            "model_calls": 0,
+            "state_kind": "current child planning state, not physical execution",
+            "action_n": 21,
+            "closure": {
+              "reached": [
+                "at_base(relay_1)",
+                "at_base(rover_1)",
+                "at_base(rover_2)",
+                "at_location(rover_1)",
+                "at_relay(rover_1)",
+                "at_target(relay_1, base)",
+                "at_target(rover_1, base)",
+                "at_target(rover_1, relay_1)",
+                "at_target(rover_1, sample_1)",
+                "at_target(rover_1, sample_2)",
+                "at_target(rover_2, base)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "docked(rover_1)",
+                "energy_checked(rover_1)",
+                "position(relay_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 20.0, 20.0, 0.0)",
+                "position(rover_1, 40.0, 20.0, 0.0)",
+                "position(rover_1, 80.0, 80.0, 0.0)",
+                "position(rover_2, 0.0, 0.0, 0.0)",
+                "psr_semantics_profile(psr_location_stored_v1)",
+                "relay_linked(rover_1)",
+                "sample_status(sample_1, field)",
+                "sample_status(sample_2, field)",
+                "scanned(rover_1)",
+                "status_sent(rover_1)"
+              ],
+              "missing_positive": [
+                "stored(sample_1)"
+              ],
+              "rounds": 2,
+              "transition_checks": 42
+            },
+            "reason": "TASK_POSITIVE_GOAL_UNREACHABLE",
+            "cpu_wall_s": 0.004365800006780773
+          },
+          {
+            "node": {
+              "id": "task_rover_2_store_sample_1",
+              "layer": "T",
+              "goal_nl": "Rover 2 completes the sample_1 storage contract so that stored(sample_1) holds.",
+              "precondition": "",
+              "postcondition": "stored(sample_1)",
+              "context": {
+                "domain_goal": {
+                  "positive": [
+                    "stored(sample_1)"
+                  ],
+                  "negative": [],
+                  "cardinality": []
+                }
+              },
+              "status": "pending",
+              "estimated_duration_s": 125.0,
+              "dependencies": [],
+              "parent_id": "mission_1",
+              "children_ids": [],
+              "assigned_agent_id": "rover_2",
+              "required_primitives": []
+            },
+            "parent_event_index": 0,
+            "start_state": [
+              "at_base(relay_1)",
+              "at_base(rover_2)",
+              "at_location(rover_1)",
+              "at_target(relay_1, base)",
+              "at_target(rover_1, sample_1)",
+              "at_target(rover_2, base)",
+              "available(relay_1)",
+              "available(rover_1)",
+              "available(rover_2)",
+              "position(relay_1, 0.0, 0.0, 0.0)",
+              "position(rover_1, 20.0, 20.0, 0.0)",
+              "position(rover_2, 0.0, 0.0, 0.0)",
+              "psr_semantics_profile(psr_location_stored_v1)",
+              "sample_status(sample_1, field)",
+              "sample_status(sample_2, field)"
+            ],
+            "actor": "rover_2",
+            "pruned": false,
+            "model_calls": 0,
+            "state_kind": "current child planning state, not physical execution",
+            "action_n": 23,
+            "closure": {
+              "reached": [
+                "at_base(relay_1)",
+                "at_base(rover_2)",
+                "at_location(rover_1)",
+                "at_location(rover_2)",
+                "at_relay(rover_2)",
+                "at_target(relay_1, base)",
+                "at_target(rover_1, sample_1)",
+                "at_target(rover_2, base)",
+                "at_target(rover_2, relay_1)",
+                "at_target(rover_2, sample_1)",
+                "at_target(rover_2, sample_2)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "cargo(rover_2, sample_1)",
+                "cargo(rover_2, sample_2)",
+                "docked(rover_2)",
+                "energy_checked(rover_2)",
+                "in_base_storage(sample_1)",
+                "in_base_storage(sample_2)",
+                "position(relay_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 20.0, 20.0, 0.0)",
+                "position(rover_2, 0.0, 0.0, 0.0)",
+                "position(rover_2, 20.0, 20.0, 0.0)",
+                "position(rover_2, 40.0, 20.0, 0.0)",
+                "position(rover_2, 80.0, 80.0, 0.0)",
+                "psr_semantics_profile(psr_location_stored_v1)",
+                "relay_linked(rover_2)",
+                "sample_collected(rover_2)",
+                "sample_offloaded(rover_2)",
+                "sample_status(sample_1, field)",
+                "sample_status(sample_1, in_base)",
+                "sample_status(sample_1, in_rover)",
+                "sample_status(sample_1, stored)",
+                "sample_status(sample_2, field)",
+                "sample_status(sample_2, in_base)",
+                "sample_status(sample_2, in_rover)",
+                "sample_status(sample_2, stored)",
+                "sample_stored(rover_2)",
+                "scanned(rover_2)",
+                "status_sent(rover_2)",
+                "stored(sample_1)",
+                "stored(sample_2)"
+              ],
+              "missing_positive": [],
+              "rounds": 2,
+              "transition_checks": 50
+            },
+            "reason": "not_excluded_by_positive_relaxation",
+            "cpu_wall_s": 0.002410100001725368
+          },
+          {
+            "node": {
+              "id": "task_rover_2_store_sample_2",
+              "layer": "T",
+              "goal_nl": "Rover 2 completes the sample_2 storage contract so that stored(sample_2) holds.",
+              "precondition": "",
+              "postcondition": "stored(sample_2)",
+              "context": {
+                "domain_goal": {
+                  "positive": [
+                    "stored(sample_2)"
+                  ],
+                  "negative": [],
+                  "cardinality": []
+                }
+              },
+              "status": "pending",
+              "estimated_duration_s": 125.0,
+              "dependencies": [
+                "task_rover_2_store_sample_1"
+              ],
+              "parent_id": "mission_1",
+              "children_ids": [],
+              "assigned_agent_id": "rover_2",
+              "required_primitives": []
+            },
+            "parent_event_index": 0,
+            "start_state": [
+              "at_base(relay_1)",
+              "at_location(rover_1)",
+              "at_location(rover_2)",
+              "at_target(relay_1, base)",
+              "at_target(rover_1, sample_1)",
+              "at_target(rover_2, sample_1)",
+              "available(relay_1)",
+              "available(rover_1)",
+              "available(rover_2)",
+              "cargo(rover_2, sample_1)",
+              "position(relay_1, 0.0, 0.0, 0.0)",
+              "position(rover_1, 20.0, 20.0, 0.0)",
+              "position(rover_2, 20.0, 20.0, 0.0)",
+              "psr_semantics_profile(psr_location_stored_v1)",
+              "sample_collected(rover_2)",
+              "sample_status(sample_1, stored)",
+              "sample_status(sample_2, field)",
+              "sample_stored(rover_2)",
+              "stored(sample_1)"
+            ],
+            "actor": "rover_2",
+            "pruned": false,
+            "model_calls": 0,
+            "state_kind": "current child planning state, not physical execution",
+            "action_n": 23,
+            "closure": {
+              "reached": [
+                "at_base(relay_1)",
+                "at_base(rover_2)",
+                "at_location(rover_1)",
+                "at_location(rover_2)",
+                "at_relay(rover_2)",
+                "at_target(relay_1, base)",
+                "at_target(rover_1, sample_1)",
+                "at_target(rover_2, base)",
+                "at_target(rover_2, relay_1)",
+                "at_target(rover_2, sample_1)",
+                "at_target(rover_2, sample_2)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "cargo(rover_2, sample_1)",
+                "cargo(rover_2, sample_2)",
+                "docked(rover_2)",
+                "energy_checked(rover_2)",
+                "in_base_storage(sample_1)",
+                "in_base_storage(sample_2)",
+                "position(relay_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 20.0, 20.0, 0.0)",
+                "position(rover_2, 0.0, 0.0, 0.0)",
+                "position(rover_2, 20.0, 20.0, 0.0)",
+                "position(rover_2, 40.0, 20.0, 0.0)",
+                "position(rover_2, 80.0, 80.0, 0.0)",
+                "psr_semantics_profile(psr_location_stored_v1)",
+                "relay_linked(rover_2)",
+                "sample_collected(rover_2)",
+                "sample_offloaded(rover_2)",
+                "sample_status(sample_1, in_base)",
+                "sample_status(sample_1, in_rover)",
+                "sample_status(sample_1, stored)",
+                "sample_status(sample_2, field)",
+                "sample_status(sample_2, in_base)",
+                "sample_status(sample_2, in_rover)",
+                "sample_status(sample_2, stored)",
+                "sample_stored(rover_2)",
+                "scanned(rover_2)",
+                "status_sent(rover_2)",
+                "stored(sample_1)",
+                "stored(sample_2)"
+              ],
+              "missing_positive": [],
+              "rounds": 2,
+              "transition_checks": 50
+            },
+            "reason": "not_excluded_by_positive_relaxation",
+            "cpu_wall_s": 0.0021662999934051186
+          }
+        ],
+        "cpu_wall_s": 0.00894220000191126,
+        "accounting": "subset of proposal_validation_wall_s, not additive; no cache or model response",
+        "guarantee": "only absence of necessary positive facts under optimistic fixed-actor closure; not physical UNSAT or feasibility when reachable"
+      },
+      "communication": null,
+      "segment_local_work": null,
+      "initial_scope": "P",
+      "final_scope": "M",
+      "diagnosis": [
+        {
+          "mode": "connected_refinement",
+          "failure": {
+            "symptom": "ACTOR_UNAVAILABLE",
+            "agent_id": "rover_1",
+            "node_id": "store_sample_1.p2",
+            "context": {
+              "scenario": "psr",
+              "observed_deviation": {
+                "kind": "author_added_actor_capability_loss",
+                "agent": "rover_1",
+                "symptom": "ACTOR_UNAVAILABLE",
+                "attempt": {
+                  "primitive": "sample_collect",
+                  "agent_id": "rover_1",
+                  "params": {
+                    "sample_id": "sample_1"
+                  }
+                },
+                "result": {
+                  "success": false,
+                  "primitive_name": "sample_collect",
+                  "agent_id": "rover_1",
+                  "failure_mode": "ACTOR_UNAVAILABLE",
+                  "elapsed_s": 0.0,
+                  "energy_consumed_wh": 0.0,
+                  "facts_added": [],
+                  "detail": "primitive absent from observed actor capabilities"
+                },
+                "scope_note": "sample_collect was removed from this actor capability set; the attempted collection failed actor authorization.",
+                "removed_capability": "sample_collect",
+                "observed_capabilities": [
+                  "communicate_relay",
+                  "communicate_status",
+                  "dock_with_base",
+                  "energy_check",
+                  "move_to",
+                  "navigate_to_relay",
+                  "return_to_base",
+                  "sample_offload",
+                  "sample_store",
+                  "scan_spectral",
+                  "wait_for_relay"
+                ]
+              },
+              "observations": {
+                "pre_deviation_observation": {
+                  "sim_time_s": 60.0,
+                  "agents": {
+                    "rover_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "energy_wh": 385.85786437626905,
+                      "facts": [
+                        "at_location"
+                      ],
+                      "cargo": []
+                    },
+                    "rover_2": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    },
+                    "relay_1": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    }
+                  },
+                  "samples": {
+                    "sample_1": {
+                      "location": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    },
+                    "sample_2": {
+                      "location": [
+                        40.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    }
+                  },
+                  "base_storage": [],
+                  "semantics_profile": "psr_location_stored_v1",
+                  "collection_tolerance_m": 0.5
+                },
+                "post_deviation_observation": {
+                  "sim_time_s": 60.0,
+                  "agents": {
+                    "rover_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "energy_wh": 385.85786437626905,
+                      "facts": [
+                        "at_location"
+                      ],
+                      "cargo": []
+                    },
+                    "rover_2": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    },
+                    "relay_1": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "facts": [
+                        "at_base"
+                      ],
+                      "cargo": []
+                    }
+                  },
+                  "samples": {
+                    "sample_1": {
+                      "location": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    },
+                    "sample_2": {
+                      "location": [
+                        40.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field"
+                    }
+                  },
+                  "base_storage": [],
+                  "semantics_profile": "psr_location_stored_v1",
+                  "collection_tolerance_m": 0.5
+                },
+                "executed_prefix": [
+                  {
+                    "node_id": "store_sample_1.p1",
+                    "step": {
+                      "primitive": "move_to",
+                      "agent_id": "rover_1",
+                      "params": {
+                        "target": "sample_1"
+                      }
+                    },
+                    "result": {
+                      "success": true,
+                      "primitive_name": "move_to",
+                      "agent_id": "rover_1",
+                      "failure_mode": null,
+                      "elapsed_s": 60.0,
+                      "energy_consumed_wh": 14.142135623730951,
+                      "facts_added": [
+                        "at_location"
+                      ],
+                      "detail": ""
+                    }
+                  }
+                ],
+                "shared_resource_information": {
+                  "scenario": "psr",
+                  "numeric_resource_model": "PSRWorld deterministic simulator",
+                  "formal_energy_guarantee": false,
+                  "source": [
+                    "simulation/energy_model.py",
+                    "paper4_impl/primitives/psr/primitives.py"
+                  ],
+                  "config": {
+                    "travel_cost_per_m": 0.5,
+                    "slope_factor": 0.02,
+                    "task_base_cost": 5.0,
+                    "low_energy_threshold": 10.0
+                  },
+                  "travel_rule": "distance_3d * (travel_cost_per_m + abs(target_slope_deg) * slope_factor)",
+                  "runtime_failure_rule": "An action fails before effects if actor.energy_wh < action_cost_wh.",
+                  "low_energy_threshold_note": "Config threshold is not an extra return obligation in PSRWorld.step.",
+                  "actors": {
+                    "relay_1": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "cargo": [],
+                      "agent_type": "RELAY",
+                      "available": true,
+                      "capabilities": [
+                        "communicate_status",
+                        "energy_check"
+                      ]
+                    },
+                    "rover_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "energy_wh": 385.85786437626905,
+                      "cargo": [],
+                      "agent_type": "ROVER",
+                      "available": true,
+                      "capabilities": [
+                        "communicate_relay",
+                        "communicate_status",
+                        "dock_with_base",
+                        "energy_check",
+                        "move_to",
+                        "navigate_to_relay",
+                        "return_to_base",
+                        "sample_offload",
+                        "sample_store",
+                        "scan_spectral",
+                        "wait_for_relay"
+                      ]
+                    },
+                    "rover_2": {
+                      "position": [
+                        0.0,
+                        0.0,
+                        0.0
+                      ],
+                      "energy_wh": 400.0,
+                      "cargo": [],
+                      "agent_type": "ROVER",
+                      "available": true,
+                      "capabilities": [
+                        "communicate_relay",
+                        "communicate_status",
+                        "dock_with_base",
+                        "energy_check",
+                        "move_to",
+                        "navigate_to_relay",
+                        "return_to_base",
+                        "sample_collect",
+                        "sample_offload",
+                        "sample_store",
+                        "scan_spectral",
+                        "wait_for_relay"
+                      ]
+                    }
+                  },
+                  "samples": {
+                    "sample_1": {
+                      "position": [
+                        20.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field",
+                      "target_slope_deg": 0.0,
+                      "traversable": true,
+                      "unreachable": false
+                    },
+                    "sample_2": {
+                      "position": [
+                        40.0,
+                        20.0,
+                        0.0
+                      ],
+                      "status": "field",
+                      "target_slope_deg": 0.0,
+                      "traversable": true,
+                      "unreachable": false
+                    }
+                  },
+                  "base": {
+                    "position": [
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "target_slope_deg": 0.0
+                  },
+                  "nonmovement_cost_wh": {
+                    "scan_spectral": 5.0,
+                    "sample_collect": 5.0,
+                    "sample_store": 5.0,
+                    "energy_check": 5.0,
+                    "communicate_status": 5.0,
+                    "communicate_relay": 5.0,
+                    "wait_for_relay": 5.0,
+                    "dock_with_base": 5.0,
+                    "sample_offload": 5.0
+                  }
+                }
+              },
+              "current_facts": [
+                "at_base(relay_1)",
+                "at_base(rover_2)",
+                "at_location(rover_1)",
+                "at_target(relay_1, base)",
+                "at_target(rover_1, sample_1)",
+                "at_target(rover_2, base)",
+                "available(relay_1)",
+                "available(rover_1)",
+                "available(rover_2)",
+                "position(relay_1, 0.0, 0.0, 0.0)",
+                "position(rover_1, 20.0, 20.0, 0.0)",
+                "position(rover_2, 0.0, 0.0, 0.0)",
+                "psr_semantics_profile(psr_location_stored_v1)",
+                "sample_status(sample_1, field)",
+                "sample_status(sample_2, field)"
+              ]
+            }
+          },
+          "rule_matched": false,
+          "rule_confident": false,
+          "client_injected": true,
+          "llm_requested": true,
+          "fallback_reason": null,
+          "logical_before": 0,
+          "return_type": "str",
+          "diagnosis_source": "llm_smoothed",
+          "parse_ok": true,
+          "posterior": {
+            "P": 0.915,
+            "T": 0.041,
+            "M": 0.022000000000000002,
+            "S": 0.022000000000000002
+          },
+          "logical_after": 1,
+          "interpretation": "cause-level posterior feeds frozen utility selector; not a chosen scope or diagnosis-accuracy score"
+        }
+      ],
+      "generated_actions": {
+        "original_remaining_n": 5,
+        "actual_executed_n": 6,
+        "actual_preserved_action_n": 0,
+        "actual_preserved_outside_fault_n": 0,
+        "removed_or_replaced_outside_fault_n": 3,
+        "unmatched_actual_action_n": 6,
+        "matched_original_actual_indices": [],
+        "fault_original_indices": [
+          0,
+          1
+        ],
+        "alignment": "ordered exact executable-content matching, IDs ignored; unmatched insertions have no unique source scope",
+        "interpretation": "observed preservation/change, not counterfactual savings; no execution means zero physically preserved actions",
+        "fault_scope_definition": "original Task containing observed failed primitive; fixed across methods, not selected repair scope"
+      },
+      "saved_control_comparable": true,
+      "delta_vs_saved_control_tokens": -10757
+    }
+  ],
+  "scope": "fixed saved diagnosis if matched; full path includes original diagnosis cost, not regenerated"
+}

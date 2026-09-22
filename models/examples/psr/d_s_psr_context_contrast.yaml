@@ -1,0 +1,24 @@
+scenario: PSR
+type: context_contrast
+source: synthetic_contrast_pair   # CC-authored on PI delegation (P0-8); teaches CSI
+scene_goal: "collect 5 ice samples from the PSR area and return them to base"
+context_A:
+  agents: [rover_1, rover_2, relay_1]   # two rovers available
+  note: "ample mobility + relay"
+expected_output_A:
+  missions:
+    - {id: mission_1_cover_region, required_agent_types: [ROVER, RELAY]}
+    - {id: mission_2_collect_samples, note: "5 samples split across rover_1 + rover_2 in parallel"}
+    - {id: mission_3_return_to_base}
+  mission_count: 3
+context_B:
+  agents: [rover_1, relay_1]            # ONE rover only
+  note: "single rover; 25-min battery cannot cover 5 samples + return in one charge"
+expected_output_B:
+  missions:
+    - {id: mission_1_cover_region, required_agent_types: [ROVER, RELAY]}
+    - {id: mission_2_collect_first_batch, note: "collect samples 1-3 (battery-bounded)"}
+    - {id: mission_3_recharge, note: "return to base, dock, recharge — REQUIRED for single rover"}
+    - {id: mission_4_collect_and_return_rest, note: "collect samples 4-5 then return all"}
+  mission_count: 4
+rationale: "Same Scene goal, different agent availability -> different decomposition: with one rover the base model MUST insert an explicit recharge Mission (battery cannot cover 5 samples in one sortie). Demonstrates context-dependent decomposition (the CSI property)."

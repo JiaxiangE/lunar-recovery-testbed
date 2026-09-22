@@ -1,0 +1,229 @@
+{
+  "parameters": {
+    "weights": {
+      "tcr": 5.0,
+      "mks": 0.05,
+      "cost": 0.01,
+      "risk": 1.0
+    },
+    "p_fix": {
+      "lambda_": 2.295,
+      "p_lucky": 0.26
+    },
+    "undershoot_mult": 2.0,
+    "subtree_size": {
+      "P": 1.0,
+      "T": 6.0,
+      "M": 25.0,
+      "S": 90.0
+    },
+    "llm_cost": {
+      "P": 0.0,
+      "T": 1.0,
+      "M": 3.0,
+      "S": 6.0
+    }
+  },
+  "actor_capabilities": {
+    "psr": {
+      "ROVER": [
+        "P",
+        "T"
+      ],
+      "RELAY": [
+        "P"
+      ]
+    },
+    "lava": {
+      "ROVER": [
+        "P",
+        "T"
+      ],
+      "SAMPLER": [
+        "M",
+        "P",
+        "T"
+      ],
+      "RELAY": [
+        "P"
+      ]
+    },
+    "construction": {
+      "TRANSPORT": [
+        "P",
+        "T"
+      ],
+      "MANIPULATOR": [
+        "P",
+        "T"
+      ],
+      "ASSEMBLER": [
+        "M",
+        "P",
+        "T"
+      ]
+    }
+  },
+  "source_record_revisions": {
+    "artifacts/base27_scene_alignment/base27/s1/c01/ours/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c01/flat/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c02/ours/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c02/flat/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c03/ours/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c03/flat/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c04/ours/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c04/flat/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c05/ours/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c05/flat/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c06/ours/trial.json": "2bb959686163a345611dcb404b920c7967125c7a",
+    "artifacts/base27_scene_alignment/base27/s1/c06/flat/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c01/ours/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c01/flat/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c02/ours/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c02/flat/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c03/ours/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c03/flat/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c04/ours/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c04/flat/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c05/ours/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/base27/s2/c05/flat/trial.json": "654e429a4ddacb53f16754a848e39810b96a075f",
+    "artifacts/base27_scene_alignment/recovery_2026_09_09_b/base27/s2/c06/ours/trial.json": "80f8b0cc98bedee188e02945559aa0fbdc383244",
+    "artifacts/base27_scene_alignment/recovery_2026_09_09_b/base27/s2/c06/flat/trial.json": "80f8b0cc98bedee188e02945559aa0fbdc383244",
+    "artifacts/diagnosis_scope_alignment_v2/offline_v2/trial.json": "1aeb043467754eb6e872a98206c22059ad890fc7",
+    "artifacts/diagnosis_scope_alignment_v2/connected_refinement/trial.json": "1aeb043467754eb6e872a98206c22059ad890fc7",
+    "artifacts/candidate_error_retry_v1/ours/control/trial.json": "add8dfdf682d648ece6b4004e8b833b7452083bf",
+    "artifacts/candidate_error_retry_v1/ours/stimulus/trial.json": "add8dfdf682d648ece6b4004e8b833b7452083bf",
+    "artifacts/late_candidate_retry_v2/n2/ours/control/trial.json": "bc17cd784bd9cba9a72ed868a4a1c3eb549ddb22",
+    "artifacts/task_capability_pruning_v1/on/trial.json": "82da3075906db2284ea3776d3eb376b4976226ad",
+    "artifacts/late_candidate_retry_v3/ours/control/trial.json": "82da3075906db2284ea3776d3eb376b4976226ad",
+    "artifacts/late_candidate_retry_v3/ours/stimulus/trial.json": "82da3075906db2284ea3776d3eb376b4976226ad",
+    "artifacts/feedback_state_clarity_v1/ours/stimulus/trial.json": "cd89f7c014bc53f4252a1b54f7dda55029b4d41f",
+    "artifacts/feedback_state_clarity_v1/flat/stimulus/trial.json": "cd89f7c014bc53f4252a1b54f7dda55029b4d41f",
+    "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_full/trial.json": "8a13e24e6b899831bf33461f8d8c9b4938023bdf",
+    "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/ours_view/trial.json": "8a13e24e6b899831bf33461f8d8c9b4938023bdf",
+    "artifacts/edge_repair_view_applicability_v1/R_T_psr_collection_position_drift/flat_full/trial.json": "8a13e24e6b899831bf33461f8d8c9b4938023bdf",
+    "artifacts/communication_closure_v1/degraded_smoke/trial.json": "82da3075906db2284ea3776d3eb376b4976226ad",
+    "artifacts/communication_closure_v1/reconnect_control/trial.json": "82da3075906db2284ea3776d3eb376b4976226ad",
+    "artifacts/communication_closure_v1/reconnect_event/trial.json": "82da3075906db2284ea3776d3eb376b4976226ad"
+  },
+  "implementation_comparisons": {
+    "2bb959686163a345611dcb404b920c7967125c7a": {
+      "matched": true,
+      "artifact_introduction_commit": "2bb959686163a345611dcb404b920c7967125c7a",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "654e429a4ddacb53f16754a848e39810b96a075f": {
+      "matched": true,
+      "artifact_introduction_commit": "654e429a4ddacb53f16754a848e39810b96a075f",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "80f8b0cc98bedee188e02945559aa0fbdc383244": {
+      "matched": true,
+      "artifact_introduction_commit": "80f8b0cc98bedee188e02945559aa0fbdc383244",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "1aeb043467754eb6e872a98206c22059ad890fc7": {
+      "matched": true,
+      "artifact_introduction_commit": "1aeb043467754eb6e872a98206c22059ad890fc7",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "add8dfdf682d648ece6b4004e8b833b7452083bf": {
+      "matched": true,
+      "artifact_introduction_commit": "add8dfdf682d648ece6b4004e8b833b7452083bf",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "bc17cd784bd9cba9a72ed868a4a1c3eb549ddb22": {
+      "matched": true,
+      "artifact_introduction_commit": "bc17cd784bd9cba9a72ed868a4a1c3eb549ddb22",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "82da3075906db2284ea3776d3eb376b4976226ad": {
+      "matched": true,
+      "artifact_introduction_commit": "82da3075906db2284ea3776d3eb376b4976226ad",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "cd89f7c014bc53f4252a1b54f7dda55029b4d41f": {
+      "matched": true,
+      "artifact_introduction_commit": "cd89f7c014bc53f4252a1b54f7dda55029b4d41f",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    },
+    "8a13e24e6b899831bf33461f8d8c9b4938023bdf": {
+      "matched": true,
+      "artifact_introduction_commit": "8a13e24e6b899831bf33461f8d8c9b4938023bdf",
+      "selector_parameter_modules_equal_baseline": {
+        "paper4_impl/scope_selector.py": true,
+        "paper4_impl/calibration/selector_config_v2.py": true
+      },
+      "ctx_literal_and_call_matched": true,
+      "selection_block_matched": true,
+      "operation_caller_matched": true,
+      "frozen_accessors_matched": true,
+      "provenance_limit": "archived repository snapshot associated with first inclusion of this artifact, not a native runtime attestation; recomputation is explicitly conditional on that archived implementation"
+    }
+  },
+  "provenance": "Parameters and capability tables extracted from archived implementations; saved decision inputs are read and recomputed at runtime."
+}

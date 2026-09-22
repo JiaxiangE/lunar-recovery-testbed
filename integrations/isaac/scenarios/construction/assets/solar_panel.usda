@@ -1,0 +1,43 @@
+#usda 1.0
+(
+    defaultPrim = "solar_panel"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+# Simple solar panel (design 8.2): a tilted dark-blue panel on a short post. Placed via
+# static_assets; orientation [0,0,0,1] (static_assets quats are x,y,z,w).
+def Xform "solar_panel"
+{
+    def Cylinder "post"
+    {
+        double radius = 0.08
+        double height = 1.0
+        uniform token axis = "Z"
+        double3 xformOp:translate = (0, 0, 0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+        color3f[] primvars:displayColor = [(0.5, 0.5, 0.52)]
+    }
+    def Cube "panel"
+    {
+        double size = 1.0
+        float3 xformOp:scale = (2.4, 0.06, 1.4)
+        quatf xformOp:orient = (0.966, 0.259, 0, 0)
+        double3 xformOp:translate = (0, 0, 1.1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        color3f[] primvars:displayColor = [(0.10, 0.14, 0.32)]
+        rel material:binding = </solar_panel/PV>
+    }
+    def Material "PV"
+    {
+        token outputs:surface.connect = </solar_panel/PV/Shader.outputs:surface>
+        def Shader "Shader"
+        {
+            uniform token info:id = "UsdPreviewSurface"
+            color3f inputs:diffuseColor = (0.10, 0.14, 0.32)
+            float inputs:metallic = 0.3
+            float inputs:roughness = 0.25
+            token outputs:surface
+        }
+    }
+}

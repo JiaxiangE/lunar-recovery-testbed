@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lunar-recovery-testbed"
+version = "0.5.0"
+description = "Lunar task worlds, scoped recovery, verified execution and paper reproduction"
+readme = "README.md"
+requires-python = ">=3.12,!=3.14.1"
+license = "MIT"
+authors = [{name = "JiaxiangE", email = "jiaxiang.e@mail.mcgill.ca"}]
+dependencies = ["z3-solver==5.1.0.0", "pydantic==2.13.5", "numpy==2.5.2", "PyYAML==6.0.3", "openai==3.8.0", "py_trees==2.4.0", "networkx==3.6.1"]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+isaac-preparation = ["usd-core==26.8"]
+
+[project.urls]
+Repository = "https://github.com/JiaxiangE/lunar-recovery-testbed"
+
+[project.scripts]
+lunar-recover = "examples.recover:main"
+lunar-generate = "examples.local_model:main"
+lunar-reproduce = "reproduction.__main__:main"
+lunar-isaac = "integrations.isaac.release_environment:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["controller*", "planning*", "validation*", "domains*", "models*", "execution*", "baselines*", "integrations*", "examples*", "reproduction*", "data*", "configs*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.jsonl", "*.yaml", "*.yml", "*.txt", "*.md", "*.gz", "*.log", "*.png", "*.usda", "*.action", "*.xml", "*.patch", "*.kit", "*.sh", "Dockerfile", "LICENSE", "OMNILRS_LICENSE", "CMakeLists.txt", "**/*.json", "**/*.jsonl", "**/*.yaml", "**/*.txt", "**/*.md", "**/*.gz", "**/*.log", "**/*.png", "**/*.usda", "**/*.action", "**/*.xml", "**/*.patch", "**/*.kit", "**/*.sh", "**/Dockerfile", "**/LICENSE", "**/CMakeLists.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

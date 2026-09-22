@@ -1,0 +1,19 @@
+scenario: PSR
+type: negative
+source: synthetic_contract2_violation   # CC-authored on PI delegation (P0-8)
+context:
+  agents: [rover_1, rover_2, relay_1]
+  scene_goal: "collect 5 ice samples from the PSR area and return them to base"
+  initial_state: "at_base(rover_1) & at_base(rover_2) & at_base(relay_1)"
+attempted_output:
+  missions:
+    - id: mission_1_collect_all
+      goal_nl: "collect all 5 samples"
+      precondition: "at_sample_sites(rover_1) & at_sample_sites(rover_2)"
+      postcondition: "stored(sample_1) & stored(sample_2) & stored(sample_3) & stored(sample_4) & stored(sample_5)"
+    - id: mission_2_return
+      goal_nl: "return samples to base"
+      precondition: "stored(sample_1)"
+      postcondition: "in_base_storage(sample_1)"
+rationale: "Missing a deployment Mission: the rovers start at base, not at the sample sites."
+validator_feedback: "Contract 2 violation: mission_1_collect_all.precondition 'at_sample_sites(rover_1)' is NOT implied by the initial state 'at_base(rover_1)'. Insert a cover/deploy Mission first so the collect Mission's precondition is established. Also mission_2 only returns sample_1 — its postcondition does not entail the Scene goal for samples 2-5 (Contract 1 violation)."

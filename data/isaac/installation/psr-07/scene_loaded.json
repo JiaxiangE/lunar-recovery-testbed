@@ -1,0 +1,173 @@
+{
+  "robot_xyz": [
+    100.0,
+    25.0,
+    22.8
+  ],
+  "camera_xyz": [
+    105.0,
+    19.0,
+    27.8
+  ],
+  "kit_build": "107.3.1+production.206797.8131b85d.gl",
+  "SDK_python": "3.11.13 (tags/v3.11.13-dirty:498b971, Jun  9 2025, 16:37:36) [GCC 7.3.1 20180303 (Red Hat 7.3.1-5)]",
+  "preview_resolution": [
+    256,
+    144
+  ],
+  "RGB_stamp_source": "latest independently received ROS /clock; no World.current_time epoch assumption",
+  "materials": [
+    {
+      "prim": "/Lunaryard/Earth/Looks/OmniPBR/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Lunaryard/Looks/Basalt/Shader",
+      "source": "assets/Textures/GravelStones.mdl",
+      "resolved": "assets/Textures/GravelStones.mdl"
+    },
+    {
+      "prim": "/Lunaryard/Looks/Sand/Shader",
+      "source": "assets/Textures/Sand.mdl",
+      "resolved": "assets/Textures/Sand.mdl"
+    },
+    {
+      "prim": "/Lunaryard/Looks/LunarRegolith8k/Shader",
+      "source": "assets/Textures/LunarRegolith8k.mdl",
+      "resolved": "assets/Textures/LunarRegolith8k.mdl"
+    },
+    {
+      "prim": "/StaticAssets/base_lander/Looks/OmniGlass/Shader",
+      "source": "OmniGlass.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniGlass.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_0/Looks/Rock/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_1/Looks/Rock/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_2/Looks/OmniPBR/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_3/Looks/Rock/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_4/Looks/Rock/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_5/Looks/Rock/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_6/Looks/OmniPBR/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/StaticAssets/boulder_7/Looks/Rock/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_Black/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_Blue/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_DarkGrey/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_Green/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_Grey/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_Red/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_White/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/Looks/material_Yellow/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/base_link/vlp16/velodyne_vlp16/Looks/Diffuse/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    },
+    {
+      "prim": "/Robots/husky/d455/RSD455/Looks/OmniGlass/Shader",
+      "source": "OmniGlass.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniGlass.mdl"
+    },
+    {
+      "prim": "/Robots/husky/d455/RSD455/Looks/Aluminum_Anodized/Shader",
+      "source": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized.mdl",
+      "resolved": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Anodized.mdl"
+    },
+    {
+      "prim": "/Robots/husky/d455/RSD455/Looks/Aluminum_Cast/Shader",
+      "source": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast.mdl",
+      "resolved": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Metals/Aluminum_Cast.mdl"
+    },
+    {
+      "prim": "/Robots/husky/d455/RSD455/Looks/Plastic_ABS/Shader",
+      "source": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_ABS.mdl",
+      "resolved": "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Materials/Base/Plastics/Plastic_ABS.mdl"
+    },
+    {
+      "prim": "/Robots/husky/d455/RSD455/Looks/OmniPBR/Shader",
+      "source": "OmniPBR.mdl",
+      "resolved": "/isaac-sim/kit/mdl/core/Base/OmniPBR.mdl"
+    }
+  ],
+  "used_layers": [
+    "/workspace/omnilrs/assets/USD_Assets/robots/ros2_husky_PhysX_vlp16.usd",
+    "/workspace/omnilrs/assets/USD_Assets/rocks/lunalab_rocks/rock_1/rock1.usd",
+    "/workspace/omnilrs/assets/USD_Assets/rocks/lunalab_rocks/rock_2/rock2.usd",
+    "/workspace/omnilrs/assets/USD_Assets/rocks/lunalab_rocks/rock_4/rock4.usd",
+    "assets/USD_Assets/common/Earth.usd",
+    "/workspace/omnilrs/assets/USD_Assets/robots/velodyne-vlp16.usd",
+    "/workspace/omnilrs/assets/USD_Assets/common/rsd455.usd",
+    "/workspace/omnilrs/assets/USD_Assets/common/lander/Vikram/Vikram.usd",
+    "/workspace/omnilrs/assets/USD_Assets/rocks/lunalab_rocks/rock_3/rock3.usd",
+    "/workspace/omnilrs/assets/USD_Assets/psr/ice_deposit.usda",
+    "/workspace/omnilrs/assets/USD_Assets/psr/relay_station.usda",
+    "",
+    "",
+    "/workspace/omnilrs/assets/USD_Assets/robots/vlp16.usd"
+  ],
+  "scope": "live Isaac stage/resolver inspection, no LLM or mission-effect claim"
+}

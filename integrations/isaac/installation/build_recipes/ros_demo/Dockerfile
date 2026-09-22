@@ -1,0 +1,72 @@
+FROM osrf/ros:humble-desktop
+ENV ROS_DISTRO=humble
+
+# Install dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        software-properties-common \
+        git \
+        build-essential \
+        cmake \
+        byobu \
+        vim \
+        wget \
+        unzip \
+        libeigen3-dev \
+        libspdlog-dev \
+        libsuitesparse-dev \
+        qtdeclarative5-dev \
+        qt5-qmake \
+        libqglviewer-dev-qt5 \
+        libopencv-dev \
+        libpcl-dev \
+        libpcl-conversions-dev \
+        libomp-dev \
+        python3-colcon-common-extensions \
+        python3-rosdep \
+        python3-pip \
+        ros-$ROS_DISTRO-rqt-tf-tree \
+        ros-$ROS_DISTRO-joy-linux \
+        ros-$ROS_DISTRO-image-geometry && \
+    rm -rf /var/lib/apt/lists/* && \
+    apt-get clean
+
+# Check if rosdep needs to be initialized
+RUN if [ ! -f "/etc/ros/rosdep/sources.list.d/20-default.list" ]; then \
+        rosdep init; \
+    fi \
+    && rosdep update
+
+RUN apt-get update && apt-get install -y ros-$ROS_DISTRO-pcl-*
+
+# Install nav2 and slamtoolbox
+RUN apt-get update && apt-get install -y \
+ros-${ROS_DISTRO}-navigation2 \
+ros-${ROS_DISTRO}-nav2-bringup \
+ros-${ROS_DISTRO}-slam-toolbox \
+ros-${ROS_DISTRO}-spatio-temporal-voxel-layer \
+ros-${ROS_DISTRO}-ackermann-msgs
+
+# Install foxglove bridge
+RUN apt install -y ros-$ROS_DISTRO-foxglove-bridge
+
+# Install octomap
+# RUN apt-get install -y ros-${ROS_DISTRO}-octomap-mapping
+
+COPY requirements.txt /tmp/
+RUN pip3 install --no-cache-dir --upgrade pip \
+  && pip3 install --no-cache-dir -r /tmp/requirements.txt
+
+
+WORKDIR /ros2_ws
+RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /root/.bashrc
+## For convenience:
+RUN echo "alias kk='clear'" >> /root/.bashrc
+RUN echo "alias tt='tmux new'" >> /root/.bashrc
+RUN echo "alias roskb='ros2 run teleop_twist_keyboard teleop_twist_keyboard'" >> /root/.bashrc
+# Save the bash history immediately on each execution
+RUN echo "export PROMPT_COMMAND='history -a' " >> "/root/.bashrc"
+RUN echo "export HISTFILE=/commandhistory/.bash_history" >> "/root/.bashrc"
+
+ENTRYPOINT ["/ros_entrypoint.sh"]
+CMD ["bash"]

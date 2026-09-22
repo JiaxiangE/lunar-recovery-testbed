@@ -1,0 +1,19 @@
+{
+  "layer": "L1",
+  "source_actual_request": "artifacts/cross_actor_state_no_feedback_v1/calls.jsonl",
+  "key_source": "artifacts/cross_actor_state_plan_basis_v1/private_answer_key.json",
+  "logical_upper": 1,
+  "physical_upper": 1,
+  "tokens_upper": 65536,
+  "transport_retries": 0,
+  "same": "full original public context/source plan, Task-parent,actor,state,domain,effects,resource/schema;7B GPU0 64K/4096 YaRN greedy seed1",
+  "stop": "strict gate accepted plus actual execution completes current Task; parent separate; no third layer or redraw",
+  "initial_support": null,
+  "local_input_computation": {
+    "model_calls": 0,
+    "world_steps": 0,
+    "rollouts": 0,
+    "state_transition_computations": 0
+  },
+  "second_layer_feasibility": "A selected if needed: current client sends static response_format; no implemented action-prefix state callback. B would require new decoder/sampler hooks or additional calls, outside this small adapter. No claim of full-chain dynamic constraints."
+}

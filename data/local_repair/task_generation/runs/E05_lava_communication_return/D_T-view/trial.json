@@ -1,0 +1,1265 @@
+{
+  "version": "grounded_tuple_decoding_v1",
+  "cell": "E05_lava_communication_return",
+  "arm": "D_T-view",
+  "seed": 1,
+  "task_problem": {
+    "goal": {
+      "positive": [
+        "at_entry(rover_2)"
+      ],
+      "negative": [],
+      "cardinality": []
+    },
+    "initial_facts": [
+      "agent_at(rover_1, entry)",
+      "agent_at(sampler_1, entry)",
+      "at_entry(relay_1)",
+      "at_entry(rover_1)",
+      "at_entry(sampler_1)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "available(sampler_1)",
+      "cargo_count(relay_1, 0)",
+      "cargo_count(rover_1, 0)",
+      "cargo_count(rover_2, 0)",
+      "cargo_count(sampler_1, 0)",
+      "has_collector(rover_1)",
+      "has_collector(rover_2)",
+      "has_collector(sampler_1)",
+      "has_volatiles_sensor(rover_1)",
+      "has_volatiles_sensor(rover_2)",
+      "low_visibility",
+      "outage_clock(120)",
+      "position(relay_1, 50.0, 50.0, 5.0)",
+      "position(rover_1, 50.0, 50.0, 0.0)",
+      "position(rover_2, 50.0, 50.0, -40.0)",
+      "position(sampler_1, 50.0, 50.0, 0.0)",
+      "radio_outage(rover_2)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)",
+      "sample_status(sample_3, field)",
+      "sample_status(sample_4, field)"
+    ]
+  },
+  "parent_problem": {
+    "goal": {
+      "positive": [
+        "at_entry(rover_2)"
+      ],
+      "negative": [],
+      "cardinality": []
+    },
+    "initial_facts": [
+      "agent_at(rover_1, entry)",
+      "agent_at(sampler_1, entry)",
+      "at_entry(relay_1)",
+      "at_entry(rover_1)",
+      "at_entry(sampler_1)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "available(sampler_1)",
+      "cargo_count(relay_1, 0)",
+      "cargo_count(rover_1, 0)",
+      "cargo_count(rover_2, 0)",
+      "cargo_count(sampler_1, 0)",
+      "has_collector(rover_1)",
+      "has_collector(rover_2)",
+      "has_collector(sampler_1)",
+      "has_volatiles_sensor(rover_1)",
+      "has_volatiles_sensor(rover_2)",
+      "low_visibility",
+      "outage_clock(120)",
+      "position(relay_1, 50.0, 50.0, 5.0)",
+      "position(rover_1, 50.0, 50.0, 0.0)",
+      "position(rover_2, 50.0, 50.0, -40.0)",
+      "position(sampler_1, 50.0, 50.0, 0.0)",
+      "radio_outage(rover_2)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)",
+      "sample_status(sample_3, field)",
+      "sample_status(sample_4, field)"
+    ]
+  },
+  "source_task": {
+    "id": "return_rover_2",
+    "layer": "T",
+    "goal_nl": "",
+    "precondition": "",
+    "postcondition": "at_entry(rover_2)",
+    "context": {
+      "domain_goal": {
+        "positive": [
+          "at_entry(rover_2)"
+        ],
+        "negative": [],
+        "cardinality": []
+      }
+    },
+    "status": "pending",
+    "estimated_duration_s": 0.0,
+    "dependencies": [],
+    "parent_id": "mission_1",
+    "children_ids": [
+      "return_rover_2.p1"
+    ],
+    "assigned_agent_id": "rover_2",
+    "required_primitives": []
+  },
+  "original_information": {
+    "tree": {
+      "root_id": "scene",
+      "nodes": {
+        "scene": {
+          "id": "scene",
+          "layer": "S",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(rover_2)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(rover_2)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": null,
+          "children_ids": [
+            "mission_1"
+          ],
+          "formal_postcondition": "at_entry(rover_2)"
+        },
+        "mission_1": {
+          "id": "mission_1",
+          "layer": "M",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(rover_2)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(rover_2)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "scene",
+          "children_ids": [
+            "return_rover_2"
+          ],
+          "required_agent_types": []
+        },
+        "return_rover_2": {
+          "id": "return_rover_2",
+          "layer": "T",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "at_entry(rover_2)",
+          "context": {
+            "domain_goal": {
+              "positive": [
+                "at_entry(rover_2)"
+              ],
+              "negative": [],
+              "cardinality": []
+            }
+          },
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "mission_1",
+          "children_ids": [
+            "return_rover_2.p1"
+          ],
+          "assigned_agent_id": "rover_2",
+          "required_primitives": []
+        },
+        "return_rover_2.p1": {
+          "id": "return_rover_2.p1",
+          "layer": "P",
+          "goal_nl": "",
+          "precondition": "",
+          "postcondition": "",
+          "context": {},
+          "status": "pending",
+          "estimated_duration_s": 0.0,
+          "dependencies": [],
+          "parent_id": "return_rover_2",
+          "children_ids": [],
+          "primitive_name": "move_to",
+          "primitive_args": {
+            "target": "entry"
+          }
+        }
+      }
+    },
+    "original_plan": [
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "entry"
+        }
+      }
+    ],
+    "original_observation": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 600.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -40.0
+          ],
+          "depth_m": 40.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 9.268728488224802,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -9.268728488224802
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.694867473874467,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.694867473874467
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 40.52754923795323,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -40.52754923795323
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51013805147884,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51013805147884
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [],
+      "comm_outage_until": {},
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [],
+      "agent_busy_s": {
+        "rover_1": 0.0,
+        "rover_2": 0.0,
+        "sampler_1": 0.0,
+        "relay_1": 0.0
+      }
+    },
+    "pre_deviation_observation": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 600.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -40.0
+          ],
+          "depth_m": 40.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 9.268728488224802,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -9.268728488224802
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.694867473874467,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.694867473874467
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 40.52754923795323,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -40.52754923795323
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51013805147884,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51013805147884
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [],
+      "comm_outage_until": {},
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [],
+      "agent_busy_s": {
+        "rover_1": 0.0,
+        "rover_2": 0.0,
+        "sampler_1": 0.0,
+        "relay_1": 0.0
+      }
+    },
+    "executed_prefix": [],
+    "executed_prefix_ids": [],
+    "observed_deviation": {
+      "id": "inj_lava_002",
+      "symptom": "C-02_comm_link_broken",
+      "trigger": {
+        "type": "time",
+        "t_seconds": 600
+      },
+      "target": {
+        "agent": "rover_2"
+      },
+      "parameters": {
+        "outage_duration_seconds": 600,
+        "peer_visibility": false
+      },
+      "radio_attempt": {
+        "primitive": "peer_communicate",
+        "agent_id": "rover_2",
+        "params": {
+          "peer_id": "relay_1",
+          "msg": "request return route"
+        }
+      },
+      "radio_result": {
+        "success": false,
+        "primitive_name": "peer_communicate",
+        "agent_id": "rover_2",
+        "failure_mode": "PRECONDITION_UNMET",
+        "elapsed_s": 0.0,
+        "energy_consumed_wh": null,
+        "detail": "peer range or injected communication outage"
+      }
+    },
+    "post_deviation_observation": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 600.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -40.0
+          ],
+          "depth_m": 40.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 9.268728488224802,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -9.268728488224802
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.694867473874467,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.694867473874467
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 40.52754923795323,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -40.52754923795323
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51013805147884,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51013805147884
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [
+        "rover_2"
+      ],
+      "comm_outage_until": {
+        "rover_2": 1200.0
+      },
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [],
+      "agent_busy_s": {
+        "rover_1": 0.0,
+        "rover_2": 0.0,
+        "sampler_1": 0.0,
+        "relay_1": 0.0
+      }
+    },
+    "public_policy": {
+      "id": null,
+      "eligible": false,
+      "source": null,
+      "nominal_goal": {
+        "positive": [
+          "at_entry(rover_2)"
+        ],
+        "negative": [],
+        "cardinality": []
+      },
+      "fallback_goal": null
+    },
+    "shared_resource_information": {
+      "scenario": "lava",
+      "numeric_resource_model": "unknown",
+      "reason": "No approved numeric movement/task energy source for this execution world.",
+      "formal_energy_guarantee": false
+    },
+    "microstudy_task_contract": {
+      "source_task": {
+        "id": "return_rover_2",
+        "layer": "T",
+        "goal_nl": "",
+        "precondition": "",
+        "postcondition": "at_entry(rover_2)",
+        "context": {
+          "domain_goal": {
+            "positive": [
+              "at_entry(rover_2)"
+            ],
+            "negative": [],
+            "cardinality": []
+          }
+        },
+        "status": "pending",
+        "estimated_duration_s": 0.0,
+        "dependencies": [],
+        "parent_id": "mission_1",
+        "children_ids": [
+          "return_rover_2.p1"
+        ],
+        "assigned_agent_id": "rover_2",
+        "required_primitives": []
+      },
+      "current_goal": {
+        "positive": [
+          "at_entry(rover_2)"
+        ],
+        "negative": [],
+        "cardinality": []
+      },
+      "parent_goal_reported_separately": {
+        "positive": [
+          "at_entry(rover_2)"
+        ],
+        "negative": [],
+        "cardinality": []
+      },
+      "flat_actor_policy": "may use any source-authorized actor; this source Task identifies the requested obligation, not an additional flat actor restriction"
+    }
+  },
+  "schema": {
+    "accepted": true
+  },
+  "task_gate": {
+    "accepted": true,
+    "reason": "VERIFIED",
+    "action_ids": [
+      "lava_action_0048"
+    ],
+    "normalized_plan": [
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "entry"
+        }
+      }
+    ],
+    "final_state": [
+      "agent_at(rover_1, entry)",
+      "agent_at(rover_2, entry)",
+      "agent_at(sampler_1, entry)",
+      "at_entry(relay_1)",
+      "at_entry(rover_1)",
+      "at_entry(rover_2)",
+      "at_entry(sampler_1)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "available(sampler_1)",
+      "cargo_count(relay_1, 0)",
+      "cargo_count(rover_1, 0)",
+      "cargo_count(rover_2, 0)",
+      "cargo_count(sampler_1, 0)",
+      "has_collector(rover_1)",
+      "has_collector(rover_2)",
+      "has_collector(sampler_1)",
+      "has_volatiles_sensor(rover_1)",
+      "has_volatiles_sensor(rover_2)",
+      "low_visibility",
+      "outage_clock(108)",
+      "position(relay_1, 50.0, 50.0, 5.0)",
+      "position(rover_1, 50.0, 50.0, 0.0)",
+      "position(rover_2, 50.0, 50.0, 0.0)",
+      "position(sampler_1, 50.0, 50.0, 0.0)",
+      "radio_outage(rover_2)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)",
+      "sample_status(sample_3, field)",
+      "sample_status(sample_4, field)"
+    ],
+    "solver_version": "5.1.0",
+    "solver_status": "unsat",
+    "solver_encode_check_s": 0.0032500000088475645,
+    "verification_s": 0.0035078999935649335,
+    "grounding": {
+      "accepted": true,
+      "checked_through_step": null,
+      "complete": true,
+      "reason": "all steps grounded"
+    },
+    "symbolic_contract": {
+      "accepted": true,
+      "reason": "VERIFIED",
+      "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+    }
+  },
+  "resource_prediction": {
+    "resource_feasible": null,
+    "status": "NUMERIC_RESOURCE_UNKNOWN",
+    "prediction_dispatch_n": 0
+  },
+  "execution": {
+    "accepted": true,
+    "reason": "EXECUTED",
+    "execution_success": true,
+    "goal_met": true,
+    "recovery_required": true,
+    "dispatch_n": 1,
+    "executed_plan": [
+      {
+        "primitive": "move_to",
+        "agent_id": "rover_2",
+        "params": {
+          "target": "entry"
+        }
+      }
+    ],
+    "execution_results": [
+      {
+        "success": true,
+        "primitive_name": "move_to",
+        "agent_id": "rover_2",
+        "failure_mode": null,
+        "elapsed_s": 60.0,
+        "energy_consumed_wh": null,
+        "detail": "nominal timing; numeric Lava energy consumption is source-undefined; communication tokens are local"
+      }
+    ],
+    "transition_observations": [
+      {
+        "actor": "rover_2",
+        "primitive": "move_to",
+        "position_before": [
+          50.0,
+          50.0,
+          -40.0
+        ],
+        "sample_id": null,
+        "sample_position_before": null,
+        "sample_status_before": null,
+        "cargo_before": [],
+        "base_storage_before": [],
+        "energy_wh_before": 350.0,
+        "collection_distance_before_m": null,
+        "position_after": [
+          50.0,
+          50.0,
+          0.0
+        ],
+        "cargo_after": [],
+        "sample_status_after": null,
+        "base_storage_after": [],
+        "energy_wh_after": 350.0,
+        "success": true
+      }
+    ],
+    "verification": {
+      "accepted": true,
+      "reason": "VERIFIED",
+      "action_ids": [
+        "lava_action_0048"
+      ],
+      "normalized_plan": [
+        {
+          "primitive": "move_to",
+          "agent_id": "rover_2",
+          "params": {
+            "target": "entry"
+          }
+        }
+      ],
+      "final_state": [
+        "agent_at(rover_1, entry)",
+        "agent_at(rover_2, entry)",
+        "agent_at(sampler_1, entry)",
+        "at_entry(relay_1)",
+        "at_entry(rover_1)",
+        "at_entry(rover_2)",
+        "at_entry(sampler_1)",
+        "available(relay_1)",
+        "available(rover_1)",
+        "available(rover_2)",
+        "available(sampler_1)",
+        "cargo_count(relay_1, 0)",
+        "cargo_count(rover_1, 0)",
+        "cargo_count(rover_2, 0)",
+        "cargo_count(sampler_1, 0)",
+        "has_collector(rover_1)",
+        "has_collector(rover_2)",
+        "has_collector(sampler_1)",
+        "has_volatiles_sensor(rover_1)",
+        "has_volatiles_sensor(rover_2)",
+        "low_visibility",
+        "outage_clock(108)",
+        "position(relay_1, 50.0, 50.0, 5.0)",
+        "position(rover_1, 50.0, 50.0, 0.0)",
+        "position(rover_2, 50.0, 50.0, 0.0)",
+        "position(sampler_1, 50.0, 50.0, 0.0)",
+        "radio_outage(rover_2)",
+        "sample_status(sample_1, field)",
+        "sample_status(sample_2, field)",
+        "sample_status(sample_3, field)",
+        "sample_status(sample_4, field)"
+      ],
+      "solver_version": "5.1.0",
+      "solver_status": "unsat",
+      "solver_encode_check_s": 0.0019403999904170632,
+      "verification_s": 0.002133100002538413,
+      "grounding": {
+        "accepted": true,
+        "checked_through_step": null,
+        "complete": true,
+        "reason": "all steps grounded"
+      },
+      "symbolic_contract": {
+        "accepted": true,
+        "reason": "VERIFIED",
+        "scope": "preconditions, effects and complete supplied goal; no numeric resource guarantee"
+      }
+    },
+    "final_state": {
+      "semantics_version": "lava_source_execution_v1",
+      "sim_time_s": 660.0,
+      "entry_pos": [
+        50.0,
+        50.0,
+        0.0
+      ],
+      "n_samples": 4,
+      "storage_fixture": {
+        "slots_per_collecting_actor": 4,
+        "source": "fixed fixture configuration; no sourced numerical Lava capacity; not measured hardware"
+      },
+      "agents": {
+        "rover_1": {
+          "id": "rover_1",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "rover_2": {
+          "id": "rover_2",
+          "agent_type": "ROVER",
+          "position": [
+            50.0,
+            50.0,
+            0.0
+          ],
+          "depth_m": -0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": true,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "sampler_1": {
+          "id": "sampler_1",
+          "agent_type": "SAMPLER",
+          "position": [
+            50.0,
+            50.0,
+            -0.0
+          ],
+          "depth_m": 0.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "agent_at(entry)",
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": true,
+          "storage_capacity": 4
+        },
+        "relay_1": {
+          "id": "relay_1",
+          "agent_type": "RELAY",
+          "position": [
+            50.0,
+            50.0,
+            5.0
+          ],
+          "depth_m": -5.0,
+          "energy_wh": 350.0,
+          "initial_energy_wh": 350.0,
+          "facts": [
+            "at_entry"
+          ],
+          "cargo": [],
+          "has_volatiles_sensor": false,
+          "has_collector": false,
+          "storage_capacity": 0
+        }
+      },
+      "samples": {
+        "sample_1": {
+          "depth_m": 9.268728488224802,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -9.268728488224802
+          ],
+          "owner": null
+        },
+        "sample_2": {
+          "depth_m": 25.694867473874467,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -25.694867473874467
+          ],
+          "owner": null
+        },
+        "sample_3": {
+          "depth_m": 40.52754923795323,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -40.52754923795323
+          ],
+          "owner": null
+        },
+        "sample_4": {
+          "depth_m": 49.51013805147884,
+          "status": "field",
+          "location": [
+            50.0,
+            50.0,
+            -49.51013805147884
+          ],
+          "owner": null
+        }
+      },
+      "tipped": [],
+      "disabled_agents": [],
+      "injected_unreachable": [],
+      "injected_comm_offline": [
+        "rover_2"
+      ],
+      "comm_outage_until": {
+        "rover_2": 1200.0
+      },
+      "peer_conflict": [],
+      "low_visibility": true,
+      "mission_infeasible": false,
+      "pending_failures": [],
+      "agent_busy_s": {
+        "rover_1": 0.0,
+        "rover_2": 60.0,
+        "sampler_1": 0.0,
+        "relay_1": 0.0
+      }
+    },
+    "final_facts": [
+      "agent_at(rover_1, entry)",
+      "agent_at(rover_2, entry)",
+      "agent_at(sampler_1, entry)",
+      "at_entry(relay_1)",
+      "at_entry(rover_1)",
+      "at_entry(rover_2)",
+      "at_entry(sampler_1)",
+      "available(relay_1)",
+      "available(rover_1)",
+      "available(rover_2)",
+      "available(sampler_1)",
+      "cargo_count(relay_1, 0)",
+      "cargo_count(rover_1, 0)",
+      "cargo_count(rover_2, 0)",
+      "cargo_count(sampler_1, 0)",
+      "has_collector(rover_1)",
+      "has_collector(rover_2)",
+      "has_collector(sampler_1)",
+      "has_volatiles_sensor(rover_1)",
+      "has_volatiles_sensor(rover_2)",
+      "low_visibility",
+      "outage_clock(108)",
+      "position(relay_1, 50.0, 50.0, 5.0)",
+      "position(rover_1, 50.0, 50.0, 0.0)",
+      "position(rover_2, 50.0, 50.0, 0.0)",
+      "position(sampler_1, 50.0, 50.0, 0.0)",
+      "radio_outage(rover_2)",
+      "sample_status(sample_1, field)",
+      "sample_status(sample_2, field)",
+      "sample_status(sample_3, field)",
+      "sample_status(sample_4, field)"
+    ],
+    "elapsed_s": 60.0,
+    "energy_consumed_wh": null,
+    "wrapper_wall_s": 0.2414942000177689,
+    "actual_radio_delivery_observed": false,
+    "timing_kind": "nominal simulator work time; not hardware latency"
+  },
+  "status": "executed",
+  "communication_before": "Disconnected",
+  "raw_response": "{\n  \"chain\": [\n    {\n      \"primitive\": \"move_to\",\n      \"params\": {\n        \"target\": \"entry\"\n      },\n      \"agent_id\": \"rover_2\",\n      \"agent_type\": \"ROVER\"\n    }\n  ]\n}",
+  "parsed_response": {
+    "chain": [
+      {
+        "primitive": "move_to",
+        "params": {
+          "target": "entry"
+        },
+        "agent_id": "rover_2",
+        "agent_type": "ROVER"
+      }
+    ]
+  },
+  "candidate": [
+    {
+      "primitive": "move_to",
+      "params": {
+        "target": "entry"
+      },
+      "agent_id": "rover_2",
+      "agent_type": "ROVER"
+    }
+  ],
+  "task_goal_met": true,
+  "parent_goal_met": true,
+  "final_facts": [
+    "agent_at(rover_1, entry)",
+    "agent_at(rover_2, entry)",
+    "agent_at(sampler_1, entry)",
+    "at_entry(relay_1)",
+    "at_entry(rover_1)",
+    "at_entry(rover_2)",
+    "at_entry(sampler_1)",
+    "available(relay_1)",
+    "available(rover_1)",
+    "available(rover_2)",
+    "available(sampler_1)",
+    "cargo_count(relay_1, 0)",
+    "cargo_count(rover_1, 0)",
+    "cargo_count(rover_2, 0)",
+    "cargo_count(sampler_1, 0)",
+    "has_collector(rover_1)",
+    "has_collector(rover_2)",
+    "has_collector(sampler_1)",
+    "has_volatiles_sensor(rover_1)",
+    "has_volatiles_sensor(rover_2)",
+    "low_visibility",
+    "outage_clock(108)",
+    "position(relay_1, 50.0, 50.0, 5.0)",
+    "position(rover_1, 50.0, 50.0, 0.0)",
+    "position(rover_2, 50.0, 50.0, 0.0)",
+    "position(sampler_1, 50.0, 50.0, 0.0)",
+    "radio_outage(rover_2)",
+    "sample_status(sample_1, field)",
+    "sample_status(sample_2, field)",
+    "sample_status(sample_3, field)",
+    "sample_status(sample_4, field)"
+  ],
+  "local_work": {
+    "implementation": "resource_assistance_v1",
+    "limits": {
+      "prediction_calls": 64,
+      "search_calls": 2,
+      "candidate_rollouts": 2112,
+      "world_steps": 100000,
+      "work_wall_s": 120.0,
+      "worker_wall_s": 30.0,
+      "memory_mb": 2048
+    },
+    "metrics": {
+      "candidate_rollouts": 0,
+      "prediction_world_steps": 0,
+      "prediction_wall_s": 0.0,
+      "standalone_prediction_wall_s": 0.0,
+      "local_search_wall_s": 0.0,
+      "proposal_validation_wall_s": 0.003514300042297691,
+      "prediction_calls": 0,
+      "search_calls": 0,
+      "work_counters_complete": true,
+      "resource_wall_s": 0.003514300042297691
+    },
+    "events": [
+      {
+        "kind": "forecast",
+        "result": {
+          "resource_feasible": null,
+          "status": "NUMERIC_RESOURCE_UNKNOWN",
+          "prediction_dispatch_n": 0
+        }
+      }
+    ],
+    "formal_resource_guarantee": false,
+    "time_accounting": "resource_wall is standalone forecast + inclusive search + external validation; prediction_wall includes nested search forecasts and must not be added again"
+  },
+  "wall_s": 100.86472900002263,
+  "communication_after": "Disconnected",
+  "dispatch_n": 1,
+  "actual_actors": [
+    "rover_2"
+  ],
+  "parent_missing_positive": [],
+  "parent_positive_newly_completed": [
+    "at_entry(rover_2)"
+  ],
+  "task_first_met_symbolic_step": 1,
+  "actions_after_task_first_met": [],
+  "extra_work_note": "suffix after Task achievement is descriptive; may satisfy other source duties, not declared wasted",
+  "replay_only": false,
+  "generation_schema": {
+    "complete": true,
+    "schema_accepted": true,
+    "finish_reason": "stop",
+    "backend_inspection_required": false
+  }
+}

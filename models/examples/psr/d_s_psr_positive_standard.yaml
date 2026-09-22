@@ -1,0 +1,29 @@
+scenario: PSR
+type: positive_standard
+source: curated_from_psr_l1_contract_S7   # CC-authored on PI delegation (P0-8)
+context:
+  region_extent_m: [200, 200]
+  agents: [rover_1, rover_2, relay_1]
+  scene_goal: "collect 5 ice samples from the PSR area and return them to base"
+  hazards: ["loose_regolith", "comm_LOS_loss_in_PSR_core"]
+expected_output:
+  missions:
+    - id: mission_1_cover_region
+      goal_nl: "deploy the two rovers to the PSR perimeter and position the relay for link coverage"
+      precondition: "at_base(rover_1) & at_base(rover_2) & at_base(relay_1)"
+      postcondition: "deployed(rover_1) & deployed(rover_2) & relay_ready(relay_1)"
+      required_agent_types: [ROVER, RELAY]
+      dependencies: []
+    - id: mission_2_collect_samples
+      goal_nl: "collect the 5 target ice samples into rover storage"
+      precondition: "deployed(rover_1) & deployed(rover_2) & relay_ready(relay_1)"
+      postcondition: "stored(sample_1) & stored(sample_2) & stored(sample_3) & stored(sample_4) & stored(sample_5)"
+      required_agent_types: [ROVER]
+      dependencies: [mission_1_cover_region]
+    - id: mission_3_return_to_base
+      goal_nl: "return all collected samples to base storage"
+      precondition: "stored(sample_1) & stored(sample_2) & stored(sample_3) & stored(sample_4) & stored(sample_5)"
+      postcondition: "in_base_storage(sample_1) & in_base_storage(sample_2) & in_base_storage(sample_3) & in_base_storage(sample_4) & in_base_storage(sample_5)"
+      required_agent_types: [ROVER]
+      dependencies: [mission_2_collect_samples]
+rationale: "Standard 3-Mission PSR decomposition (cover -> collect -> return); each Mission's precondition is implied by the prior Mission's postcondition (Contract 3 holds). Medium-difficulty trial."
